@@ -1,0 +1,93 @@
+{
+  "deal": {
+    "issuer": "Thames Auto Receivables 2026-1 plc",
+    "originator": "Kestrel Motor Finance Ltd",
+    "servicer": "Kestrel Motor Finance Ltd",
+    "trustee": "Albion Trustee Services Ltd",
+    "currency": "GBP",
+    "cut_off_date": "2025-12-31",
+    "closing_date": "2026-01-28",
+    "first_payment_date": "2026-02-20",
+    "payment_day": 20,
+    "n_periods": 12,
+    "n_loans": 5000
+  },
+  "classes": [
+    {
+      "name": "A",
+      "share": 0.85,
+      "margin": 0.007,
+      "rating": "AAA"
+    },
+    {
+      "name": "B",
+      "share": 0.06,
+      "margin": 0.013,
+      "rating": "AA"
+    },
+    {
+      "name": "C",
+      "share": 0.05,
+      "margin": 0.021,
+      "rating": "A"
+    },
+    {
+      "name": "D",
+      "share": 0.04,
+      "margin": 0.035,
+      "rating": "BBB"
+    }
+  ],
+  "sonia": [
+    0.0395,
+    0.0395,
+    0.039,
+    0.0385,
+    0.0385,
+    0.038,
+    0.038,
+    0.0375,
+    0.0375,
+    0.037,
+    0.037,
+    0.037
+  ],
+  "fees": {
+    "servicer_fee_rate": 0.01,
+    "trustee_fee_monthly": 2500.0
+  },
+  "reserve_fund": {
+    "required_pct_of_initial_notes": 0.015,
+    "can_cover_losses": false
+  },
+  "triggers": {
+    "cum_default_schedule": [
+      [
+        1,
+        6,
+        0.01
+      ],
+      [
+        7,
+        12,
+        0.02
+      ]
+    ],
+    "arrears_90_limit": 0.0125,
+    "reserve_fund_shortfall": true
+  },
+  "definitions": {
+    "default": "A loan is defaulted when it is 4 instalments in arrears.",
+    "pool_balance": "Sum of the outstanding principal of all loans that are not defaulted, prepaid or repaid.",
+    "recovery_rate": 0.55,
+    "recovery_lag": 3
+  },
+  "initial_pool_balance": 74075862.24,
+  "initial_note_balances": {
+    "A": 62964482.91,
+    "B": 4444551.73,
+    "C": 3703793.11,
+    "D": 2963034.49
+  },
+  "reserve_fund_required_amount": 1111137.93
+}

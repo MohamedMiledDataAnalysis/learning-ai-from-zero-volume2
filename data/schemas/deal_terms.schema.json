@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Deal terms extracted from a securitisation prospectus",
+  "$defs": {
+    "field": {
+      "type": "object",
+      "required": [
+        "value",
+        "page",
+        "quote",
+        "source",
+        "grounded"
+      ],
+      "properties": {
+        "value": {},
+        "page": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "quote": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "enum": [
+            "rules",
+            "model",
+            "answer key",
+            null
+          ]
+        },
+        "grounded": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "type": "object",
+  "required": [
+    "deal_name",
+    "currency",
+    "pool_balance",
+    "parties",
+    "dates",
+    "classes",
+    "reserve_funds",
+    "priority_of_payments",
+    "triggers",
+    "eligibility_criteria",
+    "risk_retention",
+    "definitions"
+  ],
+  "properties": {
+    "deal_name": {
+      "$ref": "#/$defs/field"
+    },
+    "currency": {
+      "$ref": "#/$defs/field"
+    },
+    "pool_balance": {
+      "$ref": "#/$defs/field"
+    },
+    "parties": {
+      "type": "object",
+      "properties": {
+        "issuer": {
+          "$ref": "#/$defs/field"
+        },
+        "originator": {
+          "$ref": "#/$defs/field"
+        },
+        "servicer": {
+          "$ref": "#/$defs/field"
+        },
+        "trustee": {
+          "$ref": "#/$defs/field"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "properties": {
+        "cut_off": {
+          "$ref": "#/$defs/field"
+        },
+        "closing": {
+          "$ref": "#/$defs/field"
+        },
+        "first_payment": {
+          "$ref": "#/$defs/field"
+        }
+      }
+    },
+    "classes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/$defs/field"
+          },
+          "balance": {
+            "$ref": "#/$defs/field"
+          },
+          "share": {
+            "$ref": "#/$defs/field"
+          },
+          "margin": {
+            "$ref": "#/$defs/field"
+          },
+          "rating": {
+            "$ref": "#/$defs/field"
+          }
+        }
+      }
+    },
+    "reserve_funds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/$defs/field"
+          },
+          "amount": {
+            "$ref": "#/$defs/field"
+          },
+          "percent": {
+            "$ref": "#/$defs/field"
+          },
+          "basis": {
+            "$ref": "#/$defs/field"
+          },
+          "can_cover_losses": {
+            "$ref": "#/$defs/field"
+          }
+        }
+      }
+    },
+    "priority_of_payments": {
+      "type": "object",
+      "properties": {
+        "combined": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/field"
+          }
+        },
+        "revenue": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/field"
+          }
+        },
+        "principal": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/field"
+          }
+        }
+      }
+    },
+    "triggers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "$ref": "#/$defs/field"
+          },
+          "measure": {
+            "$ref": "#/$defs/field"
+          },
+          "limit": {
+            "$ref": "#/$defs/field"
+          },
+          "consequence": {
+            "$ref": "#/$defs/field"
+          }
+        }
+      }
+    },
+    "eligibility_criteria": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/field"
+      }
+    },
+    "risk_retention": {
+      "$ref": "#/$defs/field"
+    },
+    "definitions": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/field"
+      }
+    }
+  }
+}

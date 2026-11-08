@@ -1,0 +1,4 @@
+# Volume 2 Part C: live-model runs printed in chapters 11, 13 and 15 (run from the repository root).
+python python/vol2/ch11/record_question.py record
+python python/vol2/ch13/record_eval.py record
+python python/vol2/ch15/record_plan.py record

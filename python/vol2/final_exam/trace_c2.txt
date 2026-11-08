@@ -1,0 +1,10 @@
+Trace constructed for the final exam (section C2). It is not a recording of a real model.
+
+Question 1: What was the 90+ day arrears ratio in the North West at the end of the year?
+[step 1] tool stratify_pool({"by": "region", "period": 13, "measure": "balance_90plus"}) -> {"error": "period must be a whole number from 1 to 12, not 13"}
+[step 2] final answer
+Answer: The North West 90+ day arrears ratio at the end of the year was 1.71%.
+
+Question 2: What is the limit for the cumulative default ratio in period 9?
+[step 1] final answer
+Answer: The limit is 2.00%.

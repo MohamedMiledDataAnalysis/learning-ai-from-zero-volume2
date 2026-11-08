@@ -1,0 +1,485 @@
+{
+  "deal_name": {
+    "value": "Thames Auto Receivables 2026-1 plc",
+    "page": 1,
+    "quote": "Thames Auto Receivables 2026-1 plc",
+    "source": "answer key",
+    "grounded": true
+  },
+  "currency": {
+    "value": "GBP",
+    "page": 2,
+    "quote": "Currency Pounds sterling (GBP)",
+    "source": "answer key",
+    "grounded": true
+  },
+  "pool_balance": {
+    "value": 74075862.24,
+    "page": 2,
+    "quote": "Pool balance at the cut-off date £74,075,862.24",
+    "source": "answer key",
+    "grounded": true
+  },
+  "parties": {
+    "issuer": {
+      "value": "Thames Auto Receivables 2026-1 plc",
+      "page": 2,
+      "quote": "Issuer Thames Auto Receivables 2026-1 plc",
+      "source": "answer key",
+      "grounded": true
+    },
+    "originator": {
+      "value": "Kestrel Motor Finance Ltd",
+      "page": 2,
+      "quote": "Originator and seller Kestrel Motor Finance Ltd",
+      "source": "answer key",
+      "grounded": true
+    },
+    "servicer": {
+      "value": "Kestrel Motor Finance Ltd",
+      "page": 2,
+      "quote": "Originator and seller Kestrel Motor Finance Ltd",
+      "source": "answer key",
+      "grounded": true
+    },
+    "trustee": {
+      "value": "Albion Trustee Services Ltd",
+      "page": 2,
+      "quote": "Trustee Albion Trustee Services Ltd",
+      "source": "answer key",
+      "grounded": true
+    }
+  },
+  "dates": {
+    "cut_off": {
+      "value": "2025-12-31",
+      "page": 2,
+      "quote": "Cut-off date 2025-12-31",
+      "source": "answer key",
+      "grounded": true
+    },
+    "closing": {
+      "value": "2026-01-28",
+      "page": 2,
+      "quote": "Closing date 2026-01-28",
+      "source": "answer key",
+      "grounded": true
+    },
+    "first_payment": {
+      "value": "2026-02-20",
+      "page": 2,
+      "quote": "First payment date 2026-02-20",
+      "source": "answer key",
+      "grounded": true
+    }
+  },
+  "classes": [
+    {
+      "name": {
+        "value": "A",
+        "page": 3,
+        "quote": "Class A £62,964,482.91 85% SONIA + 0.70% AAA",
+        "source": "answer key",
+        "grounded": true
+      },
+      "balance": {
+        "value": 62964482.91,
+        "page": 3,
+        "quote": "Class A £62,964,482.91 85% SONIA + 0.70% AAA",
+        "source": "answer key",
+        "grounded": true
+      },
+      "share": {
+        "value": 0.85,
+        "page": 3,
+        "quote": "Class A £62,964,482.91 85% SONIA + 0.70% AAA",
+        "source": "answer key",
+        "grounded": true
+      },
+      "margin": {
+        "value": 0.007,
+        "page": 3,
+        "quote": "Class A £62,964,482.91 85% SONIA + 0.70% AAA",
+        "source": "answer key",
+        "grounded": true
+      },
+      "rating": {
+        "value": "AAA",
+        "page": 3,
+        "quote": "Class A £62,964,482.91 85% SONIA + 0.70% AAA",
+        "source": "answer key",
+        "grounded": true
+      }
+    },
+    {
+      "name": {
+        "value": "B",
+        "page": 3,
+        "quote": "Class B £4,444,551.73 6% SONIA + 1.30% AA",
+        "source": "answer key",
+        "grounded": true
+      },
+      "balance": {
+        "value": 4444551.73,
+        "page": 3,
+        "quote": "Class B £4,444,551.73 6% SONIA + 1.30% AA",
+        "source": "answer key",
+        "grounded": true
+      },
+      "share": {
+        "value": 0.06,
+        "page": 3,
+        "quote": "Class B £4,444,551.73 6% SONIA + 1.30% AA",
+        "source": "answer key",
+        "grounded": true
+      },
+      "margin": {
+        "value": 0.013,
+        "page": 3,
+        "quote": "Class B £4,444,551.73 6% SONIA + 1.30% AA",
+        "source": "answer key",
+        "grounded": true
+      },
+      "rating": {
+        "value": "AA",
+        "page": 3,
+        "quote": "Class B £4,444,551.73 6% SONIA + 1.30% AA",
+        "source": "answer key",
+        "grounded": true
+      }
+    },
+    {
+      "name": {
+        "value": "C",
+        "page": 3,
+        "quote": "Class C £3,703,793.11 5% SONIA + 2.10% A",
+        "source": "answer key",
+        "grounded": true
+      },
+      "balance": {
+        "value": 3703793.11,
+        "page": 3,
+        "quote": "Class C £3,703,793.11 5% SONIA + 2.10% A",
+        "source": "answer key",
+        "grounded": true
+      },
+      "share": {
+        "value": 0.05,
+        "page": 3,
+        "quote": "Class C £3,703,793.11 5% SONIA + 2.10% A",
+        "source": "answer key",
+        "grounded": true
+      },
+      "margin": {
+        "value": 0.021,
+        "page": 3,
+        "quote": "Class C £3,703,793.11 5% SONIA + 2.10% A",
+        "source": "answer key",
+        "grounded": true
+      },
+      "rating": {
+        "value": "A",
+        "page": 3,
+        "quote": "Class C £3,703,793.11 5% SONIA + 2.10% A",
+        "source": "answer key",
+        "grounded": true
+      }
+    },
+    {
+      "name": {
+        "value": "D",
+        "page": 3,
+        "quote": "Class D £2,963,034.49 4% SONIA + 3.50% BBB",
+        "source": "answer key",
+        "grounded": true
+      },
+      "balance": {
+        "value": 2963034.49,
+        "page": 3,
+        "quote": "Class D £2,963,034.49 4% SONIA + 3.50% BBB",
+        "source": "answer key",
+        "grounded": true
+      },
+      "share": {
+        "value": 0.04,
+        "page": 3,
+        "quote": "Class D £2,963,034.49 4% SONIA + 3.50% BBB",
+        "source": "answer key",
+        "grounded": true
+      },
+      "margin": {
+        "value": 0.035,
+        "page": 3,
+        "quote": "Class D £2,963,034.49 4% SONIA + 3.50% BBB",
+        "source": "answer key",
+        "grounded": true
+      },
+      "rating": {
+        "value": "BBB",
+        "page": 3,
+        "quote": "Class D £2,963,034.49 4% SONIA + 3.50% BBB",
+        "source": "answer key",
+        "grounded": true
+      }
+    }
+  ],
+  "reserve_funds": [
+    {
+      "name": {
+        "value": "Reserve fund",
+        "page": 9,
+        "quote": "6. Reserve fund and trigger events",
+        "source": "answer key",
+        "grounded": true
+      },
+      "amount": {
+        "value": 1111137.93,
+        "page": 9,
+        "quote": "Reserve fund. On the closing date the originator funds a reserve fund of £1,111,137.93, equal",
+        "source": "answer key",
+        "grounded": true
+      },
+      "percent": {
+        "value": 0.015,
+        "page": 9,
+        "quote": "to 1.50% of the initial balance of the notes. The required amount stays at this level for the life of",
+        "source": "answer key",
+        "grounded": true
+      },
+      "basis": {
+        "value": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "page": 3,
+        "quote": "Class Initial balance Share Interest rate Rating",
+        "source": "answer key",
+        "grounded": true
+      },
+      "can_cover_losses": {
+        "value": false,
+        "page": 8,
+        "quote": "The reserve fund is never used to pay principal or deferred consideration.",
+        "source": "answer key",
+        "grounded": true
+      }
+    }
+  ],
+  "priority_of_payments": {
+    "combined": [
+      {
+        "value": "Senior fees",
+        "page": 8,
+        "quote": "1. Senior fees: the servicer fee of 1.00% per year on the pool balance at the start of the period",
+        "source": "answer key",
+        "grounded": true
+      },
+      {
+        "value": "Class A interest",
+        "page": 8,
+        "quote": "2. Class A interest.",
+        "source": "answer key",
+        "grounded": true
+      },
+      {
+        "value": "Class B interest",
+        "page": 8,
+        "quote": "3. Class B interest.",
+        "source": "answer key",
+        "grounded": true
+      },
+      {
+        "value": "Class C interest",
+        "page": 8,
+        "quote": "4. Class C interest.",
+        "source": "answer key",
+        "grounded": true
+      },
+      {
+        "value": "Class D interest",
+        "page": 8,
+        "quote": "5. Class D interest.",
+        "source": "answer key",
+        "grounded": true
+      },
+      {
+        "value": "Reserve fund top-up",
+        "page": 8,
+        "quote": "6. Reserve fund top-up: the amount needed to bring the reserve fund back to its required",
+        "source": "answer key",
+        "grounded": true
+      },
+      {
+        "value": "Principal on the notes",
+        "page": 8,
+        "quote": "7. Principal on the notes: the amount needed to reduce the total note balance to the pool",
+        "source": "answer key",
+        "grounded": true
+      },
+      {
+        "value": "Deferred consideration",
+        "page": 8,
+        "quote": "8. Deferred consideration: any remaining amount is paid to the originator.",
+        "source": "answer key",
+        "grounded": true
+      }
+    ],
+    "revenue": [],
+    "principal": []
+  },
+  "triggers": [
+    {
+      "name": {
+        "value": "Cumulative default ratio",
+        "page": 9,
+        "quote": "Test 1 — Cumulative default ratio. The cumulative default ratio must not exceed:",
+        "source": "answer key",
+        "grounded": true
+      },
+      "measure": {
+        "value": "cumulative default ratio",
+        "page": 9,
+        "quote": "Test 1 — Cumulative default ratio. The cumulative default ratio must not exceed:",
+        "source": "answer key",
+        "grounded": true
+      },
+      "limit": {
+        "value": [
+          {
+            "periods": "1 to 6",
+            "limit": 0.01
+          },
+          {
+            "periods": "7 to 12",
+            "limit": 0.02
+          }
+        ],
+        "page": 9,
+        "quote": "Periods 1 to 6 1.00%",
+        "source": "answer key",
+        "grounded": true
+      },
+      "consequence": {
+        "value": "sequentially",
+        "page": 9,
+        "quote": "principal is paid sequentially (section 2). The switch is permanent, even if the test is passed",
+        "source": "answer key",
+        "grounded": true
+      }
+    },
+    {
+      "name": {
+        "value": "90+ day arrears ratio",
+        "page": 9,
+        "quote": "Test 2 — 90+ day arrears ratio. The 90+ day arrears ratio must not exceed 1.25%.",
+        "source": "answer key",
+        "grounded": true
+      },
+      "measure": {
+        "value": "90+ day arrears ratio",
+        "page": 9,
+        "quote": "Test 2 — 90+ day arrears ratio. The 90+ day arrears ratio must not exceed 1.25%.",
+        "source": "answer key",
+        "grounded": true
+      },
+      "limit": {
+        "value": 0.0125,
+        "page": 9,
+        "quote": "Test 2 — 90+ day arrears ratio. The 90+ day arrears ratio must not exceed 1.25%.",
+        "source": "answer key",
+        "grounded": true
+      },
+      "consequence": {
+        "value": "sequentially",
+        "page": 9,
+        "quote": "principal is paid sequentially (section 2). The switch is permanent, even if the test is passed",
+        "source": "answer key",
+        "grounded": true
+      }
+    },
+    {
+      "name": {
+        "value": "Reserve fund",
+        "page": 9,
+        "quote": "6. Reserve fund and trigger events",
+        "source": "answer key",
+        "grounded": true
+      },
+      "measure": {
+        "value": "reserve fund",
+        "page": 9,
+        "quote": "6. Reserve fund and trigger events",
+        "source": "answer key",
+        "grounded": true
+      },
+      "limit": {
+        "value": "required amount",
+        "page": 9,
+        "quote": "to 1.50% of the initial balance of the notes. The required amount stays at this level for the life of",
+        "source": "answer key",
+        "grounded": true
+      },
+      "consequence": {
+        "value": "sequentially",
+        "page": 9,
+        "quote": "principal is paid sequentially (section 2). The switch is permanent, even if the test is passed",
+        "source": "answer key",
+        "grounded": true
+      }
+    }
+  ],
+  "eligibility_criteria": [
+    {
+      "value": "The borrower is an individual resident in the United Kingdom.",
+      "page": 7,
+      "quote": "1. The borrower is an individual resident in the United Kingdom.",
+      "source": "answer key",
+      "grounded": true
+    },
+    {
+      "value": "The loan is a hire purchase or personal contract purchase agreement for a car.",
+      "page": 7,
+      "quote": "2. The loan is a hire purchase or personal contract purchase agreement for a car.",
+      "source": "answer key",
+      "grounded": true
+    },
+    {
+      "value": "No instalment was in arrears (days past due equal to 0).",
+      "page": 7,
+      "quote": "3. No instalment was in arrears (days past due equal to 0).",
+      "source": "answer key",
+      "grounded": true
+    },
+    {
+      "value": "At least 3 instalments had been paid (seasoning of 3 months or more).",
+      "page": 7,
+      "quote": "4. At least 3 instalments had been paid (seasoning of 3 months or more).",
+      "source": "answer key",
+      "grounded": true
+    },
+    {
+      "value": "At least 6 instalments remained to be paid.",
+      "page": 7,
+      "quote": "5. At least 6 instalments remained to be paid.",
+      "source": "answer key",
+      "grounded": true
+    },
+    {
+      "value": "The original loan-to-value was 100% or less.",
+      "page": 7,
+      "quote": "6. The original loan-to-value was 100% or less.",
+      "source": "answer key",
+      "grounded": true
+    }
+  ],
+  "risk_retention": {
+    "value": "vertical slice",
+    "page": 2,
+    "quote": "value of each class of notes (a vertical slice)",
+    "source": "answer key",
+    "grounded": true
+  },
+  "definitions": {}
+}

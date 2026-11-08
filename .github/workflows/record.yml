@@ -1,0 +1,57 @@
+# Record every model reply the book prints, on a GitHub-hosted runner.
+# Run it by hand: Actions tab > "Record model replies" > Run workflow.
+# The recordings are uploaded as an artifact: download it, copy the files into
+# python/recordings and r/recordings, and commit them yourself.
+
+name: Record model replies
+
+on:
+  workflow_dispatch:
+
+jobs:
+  record:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Python packages
+        run: pip install -r requirements.txt ollama==0.6.1 scikit-learn matplotlib openpyxl
+
+      - name: Install R and packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y r-base-core r-cran-jsonlite r-cran-httr2 r-cran-dplyr r-cran-readr \
+            r-cran-pdftools r-cran-testthat r-cran-shiny r-cran-bslib r-cran-dt r-cran-openxlsx \
+            r-cran-ggplot2 r-cran-rpart r-cran-commonmark r-cran-withr
+
+      - name: Cache the model
+        uses: actions/cache@v4
+        with:
+          path: ~/.ollama/models
+          key: ollama-qwen2.5-7b
+
+      - name: Install Ollama and pull the pinned model
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          # The installer starts a system service; stop it and run Ollama as this user,
+          # so the model is stored in ~/.ollama/models, the folder the cache step saves.
+          sudo systemctl stop ollama || true
+          ollama serve > ollama.log 2>&1 &
+          sleep 5
+          ollama pull qwen2.5:7b
+
+      - name: Record
+        run: python python/record_all.py
+
+      - name: Upload the recordings
+        uses: actions/upload-artifact@v4
+        with:
+          name: recordings
+          path: |
+            python/recordings/
+            r/recordings/

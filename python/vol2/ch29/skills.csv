@@ -1,0 +1,15 @@
+skill,where_in_the_book,ai_engineer,data_scientist,ml_engineer,analytics_engineer,surveillance_analyst,model_validator
+Python data handling (pandas),V1 ch5; V2 ch7-8,1,1,1,1,1,1
+R data handling,V1 ch9-12; V2 ch16-25,0,1,0,1,1,1
+Training and judging a model,V1 ch6-12,0,1,1,0,0,1
+Fairness testing by group,V2 ch28,0,1,1,0,0,1
+"Tokens, embeddings, attention",V1 ch21-23,1,1,1,0,0,0
+Prompting and structured output,V1 ch24-26,1,1,0,0,1,0
+Retrieval (RAG),V1 ch27; V2 ch10,1,1,1,0,1,0
+"Tools, schemas and agent loop",V1 ch28-32; V2 ch11,1,0,1,0,1,1
+Testing and evaluation sets,V2 ch5; V2 ch13,1,1,1,1,0,1
+Packaging and Excel export,V2 ch14,1,0,1,1,1,0
+"Planning, memory and approval",V1 ch33-34; V2 ch15,1,0,0,0,1,1
+Loan tapes and stratifications,V2 ch1-2; V2 ch7-8,0,0,0,1,1,1
+Triggers and the waterfall,V2 ch1; V2 ch9,0,0,0,0,1,1
+Model risk documentation,V2 ch28,0,0,0,0,0,1

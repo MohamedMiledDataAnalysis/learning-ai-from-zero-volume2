@@ -1,0 +1,4 @@
+# Volume 2 Part E: model layer of the extraction (R)
+Rscript r/vol2/partE/record_extraction.R --deal thames --mode record
+Rscript r/vol2/partE/record_extraction.R --deal severn --mode record
+Rscript r/vol2/ch26/ask_prospectus.R --deal severn --mode record

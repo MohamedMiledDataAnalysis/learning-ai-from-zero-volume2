@@ -1,0 +1,5 @@
+# Volume 2 Part E: model layer of the extraction (Python)
+python python/vol2/partE/record_extraction.py --deal thames --mode record
+python python/vol2/partE/record_extraction.py --deal severn --mode record
+# Volume 2 chapter 27: the Ask tab of the Dash app (replayed for this question about Severn only)
+python python/vol2/ch27/ask_prospectus.py --deal severn --mode record

@@ -1,0 +1,5 @@
+# Volume 2 Part D: live-model runs from R printed in chapters 20, 22 and 24 (run from the repository root).
+Rscript r/vol2/ch20/record_question.R record
+Rscript r/vol2/ch22/record_eval.R record
+Rscript r/vol2/ch24/record_plan.R record
+Rscript r/taragent/cli.R ask "What is the 90+ day arrears ratio in period 10?" --mode record --recording r/recordings/shiny_question.jsonl

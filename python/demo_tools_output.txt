@@ -1,0 +1,105 @@
+==============================================================================
+Tool call: validate_loan_tape({})
+------------------------------------------------------------------------------
+{
+  "rows_received": 5002,
+  "loans_after_cleaning": 5000,
+  "issues_found": 9,
+  "issues_by_rule": {
+    "duplicate row": 2,
+    "missing value": 2,
+    "rate out of range (decimal point missing)": 1,
+    "region not a standard name": 1,
+    "maturity date not after origination date": 1,
+    "negative balance": 1,
+    "credit score outside 0-999": 1
+  },
+  "balance_after_cleaning": 74075862.24,
+  "initial_pool_balance_in_deal_terms": 74075862.24,
+  "reconciles": true
+}
+==============================================================================
+Tool call: stratify_pool({"by": "region", "period": 10, "measure": "balance_90plus"})
+------------------------------------------------------------------------------
+{'group': 'North West', 'balance_90plus': 519289.63, 'share_of_total': 0.799785, 'ratio_within_group': 0.092782}
+{'group': 'London', 'balance_90plus': 35457.67, 'share_of_total': 0.05461, 'ratio_within_group': 0.005573}
+{'group': 'East of England', 'balance_90plus': 27584.44, 'share_of_total': 0.042484, 'ratio_within_group': 0.005634}
+{'group': 'Scotland', 'balance_90plus': 19700.71, 'share_of_total': 0.030342, 'ratio_within_group': 0.004851}
+==============================================================================
+Tool call: run_trigger_tests({"period": 10})
+------------------------------------------------------------------------------
+{
+  "period": 10,
+  "payment_date": "2026-11-20",
+  "tests": [
+    {
+      "test": "cumulative_default_ratio",
+      "value": 0.004477,
+      "limit": 0.02,
+      "headroom": 0.015523,
+      "breached": false,
+      "reported_value": 0.004477,
+      "agrees_with_report": true
+    },
+    {
+      "test": "arrears_90_ratio",
+      "value": 0.01321,
+      "limit": 0.0125,
+      "headroom": -0.00071,
+      "breached": true,
+      "reported_value": 0.01321,
+      "agrees_with_report": true
+    }
+  ],
+  "reserve_fund_shortfall": false,
+  "trigger_event_this_period": true,
+  "first_breach_period": 10,
+  "principal_payment_mode": "sequential",
+  "report_shows_mode": "sequential"
+}
+==============================================================================
+Tool call: search_prospectus({"query": "What is the limit for the 90+ day arrears ratio?", "top_k": 2})
+------------------------------------------------------------------------------
+{
+  "query": "What is the limit for the 90+ day arrears ratio?",
+  "results": [
+    {
+      "page": 9,
+      "section": "6. Reserve fund and trigger events",
+      "score": 13.854,
+      "text": "Test 1 — Cumulative default ratio. The cumulative default ratio must not exceed: Periods Maximum cumulative default ratio Periods 1 to 6 1.00% Periods 7 to 12 2.00% Test 2 — 90+ day arrears ratio. The 90+ day arrears ratio must not exceed 1.25%."
+    },
+    {
+      "page": 9,
+      "section": "6. Reserve fund and trigger events",
+      "score": 12.52,
+      "text": "Periods 7 to 12 2.00% Test 2 — 90+ day arrears ratio. The 90+ day arrears ratio must not exceed 1.25%. Test 3 — Reserve fund. After the previous payment date, the reserve fund must be at its required amount. Consequence. From the payment date that follows the period in which a trigger event occurs,"
+    }
+  ]
+}
+==============================================================================
+Tool call: draft_surveillance_note({"period": 10})
+------------------------------------------------------------------------------
+# Surveillance note — Thames Auto Receivables 2026-1 plc
+Collection period 10 (ending 2026-10-31), payment date 2026-11-20
+
+**A trigger event occurred this period. Principal is now paid sequentially.**
+
+## Pool
+- Pool balance fell from £51,494,568 to £49,151,533 (4,042 loans).
+- Prepayments: £616,340. Defaults: £153,395. Recoveries: £12,652.
+
+## Trigger tests
+- 90+ day arrears ratio: 1.32% against a limit of 1.25% — BREACHED (previous period 1.20%).
+- Cumulative default ratio: 0.45% against a limit of 2.00% — pass.
+- Reserve fund: £1,111,138 (required £1,111,138).
+- Figures recomputed from the loan-level data agree with the investor report.
+
+## Driver
+- North West holds 80.0% of the 90+ day arrears balance but 11.4% of the pool balance. 9.3% of its balance is 90+ days in arrears.
+
+## Notes
+- Class A: £41,427,347 after £2,343,035 of principal.
+- Class B: £3,089,674 after £0 of principal.
+- Class C: £2,574,728 after £0 of principal.
+- Class D: £2,059,783 after £0 of principal.

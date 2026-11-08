@@ -1,0 +1,161 @@
+{
+  "deal": "Thames Auto Receivables 2026-1 plc",
+  "period": 5,
+  "collection_period_end": "2026-05-31",
+  "payment_date": "2026-06-20",
+  "sonia": 0.0385,
+  "pool": {
+    "loans_outstanding": 4669,
+    "opening_balance": 64208310.68,
+    "principal_received": 1435682.38,
+    "prepayments": 925034.02,
+    "defaults": 0.0,
+    "closing_balance": 61847594.28,
+    "interest_collections": 484622.52,
+    "recoveries": 0.0,
+    "cumulative_defaults": 20806.45,
+    "cumulative_recoveries": 0.0,
+    "pool_factor": 0.834922,
+    "cpr": 0.163184
+  },
+  "arrears": {
+    "0_instalments": {
+      "count": 4410,
+      "balance": 58356626.58
+    },
+    "1_instalments": {
+      "count": 201,
+      "balance": 2732657.9
+    },
+    "2_instalments": {
+      "count": 47,
+      "balance": 618771.23
+    },
+    "3_instalments": {
+      "count": 11,
+      "balance": 139538.57
+    }
+  },
+  "available_funds": 2845338.92,
+  "waterfall": [
+    {
+      "item": "1. Servicer fee",
+      "due": 53506.93,
+      "paid": 53506.93
+    },
+    {
+      "item": "1. Trustee fee",
+      "due": 2500.0,
+      "paid": 2500.0
+    },
+    {
+      "item": "2. Class A interest",
+      "due": 206938.03,
+      "paid": 206938.03
+    },
+    {
+      "item": "3. Class B interest",
+      "due": 16533.64,
+      "paid": 16533.64
+    },
+    {
+      "item": "4. Class C interest",
+      "due": 15918.31,
+      "paid": 15918.31
+    },
+    {
+      "item": "5. Class D interest",
+      "due": 15731.04,
+      "paid": 15731.04
+    },
+    {
+      "item": "6. Reserve fund top-up",
+      "due": 0.0,
+      "paid": 0.0
+    },
+    {
+      "item": "7. Principal on the notes",
+      "due": 2360716.4,
+      "paid": 2360716.4
+    },
+    {
+      "item": "8. Deferred consideration to the originator",
+      "due": 173494.57,
+      "paid": 173494.57
+    }
+  ],
+  "reserve_fund": {
+    "required": 1111137.93,
+    "drawn": 0.0,
+    "balance": 1111137.93
+  },
+  "notes": [
+    {
+      "class": "A",
+      "rating": "AAA",
+      "margin": 0.007,
+      "coupon": 0.0455,
+      "opening_balance": 54577064.08,
+      "interest_paid": 206938.03,
+      "principal_paid": 2006608.94,
+      "closing_balance": 52570455.14,
+      "initial_balance": 62964482.91,
+      "factor": 0.834922
+    },
+    {
+      "class": "B",
+      "rating": "AA",
+      "margin": 0.013,
+      "coupon": 0.0515,
+      "opening_balance": 3852498.64,
+      "interest_paid": 16533.64,
+      "principal_paid": 141642.98,
+      "closing_balance": 3710855.66,
+      "initial_balance": 4444551.73,
+      "factor": 0.834922
+    },
+    {
+      "class": "C",
+      "rating": "A",
+      "margin": 0.021,
+      "coupon": 0.0595,
+      "opening_balance": 3210415.53,
+      "interest_paid": 15918.31,
+      "principal_paid": 118035.82,
+      "closing_balance": 3092379.71,
+      "initial_balance": 3703793.11,
+      "factor": 0.834922
+    },
+    {
+      "class": "D",
+      "rating": "BBB",
+      "margin": 0.035,
+      "coupon": 0.0735,
+      "opening_balance": 2568332.43,
+      "interest_paid": 15731.04,
+      "principal_paid": 94428.66,
+      "closing_balance": 2473903.77,
+      "initial_balance": 2963034.49,
+      "factor": 0.834922
+    }
+  ],
+  "principal_deficiency": 0.0,
+  "triggers": {
+    "cumulative_default_ratio": {
+      "value": 0.000281,
+      "limit": 0.01,
+      "breached": false
+    },
+    "arrears_90_ratio": {
+      "value": 0.002256,
+      "limit": 0.0125,
+      "breached": false
+    },
+    "reserve_fund_shortfall": {
+      "breached": false
+    },
+    "sequential_payment": false,
+    "newly_breached_this_period": false
+  },
+  "residual_to_originator": 173494.57
+}

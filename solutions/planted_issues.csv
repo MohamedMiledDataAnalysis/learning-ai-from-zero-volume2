@@ -1,0 +1,10 @@
+loan_id,column,problem,fix,value_received,correct_value
+TAR00766,interest_rate_pct,rate entered without the decimal point,divide by 100,1089.0,10.89
+TAR02409,current_balance,negative balance (sign error),take the absolute value,-9063.38,9063.38
+TAR00888,region,region name misspelt or wrong case,map to the standard region name,yorkshire and the humber,Yorkshire and the Humber
+TAR00040,postcode_area,missing postcode area,leave missing and flag; region is still known,,NR
+TAR04067,postcode_area,missing postcode area,leave missing and flag; region is still known,,BN
+TAR00953,origination_date/maturity_date,origination and maturity dates swapped,swap them back,2027-09-03/2023-09-03,2023-09-03/2027-09-03
+TAR02998,credit_score,credit score outside the 0-999 scale (placeholder value),treat as missing and flag,9999,709
+TAR00819,(whole row),row duplicated,drop the second copy,2 rows,1 row
+TAR04158,(whole row),row duplicated,drop the second copy,2 rows,1 row

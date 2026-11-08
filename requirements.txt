@@ -1,0 +1,12 @@
+numpy==2.5.3
+pandas==3.0.5
+pypdf==6.17.0
+pytest==9.1.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+ollama==0.6.1
+openpyxl==3.1.5
+dash==3.4.0
+plotly==7.1.0
+# Optional: only the screenshot scripts of Volume 2, chapters 25 to 27, use Playwright.
+# playwright==1.63.0
