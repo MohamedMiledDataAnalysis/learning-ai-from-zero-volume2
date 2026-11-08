@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"search_prospectus","arguments":{"query":"servicer fee","top_k":1}}]}
+{"content": "According to the prospectus on page 8, the servicer fee is 1.00% per year on the pool balance at the start of the period, paid monthly at one-twelfth of that rate.", "tool_calls": []}

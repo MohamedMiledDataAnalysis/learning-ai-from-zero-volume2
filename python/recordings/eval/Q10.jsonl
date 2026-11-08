@@ -1,0 +1,3 @@
+{"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"measure": "balance_90plus", "period": 9, "by": "count"}}]}
+{"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"by": "interest_rate_band", "measure": "balance_90plus", "period": 9}}]}
+{"content": "The 90+ day arrears ratio in period 9 is 1.40%. This ratio is highest in the \"11.00% and above\" interest rate band, where it stands at 2.34%.", "tool_calls": []}

@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"search_prospectus","arguments":{"query":"90+ day arrears ratio","top_k":1}}]}
+{"content": "According to the prospectus on page 9, the limit for the 90+ day arrears ratio is 1.25%.", "tool_calls": []}

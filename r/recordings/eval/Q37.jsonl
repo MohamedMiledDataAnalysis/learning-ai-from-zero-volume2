@@ -1,0 +1,4 @@
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"by":"count","measure":"balance","period":12}}]}
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"by":"balance","measure":"balance","period":12}}]}
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"by":"product","measure":"balance","period":12}}]}
+{"content": "The pool balance in period 12 is £44,580,732.16, with PCP loans accounting for 66.77% of the total balance and HP loans for 33.23%.", "tool_calls": []}

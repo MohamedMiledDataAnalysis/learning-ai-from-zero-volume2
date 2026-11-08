@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"run_trigger_tests","arguments":{"period":1}}]}
+{"content": "No trigger was breached in period 1.", "tool_calls": []}

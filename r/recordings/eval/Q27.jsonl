@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"by":"fuel_type","measure":"balance","period":0}}]}
+{"content": "At the cut-off date, the fuel type with the largest balance is Petrol, with a balance of £33,204,077.76.", "tool_calls": []}

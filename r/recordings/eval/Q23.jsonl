@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"measure":"balance_90plus","period":10,"by":"region"}}]}
+{"content": "In period 10, the North West region holds a share of 79.98% of the 90+ day arrears balance, which amounts to £519,289.63.", "tool_calls": []}

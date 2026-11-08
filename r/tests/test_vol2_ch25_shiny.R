@@ -32,7 +32,11 @@ test_that("the agent answers only when the button is pressed", {
     session$setInputs(ask = 1)
     expect_match(answer(), "1.32%", fixed = TRUE)
     session$setInputs(mode = "replay", ask = 2)
-    expect_equal(answer(), PENDING)              # no recording yet in the repository
+    if (file.exists(file.path(RECORDINGS, "shiny_question.jsonl"))) {
+      expect_match(answer(), "1.32%", fixed = TRUE)   # the recorded reply of qwen2.5:7b
+    } else {
+      expect_equal(answer(), PENDING)            # no recording yet in the repository
+    }
   })
 })
 

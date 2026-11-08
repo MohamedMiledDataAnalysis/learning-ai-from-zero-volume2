@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"search_prospectus","arguments":{"query":"trustee fee","top_k":1}}]}
+{"content": "According to the prospectus on page 8, the trustee fee is £2,500.00 per payment date.", "tool_calls": []}

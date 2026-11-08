@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"by": "region", "measure": "balance_90plus", "period": 10}}, {"name": "run_trigger_tests", "arguments": {"period": 10}}]}
+{"content": "The North West region holds the most 90+ day arrears in October 2026, with 519,289.63 pounds, representing 79.98% of the total 90+ arrears. A trigger has been breached due to the 90+ day arrears ratio exceeding the limit.", "tool_calls": []}

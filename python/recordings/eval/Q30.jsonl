@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name": "search_prospectus", "arguments": {"query": "margin Class B notes", "top_k": 3}}]}
+{"content": "According to the prospectus on page 3, the margin on the Class B notes is 1.30%.", "tool_calls": []}

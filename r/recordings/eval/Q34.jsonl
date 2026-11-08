@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"search_prospectus","arguments":{"query":"weighted average interest rate","top_k":1}}]}
+{"content": "According to the prospectus on page 4, the weighted average interest rate of the pool is 9.31%.", "tool_calls": []}

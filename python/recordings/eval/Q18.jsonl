@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name": "run_trigger_tests", "arguments": {"period": 1}}]}
+{"content": "No trigger was breached in period 1. The cumulative default ratio and 90+ day arrears ratio both remained within their limits, and the principal was paid pro rata. The first breach of a trigger, if any, occurred in a later period.", "tool_calls": []}

@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name": "run_trigger_tests", "arguments": {"period": 7}}]}
+{"content": "The 90+ day arrears ratio in period 7 is 0.66%. This ratio is within the limit specified in the prospectus.", "tool_calls": []}

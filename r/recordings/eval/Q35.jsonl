@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"search_prospectus","arguments":{"query":"Class A notes rating","top_k":1}}]}
+{"content": "At closing, the rating of the Class A notes is AAA.", "tool_calls": []}

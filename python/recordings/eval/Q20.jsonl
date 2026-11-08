@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name": "run_trigger_tests", "arguments": {"period": 11}}]}
+{"content": "Principal is paid sequentially in period 11.", "tool_calls": []}

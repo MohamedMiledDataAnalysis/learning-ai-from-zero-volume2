@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"draft_surveillance_note","arguments":{"period":10}}]}
+{"content": "The surveillance note for period 10 of Thames Auto Receivables 2026-1 plc indicates a breach of the 90+ day arrears ratio at 1.32%, up from 1.20% in the previous period. Principal is now paid sequentially due to a trigger event. The North West region holds 80.0% of the 90+ day arrears balance, with 9.3% of its balance 90+ days in arrears.", "tool_calls": []}

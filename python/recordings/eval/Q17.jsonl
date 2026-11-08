@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name": "run_trigger_tests", "arguments": {"period": 12}}]}
+{"content": "The cumulative default ratio in period 12 is 0.86%. This ratio did not breach the limit of 2.00%, and the payment mode for this period is sequential.", "tool_calls": []}

@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name": "run_trigger_tests", "arguments": {"period": 11}}]}
+{"content": "The 90+ day arrears ratio in period 11 is 1.41%. This ratio has breached the limit of 1.25%, indicating a breach in the deal's rules.", "tool_calls": []}

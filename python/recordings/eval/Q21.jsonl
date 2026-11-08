@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"by": "region", "measure": "balance_90plus", "period": 10}}]}
+{"content": "The North West region holds the most of the 90+ day arrears in period 10, accounting for 79.98% of the total 90+ day arrears in that region.", "tool_calls": []}

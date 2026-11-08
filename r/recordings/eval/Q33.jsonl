@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"search_prospectus","arguments":{"query":"cumulative default ratio limit","top_k":3}}]}
+{"content": "According to the prospectus on page 9, the cumulative default ratio limit for periods 7 to 12 is 2.00%.", "tool_calls": []}

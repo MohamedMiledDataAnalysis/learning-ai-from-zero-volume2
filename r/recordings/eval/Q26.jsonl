@@ -1,0 +1,5 @@
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"by":"count","measure":"count","period":12}}]}
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"by":"count","measure":"count","period":12,"toolbench_rapidapi_key":null}}]}
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"measure":"count","period":12,"by":"count"}}]}
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"by":"product","measure":"count","period":12}}]}
+{"content": "In period 12, there are 3,809 loans outstanding, with 2,220 Personal Contract Purchase (PCP) loans and 1,589 Hire Purchase (HP) loans.", "tool_calls": []}

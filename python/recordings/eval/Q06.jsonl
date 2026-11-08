@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name": "run_trigger_tests", "arguments": {"period": 5}}]}
+{"content": "The 90+ day arrears ratio in period 5 is 0.23%. This ratio is well within the limit of 1.25%, with headroom of 1.02%.", "tool_calls": []}

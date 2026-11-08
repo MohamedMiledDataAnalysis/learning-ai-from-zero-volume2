@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"measure":"balance","period":0,"by":"region"}}]}
+{"content": "The balance of the London region at the cut-off date is £9,758,144.69.", "tool_calls": []}

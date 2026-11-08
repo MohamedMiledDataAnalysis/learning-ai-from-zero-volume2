@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"period":12,"by":"region","measure":"balance_90plus"}}]}
+{"content": "The North West region holds the most of the 90+ day arrears in period 12, with a balance of £610,937.91, representing 83.55% of the total 90+ day arrears in that period.", "tool_calls": []}

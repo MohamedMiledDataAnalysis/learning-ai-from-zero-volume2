@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name":"search_prospectus","arguments":{"query":"reserve fund","top_k":3}}]}
+{"content": "According to the prospectus on page 9, the reserve fund on the closing date is £1,111,137.93, which is 1.50% of the initial balance of the notes.", "tool_calls": []}

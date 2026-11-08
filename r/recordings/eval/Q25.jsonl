@@ -1,0 +1,3 @@
+{"content": "", "tool_calls": [{"name":"validate_loan_tape","arguments":{}}]}
+{"content": "", "tool_calls": [{"name":"stratify_pool","arguments":{"by":"product","measure":"balance","period":0}}]}
+{"content": "The share of the pool balance at the cut-off date that is PCP is 63.03%.", "tool_calls": []}

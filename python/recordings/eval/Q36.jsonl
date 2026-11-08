@@ -1,0 +1,2 @@
+{"content": "", "tool_calls": [{"name": "search_prospectus", "arguments": {"query": "default", "top_k": 1}}]}
+{"content": "According to the prospectus (page 9), a loan is defaulted when it contributes to the cumulative default ratio exceeding the limit specified for each period, as reported in the investor report.", "tool_calls": []}
