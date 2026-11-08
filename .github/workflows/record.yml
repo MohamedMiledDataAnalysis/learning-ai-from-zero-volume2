@@ -33,9 +33,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.ollama/models
-          key: ollama-qwen2.5-7b
+          key: ollama-qwen2.5-7b-nomic-embed-text
 
-      - name: Install Ollama and pull the pinned model
+      - name: Install Ollama and pull the pinned models
         run: |
           curl -fsSL https://ollama.com/install.sh | sh
           # The installer starts a system service; stop it and run Ollama as this user,
@@ -44,6 +44,7 @@ jobs:
           ollama serve > ollama.log 2>&1 &
           sleep 5
           ollama pull qwen2.5:7b
+          ollama pull nomic-embed-text   # embedding model of chapter 27 (Volume 1)
 
       - name: Record
         run: python python/record_all.py

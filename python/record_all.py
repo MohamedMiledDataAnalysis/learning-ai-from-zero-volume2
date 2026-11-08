@@ -1,6 +1,7 @@
-"""Record every model reply the book prints. Needs Ollama running with the pinned model:
+"""Record every model reply the book prints. Needs Ollama running with the pinned models:
 
     ollama pull qwen2.5:7b
+    ollama pull nomic-embed-text
     python python/record_all.py
 
 Each line of python/recordings/manifest-*.txt is a command run in 'record' mode.
