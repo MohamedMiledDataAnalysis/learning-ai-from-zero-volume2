@@ -18,6 +18,9 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from deal_terms import (BEHAVIOUR, CLASSES, DEAL, DEFINITIONS, FEES,  # noqa: E402
                         RESERVE_FUND, SEED, SONIA, TRIGGERS)
+import real_files  # noqa: E402
+from investor_report_pdf import write_investor_report_pdf  # noqa: E402
+from investor_report_xlsx import write_investor_report_xlsx  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -502,7 +505,9 @@ def write_servicer_report(perf, loans, t, path):
             "defaults": r2(pr.defaulted_balance.sum()),
             "prepayments": r2(pr.prepayment.sum()),
         })
-    pd.DataFrame(rows).to_csv(path, index=False)
+    table = pd.DataFrame(rows)
+    table.to_csv(path, index=False)
+    return table
 
 
 def main():
@@ -534,11 +539,12 @@ def main():
     snap["status_period"] = snap.loan_id.map(status.period)
     snap.to_csv(DATA / "loan_tape_2026_12.csv", index=False)
 
+    regional = {}
     for rep in reports:
         stem = f"investor_report_{period_end(rep['period']).strftime('%Y_%m')}"
         (DATA / "investor_reports" / f"{stem}.json").write_text(json.dumps(rep, indent=2), encoding="utf-8")
         write_investor_report_md(rep, DATA / "investor_reports" / f"{stem}.md")
-        write_servicer_report(perf, loans, rep["period"],
+        regional[rep["period"]] = write_servicer_report(perf, loans, rep["period"],
                               DATA / "servicer_reports" / f"servicer_report_{period_end(rep['period']).strftime('%Y_%m')}.csv")
 
     terms = {"deal": DEAL, "classes": CLASSES, "sonia": SONIA, "fees": FEES, "reserve_fund": RESERVE_FUND,
@@ -546,6 +552,11 @@ def main():
              "definitions": DEFINITIONS, "initial_pool_balance": initial_pool,
              "initial_note_balances": initial_notes, "reserve_fund_required_amount": rf_required}
     (DATA / "deal_terms.json").write_text(json.dumps(terms, indent=2), encoding="utf-8")
+
+    # The same deal in the formats the parties really send (Kestrel's Excel files, Larkmead's PDF reports and
+    # the FCA loan-level files): see real_files.py.
+    real_files.write_all(DATA, loans, perf, recoveries, reports, dirty, regional, DEAL,
+                         write_investor_report_pdf, write_investor_report_xlsx)
 
     for rep in reports:
         tr = rep["triggers"]

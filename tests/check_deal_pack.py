@@ -3,9 +3,12 @@
 Run from the repository root:
 
     python tests/check_deal_pack.py
+
+The files are read as the parties send them (Excel, CSV and PDF), through the agent's readers.
 """
 
 import json
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -14,12 +17,16 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 TOL = 0.05  # pounds: rounding to the penny on thousands of loans
 
+sys.path.insert(0, str(ROOT / "python"))
+from tar_agent import data as D  # noqa: E402
+from tar_agent.tools.loan_tape import read_tape  # noqa: E402
+
 terms = json.loads((DATA / "deal_terms.json").read_text())
-perf = pd.read_csv(DATA / "loan_performance.csv")
-tape_dirty = pd.read_csv(DATA / "loan_tape_cutoff.csv", keep_default_na=False)
+perf = D.loan_performance()
+tape_dirty = read_tape()
 tape_clean = pd.read_csv(ROOT / "solutions" / "loan_tape_cutoff_clean.csv", keep_default_na=False)
 issues = pd.read_csv(ROOT / "solutions" / "planted_issues.csv", keep_default_na=False)
-reports = [json.loads(p.read_text()) for p in sorted((DATA / "investor_reports").glob("*.json"))]
+reports = [D.investor_report(t) for t in range(1, 13)]
 
 failures = []
 
@@ -82,8 +89,7 @@ for r in reports:
 
 # 5. Regional servicer reports add up to the investor reports.
 for r in reports:
-    stem = r["collection_period_end"][:7].replace("-", "_")
-    s = pd.read_csv(DATA / "servicer_reports" / f"servicer_report_{stem}.csv")
+    s = D.servicer_report(r["period"])
     check(abs(s.balance.sum() - r["pool"]["closing_balance"]) < TOL, f"period {r['period']}: servicer balance = pool balance")
     check(abs(s.balance_3_in_arrears.sum() - r["arrears"]["3_instalments"]["balance"]) < TOL,
           f"period {r['period']}: servicer 90+ balance = investor report")
@@ -120,6 +126,40 @@ for row in issues.itertuples():
 fixed = fixed.reset_index(drop=True).astype(tape_clean.dtypes.to_dict())
 check(fixed.equals(tape_clean), "received tape + documented fixes = clean tape")
 check(len(tape_dirty) - len(tape_clean) == 2, "received tape has exactly 2 duplicated rows")
+
+# 8. The servicer report's Summary sheet carries the investor report's pool figures.
+lines = {"Opening Capital Balance": "opening_balance", "Scheduled Capital Received": "principal_received",
+         "Early Settlements": "prepayments", "Defaults": "defaults", "Closing Capital Balance": "closing_balance",
+         "Interest Received": "interest_collections", "Recoveries": "recoveries"}
+for r in reports:
+    summary = D.servicer_summary(r["period"])
+    check(all(abs(summary[k] - r["pool"][v]) < 0.005 for k, v in lines.items()),
+          f"period {r['period']}: servicer summary = investor report pool figures")
+
+# 9. The FCA loan-level file (AUTL) reconciles with the investor report.
+for r in reports:
+    fca = D.fca_loan_level(r["period"])
+    live = fca[fca.AUTL70.isin(["PERF", "ARRE"])]
+    check(len(live) == r["pool"]["loans_outstanding"], f"period {r['period']}: AUTL live loans = loans outstanding")
+    check(abs(live.AUTL30.astype(float).sum() - r["pool"]["closing_balance"]) < TOL,
+          f"period {r['period']}: AUTL current principal balance = closing pool balance")
+    nd = fca.drop(columns=["AUTL1"]).isin(["ND1", "ND2", "ND3", "ND4", "ND5"]).sum().sum()
+    check(len(fca.columns) == 84 and nd > 0, f"period {r['period']}: AUTL file has 84 fields and uses ND codes")
+
+# 10. The FCA investor report (IVS) agrees with the cash manager's PDF.
+for r in reports:
+    ivs = D.fca_investor_report(r["period"])
+    ivss = ivs["IVSS"].iloc[0]
+    check(abs(float(ivss.IVSS22) / 100 - r["pool"]["cpr"]) < 5e-7, f"period {r['period']}: IVSS22 CPR = report CPR")
+    status = dict(zip(ivs["IVSR"].IVSR2, ivs["IVSR"].IVSR7))
+    tr = r["triggers"]
+    check(status == {"CDR": "Y" if tr["cumulative_default_ratio"]["breached"] else "N",
+                     "ARR90": "Y" if tr["arrears_90_ratio"]["breached"] else "N",
+                     "RFREQ": "Y" if tr["reserve_fund_shortfall"]["breached"] else "N"},
+          f"period {r['period']}: IVSR trigger statuses = report")
+    paid = [float(x) for x in ivs["IVSF"].IVSF5]
+    check(all(abs(a - w["paid"]) < 0.005 for a, w in zip(paid, r["waterfall"])) and len(paid) == len(r["waterfall"]),
+          f"period {r['period']}: IVSF amounts paid = priority of payments")
 
 print()
 print(f"{len(failures)} failure(s)" if failures else "All checks passed.")

@@ -31,14 +31,14 @@ def test_normalise_line_joins_split_letters_and_fixes_spaces():
 
 def test_running_header_and_page_numbers_are_removed():
     pages = read_pages(SEVERN)
-    assert len(pages) == 13
+    assert len(pages) == 122
     assert not any("Offering circular" in ln for p in pages[1:] for ln in p)
     assert not any(ln in ("- 3 -", "-3-") for p in pages for ln in p)
 
 
 def test_search_any_pdf_finds_the_severn_trigger_page():
     top = search_document(SEVERN, "arrears trigger per cent")["results"][0]
-    assert top["page"] == 7 and "Arrears Trigger" in top["text"]
+    assert top["page"] == 64 and "2.50 per cent" in top["text"]          # section 8, the Arrears Trigger
 
 
 # ---------------------------------------------------------------- layer 1: rules
@@ -65,7 +65,7 @@ def test_rules_find_only_part_of_severn():
 def test_every_rules_value_cites_its_page_and_a_quote():
     t = extract_deal_terms(THAMES, "rules")
     c = t["classes"][1]
-    assert c["margin"] == {"value": 0.013, "page": 3, "quote": "Class B £4,444,551.73 6% SONIA + 1.30% AA",
+    assert c["margin"] == {"value": 0.013, "page": 46, "quote": "Class B £4,444,551.73 6% SONIA + 1.30% AA",
                            "source": "rules", "grounded": True}
     limits = t["triggers"][0]["limit"]["value"]
     assert limits == [{"periods": "1 to 6", "limit": 0.01}, {"periods": "7 to 12", "limit": 0.02}]
@@ -206,7 +206,7 @@ def test_grounding_needs_the_number_in_its_quote():
     from tar_agent.tools.extract import ground_field
     from tar_agent.tools.document import page_texts
     texts = page_texts(THAMES)
-    wrong_quote = {"value": 0.0125, "page": 9, "quote": "Test 3 — Reserve fund. After the previous payment date,",
+    wrong_quote = {"value": 0.0125, "page": 109, "quote": "Test 3 — Reserve fund. After the previous payment date,",
                    "source": "model", "grounded": None}
     assert ground_field(wrong_quote, texts)["grounded"] is False
     from tar_agent.tools.extract import _value_on_page

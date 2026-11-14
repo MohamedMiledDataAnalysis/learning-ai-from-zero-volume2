@@ -37,12 +37,14 @@ def table(id_, columns):
         style_header={"fontWeight": "bold", "backgroundColor": "#EEF1F6"},
         style_data_conditional=[
             {"if": {"filter_query": '{grounded} = "NOT grounded"'}, "color": RED, "fontWeight": "bold"},
-            {"if": {"filter_query": '{result} = "FAIL" || {result} = "BREACH"'}, "color": RED, "fontWeight": "bold"},
+            {"if": {"filter_query": '{result} = "FAIL" || {result} = "BREACH" || {result} = "BREACHED"'},
+             "color": RED, "fontWeight": "bold"},
         ])
 
 
-def upload(id_, label, accept):
-    return dcc.Upload(id=id_, children=html.Button(label, style=BUTTON), accept=accept, max_size=logic.MAX_BYTES)
+def upload(id_, label, accept, multiple=False):
+    return dcc.Upload(id=id_, children=html.Button(label, style=BUTTON), accept=accept, max_size=logic.MAX_BYTES,
+                      multiple=multiple)
 
 
 sidebar = html.Div(style={"width": "330px", "flex": "none", "padding": "12px", "background": "#F7F8FB",
@@ -59,9 +61,9 @@ sidebar = html.Div(style={"width": "330px", "flex": "none", "padding": "12px", "
     dcc.RadioItems(id="mode", options=["simulated", "replay", "live", "record"], value="simulated", inline=True),
     html.Button("Extract the deal terms", id="extract",
                 style={**BUTTON, "background": NAVY, "color": "white", "marginTop": "6px"}),
-    html.H6("3. Optional data", style=H6),
-    upload("tape", "Loan tape (CSV)", ".csv"),
-    upload("report", "Investor report (JSON)", ".json"),
+    html.H6("3. The deal's other files", style=H6),
+    upload("tape", "Loan tape (FCA template + supplementary file)", ".csv", multiple=True),
+    upload("report", "Investor report (PDF or Excel)", ".pdf,.xlsx"),
     dcc.Checklist(id="thames_data", options=["Use the Thames sample data"], value=[]),
 ])
 
@@ -96,6 +98,10 @@ tabs = dcc.Tabs(id="tabs", value="terms", children=[
         table("surveillance", ["period", "cumulative default ratio", "default limit", "90+ arrears ratio",
                                "arrears limit", "result", "report says"]),
         html.H6("Uploaded loan tape", style=H6), html.Pre(id="tape_check")]),
+    dcc.Tab(label="Deal check", value="deal_check", children=[
+        html.P("The prospectus, the loan tape and one investor report checked against each other."),
+        html.Div(id="deal_check_status"),
+        table("deal_check", ["check", "files", "prospectus page", "expected", "found", "result"])]),
     dcc.Tab(label="Export", value="export", children=[
         html.P("Download the extracted terms and the analysis."),
         html.Button("JSON", id="download_json", style=BUTTON),
@@ -183,14 +189,16 @@ def surveil(terms_json, report, tape, thames_data):
     if not terms_json:
         return "Extract the terms first.", [], ""
     try:
-        report_path = logic.decode_upload(report, "report.json", kind="json") if report else None
-        tape_path = logic.decode_upload(tape, "tape.csv", kind="csv") if tape else None
+        report_path = logic.decode_upload(report, "report", kind="report") if report else None
+        uploaded = [logic.decode_upload(c, "tape.csv", kind="csv") for c in (tape or [])]
     except ValueError as e:
         return f"Upload refused: {e}", [], ""
+    tape_path, supplementary_path = logic.tape_files(uploaded)
     try:
-        out = logic.surveillance(json.loads(terms_json), bool(thames_data), report_path, tape_path)
+        out = logic.surveillance(json.loads(terms_json), bool(thames_data), report_path, tape_path,
+                                 supplementary_path)
     finally:                                       # the uploaded copies are read once, then deleted
-        for p in (report_path, tape_path):
+        for p in [report_path, *uploaded]:
             if p:
                 Path(p).unlink(missing_ok=True)
     status = out["message"] or f"{len(out['rows'])} period(s) tested with the limits extracted from the prospectus."
@@ -198,10 +206,39 @@ def surveil(terms_json, report, tape, thames_data):
     return status, out["rows"], tape_text
 
 
+@app.callback(Output("deal_check_status", "children"), Output("deal_check", "data"),
+              Input("terms_store", "data"), Input("report", "contents"), Input("tape", "contents"),
+              Input("thames_data", "value"))
+def check_deal(terms_json, report, tape, thames_data):
+    """Step 6: the prospectus, the loan tape and an investor report checked against each other."""
+    if not terms_json:
+        return "Extract the terms first.", []
+    try:
+        report_path = logic.decode_upload(report, "report", kind="report") if report else None
+        tape_uploads = [logic.decode_upload(c, "tape.csv", kind="csv") for c in (tape or [])]
+    except ValueError as e:
+        return f"Upload refused: {e}", []
+    uploaded = [p for p in [report_path, *tape_uploads] if p]
+    tape_path, supplementary_path = logic.tape_files(tape_uploads)
+    if thames_data:                                # the sample files fill what was not uploaded
+        report_path = report_path or str(logic.investor_report_path(12))
+        tape_path, supplementary_path = (tape_path, supplementary_path) if tape_path else \
+            (str(logic.POOL_CUT), str(logic.SUPPLEMENTARY))
+    try:
+        rows = logic.deal_check(json.loads(terms_json), tape_path, report_path, supplementary_path)
+    except (ValueError, KeyError, OSError) as e:
+        return f"A file could not be read: {e}", []
+    finally:                                       # the uploaded copies are read once, then deleted
+        for p in uploaded:
+            Path(p).unlink(missing_ok=True)
+    counts = {r: sum(row["result"] == r for row in rows) for r in ("pass", "FAIL", "BREACHED", "file not loaded")}
+    return ", ".join(f"{n} {r}" for r, n in counts.items() if n) + ".", rows
+
+
 @app.callback(Output("download", "data"), Input("download_json", "n_clicks"), Input("download_excel", "n_clicks"),
               State("terms_store", "data"), prevent_initial_call=True)
 def export(_json, _xlsx, terms_json):
-    """Step 6: send the terms and the analysis to the browser as a file."""
+    """Step 7: send the terms and the analysis to the browser as a file."""
     if not terms_json:
         return no_update
     terms = json.loads(terms_json)

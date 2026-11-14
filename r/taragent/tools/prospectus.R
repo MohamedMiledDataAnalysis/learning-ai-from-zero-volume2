@@ -37,8 +37,10 @@ chunks <- function() {
       lines <- lines[nchar(lines) > 0 &
                        !startsWith(lines, "Thames Auto Receivables 2026-1 plc Prospectus") &
                        !grepl("^Page [0-9]+$", lines)]
-      # A heading is "N. Title" with no full stop or colon (list items such as "2. Class A interest." have one).
-      is_heading <- grepl("^[0-9]\\. [A-Z][^.:]*$", lines) | lines == "Important notice"
+      # Every section starts on a new page, so a heading is the first line of a page, written "N. Title" with no
+      # full stop or colon. Numbered lines elsewhere (the contents, list items) are not headings.
+      is_heading <- seq_along(lines) == 1 &
+        (grepl("^[0-9]{1,2}\\. [A-Z][^.:]*$", lines) | lines %in% c("Important notices", "Index of defined terms"))
       if (!length(lines)) next                       # a page with no text gives no chunk
       for (start in window_starts(length(lines))) {
         for (i in 0:start) if (i + 1 <= length(lines) && is_heading[i + 1]) section <- lines[i + 1]

@@ -17,7 +17,7 @@ local({
   }
   root <- find_root()
   files <- c("agentcore/paths.R", "agentcore/loop.R", "agentcore/brains.R",
-             "taragent/data.R", "taragent/tools/loan_tape.R", "taragent/tools/stratify.R",
+             "taragent/data.R", "taragent/tools/investor_report.R", "taragent/tools/loan_tape.R", "taragent/tools/stratify.R",
              "taragent/tools/triggers.R", "taragent/tools/prospectus.R", "taragent/tools/note.R",
              "taragent/registry.R", "taragent/agent.R", "taragent/evaluate.R", "taragent/export.R",
              "taragent/agentic.R")

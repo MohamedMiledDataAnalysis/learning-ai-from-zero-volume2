@@ -90,7 +90,7 @@ def test_live_mode_without_ollama_gives_a_message():
 
 def test_ask_rules_gives_the_best_passage_with_its_page():
     ans = logic.answer_question(THAMES, "What is the limit of the 90+ day arrears ratio?", "rules")
-    assert ans["answer"].startswith("Best passage (page 9, no model used)") and "1.25%" in ans["answer"]
+    assert ans["answer"].startswith("Best passage (page 109, no model used)") and "1.25%" in ans["answer"]
     # Replay never shows the recorded answer for another question or another document.
     assert logic.answer_question(THAMES, "fees", "replay")["answer"].startswith("Replay holds one recorded answer")
     if not logic.ASK_RECORDING.exists():
@@ -140,7 +140,7 @@ def test_capital_structure_figure(severn_both):
 def test_trigger_rows(thames_rules):
     rows = logic.trigger_rows(thames_rules)
     assert rows[0]["limit"] == "periods 1 to 6: 1.00%; periods 7 to 12: 2.00%"
-    assert rows[1]["limit"] == "1.25%" and rows[1]["page"] == 9
+    assert rows[1]["limit"] == "1.25%" and rows[1]["page"] == 109
 
 
 # ---------------------------------------------------------------- surveillance
@@ -152,12 +152,26 @@ def test_surveillance_with_extracted_limits(thames_rules):
     assert all((r["result"] == "BREACH") == (r["report says"] == "breached") for r in out["rows"])
 
 
-def test_surveillance_with_uploaded_report_and_tape(thames_rules, tmp_path):
-    report = tmp_path / "report.json"
-    shutil.copy(ROOT / "data" / "investor_reports" / "investor_report_2026_10.json", report)
-    out = logic.surveillance(thames_rules, False, str(report), str(ROOT / "data" / "loan_tape_cutoff.csv"))
+@pytest.mark.parametrize("suffix", [".pdf", ".xlsx"])
+def test_surveillance_with_uploaded_report_and_tape(thames_rules, tmp_path, suffix):
+    report = tmp_path / ("report" + suffix)
+    shutil.copy(ROOT / "data" / "investor_reports" / f"Thames_2026-1_Investor_Report_2026-11-20{suffix}", report)
+    template, supplementary = logic.tape_files([str(logic.SUPPLEMENTARY), str(logic.POOL_CUT)])
+    out = logic.surveillance(thames_rules, False, str(report), template, supplementary)
     assert [r["result"] for r in out["rows"]] == ["BREACH"]
     assert out["tape"]["issues found"] == 9
+
+
+def test_deal_check_uses_the_three_files(thames_rules):
+    rows = logic.deal_check(thames_rules, str(logic.POOL_CUT), str(logic.investor_report_path(10)),
+                            str(logic.SUPPLEMENTARY))
+    results = {r["check"]: r["result"] for r in rows}
+    assert results["Pool balance at the cut-off date"] == "pass"
+    assert results["Trigger tests, period 10"] == "BREACHED"
+    assert results["Pool factor: report closing balance / tape balance"] == "pass"
+    assert sum(r == "pass" for r in results.values()) == len(rows) - 1
+    missing = logic.deal_check(thames_rules)
+    assert all(r["result"] == "file not loaded" for r in missing)
 
 
 def test_surveillance_without_data_explains(severn_both):
@@ -176,7 +190,7 @@ def test_upload_decoding(monkeypatch):
         logic.decode_upload(None, "x.pdf")
     assert logic.size_text(logic.MAX_BYTES) == "50.0 MB"
     monkeypatch.setattr(logic, "MAX_BYTES", 1024)
-    with pytest.raises(ValueError, match="the file is 38.1 kB; the limit is 1.0 kB"):
+    with pytest.raises(ValueError, match=f"the file is {logic.size_text(len(raw))}; the limit is 1.0 kB"):
         logic.decode_upload(data_url(raw), "big.pdf")
 
 
@@ -196,9 +210,9 @@ def test_app_builds_and_registers_callbacks():
     import app as dash_app
     outputs = " ".join(dash_app.app.callback_map)
     for target in ["doc_store.data", "terms_store.data", "terms_table.data", "answer.children",
-                   "surveillance.data", "download.data"]:
+                   "surveillance.data", "deal_check.data", "download.data"]:
         assert target in outputs
-    assert len(dash_app.app.callback_map) == 6
+    assert len(dash_app.app.callback_map) == 7
 
 
 def test_extract_callback_end_to_end():
@@ -227,7 +241,7 @@ def test_csv_that_is_not_a_loan_tape(thames_rules, tmp_path):
     bad = tmp_path / "other.csv"
     bad.write_text("a,b\n1,2\n", encoding="utf-8")
     out = logic.surveillance(thames_rules, tape_path=str(bad))
-    assert out["tape"]["error"].startswith("the CSV is not a loan tape")
+    assert out["tape"]["error"].startswith("the file is not a loan tape that matches the data dictionary")
 
 
 def test_csv_that_is_not_utf8(thames_rules, tmp_path):
@@ -244,8 +258,8 @@ def test_damaged_pdf(tmp_path):
     assert logic.answer_question(str(bad), "What is the arrears limit?")["answer"] == "the PDF could not be read (damaged file)"
 
 
-def test_report_that_is_a_list(thames_rules, tmp_path):
+def test_report_that_is_neither_pdf_nor_excel(thames_rules, tmp_path):
     bad = tmp_path / "report.json"
     bad.write_text("[1, 2]", encoding="utf-8")
     out = logic.surveillance(thames_rules, report_path=str(bad))
-    assert out["message"].endswith("(expected one JSON object for one period).")
+    assert out["message"].endswith("is neither a PDF nor an Excel workbook")

@@ -121,7 +121,10 @@ def choose_tool(question):
     q = question.lower()
     period = find_period(question)
     if "prospectus" in q:
-        return "search_prospectus", {"query": question}
+        # Search for the subject of the question, not for the word "prospectus": in a 136-page prospectus that
+        # word is on many pages and would pull them up.
+        query = re.sub(r"(?i)^according to the prospectus,?\s*", "", question)
+        return "search_prospectus", {"query": query}
     if "loan tape" in q:
         return "validate_loan_tape", {}
     # Order matters: the stratification words are checked before "pool balance",

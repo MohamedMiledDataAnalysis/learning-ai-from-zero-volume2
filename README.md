@@ -8,9 +8,22 @@ Companion repository for *Learning AI from Zero — Build Your Own AI Agent*, Vo
 | `r/taragent/` | The same agent in R |
 | `python/agent_core/`, `r/agentcore/` | The agent loop and the four brains (rules, replay, live, record) |
 | `python/vol2/chNN/`, `r/vol2/chNN/` | The code of each chapter, including the Shiny surveillance app (ch25), the Prospectus Analyser in Shiny (ch26) and in Dash (ch27) |
-| `data/` | The Thames Auto Receivables 2026-1 deal pack, the Severn Residential Mortgages 2026-1 prospectus, the 40-question test set and the answer keys |
+| `data/` | The Thames Auto Receivables 2026-1 deal pack (below), the Severn Residential Mortgages 2026-1 offering circular, the 40-question test set and the answer keys |
 | `generator/` | The seeded scripts that rebuild both deals, their prospectuses and the answer keys |
 | `python/tests/`, `r/tests/`, `tests/` | The tests that check every figure printed in the book |
+
+## The Thames deal pack
+
+Every file is in the format the party that sends it uses in real work. All names, loans and figures are fictional.
+
+| Folder | Sent by | Files |
+|---|---|---|
+| `data/prospectus/` | the issuer | the prospectus (PDF, 136 pages) |
+| `data/originator/` | Kestrel, the originator | the pool-cut tape in the FCA template for car loans (SECN 12 Annex 5, fields AUTL1 to AUTL84), a supplementary file and the data dictionary (Excel) |
+| `data/servicer_reports/` | Kestrel, the servicer | twelve monthly servicer reports (Excel) and loan-level data files (CSV) |
+| `data/investor_reports/` | Larkmead Bank, the cash manager | twelve monthly investor reports, each as a PDF and as an Excel copy |
+| `data/loan_level/` | Kestrel, the reporting entity | the monthly FCA loan-level files (AUTL) and investor report templates (SECN 12 Annex 12) |
+| `data/deal_terms.json` | the analyst | the deal terms in machine-readable form, the agent's model set-up |
 
 ## Run the apps
 
@@ -27,7 +40,7 @@ You need Python 3.13 and R 4.3 (Volume 1, chapter 2 walks through the installati
 ```bash
 pip install -r requirements.txt                    # Python packages, pinned
 Rscript r/install_packages.R                       # R packages (the list and tested versions are in the file)
-python tests/check_deal_pack.py                    # the deal pack: 188 consistency checks
+python tests/check_deal_pack.py                    # the deal pack: its consistency checks
 cd python && python -m pytest -q                   # the Python tests
 cd .. && Rscript -e "testthat::test_dir('r/tests')"   # the R tests
 ```

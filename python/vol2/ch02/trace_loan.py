@@ -6,11 +6,11 @@ Run from the repository root:
 import sys
 from pathlib import Path
 
-import pandas as pd
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from tar_agent.data import loan_performance, loan_snapshot  # noqa: E402
 
-DATA = Path(__file__).resolve().parents[3] / "data"
-perf = pd.read_csv(DATA / "loan_performance.csv")
-tape = pd.read_csv(DATA / "loan_tape_2026_12.csv")
+perf = loan_performance()          # the twelve loan-level files of the servicer, one row per loan and month
+tape = loan_snapshot()             # every loan's fixed fields and its latest status
 
 if len(sys.argv) > 1:
     loan_id = sys.argv[1]

@@ -6,8 +6,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))   # lets Python fin
 
 from tar_agent.evaluate import score_answer
 
-expected = {"kind": "number", "value": 1.25, "tolerance": 0, "page": 9}
-for answer in ["The limit is 1.25% (page 9).", "The limit is 1.25%.", "The limit is 1.5% (page 9).",
-               "The limit is 1.25% (page 8)."]:
+expected = {"kind": "number", "value": 1.25, "tolerance": 0, "page": 109}
+for answer in ["The limit is 1.25% (page 109).", "The limit is 1.25%.", "The limit is 1.5% (page 109).",
+               "The limit is 1.25% (page 108)."]:
     ok, reason = score_answer(answer, expected)
     print(f"{'RIGHT' if ok else 'WRONG'}  {answer:<32} {reason}")

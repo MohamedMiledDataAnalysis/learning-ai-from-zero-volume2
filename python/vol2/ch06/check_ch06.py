@@ -15,7 +15,7 @@ fee = m.call_over_mcp("search_prospectus", {"query": "servicer fee", "top_k": 1}
 trig = m.call_over_mcp("run_trigger_tests", {"period": 10})
 refused = m.call_over_mcp("validate_loan_tape", {})
 report([
-    ("search_prospectus finds page 8", fee.get("results", [{}])[0].get("page") == 8),
+    ("search_prospectus finds page 97", fee.get("results", [{}])[0].get("page") == 97),
     ("run_trigger_tests returns period 10", trig.get("period") == 10),
     ("validate_loan_tape is refused", "error" in refused),
 ])

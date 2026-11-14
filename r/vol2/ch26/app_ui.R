@@ -18,9 +18,9 @@ ui <- page_sidebar(
     radioButtons("layer", "Layer", c("rules", "model", "both"), selected = "rules", inline = TRUE),
     radioButtons("mode", "Model brain", c("simulated", "replay", "live", "record"), selected = "simulated", inline = TRUE),
     actionButton("extract", "Extract the deal terms", class = "btn-primary"),
-    h6("3. Optional data"),
-    fileInput("tape", "Loan tape (CSV)", accept = ".csv"),
-    fileInput("report", "Investor report (JSON)", accept = ".json"),
+    h6("3. The deal's other files"),
+    fileInput("tape", "Loan tape (FCA template + supplementary file)", accept = ".csv", multiple = TRUE),
+    fileInput("report", "Investor report (PDF or Excel)", accept = c(".pdf", ".xlsx")),
     checkboxInput("thames_data", "Use the Thames sample data", value = FALSE)
   ),
   navset_card_tab(
@@ -46,6 +46,9 @@ ui <- page_sidebar(
               tableOutput("surveillance"),
               h6("Uploaded investor report against the prospectus limits"), tableOutput("report_check"),
               h6("Uploaded loan tape"), verbatimTextOutput("tape_check")),
+    nav_panel("Deal check",
+              p("The prospectus, the loan tape and one investor report checked against each other."),
+              textOutput("deal_check_status"), tableOutput("deal_check")),
     nav_panel("Export",
               p("Download the extracted terms and the analysis."),
               downloadButton("download_json", "JSON"), downloadButton("download_excel", "Excel"))

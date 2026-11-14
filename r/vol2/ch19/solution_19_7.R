@@ -3,6 +3,7 @@ source("r/taragent/load.R")
 
 pages <- pdf_text(file.path(DATA_DIR, "prospectus", "prospectus.pdf"))
 uncovered <- 0
+gaps <- character(0)
 for (number in seq_along(pages)) {
   # The same cleaning as chunks(): one space between words, no header, no page number.
   text <- pages[number]
@@ -14,7 +15,9 @@ for (number in seq_along(pages)) {
   covered <- unique(unlist(lapply(starts, function(s) (s + 1):min(s + WINDOW, length(lines)))))
   missing <- setdiff(seq_along(lines), covered)
   uncovered <- uncovered + length(missing)
-  cat(sprintf("page %d: %2d lines, %d chunks, lines in no chunk: %d\n", number, length(lines), length(starts),
-              length(missing)))
+  if (number <= 3) cat(sprintf("page %d: %2d lines, %d chunks, lines in no chunk: %d\n", number, length(lines),
+                               length(starts), length(missing)))
+  if (length(missing)) gaps <- c(gaps, as.character(number))
 }
-cat(sprintf("Total chunks: %d   Lines in no chunk: %d\n", length(chunks()), uncovered))
+cat(sprintf("... %d pages in all\nTotal chunks: %d   Lines in no chunk: %d   Pages with a gap: %s\n", length(pages),
+            length(chunks()), uncovered, if (length(gaps)) paste(gaps, collapse = ", ") else "none"))

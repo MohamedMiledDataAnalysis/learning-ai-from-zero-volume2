@@ -22,6 +22,7 @@ import pandas as pd
 
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "python"))
+from tar_agent.data import loan_performance  # noqa: E402
 from tar_agent.tools.loan_tape import load_clean_tape  # noqa: E402
 
 OUT = REPO / "data" / "learning"
@@ -34,7 +35,7 @@ def main():
     tape = tape[tape.credit_score.notna()].copy()          # 1 loan has no usable credit score: left out
 
     # The outcome: did the loan reach 3 or more instalments in arrears, or default, during 2026?
-    perf = pd.read_csv(REPO / "data" / "loan_performance.csv")
+    perf = loan_performance()                               # the servicer's twelve loan-level files
     perf["bad_month"] = (perf.instalments_in_arrears >= 3) | (perf.status == "Defaulted")
     bad = perf.groupby("loan_id").bad_month.any().astype(int)
 

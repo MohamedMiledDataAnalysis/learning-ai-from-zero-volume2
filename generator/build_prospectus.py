@@ -1,4 +1,8 @@
-"""Build the short prospectus (PDF) from the deal terms and the clean cut-off tape.
+import calendar
+"""Build the Thames prospectus (PDF) from the deal terms and the clean cut-off tape.
+
+The key sections below are the ones the agent reads; prospectus_long.py places them, renumbered, among
+the longer sections of a full prospectus (generator/prospectus_text/thames/).
 
 Run from the repository root after generate_deal_pack.py:
 
@@ -127,7 +131,9 @@ enough, because Class D is 4% of the notes.
 
 # 2. The notes
 
-| Class | Initial balance | Share | Interest rate | Rating |
+The table shows the margin of each class of notes over SONIA and its rating at closing.
+
+| Class | Initial balance | Share | SONIA + margin | Rating |
 |---|---:|---:|---|---|
 {notes_rows}
 
@@ -265,12 +271,198 @@ pool performance, the arrears, the application of funds, the note balances, the 
 of each test in this section.
 """
 
+# ---------------------------------------------------------------- the full-length document
+
+import sys  # noqa: E402
+from datetime import date  # noqa: E402
+
+import numpy as np  # noqa: E402
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import prospectus_long as L  # noqa: E402
+
+FINAL_MATURITY = "2032-12-20"
+def _words(iso):
+    y, m, dd = map(int, str(iso).split("-"))
+    return f"{dd} {calendar.month_name[m]} {y}"
+
+
+VALUES = {"issuer": d["issuer"], "originator": d["originator"], "closing_date": _words(d["closing_date"]),
+          "cut_off_date": _words(d["cut_off_date"]), "first_payment_date": _words(d["first_payment_date"]),
+          "payment_day": f"{d['payment_day']}th", "final_maturity_date": _words(FINAL_MATURITY),
+          "pool_balance": money(pool), "n_loans": f"{len(tape):,}",
+          "servicer_fee": f"{terms['fees']['servicer_fee_rate'] * 100:.2f}%"}
+
+# Extra stratification tables of section 10 (the first eight keep their numbers 3.1 to 3.8 -> 10.1 to 10.8).
+tape["orig_year"] = tape.origination_date.str[:4]
+tape["seasoning_band"] = pd.cut(seasoning, [0, 6, 12, 24, 36, 120],
+                                labels=["3–6 months", "7–12 months", "13–24 months", "25–36 months", "Over 36 months"])
+tape["balance_band"] = pd.cut(tape.current_balance, [0, 5000, 10000, 15000, 20000, 30000, 1e9],
+                              labels=["Up to £5,000", "£5,000.01–£10,000", "£10,000.01–£15,000",
+                                      "£15,000.01–£20,000", "£20,000.01–£30,000", "Over £30,000"])
+tape["orig_term_band"] = pd.cut(tape.original_term_months, [0, 24, 36, 48, 60, 999],
+                                labels=["Up to 24 months", "25–36 months", "37–48 months", "49–60 months", "Over 60 months"])
+tape["income_band"] = pd.cut(tape.annual_income, [0, 20000, 30000, 40000, 60000, 1e9],
+                             labels=["Up to £20,000", "£20,000.01–£30,000", "£30,000.01–£40,000",
+                                     "£40,000.01–£60,000", "Over £60,000"])
+tape["maturity_year"] = tape.maturity_date.str[:4]
+pcp = tape["product"] == "PCP"
+tape["balloon_share"] = np.where(pcp, tape.balloon_amount / tape.current_balance, np.nan)
+tape["balloon_band"] = pd.cut(tape.balloon_share, [0, 0.25, 0.5, 0.75, 1.0, 99],
+                              labels=["Up to 25%", "25–50%", "50–75%", "75–100%", "Over 100%"])
+extra_tables = [
+    strat("orig_year", "Table 10.9 — Distribution by year of origination"),
+    strat("seasoning_band", "Table 10.10 — Distribution by seasoning"),
+    strat("balance_band", "Table 10.11 — Distribution by current balance"),
+    strat("orig_term_band", "Table 10.12 — Distribution by original term"),
+    strat("maturity_year", "Table 10.13 — Distribution by year of maturity"),
+    strat("employment_status", "Table 10.14 — Distribution by employment status of the borrower"),
+    strat("income_band", "Table 10.15 — Distribution by annual income of the borrower"),
+    strat("postcode_area", "Table 10.16 — Distribution by postcode area"),
+]
+pcp_tape = tape[pcp]
+g = pcp_tape.groupby("balloon_band", observed=True).agg(loans=("loan_id", "count"), balance=("current_balance", "sum"),
+                                                        balloon=("balloon_amount", "sum"))
+rows = ["**Table 10.17 — PCP loans: balloon payment as a share of current balance**", "",
+        "| Balloon / current balance | Loans | Current balance | Balloon payments |", "|---|---:|---:|---:|"]
+for k, r in g.iterrows():
+    rows.append(f"| {k} | {int(r.loans):,} | {money(r.balance)} | {money(r.balloon)} |")
+rows.append(f"| **Total** | **{int(g.loans.sum()):,}** | **{money(g.balance.sum())}** | **{money(g.balloon.sum())}** |")
+extra_tables.append("\n".join(rows) + "\n")
+
+
+# Weighted average lives (section 17): scheduled amortisation of every loan, a constant prepayment rate,
+# no defaults, principal paid pro rata, with and without the clean-up call.
+def pool_principal(cpr):
+    bal = tape.current_balance.to_numpy(dtype=float).copy()
+    r = tape.interest_rate_pct.to_numpy(dtype=float) / 1200
+    inst = tape.monthly_instalment.to_numpy(dtype=float)
+    n = tape.remaining_term_months.to_numpy(dtype=int)
+    balloon = tape.balloon_amount.to_numpy(dtype=float)
+    smm = 1 - (1 - cpr) ** (1 / 12)
+    flows = []
+    for m in range(1, n.max() + 1):
+        live = (n >= m) & (bal > 0.005)
+        sched = np.where(live, np.minimum(bal, np.maximum(inst - bal * r, 0)), 0)
+        last = live & (n == m)
+        sched = np.where(last, bal, sched)                      # the last instalment repays the rest (balloon)
+        bal = bal - sched
+        prep = np.where(live & ~last, bal * smm, 0)
+        bal = bal - prep
+        flows.append(sched.sum() + prep.sum())
+    return np.array(flows)
+
+
+def wal_row(cpr, call):
+    flows = pool_principal(cpr)
+    remaining = pool - np.cumsum(flows)
+    if call:
+        k = int(np.argmax(remaining < 0.10 * pool))
+        flows = flows[: k + 1].copy()
+        flows[k] += max(remaining[k], 0)
+    months = np.arange(1, len(flows) + 1)
+    wal = (months * flows).sum() / flows.sum() / 12
+    last = len(flows)
+    y, mth = 2026 + (last) // 12, (last) % 12 + 1
+    return wal, date(y if mth != 12 else y, mth, 20).strftime("%B %Y")
+
+
+wal_lines = ["| Constant prepayment rate | Weighted average life (years), with clean-up call | Last payment date, "
+             "with call | Weighted average life (years), to maturity | Last payment date, to maturity |",
+             "|---:|---:|---|---:|---|"]
+for cpr in (0.0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30):
+    w1, d1 = wal_row(cpr, True)
+    w2, d2 = wal_row(cpr, False)
+    wal_lines.append(f"| {cpr * 100:.0f}% | {w1:.2f} | {d1} | {w2:.2f} | {d2} |")
+amort = pool - np.cumsum(pool_principal(0.0))
+amort_lines = ["| Payment date | Scheduled pool balance (no prepayments, no defaults) | Pool factor |", "|---|---:|---:|"]
+for m in range(0, 48, 3):
+    y, mth = 2026 + (m + 1) // 12, (m + 1) % 12 + 1
+    amort_lines.append(f"| {date(y, mth, 20):%d %B %Y} | {money(max(amort[m], 0))} | {max(amort[m], 0) / pool:.4f} |")
+
+wal_md = f"""# 17. Weighted average lives of the notes
+
+The weighted average life of a note is the average time, in years, from the closing date until each pound of
+its principal is repaid, weighted by the principal repaid. It depends on the rate at which borrowers repay
+their loans early, which cannot be predicted. The tables below are calculated on the following assumptions
+(the "Modelling Assumptions"):
+
+(a) the loans pay their scheduled instalments, and each PCP loan pays its balloon payment on its last
+instalment date;
+
+(b) the loans prepay at the constant annual rate shown (the "Constant Prepayment Rate"), applied monthly;
+
+(c) no loan defaults, is in arrears or is repurchased, and no trigger event occurs, so that principal is paid
+pro rata to all classes as described in section 4;
+
+(d) the first payment date is [[first_payment_date]] and payments are made on the [[payment_day]] day of each
+month;
+
+(e) where stated, the issuer exercises the clean-up call described in Condition 6 on the first payment date on
+which the pool balance is less than 10% of the pool balance at the cut-off date.
+
+Because principal is paid pro rata until a trigger event occurs, every class of notes has the same weighted
+average life under the Modelling Assumptions. The actual weighted average lives will differ, and the
+differences may be material.
+
+**Table 17.1 — Weighted average lives of the Class A, B, C and D Notes**
+
+{chr(10).join(wal_lines)}
+
+**Table 17.2 — Scheduled amortisation of the pool**
+
+{chr(10).join(amort_lines)}
+"""
+
+# Renumber the key sections: 1 -> 1, 2 -> 4, 3 -> 10, 4 -> 11, 5 -> 15, 6 -> 16 (headings, tables, references).
+NEW = {1: 1, 2: 4, 3: 10, 4: 11, 5: 15, 6: 16}
+front, parts = L.split_sections(md, r"^# ")
+key = {}
+for head, body in parts:
+    if head is None:
+        continue
+    m = re.match(r"^# (\d)\. (.+)$", head)
+    if not m:
+        continue                                          # the short "Important notice" is replaced
+    n = int(m.group(1))
+    body = re.sub(r"\bsection (\d)\b", lambda x: f"section {NEW[int(x.group(1))]}", body)
+    body = re.sub(r"Table 3\.(\d)", r"Table 10.\1", body)
+    key[n] = f"# {NEW[n]}. {m.group(2)}\n" + L.strip_newpages(body)
+key[3] = key[3].rstrip() + "\n\n" + "\n".join(extra_tables)
+
+front = front.replace('subtitle: "Prospectus (short form) — £', 'subtitle: "Prospectus — £')
+front = front.replace("header-includes:", "toc-title: Contents\nheader-includes:")
+cover = f"""
+| Class | Initial principal amount | Issue price | Interest rate | Expected rating | Final maturity date |
+|---|---:|---:|---|---|---|
+""" + "\n".join(f"| Class {c['name']} Notes | {money(terms['initial_note_balances'][c['name']])} | 100% | "
+               f"Compounded Daily SONIA + {c['margin'] * 100:.2f}% p.a. | {c['rating']} | "
+               f"{date.fromisoformat(FINAL_MATURITY):%d %B %Y} |"
+               for c in terms["classes"]) + f"""
+
+Interest is payable monthly at Compounded Daily SONIA plus the margin of each class (section 4). The
+notes are asset-backed floating rate notes issued by the issuer and secured on a portfolio of UK motor vehicle
+loans originated by [[originator]]. They are offered only to professional investors and are not
+listed on any stock exchange.
+
+**Arranger and Lead Manager: Corvane Securities plc**
+
+The date of this prospectus is 26 January 2026.
+
+\\newpage
+"""
+order = [
+    cover, L.section_file("thames", "s00-important-notices.md"), "\\tableofcontents\n",
+    key[1], L.section_file("thames", "s02-risk-factors.md"), L.section_file("thames", "s03-transaction-parties.md"),
+    key[2], L.section_file("thames", "s05-terms-and-conditions.md"), L.section_file("thames", "s06-use-of-proceeds.md"),
+    L.section_file("thames", "s07-issuer-holdings.md"), L.section_file("thames", "s08-originator-servicer.md"),
+    L.section_file("thames", "s09-origination-underwriting.md"), key[3], key[4],
+    L.section_file("thames", "s12-loan-warranties.md"), L.section_file("thames", "s13-servicing-collections-arrears.md"),
+    L.section_file("thames", "s14-cash-management-accounts.md"), key[5], key[6], wal_md,
+    L.section_file("thames", "s18-regulatory-disclosures.md"), L.section_file("thames", "s19-taxation.md"),
+    L.section_file("thames", "s20-subscription-and-sale.md"), L.section_file("thames", "s21-general-information.md"),
+]
+body = "\n\n\\newpage\n\n".join(L.fill(x, VALUES).strip() for x in order if x.strip())
 OUT.mkdir(parents=True, exist_ok=True)
-(OUT / "prospectus.md").write_text(md, encoding="utf-8")
-subprocess.run(["pandoc", str(OUT / "prospectus.md"), "-o", str(OUT / "prospectus.pdf"),
-                "--pdf-engine=xelatex"], check=True, env={**os.environ, "SOURCE_DATE_EPOCH": "1767225600", "FORCE_SOURCE_DATE": "1"})
-# The PDF's trailer ID is derived from pandoc's temporary folder name; fix it so every build is byte-identical.
-pdf = (OUT / "prospectus.pdf").read_bytes()
-pdf = re.sub(rb"/ID\[<[0-9a-f]{32}><[0-9a-f]{32}>\]", b"/ID[<" + b"0" * 32 + b"><" + b"0" * 32 + b">]", pdf)
-(OUT / "prospectus.pdf").write_bytes(pdf)
-print("Wrote", OUT / "prospectus.pdf")
+n_terms = L.build_with_index(front + "\n" + body, "Index of defined terms", OUT, "# Index of defined terms")
+print("Wrote", OUT / "prospectus.pdf", f"({n_terms} defined terms in the index)")

@@ -53,7 +53,7 @@ def test_ch01_pool():
 # ------------------------------------------------------------ chapter 2
 def test_ch02_inventory_and_story():
     inv = run("ch02/inventory.py")
-    assert "5,002 rows x 21 columns" in inv and "54,350 rows x 12 columns" in inv and "9 pages" in inv
+    assert "5,002 rows x 84 fields" in inv and "12 files, 54,350 rows" in inv and "136 pages" in inv
     nw = run("ch02/north_west.py")
     assert "    10         9.28%           0.30%            80.0%             11.4%" in nw
     cal = run("ch02/calibration.py")

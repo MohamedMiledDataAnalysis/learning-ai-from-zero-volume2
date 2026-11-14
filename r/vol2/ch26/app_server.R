@@ -77,14 +77,33 @@ server <- function(input, output, session) {
   })
   output$report_check <- renderTable({
     req(terms(), input$report)
-    plainly(report_against_limits(input$report$datapath, terms()), "The investor report (JSON in the book's format)")
+    plainly(report_against_limits(input$report$datapath, terms()), "The investor report (PDF or Excel)")
   })
   output$tape_check <- renderText({
     req(input$tape)
-    v <- plainly(validate_loan_tape(input$tape$datapath), "The loan tape (CSV in the book's format)")
+    files <- tape_files(input$tape$datapath)
+    v <- plainly({
+      if (is.null(files$template)) stop("no file starts with the field AUTL1 of the FCA template", call. = FALSE)
+      validate_loan_tape(files$template, files$supplementary)
+    }, "The loan tape (FCA template and supplementary file)")
     sprintf("%d rows received, %d issues found, cleaned balance %s.", v$rows_received, v$issues_found,
             formatC(v$balance_after_cleaning, format = "f", digits = 2, big.mark = ","))
   })
+
+  # The three files together. With the sample box ticked, the Thames files fill in what was not uploaded.
+  checks <- reactive({
+    req(terms())
+    files <- if (!is.null(input$tape)) tape_files(input$tape$datapath) else
+      if (isTRUE(input$thames_data)) list(template = POOL_CUT, supplementary = SUPPLEMENTARY) else list()
+    report <- if (!is.null(input$report)) input$report$datapath else
+      if (isTRUE(input$thames_data)) investor_report_path(12) else NULL
+    plainly(deal_check(terms(), files$template, report, files$supplementary), "A file")
+  })
+  output$deal_check_status <- renderText({
+    counts <- table(factor(checks()$Result, levels = c("pass", "FAIL", "BREACHED", "file not loaded")))
+    paste0(paste(counts[counts > 0], names(counts)[counts > 0], collapse = ", "), ".")
+  })
+  output$deal_check <- renderTable(checks())
 
   output$download_json <- downloadHandler(
     filename = function() "deal_terms.json",

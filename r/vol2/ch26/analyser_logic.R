@@ -236,9 +236,9 @@ surveillance_table <- function(terms) {
   do.call(rbind, rows)
 }
 
-# An uploaded investor report (JSON, Thames format): its reported ratios against the extracted limits.
+# An uploaded investor report (the cash manager's PDF or Excel): its reported ratios against the extracted limits.
 report_against_limits <- function(report_path, terms) {
-  rep <- jsonlite::fromJSON(report_path, simplifyVector = FALSE)
+  rep <- read_investor_report(report_path)
   lim <- extracted_limits(terms)
   p <- as.integer(rep$period)
   cum <- rep$triggers$cumulative_default_ratio$value
@@ -250,7 +250,111 @@ report_against_limits <- function(report_path, terms) {
              check.names = FALSE)
 }
 
-# ---------------------------------------------------------------- 6. export
+# ---------------------------------------------------------------- 6. the deal check: the three files together
+
+# Eligibility criteria the check can test on the tape: a pattern in the criterion's text, and the test.
+ELIGIBILITY_TESTS <- list(
+  list(pattern = "resident in the United Kingdom", test = function(t, n) t$region %in% STANDARD_REGIONS),
+  list(pattern = "hire purchase or personal contract purchase", test = function(t, n) t$product %in% c("HP", "PCP")),
+  list(pattern = "days past due equal to 0", test = function(t, n) t$days_past_due == 0),
+  list(pattern = "At least ([0-9]+) instalments had been paid",
+       test = function(t, n) t$original_term_months - t$remaining_term_months >= n),
+  list(pattern = "At least ([0-9]+) instalments remained", test = function(t, n) t$remaining_term_months >= n),
+  list(pattern = "loan-to-value was ([0-9]+)% or less", test = function(t, n) t$ltv_original_pct <= n))
+
+money_text <- function(x) paste0("\u00a3", formatC(x, format = "f", digits = 2, big.mark = ","))
+
+check_row <- function(check, files, page, expected, found, result) {
+  data.frame(Check = check, Files = files, `Prospectus page` = if (is.null(page)) "" else as.character(page),
+             Expected = expected, Found = found, Result = result, check.names = FALSE)
+}
+
+# Sort uploaded tape files: the FCA template file starts with the field AUTL1, the supplementary file with AUTL2.
+tape_files <- function(paths) {
+  first <- vapply(paths, function(p) readLines(p, n = 1, warn = FALSE)[1], "")
+  list(template = paths[startsWith(first, "AUTL1,")][1], supplementary = paths[startsWith(first, "AUTL2,")][1]) |>
+    lapply(function(x) if (length(x) && !is.na(x)) unname(x) else NULL)
+}
+
+# Check the prospectus, the loan tape and one investor report against each other, as on a new deal.
+deal_check <- function(terms, tape_path = NULL, report_path = NULL, supplementary_path = NULL) {
+  rows <- list()
+  add <- function(...) rows[[length(rows) + 1]] <<- check_row(...)
+  tape <- if (!is.null(tape_path)) load_clean_tape(tape_path, supplementary_path) else NULL
+  report <- if (!is.null(report_path)) read_investor_report(report_path) else NULL
+  pool <- terms$pool_balance
+
+  # 1. The tape against the prospectus.
+  if (is.null(tape)) {
+    add("Pool balance at the cut-off date", "tape + prospectus", NULL, "", "", "file not loaded")
+    add("Eligibility criteria", "tape + prospectus", NULL, "", "", "file not loaded")
+  } else {
+    total <- round(sum(tape$current_balance), 2)
+    add("Pool balance at the cut-off date", "tape + prospectus", pool$page, money_text(pool$value),
+        sprintf("%s (%s loans)", money_text(total), formatC(nrow(tape), big.mark = ",")),
+        if (!is.null(pool$value) && abs(total - pool$value) < 0.01) "pass" else "FAIL")
+    for (c in terms$eligibility_criteria) {
+      text <- if (is.null(c$value)) "" else c$value
+      hit <- Filter(function(e) grepl(e$pattern, text), ELIGIBILITY_TESTS)
+      if (!length(hit)) {
+        add(paste("Eligibility:", text), "tape + prospectus", c$page, "", "", "not tested automatically")
+        next
+      }
+      m <- regmatches(text, regexec(hit[[1]]$pattern, text))[[1]]
+      n <- if (length(m) > 1) as.numeric(m[2]) else NA
+      fails <- sum(!hit[[1]]$test(tape, n))
+      add(paste("Eligibility:", text), "tape + prospectus", c$page, "every loan", sprintf("%d loan(s) fail", fails),
+          if (fails == 0) "pass" else "FAIL")
+    }
+  }
+
+  # 2. The investor report against the prospectus.
+  if (is.null(report)) {
+    for (name in c("Notes: balance, margin and rating", "Reserve fund required amount", "Trigger tests"))
+      add(name, "report + prospectus", NULL, "", "", "file not loaded")
+  } else {
+    reported <- setNames(report$notes, vapply(report$notes, function(n) n$class, ""))
+    for (c in terms$classes) {
+      name <- c$name$value
+      n <- reported[[name]]
+      found <- if (is.null(n)) "not in the report" else
+        sprintf("%s, %.2f%%, %s", money_text(n$initial_balance), n$margin * 100, n$rating)
+      ok <- !is.null(n) && abs(n$initial_balance - c$balance$value) < 0.01 &&
+        abs(n$margin - c$margin$value) < 1e-9 && identical(n$rating, c$rating$value)
+      add(sprintf("Class %s: balance, margin and rating", name), "report + prospectus", c$balance$page,
+          sprintf("%s, %.2f%%, %s", money_text(c$balance$value), c$margin$value * 100, c$rating$value), found,
+          if (ok) "pass" else "FAIL")
+    }
+    if (length(terms$reserve_funds)) {
+      rf <- terms$reserve_funds[[1]]$amount
+      add("Reserve fund required amount", "report + prospectus", rf$page, money_text(rf$value),
+          money_text(report$reserve_fund$required),
+          if (abs(report$reserve_fund$required - rf$value) < 0.01) "pass" else "FAIL")
+    }
+    lim <- extracted_limits(terms)
+    p <- as.integer(report$period)
+    cum <- report$triggers$cumulative_default_ratio$value
+    arr <- report$triggers$arrears_90_ratio$value
+    breach <- cum > schedule_limit(lim$cumulative, p) || arr > lim$arrears
+    add(sprintf("Trigger tests, period %d", p), "report + prospectus",
+        if (length(terms$triggers)) terms$triggers[[1]]$limit$page else NULL,
+        sprintf("limits %.2f%% and %.2f%%", schedule_limit(lim$cumulative, p) * 100, lim$arrears * 100),
+        sprintf("%.2f%% and %.2f%%", cum * 100, arr * 100), if (breach) "BREACHED" else "pass")
+  }
+
+  # 3. The investor report against the tape: the pool factor is the closing balance over the cut-off balance.
+  if (is.null(tape) || is.null(report)) {
+    add("Pool factor: report closing balance / tape balance", "report + tape", NULL, "", "", "file not loaded")
+  } else {
+    factor <- round(report$pool$closing_balance / sum(tape$current_balance), 6)
+    add("Pool factor: report closing balance / tape balance", "report + tape", NULL,
+        sprintf("%.6f (in the report)", report$pool$pool_factor), sprintf("%.6f", factor),
+        if (abs(factor - report$pool$pool_factor) < 1e-6) "pass" else "FAIL")
+  }
+  do.call(rbind, rows)
+}
+
+# ---------------------------------------------------------------- 7. export
 
 export_json <- function(terms, analysis, path) {
   writeLines(jsonlite::toJSON(list(terms = terms, analysis = analysis), auto_unbox = TRUE, null = "null",

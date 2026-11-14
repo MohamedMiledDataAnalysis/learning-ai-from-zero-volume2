@@ -5,7 +5,8 @@ Run from the repository root (needs R with shiny, and Python's playwright with C
     python r/vol2/ch26/screenshot.py book/figures
 
 It loads the Severn sample, extracts with both layers and the simulated model, and saves
-v2-ch26-terms.png, v2-ch26-analysis.png and v2-ch26-ask.png.
+v2-ch26-terms.png, v2-ch26-analysis.png and v2-ch26-ask.png. Then it loads the Thames sample with its sample
+files and saves the Deal check tab as v2-ch26-deal-check.png.
 """
 
 import subprocess
@@ -47,8 +48,18 @@ try:
         page.wait_for_function("document.querySelector('#answer').innerText.length > 10")
         page.wait_for_timeout(300)
         page.screenshot(path=str(out / "v2-ch26-ask.png"))
+        page.goto(f"http://127.0.0.1:{port}")             # a fresh session for Thames and its three files
+        page.click("#sample_thames")
+        page.check("input[name='layer'][value='rules']")
+        page.click("#extract")
+        page.wait_for_function("document.querySelectorAll('#terms table tbody tr').length >= 10")
+        page.check("#thames_data")
+        page.click("a[data-value='Deal check']")
+        page.wait_for_function("document.querySelectorAll('#deal_check table tbody tr').length >= 14")
+        page.wait_for_timeout(800)
+        page.screenshot(path=str(out / "v2-ch26-deal-check.png"), full_page=True)
         browser.close()
 finally:
     app.terminate()
     app.wait()
-print("Wrote v2-ch26-terms.png, v2-ch26-analysis.png, v2-ch26-ask.png")
+print("Wrote v2-ch26-terms.png, v2-ch26-analysis.png, v2-ch26-ask.png, v2-ch26-deal-check.png")

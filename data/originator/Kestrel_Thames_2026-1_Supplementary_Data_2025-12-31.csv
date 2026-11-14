@@ -1,0 +1,5001 @@
+AUTL2,Bureau Score at Origination,Fuel Type,Region,Postcode Area
+TAR00001,741,Electric,North West,M
+TAR00002,759,Petrol,South West,EX
+TAR00003,781,Electric,Yorkshire and the Humber,HU
+TAR00004,913,Diesel,East Midlands,NG
+TAR00005,617,Electric,West Midlands,B
+TAR00006,750,Petrol,South East,BN
+TAR00007,695,Petrol,South East,OX
+TAR00008,849,Petrol,South West,PL
+TAR00009,647,Petrol,South West,BA
+TAR00010,720,Petrol,North West,PR
+TAR00011,710,Diesel,Yorkshire and the Humber,BD
+TAR00012,842,Petrol,Wales,LL
+TAR00013,891,Hybrid,North East,NE
+TAR00014,751,Electric,North West,M
+TAR00015,833,Petrol,North West,PR
+TAR00016,946,Hybrid,West Midlands,WV
+TAR00017,758,Hybrid,Yorkshire and the Humber,HU
+TAR00018,746,Diesel,South East,BN
+TAR00019,606,Diesel,Scotland,DD
+TAR00020,689,Electric,North East,NE
+TAR00021,831,Electric,South East,BN
+TAR00022,939,Diesel,North West,L
+TAR00023,924,Diesel,Scotland,EH
+TAR00024,854,Petrol,London,SW
+TAR00025,847,Electric,East of England,IP
+TAR00026,607,Hybrid,South West,PL
+TAR00027,708,Petrol,East of England,CO
+TAR00028,717,Electric,North West,M
+TAR00029,763,Petrol,West Midlands,CV
+TAR00030,632,Petrol,West Midlands,ST
+TAR00031,781,Electric,London,W
+TAR00032,737,Hybrid,East of England,NR
+TAR00033,760,Petrol,Wales,SA
+TAR00034,674,Hybrid,North East,SR
+TAR00035,979,Electric,South East,BN
+TAR00036,660,Diesel,South East,OX
+TAR00037,841,Electric,Wales,CF
+TAR00038,808,Diesel,West Midlands,B
+TAR00039,650,Diesel,North West,L
+TAR00040,729,Hybrid,East of England,
+TAR00041,797,Petrol,South East,BN
+TAR00042,748,Diesel,East of England,IP
+TAR00043,752,Diesel,North West,M
+TAR00044,770,Petrol,Yorkshire and the Humber,HU
+TAR00045,806,Petrol,Wales,SA
+TAR00046,804,Hybrid,London,N
+TAR00047,792,Hybrid,West Midlands,ST
+TAR00048,831,Diesel,South East,OX
+TAR00049,895,Hybrid,East Midlands,NG
+TAR00050,793,Electric,Scotland,G
+TAR00051,978,Hybrid,South West,BS
+TAR00052,866,Petrol,North West,M
+TAR00053,699,Hybrid,South East,GU
+TAR00054,884,Diesel,East of England,CO
+TAR00055,906,Petrol,London,E
+TAR00056,764,Petrol,North West,WA
+TAR00057,815,Electric,Wales,SA
+TAR00058,864,Hybrid,East Midlands,NG
+TAR00059,790,Petrol,South East,ME
+TAR00060,865,Electric,West Midlands,WV
+TAR00061,760,Petrol,North West,PR
+TAR00062,706,Petrol,North East,DH
+TAR00063,902,Electric,Scotland,AB
+TAR00064,773,Hybrid,West Midlands,ST
+TAR00065,873,Petrol,Yorkshire and the Humber,S
+TAR00066,796,Petrol,North East,DH
+TAR00067,813,Petrol,West Midlands,CV
+TAR00068,768,Hybrid,Wales,LL
+TAR00069,647,Electric,West Midlands,CV
+TAR00070,790,Hybrid,London,SE
+TAR00071,703,Electric,South East,OX
+TAR00072,649,Petrol,South East,OX
+TAR00073,797,Hybrid,West Midlands,WV
+TAR00074,799,Hybrid,South East,BN
+TAR00075,911,Petrol,Yorkshire and the Humber,LS
+TAR00076,803,Petrol,South East,RG
+TAR00077,888,Petrol,Yorkshire and the Humber,BD
+TAR00078,638,Petrol,West Midlands,ST
+TAR00079,848,Petrol,South West,BS
+TAR00080,796,Petrol,North West,WA
+TAR00081,812,Diesel,North West,WA
+TAR00082,844,Petrol,Northern Ireland,BT
+TAR00083,775,Hybrid,West Midlands,ST
+TAR00084,939,Petrol,East Midlands,NG
+TAR00085,661,Diesel,South East,RG
+TAR00086,857,Hybrid,North East,DH
+TAR00087,619,Electric,South East,OX
+TAR00088,668,Petrol,North West,PR
+TAR00089,709,Diesel,North West,WA
+TAR00090,767,Petrol,Yorkshire and the Humber,HU
+TAR00091,734,Petrol,South East,RG
+TAR00092,700,Hybrid,London,E
+TAR00093,859,Petrol,London,SE
+TAR00094,723,Petrol,Yorkshire and the Humber,S
+TAR00095,771,Electric,South West,BS
+TAR00096,894,Petrol,East Midlands,DE
+TAR00097,682,Petrol,North West,WA
+TAR00098,932,Hybrid,East Midlands,DE
+TAR00099,844,Petrol,South West,EX
+TAR00100,772,Hybrid,South West,BA
+TAR00101,745,Diesel,East of England,NR
+TAR00102,818,Petrol,Yorkshire and the Humber,LS
+TAR00103,698,Hybrid,East of England,IP
+TAR00104,919,Hybrid,Scotland,AB
+TAR00105,887,Petrol,South West,BA
+TAR00106,811,Electric,West Midlands,CV
+TAR00107,615,Electric,South West,PL
+TAR00108,734,Petrol,Yorkshire and the Humber,LS
+TAR00109,746,Hybrid,South West,BA
+TAR00110,971,Hybrid,Scotland,G
+TAR00111,840,Petrol,South West,EX
+TAR00112,970,Hybrid,London,SW
+TAR00113,829,Electric,South East,OX
+TAR00114,697,Petrol,West Midlands,CV
+TAR00115,735,Hybrid,Yorkshire and the Humber,S
+TAR00116,779,Petrol,London,W
+TAR00117,824,Petrol,West Midlands,B
+TAR00118,736,Hybrid,Scotland,AB
+TAR00119,826,Electric,South West,EX
+TAR00120,770,Diesel,Yorkshire and the Humber,LS
+TAR00121,694,Hybrid,West Midlands,CV
+TAR00122,823,Diesel,Yorkshire and the Humber,S
+TAR00123,635,Hybrid,South East,ME
+TAR00124,709,Diesel,South East,OX
+TAR00125,808,Petrol,West Midlands,B
+TAR00126,903,Hybrid,East of England,IP
+TAR00127,738,Diesel,South East,BN
+TAR00128,878,Petrol,South East,ME
+TAR00129,909,Hybrid,London,SE
+TAR00130,798,Petrol,London,E
+TAR00131,744,Electric,South East,RG
+TAR00132,951,Petrol,South East,BN
+TAR00133,757,Diesel,North East,NE
+TAR00134,830,Hybrid,Northern Ireland,BT
+TAR00135,751,Petrol,North West,BL
+TAR00136,733,Petrol,Yorkshire and the Humber,BD
+TAR00137,749,Diesel,London,SE
+TAR00138,761,Electric,Yorkshire and the Humber,S
+TAR00139,746,Hybrid,West Midlands,CV
+TAR00140,819,Diesel,South West,BA
+TAR00141,752,Electric,South East,ME
+TAR00142,788,Hybrid,South East,ME
+TAR00143,801,Petrol,East Midlands,DE
+TAR00144,939,Petrol,Scotland,AB
+TAR00145,656,Petrol,Yorkshire and the Humber,BD
+TAR00146,999,Electric,North West,BL
+TAR00147,864,Diesel,South West,BS
+TAR00148,728,Diesel,Scotland,DD
+TAR00149,845,Electric,West Midlands,WV
+TAR00150,674,Electric,South East,ME
+TAR00151,864,Diesel,Yorkshire and the Humber,S
+TAR00152,644,Electric,East of England,CO
+TAR00153,814,Petrol,West Midlands,ST
+TAR00154,879,Diesel,North West,L
+TAR00155,823,Petrol,Yorkshire and the Humber,S
+TAR00156,741,Petrol,North West,BL
+TAR00157,803,Petrol,East Midlands,DE
+TAR00158,647,Electric,South West,PL
+TAR00159,694,Electric,South West,BA
+TAR00160,761,Hybrid,East Midlands,LE
+TAR00161,737,Diesel,East Midlands,DE
+TAR00162,760,Diesel,West Midlands,CV
+TAR00163,788,Electric,East Midlands,LE
+TAR00164,768,Diesel,London,E
+TAR00165,764,Hybrid,North East,DH
+TAR00166,929,Electric,Northern Ireland,BT
+TAR00167,807,Diesel,South East,RG
+TAR00168,697,Petrol,North West,PR
+TAR00169,897,Hybrid,Northern Ireland,BT
+TAR00170,779,Diesel,South East,BN
+TAR00171,698,Hybrid,London,N
+TAR00172,671,Hybrid,Yorkshire and the Humber,LS
+TAR00173,747,Petrol,South West,PL
+TAR00174,741,Petrol,East Midlands,LE
+TAR00175,794,Electric,Scotland,G
+TAR00176,755,Diesel,London,W
+TAR00177,799,Petrol,East of England,CO
+TAR00178,774,Hybrid,East of England,NR
+TAR00179,856,Electric,Scotland,DD
+TAR00180,661,Diesel,West Midlands,ST
+TAR00181,952,Diesel,East of England,NR
+TAR00182,873,Electric,South East,GU
+TAR00183,887,Petrol,East of England,CB
+TAR00184,877,Petrol,East of England,IP
+TAR00185,867,Petrol,East of England,CB
+TAR00186,919,Petrol,North East,DH
+TAR00187,918,Hybrid,North East,DH
+TAR00188,978,Electric,South West,BS
+TAR00189,696,Petrol,Scotland,EH
+TAR00190,725,Diesel,Northern Ireland,BT
+TAR00191,743,Diesel,East of England,NR
+TAR00192,594,Petrol,London,E
+TAR00193,777,Petrol,North West,M
+TAR00194,672,Petrol,Yorkshire and the Humber,LS
+TAR00195,849,Electric,South East,OX
+TAR00196,823,Petrol,South West,EX
+TAR00197,756,Petrol,East of England,CB
+TAR00198,771,Diesel,West Midlands,WV
+TAR00199,790,Petrol,Yorkshire and the Humber,LS
+TAR00200,773,Petrol,South West,PL
+TAR00201,893,Petrol,Scotland,G
+TAR00202,885,Hybrid,North West,PR
+TAR00203,736,Petrol,East Midlands,NG
+TAR00204,759,Hybrid,South West,BA
+TAR00205,865,Petrol,North East,SR
+TAR00206,615,Petrol,West Midlands,WV
+TAR00207,779,Diesel,South East,GU
+TAR00208,741,Diesel,Wales,SA
+TAR00209,676,Diesel,North West,L
+TAR00210,982,Petrol,North West,PR
+TAR00211,648,Hybrid,South East,RG
+TAR00212,879,Petrol,East Midlands,DE
+TAR00213,656,Petrol,West Midlands,B
+TAR00214,753,Diesel,Scotland,EH
+TAR00215,543,Hybrid,Wales,LL
+TAR00216,874,Petrol,South West,PL
+TAR00217,803,Petrol,London,W
+TAR00218,553,Petrol,London,SE
+TAR00219,728,Petrol,East Midlands,LE
+TAR00220,691,Diesel,North West,L
+TAR00221,602,Petrol,North West,M
+TAR00222,797,Petrol,North East,DH
+TAR00223,710,Petrol,Wales,CF
+TAR00224,589,Petrol,Yorkshire and the Humber,BD
+TAR00225,693,Diesel,Scotland,G
+TAR00226,819,Petrol,West Midlands,CV
+TAR00227,821,Diesel,South East,ME
+TAR00228,939,Electric,Wales,LL
+TAR00229,905,Petrol,North West,BL
+TAR00230,930,Petrol,Yorkshire and the Humber,S
+TAR00231,885,Petrol,London,SW
+TAR00232,825,Petrol,West Midlands,WV
+TAR00233,774,Diesel,South West,PL
+TAR00234,681,Petrol,South East,RG
+TAR00235,724,Petrol,West Midlands,WV
+TAR00236,751,Electric,South East,ME
+TAR00237,655,Petrol,London,E
+TAR00238,688,Electric,South East,GU
+TAR00239,704,Petrol,South East,ME
+TAR00240,775,Electric,Yorkshire and the Humber,HU
+TAR00241,885,Petrol,London,SW
+TAR00242,747,Diesel,East of England,CO
+TAR00243,791,Hybrid,Yorkshire and the Humber,HU
+TAR00244,831,Petrol,Scotland,DD
+TAR00245,852,Hybrid,North East,NE
+TAR00246,655,Diesel,Yorkshire and the Humber,LS
+TAR00247,917,Petrol,East Midlands,LE
+TAR00248,615,Hybrid,Wales,LL
+TAR00249,786,Diesel,Wales,LL
+TAR00250,769,Hybrid,South West,BS
+TAR00251,916,Petrol,South West,PL
+TAR00252,890,Petrol,Scotland,AB
+TAR00253,824,Electric,Yorkshire and the Humber,S
+TAR00254,681,Petrol,North West,WA
+TAR00255,753,Petrol,South East,RG
+TAR00256,786,Hybrid,West Midlands,ST
+TAR00257,725,Petrol,Wales,CF
+TAR00258,836,Hybrid,East Midlands,NG
+TAR00259,745,Hybrid,London,W
+TAR00260,803,Hybrid,South West,EX
+TAR00261,854,Petrol,West Midlands,CV
+TAR00262,874,Diesel,London,N
+TAR00263,789,Petrol,London,SE
+TAR00264,761,Electric,West Midlands,ST
+TAR00265,930,Petrol,Scotland,AB
+TAR00266,857,Diesel,North West,BL
+TAR00267,885,Hybrid,Scotland,G
+TAR00268,689,Hybrid,London,W
+TAR00269,808,Hybrid,South West,PL
+TAR00270,964,Diesel,South East,BN
+TAR00271,757,Diesel,East of England,CB
+TAR00272,748,Petrol,East of England,CB
+TAR00273,825,Hybrid,Yorkshire and the Humber,S
+TAR00274,862,Petrol,Northern Ireland,BT
+TAR00275,739,Diesel,Scotland,G
+TAR00276,784,Hybrid,East Midlands,NG
+TAR00277,718,Petrol,South East,GU
+TAR00278,815,Petrol,Yorkshire and the Humber,HU
+TAR00279,855,Diesel,London,W
+TAR00280,710,Hybrid,London,E
+TAR00281,825,Hybrid,East Midlands,NG
+TAR00282,772,Petrol,London,SW
+TAR00283,789,Diesel,London,N
+TAR00284,869,Diesel,London,N
+TAR00285,931,Petrol,Scotland,DD
+TAR00286,886,Petrol,West Midlands,ST
+TAR00287,782,Petrol,South West,BS
+TAR00288,989,Diesel,South West,BS
+TAR00289,907,Hybrid,Scotland,EH
+TAR00290,783,Electric,East Midlands,NG
+TAR00291,817,Hybrid,South West,EX
+TAR00292,699,Electric,South East,GU
+TAR00293,731,Diesel,West Midlands,WV
+TAR00294,785,Diesel,East Midlands,LE
+TAR00295,797,Diesel,North East,SR
+TAR00296,733,Hybrid,North East,SR
+TAR00297,716,Electric,East Midlands,DE
+TAR00298,516,Petrol,South West,BA
+TAR00299,656,Petrol,North West,BL
+TAR00300,907,Petrol,North West,PR
+TAR00301,683,Electric,South West,BS
+TAR00302,756,Petrol,North East,NE
+TAR00303,943,Diesel,Yorkshire and the Humber,BD
+TAR00304,629,Petrol,Scotland,EH
+TAR00305,767,Hybrid,London,W
+TAR00306,836,Diesel,Wales,CF
+TAR00307,663,Petrol,Scotland,DD
+TAR00308,838,Diesel,South East,OX
+TAR00309,756,Electric,South East,GU
+TAR00310,743,Petrol,South East,RG
+TAR00311,824,Hybrid,Wales,SA
+TAR00312,868,Electric,West Midlands,CV
+TAR00313,659,Petrol,North East,SR
+TAR00314,756,Hybrid,Scotland,G
+TAR00315,742,Diesel,Wales,CF
+TAR00316,768,Diesel,Northern Ireland,BT
+TAR00317,675,Petrol,Scotland,G
+TAR00318,970,Petrol,East Midlands,LE
+TAR00319,807,Electric,London,SE
+TAR00320,739,Petrol,Scotland,DD
+TAR00321,893,Petrol,Scotland,AB
+TAR00322,803,Hybrid,Wales,LL
+TAR00323,843,Diesel,South West,PL
+TAR00324,852,Petrol,Northern Ireland,BT
+TAR00325,847,Electric,South East,OX
+TAR00326,694,Petrol,South East,GU
+TAR00327,651,Hybrid,East Midlands,DE
+TAR00328,672,Diesel,Wales,SA
+TAR00329,617,Petrol,East of England,NR
+TAR00330,870,Hybrid,West Midlands,CV
+TAR00331,961,Hybrid,Scotland,AB
+TAR00332,751,Diesel,London,N
+TAR00333,880,Petrol,London,SE
+TAR00334,780,Petrol,North East,NE
+TAR00335,797,Diesel,North West,BL
+TAR00336,842,Hybrid,East of England,IP
+TAR00337,916,Hybrid,Scotland,AB
+TAR00338,816,Petrol,Yorkshire and the Humber,HU
+TAR00339,971,Petrol,West Midlands,WV
+TAR00340,879,Diesel,Wales,CF
+TAR00341,623,Electric,Yorkshire and the Humber,HU
+TAR00342,686,Diesel,North West,L
+TAR00343,810,Diesel,East of England,NR
+TAR00344,873,Diesel,South West,PL
+TAR00345,875,Diesel,East Midlands,DE
+TAR00346,680,Petrol,East Midlands,DE
+TAR00347,727,Hybrid,East Midlands,LE
+TAR00348,718,Electric,South East,BN
+TAR00349,999,Petrol,North East,SR
+TAR00350,596,Electric,London,SE
+TAR00351,798,Hybrid,North West,BL
+TAR00352,841,Hybrid,West Midlands,B
+TAR00353,864,Electric,South East,OX
+TAR00354,722,Hybrid,West Midlands,ST
+TAR00355,873,Petrol,Scotland,EH
+TAR00356,851,Petrol,Wales,LL
+TAR00357,880,Electric,Wales,CF
+TAR00358,649,Electric,London,N
+TAR00359,733,Diesel,South East,BN
+TAR00360,744,Diesel,Yorkshire and the Humber,HU
+TAR00361,821,Petrol,East Midlands,DE
+TAR00362,799,Diesel,Yorkshire and the Humber,S
+TAR00363,834,Hybrid,North East,DH
+TAR00364,811,Petrol,North East,DH
+TAR00365,897,Hybrid,South East,GU
+TAR00366,931,Petrol,West Midlands,ST
+TAR00367,664,Diesel,North West,M
+TAR00368,910,Diesel,Wales,CF
+TAR00369,682,Petrol,North West,PR
+TAR00370,653,Petrol,East Midlands,NG
+TAR00371,838,Petrol,South East,RG
+TAR00372,840,Electric,East of England,CB
+TAR00373,743,Diesel,Scotland,EH
+TAR00374,747,Hybrid,West Midlands,B
+TAR00375,622,Petrol,South West,EX
+TAR00376,767,Hybrid,East of England,IP
+TAR00377,797,Petrol,Wales,LL
+TAR00378,763,Hybrid,South West,BA
+TAR00379,971,Hybrid,East Midlands,LE
+TAR00380,910,Electric,South East,GU
+TAR00381,823,Diesel,London,SW
+TAR00382,741,Diesel,Wales,CF
+TAR00383,822,Petrol,Scotland,DD
+TAR00384,655,Diesel,North West,BL
+TAR00385,682,Diesel,West Midlands,WV
+TAR00386,756,Hybrid,Wales,LL
+TAR00387,799,Electric,North West,L
+TAR00388,805,Petrol,East of England,IP
+TAR00389,685,Petrol,North West,M
+TAR00390,721,Hybrid,Northern Ireland,BT
+TAR00391,712,Petrol,West Midlands,ST
+TAR00392,742,Electric,South West,EX
+TAR00393,779,Diesel,London,W
+TAR00394,725,Electric,South East,OX
+TAR00395,658,Electric,South East,RG
+TAR00396,759,Diesel,North East,NE
+TAR00397,803,Diesel,South East,OX
+TAR00398,734,Hybrid,London,E
+TAR00399,654,Hybrid,North West,WA
+TAR00400,841,Petrol,London,W
+TAR00401,945,Electric,South East,RG
+TAR00402,689,Diesel,North West,PR
+TAR00403,685,Petrol,North West,PR
+TAR00404,723,Petrol,East of England,NR
+TAR00405,785,Hybrid,South West,EX
+TAR00406,674,Hybrid,North West,M
+TAR00407,781,Electric,South West,PL
+TAR00408,765,Petrol,East of England,CO
+TAR00409,805,Petrol,Yorkshire and the Humber,LS
+TAR00410,889,Diesel,Wales,LL
+TAR00411,905,Electric,Scotland,EH
+TAR00412,584,Petrol,East of England,CO
+TAR00413,798,Petrol,East of England,IP
+TAR00414,698,Petrol,South East,OX
+TAR00415,912,Electric,South East,ME
+TAR00416,822,Petrol,South East,OX
+TAR00417,702,Petrol,London,SW
+TAR00418,785,Electric,London,N
+TAR00419,826,Petrol,Wales,CF
+TAR00420,863,Diesel,Yorkshire and the Humber,S
+TAR00421,843,Petrol,East of England,CB
+TAR00422,806,Hybrid,South West,BS
+TAR00423,868,Hybrid,East of England,CO
+TAR00424,608,Petrol,West Midlands,CV
+TAR00425,820,Petrol,West Midlands,B
+TAR00426,690,Petrol,South East,GU
+TAR00427,699,Hybrid,East of England,CO
+TAR00428,638,Petrol,West Midlands,ST
+TAR00429,764,Electric,London,SE
+TAR00430,822,Petrol,East of England,NR
+TAR00431,825,Diesel,West Midlands,ST
+TAR00432,834,Diesel,West Midlands,ST
+TAR00433,782,Petrol,Scotland,G
+TAR00434,775,Hybrid,North East,NE
+TAR00435,851,Electric,North West,PR
+TAR00436,744,Petrol,North West,M
+TAR00437,841,Hybrid,London,E
+TAR00438,790,Electric,East of England,CO
+TAR00439,828,Hybrid,East of England,CB
+TAR00440,803,Diesel,East of England,NR
+TAR00441,953,Hybrid,East of England,IP
+TAR00442,806,Petrol,West Midlands,WV
+TAR00443,868,Diesel,London,SE
+TAR00444,653,Petrol,South East,RG
+TAR00445,776,Petrol,London,SE
+TAR00446,813,Petrol,North West,PR
+TAR00447,965,Hybrid,South East,GU
+TAR00448,875,Petrol,South West,PL
+TAR00449,908,Electric,Yorkshire and the Humber,S
+TAR00450,829,Petrol,North West,M
+TAR00451,851,Petrol,North East,NE
+TAR00452,786,Petrol,South East,ME
+TAR00453,847,Diesel,London,N
+TAR00454,833,Hybrid,South East,ME
+TAR00455,903,Petrol,West Midlands,WV
+TAR00456,697,Petrol,Northern Ireland,BT
+TAR00457,836,Petrol,West Midlands,CV
+TAR00458,845,Petrol,London,E
+TAR00459,828,Diesel,South East,ME
+TAR00460,954,Petrol,East of England,IP
+TAR00461,704,Petrol,South East,RG
+TAR00462,830,Hybrid,South East,ME
+TAR00463,768,Electric,North West,WA
+TAR00464,860,Electric,London,SE
+TAR00465,910,Diesel,West Midlands,CV
+TAR00466,896,Petrol,East Midlands,DE
+TAR00467,721,Petrol,Yorkshire and the Humber,LS
+TAR00468,915,Hybrid,East Midlands,DE
+TAR00469,720,Petrol,East of England,CB
+TAR00470,784,Hybrid,London,SW
+TAR00471,751,Petrol,East of England,CB
+TAR00472,720,Diesel,North West,M
+TAR00473,649,Diesel,East of England,NR
+TAR00474,715,Diesel,South East,RG
+TAR00475,766,Electric,North East,NE
+TAR00476,939,Diesel,Wales,CF
+TAR00477,751,Petrol,East Midlands,DE
+TAR00478,937,Hybrid,North West,PR
+TAR00479,624,Petrol,South East,OX
+TAR00480,753,Petrol,East of England,CB
+TAR00481,819,Electric,South East,ME
+TAR00482,723,Petrol,Wales,CF
+TAR00483,999,Petrol,North West,BL
+TAR00484,865,Hybrid,South West,EX
+TAR00485,674,Petrol,Wales,LL
+TAR00486,591,Hybrid,South West,BS
+TAR00487,706,Petrol,South West,PL
+TAR00488,793,Diesel,South East,BN
+TAR00489,771,Petrol,West Midlands,CV
+TAR00490,823,Diesel,East Midlands,NG
+TAR00491,821,Petrol,North West,WA
+TAR00492,917,Petrol,South East,ME
+TAR00493,777,Petrol,Northern Ireland,BT
+TAR00494,910,Diesel,South East,BN
+TAR00495,798,Petrol,South East,RG
+TAR00496,687,Petrol,South East,ME
+TAR00497,911,Petrol,South East,BN
+TAR00498,752,Petrol,South East,GU
+TAR00499,762,Diesel,North West,M
+TAR00500,847,Petrol,North West,M
+TAR00501,838,Petrol,North West,PR
+TAR00502,811,Hybrid,London,E
+TAR00503,963,Diesel,North West,PR
+TAR00504,723,Electric,South West,BA
+TAR00505,755,Petrol,East Midlands,LE
+TAR00506,877,Electric,East of England,CO
+TAR00507,785,Petrol,London,W
+TAR00508,813,Hybrid,Wales,SA
+TAR00509,851,Petrol,Wales,SA
+TAR00510,844,Petrol,East Midlands,DE
+TAR00511,651,Petrol,London,W
+TAR00512,936,Electric,North West,M
+TAR00513,844,Petrol,East Midlands,NG
+TAR00514,710,Diesel,Wales,SA
+TAR00515,680,Diesel,South East,OX
+TAR00516,832,Petrol,London,W
+TAR00517,857,Hybrid,West Midlands,ST
+TAR00518,773,Petrol,London,N
+TAR00519,773,Petrol,Scotland,DD
+TAR00520,667,Electric,East of England,IP
+TAR00521,779,Petrol,Yorkshire and the Humber,S
+TAR00522,553,Petrol,Yorkshire and the Humber,BD
+TAR00523,935,Electric,Wales,CF
+TAR00524,761,Electric,London,E
+TAR00525,760,Diesel,South East,OX
+TAR00526,619,Diesel,South East,GU
+TAR00527,749,Petrol,South East,ME
+TAR00528,903,Diesel,Wales,SA
+TAR00529,928,Petrol,London,N
+TAR00530,880,Petrol,East Midlands,NG
+TAR00531,830,Hybrid,East Midlands,DE
+TAR00532,963,Petrol,North West,PR
+TAR00533,807,Diesel,West Midlands,B
+TAR00534,673,Petrol,Scotland,G
+TAR00535,698,Petrol,South West,BA
+TAR00536,823,Diesel,East of England,IP
+TAR00537,627,Electric,East Midlands,DE
+TAR00538,861,Petrol,Scotland,DD
+TAR00539,789,Petrol,London,N
+TAR00540,724,Petrol,East Midlands,LE
+TAR00541,639,Hybrid,Yorkshire and the Humber,HU
+TAR00542,766,Hybrid,Wales,LL
+TAR00543,845,Petrol,South East,GU
+TAR00544,688,Diesel,Yorkshire and the Humber,BD
+TAR00545,864,Hybrid,Northern Ireland,BT
+TAR00546,852,Petrol,North East,NE
+TAR00547,816,Electric,East of England,CO
+TAR00548,778,Petrol,West Midlands,CV
+TAR00549,824,Petrol,Scotland,AB
+TAR00550,502,Petrol,North East,NE
+TAR00551,649,Petrol,Yorkshire and the Humber,S
+TAR00552,673,Diesel,London,SW
+TAR00553,713,Hybrid,Yorkshire and the Humber,LS
+TAR00554,769,Electric,South East,OX
+TAR00555,920,Diesel,South East,RG
+TAR00556,741,Electric,North West,BL
+TAR00557,754,Hybrid,Yorkshire and the Humber,S
+TAR00558,641,Petrol,London,SE
+TAR00559,744,Petrol,North West,BL
+TAR00560,823,Petrol,North West,PR
+TAR00561,847,Petrol,North West,WA
+TAR00562,794,Diesel,East of England,IP
+TAR00563,714,Petrol,East Midlands,NG
+TAR00564,830,Petrol,West Midlands,B
+TAR00565,941,Petrol,Scotland,EH
+TAR00566,893,Hybrid,South East,GU
+TAR00567,806,Hybrid,London,E
+TAR00568,687,Diesel,Scotland,G
+TAR00569,881,Petrol,South East,ME
+TAR00570,710,Hybrid,London,SW
+TAR00571,734,Hybrid,Scotland,DD
+TAR00572,805,Diesel,South West,EX
+TAR00573,945,Hybrid,West Midlands,CV
+TAR00574,816,Petrol,Wales,LL
+TAR00575,773,Hybrid,London,N
+TAR00576,749,Electric,North West,WA
+TAR00577,804,Hybrid,London,E
+TAR00578,775,Electric,Northern Ireland,BT
+TAR00579,853,Hybrid,North West,WA
+TAR00580,595,Petrol,Northern Ireland,BT
+TAR00581,945,Hybrid,Scotland,DD
+TAR00582,842,Petrol,South East,GU
+TAR00583,720,Petrol,North West,PR
+TAR00584,652,Hybrid,Scotland,G
+TAR00585,967,Diesel,South East,OX
+TAR00586,748,Petrol,East Midlands,NG
+TAR00587,818,Petrol,North East,SR
+TAR00588,795,Electric,West Midlands,ST
+TAR00589,753,Diesel,Yorkshire and the Humber,LS
+TAR00590,880,Electric,North West,BL
+TAR00591,834,Hybrid,West Midlands,B
+TAR00592,732,Diesel,Wales,SA
+TAR00593,853,Diesel,London,SE
+TAR00594,803,Electric,South East,ME
+TAR00595,689,Petrol,South West,BS
+TAR00596,900,Diesel,East of England,CO
+TAR00597,735,Petrol,West Midlands,WV
+TAR00598,922,Hybrid,South East,ME
+TAR00599,769,Diesel,South East,GU
+TAR00600,852,Diesel,North West,WA
+TAR00601,710,Hybrid,London,N
+TAR00602,921,Diesel,Wales,CF
+TAR00603,855,Electric,West Midlands,CV
+TAR00604,750,Electric,South West,PL
+TAR00605,780,Petrol,Yorkshire and the Humber,HU
+TAR00606,717,Diesel,South East,OX
+TAR00607,817,Hybrid,London,W
+TAR00608,753,Petrol,Northern Ireland,BT
+TAR00609,788,Petrol,East of England,IP
+TAR00610,821,Petrol,Yorkshire and the Humber,HU
+TAR00611,999,Hybrid,Yorkshire and the Humber,LS
+TAR00612,811,Electric,London,N
+TAR00613,745,Petrol,West Midlands,CV
+TAR00614,904,Diesel,South East,OX
+TAR00615,798,Petrol,West Midlands,CV
+TAR00616,884,Petrol,South West,EX
+TAR00617,760,Diesel,South East,OX
+TAR00618,871,Diesel,East Midlands,LE
+TAR00619,753,Petrol,South East,OX
+TAR00620,819,Petrol,Yorkshire and the Humber,LS
+TAR00621,872,Petrol,West Midlands,B
+TAR00622,703,Petrol,Wales,LL
+TAR00623,932,Electric,London,SW
+TAR00624,707,Petrol,South East,GU
+TAR00625,873,Hybrid,West Midlands,CV
+TAR00626,980,Petrol,West Midlands,B
+TAR00627,795,Diesel,Yorkshire and the Humber,LS
+TAR00628,820,Hybrid,London,SE
+TAR00629,777,Diesel,South West,BS
+TAR00630,788,Electric,South East,GU
+TAR00631,756,Petrol,London,W
+TAR00632,808,Diesel,North West,L
+TAR00633,727,Electric,Scotland,EH
+TAR00634,814,Petrol,Yorkshire and the Humber,LS
+TAR00635,947,Diesel,East Midlands,LE
+TAR00636,921,Petrol,West Midlands,WV
+TAR00637,767,Electric,South West,PL
+TAR00638,775,Petrol,West Midlands,CV
+TAR00639,881,Petrol,South West,BS
+TAR00640,789,Petrol,West Midlands,ST
+TAR00641,833,Diesel,South West,BS
+TAR00642,861,Petrol,South West,PL
+TAR00643,858,Diesel,London,N
+TAR00644,774,Hybrid,South East,RG
+TAR00645,659,Petrol,North West,PR
+TAR00646,854,Electric,East Midlands,NG
+TAR00647,799,Electric,North East,NE
+TAR00648,822,Electric,Scotland,DD
+TAR00649,584,Petrol,London,SW
+TAR00650,704,Electric,East of England,IP
+TAR00651,778,Petrol,Scotland,EH
+TAR00652,799,Hybrid,East Midlands,NG
+TAR00653,858,Petrol,East of England,CB
+TAR00654,918,Petrol,South East,OX
+TAR00655,745,Hybrid,London,W
+TAR00656,689,Petrol,South East,GU
+TAR00657,701,Diesel,South East,RG
+TAR00658,754,Petrol,Scotland,EH
+TAR00659,873,Hybrid,East of England,NR
+TAR00660,704,Hybrid,Scotland,AB
+TAR00661,769,Electric,East of England,CO
+TAR00662,728,Petrol,East of England,CO
+TAR00663,809,Petrol,East of England,NR
+TAR00664,747,Diesel,Wales,SA
+TAR00665,755,Petrol,South East,OX
+TAR00666,717,Petrol,East of England,NR
+TAR00667,757,Diesel,South West,BS
+TAR00668,712,Diesel,East of England,IP
+TAR00669,849,Diesel,Scotland,DD
+TAR00670,739,Electric,South East,BN
+TAR00671,877,Hybrid,Yorkshire and the Humber,LS
+TAR00672,826,Diesel,Scotland,DD
+TAR00673,766,Hybrid,East Midlands,NG
+TAR00674,883,Diesel,East of England,CO
+TAR00675,805,Diesel,London,W
+TAR00676,689,Petrol,London,E
+TAR00677,900,Hybrid,Scotland,G
+TAR00678,823,Diesel,Northern Ireland,BT
+TAR00679,774,Diesel,Wales,SA
+TAR00680,660,Petrol,East of England,NR
+TAR00681,761,Hybrid,Northern Ireland,BT
+TAR00682,861,Electric,East Midlands,NG
+TAR00683,793,Petrol,Yorkshire and the Humber,S
+TAR00684,698,Diesel,South East,GU
+TAR00685,759,Petrol,North West,L
+TAR00686,901,Hybrid,South East,RG
+TAR00687,796,Hybrid,South East,OX
+TAR00688,696,Hybrid,North West,M
+TAR00689,705,Petrol,Yorkshire and the Humber,S
+TAR00690,755,Electric,North West,M
+TAR00691,671,Petrol,East of England,CB
+TAR00692,792,Petrol,South East,OX
+TAR00693,790,Hybrid,West Midlands,ST
+TAR00694,744,Petrol,Wales,CF
+TAR00695,583,Petrol,South East,GU
+TAR00696,887,Electric,East of England,IP
+TAR00697,831,Petrol,Scotland,AB
+TAR00698,781,Petrol,North West,BL
+TAR00699,738,Hybrid,London,SW
+TAR00700,819,Diesel,North West,PR
+TAR00701,801,Electric,Scotland,DD
+TAR00702,927,Petrol,West Midlands,WV
+TAR00703,865,Diesel,Northern Ireland,BT
+TAR00704,662,Diesel,South West,BA
+TAR00705,609,Hybrid,Wales,LL
+TAR00706,701,Petrol,Scotland,AB
+TAR00707,841,Petrol,North East,SR
+TAR00708,867,Petrol,East Midlands,NG
+TAR00709,792,Diesel,Scotland,DD
+TAR00710,820,Petrol,London,SW
+TAR00711,644,Diesel,Yorkshire and the Humber,HU
+TAR00712,647,Electric,South East,ME
+TAR00713,864,Petrol,Yorkshire and the Humber,HU
+TAR00714,675,Petrol,West Midlands,WV
+TAR00715,649,Electric,Yorkshire and the Humber,LS
+TAR00716,917,Diesel,East of England,IP
+TAR00717,790,Electric,London,W
+TAR00718,871,Petrol,Yorkshire and the Humber,S
+TAR00719,683,Petrol,South West,BS
+TAR00720,755,Petrol,South East,OX
+TAR00721,693,Hybrid,North West,L
+TAR00722,849,Electric,East Midlands,DE
+TAR00723,734,Petrol,North West,M
+TAR00724,882,Petrol,Northern Ireland,BT
+TAR00725,676,Petrol,Scotland,EH
+TAR00726,578,Electric,Wales,SA
+TAR00727,590,Hybrid,North East,DH
+TAR00728,580,Electric,East of England,CO
+TAR00729,787,Diesel,East of England,CO
+TAR00730,710,Petrol,West Midlands,ST
+TAR00731,643,Petrol,East of England,IP
+TAR00732,977,Petrol,Yorkshire and the Humber,LS
+TAR00733,727,Electric,London,SW
+TAR00734,598,Petrol,South East,OX
+TAR00735,636,Petrol,Wales,SA
+TAR00736,783,Petrol,Scotland,G
+TAR00737,709,Diesel,Northern Ireland,BT
+TAR00738,772,Petrol,Scotland,DD
+TAR00739,719,Petrol,Northern Ireland,BT
+TAR00740,869,Hybrid,London,SE
+TAR00741,780,Diesel,Scotland,EH
+TAR00742,911,Electric,South East,ME
+TAR00743,821,Diesel,South East,BN
+TAR00744,944,Petrol,Scotland,DD
+TAR00745,805,Petrol,Wales,LL
+TAR00746,719,Hybrid,North West,L
+TAR00747,803,Hybrid,West Midlands,ST
+TAR00748,889,Petrol,North East,NE
+TAR00749,779,Electric,London,W
+TAR00750,714,Petrol,East of England,CB
+TAR00751,672,Electric,South East,GU
+TAR00752,835,Electric,North East,DH
+TAR00753,818,Petrol,North West,L
+TAR00754,570,Diesel,Yorkshire and the Humber,BD
+TAR00755,944,Petrol,West Midlands,WV
+TAR00756,889,Electric,North West,L
+TAR00757,846,Diesel,Wales,SA
+TAR00758,822,Diesel,Scotland,G
+TAR00759,974,Petrol,London,W
+TAR00760,636,Electric,South East,RG
+TAR00761,890,Electric,East Midlands,LE
+TAR00762,732,Diesel,South East,ME
+TAR00763,790,Hybrid,South East,BN
+TAR00764,679,Diesel,London,SW
+TAR00765,795,Hybrid,North West,L
+TAR00766,621,Electric,Yorkshire and the Humber,HU
+TAR00767,787,Petrol,Scotland,EH
+TAR00768,797,Diesel,Scotland,DD
+TAR00769,969,Petrol,London,SE
+TAR00770,838,Diesel,North West,PR
+TAR00771,652,Electric,Scotland,EH
+TAR00772,606,Hybrid,Yorkshire and the Humber,S
+TAR00773,900,Petrol,London,W
+TAR00774,800,Diesel,East of England,IP
+TAR00775,951,Electric,Scotland,G
+TAR00776,932,Petrol,Wales,SA
+TAR00777,822,Hybrid,London,SW
+TAR00778,905,Electric,Yorkshire and the Humber,S
+TAR00779,770,Petrol,North West,L
+TAR00780,888,Petrol,West Midlands,WV
+TAR00781,789,Diesel,West Midlands,CV
+TAR00782,953,Electric,London,W
+TAR00783,878,Hybrid,Yorkshire and the Humber,BD
+TAR00784,783,Electric,Scotland,G
+TAR00785,683,Petrol,West Midlands,ST
+TAR00786,654,Petrol,North West,BL
+TAR00787,873,Electric,East Midlands,NG
+TAR00788,802,Petrol,North West,WA
+TAR00789,782,Petrol,East of England,CO
+TAR00790,729,Hybrid,West Midlands,B
+TAR00791,806,Diesel,North East,DH
+TAR00792,866,Electric,North West,L
+TAR00793,776,Petrol,South East,BN
+TAR00794,725,Petrol,North West,WA
+TAR00795,722,Electric,Scotland,DD
+TAR00796,745,Petrol,North West,WA
+TAR00797,829,Diesel,London,SE
+TAR00798,939,Petrol,Scotland,EH
+TAR00799,923,Hybrid,Scotland,DD
+TAR00800,832,Petrol,North West,PR
+TAR00801,712,Electric,South East,RG
+TAR00802,739,Petrol,Yorkshire and the Humber,LS
+TAR00803,732,Diesel,Scotland,EH
+TAR00804,577,Electric,South East,RG
+TAR00805,757,Petrol,London,E
+TAR00806,747,Electric,West Midlands,WV
+TAR00807,800,Petrol,West Midlands,WV
+TAR00808,728,Petrol,Yorkshire and the Humber,BD
+TAR00809,694,Hybrid,East of England,CB
+TAR00810,696,Petrol,East Midlands,LE
+TAR00811,777,Electric,East of England,NR
+TAR00812,829,Petrol,East of England,CO
+TAR00813,653,Electric,South West,BA
+TAR00814,867,Petrol,East Midlands,LE
+TAR00815,850,Petrol,East Midlands,DE
+TAR00816,764,Petrol,East Midlands,LE
+TAR00817,735,Electric,Northern Ireland,BT
+TAR00818,944,Petrol,Yorkshire and the Humber,S
+TAR00819,875,Petrol,West Midlands,CV
+TAR00820,678,Petrol,Yorkshire and the Humber,HU
+TAR00821,781,Petrol,Scotland,G
+TAR00822,900,Petrol,South East,BN
+TAR00823,695,Petrol,Wales,CF
+TAR00824,787,Petrol,London,E
+TAR00825,798,Hybrid,Wales,LL
+TAR00826,940,Petrol,South West,BA
+TAR00827,707,Petrol,South West,BS
+TAR00828,804,Petrol,London,N
+TAR00829,898,Diesel,Yorkshire and the Humber,HU
+TAR00830,966,Electric,South East,OX
+TAR00831,593,Petrol,London,N
+TAR00832,858,Diesel,South West,BA
+TAR00833,913,Diesel,South West,PL
+TAR00834,784,Petrol,East of England,NR
+TAR00835,855,Electric,Northern Ireland,BT
+TAR00836,577,Hybrid,South East,BN
+TAR00837,748,Hybrid,London,E
+TAR00838,728,Electric,North East,SR
+TAR00839,918,Petrol,West Midlands,B
+TAR00840,707,Diesel,West Midlands,B
+TAR00841,887,Hybrid,South East,OX
+TAR00842,711,Diesel,London,E
+TAR00843,727,Electric,East of England,CB
+TAR00844,978,Petrol,London,W
+TAR00845,847,Hybrid,Scotland,AB
+TAR00846,924,Diesel,Wales,CF
+TAR00847,665,Hybrid,East Midlands,DE
+TAR00848,621,Petrol,West Midlands,ST
+TAR00849,823,Hybrid,South East,BN
+TAR00850,677,Hybrid,North West,BL
+TAR00851,830,Electric,London,W
+TAR00852,770,Petrol,North East,DH
+TAR00853,770,Electric,Yorkshire and the Humber,HU
+TAR00854,696,Petrol,East Midlands,DE
+TAR00855,875,Hybrid,Scotland,G
+TAR00856,769,Diesel,Yorkshire and the Humber,BD
+TAR00857,953,Diesel,North West,BL
+TAR00858,747,Petrol,East of England,NR
+TAR00859,859,Petrol,East Midlands,LE
+TAR00860,746,Petrol,Yorkshire and the Humber,BD
+TAR00861,743,Diesel,East Midlands,NG
+TAR00862,655,Diesel,South East,GU
+TAR00863,841,Petrol,East Midlands,DE
+TAR00864,923,Petrol,North West,L
+TAR00865,812,Petrol,London,E
+TAR00866,654,Diesel,East of England,CB
+TAR00867,659,Petrol,North West,BL
+TAR00868,815,Petrol,South East,RG
+TAR00869,857,Petrol,Wales,SA
+TAR00870,941,Petrol,North West,PR
+TAR00871,697,Diesel,South East,ME
+TAR00872,673,Hybrid,London,SW
+TAR00873,703,Petrol,West Midlands,ST
+TAR00874,893,Hybrid,North West,M
+TAR00875,775,Hybrid,London,E
+TAR00876,904,Diesel,London,N
+TAR00877,683,Hybrid,Northern Ireland,BT
+TAR00878,901,Petrol,West Midlands,CV
+TAR00879,731,Petrol,South East,OX
+TAR00880,850,Diesel,Northern Ireland,BT
+TAR00881,764,Petrol,East Midlands,DE
+TAR00882,797,Diesel,Scotland,EH
+TAR00883,742,Diesel,Scotland,G
+TAR00884,741,Diesel,South East,RG
+TAR00885,745,Petrol,West Midlands,WV
+TAR00886,918,Petrol,East of England,NR
+TAR00887,672,Electric,North West,L
+TAR00888,643,Petrol,yorkshire and the humber,S
+TAR00889,670,Petrol,London,SW
+TAR00890,694,Diesel,Scotland,AB
+TAR00891,824,Hybrid,South East,RG
+TAR00892,756,Petrol,North West,BL
+TAR00893,706,Petrol,Yorkshire and the Humber,BD
+TAR00894,895,Hybrid,East of England,NR
+TAR00895,758,Petrol,East Midlands,NG
+TAR00896,829,Petrol,South East,OX
+TAR00897,835,Diesel,South East,OX
+TAR00898,759,Hybrid,South East,GU
+TAR00899,775,Hybrid,Wales,CF
+TAR00900,797,Hybrid,Northern Ireland,BT
+TAR00901,894,Electric,West Midlands,WV
+TAR00902,799,Hybrid,East of England,CO
+TAR00903,858,Petrol,North West,PR
+TAR00904,699,Petrol,South East,GU
+TAR00905,999,Petrol,South West,PL
+TAR00906,769,Electric,East of England,CO
+TAR00907,797,Diesel,South East,OX
+TAR00908,951,Diesel,Wales,SA
+TAR00909,882,Petrol,North East,DH
+TAR00910,756,Diesel,Scotland,AB
+TAR00911,781,Petrol,East of England,CB
+TAR00912,713,Diesel,South East,RG
+TAR00913,763,Hybrid,Yorkshire and the Humber,S
+TAR00914,681,Diesel,South East,ME
+TAR00915,807,Petrol,East of England,CO
+TAR00916,823,Hybrid,South West,EX
+TAR00917,866,Petrol,Yorkshire and the Humber,LS
+TAR00918,528,Diesel,East of England,NR
+TAR00919,850,Diesel,London,N
+TAR00920,847,Diesel,East Midlands,LE
+TAR00921,764,Petrol,Scotland,G
+TAR00922,770,Petrol,Scotland,EH
+TAR00923,733,Petrol,West Midlands,CV
+TAR00924,854,Diesel,Northern Ireland,BT
+TAR00925,738,Petrol,South West,EX
+TAR00926,877,Petrol,South East,RG
+TAR00927,827,Hybrid,Scotland,EH
+TAR00928,776,Petrol,South East,OX
+TAR00929,824,Electric,Scotland,G
+TAR00930,909,Diesel,South East,RG
+TAR00931,867,Diesel,London,E
+TAR00932,857,Petrol,North West,BL
+TAR00933,836,Petrol,East of England,CB
+TAR00934,838,Petrol,Yorkshire and the Humber,S
+TAR00935,762,Electric,North West,L
+TAR00936,706,Petrol,London,E
+TAR00937,628,Electric,London,SW
+TAR00938,797,Electric,North West,L
+TAR00939,790,Diesel,Yorkshire and the Humber,S
+TAR00940,687,Petrol,West Midlands,ST
+TAR00941,682,Electric,East Midlands,NG
+TAR00942,895,Petrol,North East,SR
+TAR00943,826,Diesel,East Midlands,DE
+TAR00944,633,Petrol,London,SE
+TAR00945,700,Hybrid,North West,PR
+TAR00946,731,Hybrid,North East,DH
+TAR00947,799,Petrol,Wales,LL
+TAR00948,747,Petrol,East of England,CB
+TAR00949,818,Petrol,London,SW
+TAR00950,687,Petrol,Northern Ireland,BT
+TAR00951,798,Electric,South West,EX
+TAR00952,753,Diesel,West Midlands,WV
+TAR00953,555,Electric,South East,BN
+TAR00954,807,Petrol,South West,BA
+TAR00955,823,Petrol,London,N
+TAR00956,676,Petrol,West Midlands,ST
+TAR00957,854,Petrol,North West,BL
+TAR00958,871,Hybrid,Wales,CF
+TAR00959,740,Petrol,Yorkshire and the Humber,LS
+TAR00960,886,Hybrid,East Midlands,DE
+TAR00961,838,Petrol,Yorkshire and the Humber,BD
+TAR00962,878,Petrol,South West,BS
+TAR00963,796,Electric,Northern Ireland,BT
+TAR00964,791,Diesel,London,N
+TAR00965,726,Electric,Wales,LL
+TAR00966,897,Petrol,London,W
+TAR00967,788,Petrol,North West,M
+TAR00968,847,Hybrid,South East,GU
+TAR00969,687,Petrol,London,N
+TAR00970,609,Electric,West Midlands,B
+TAR00971,816,Diesel,East Midlands,NG
+TAR00972,784,Diesel,South East,GU
+TAR00973,925,Petrol,South East,RG
+TAR00974,652,Petrol,Wales,CF
+TAR00975,964,Petrol,North West,WA
+TAR00976,883,Petrol,London,N
+TAR00977,999,Hybrid,South West,BA
+TAR00978,727,Hybrid,North West,BL
+TAR00979,908,Diesel,East Midlands,LE
+TAR00980,765,Petrol,Wales,CF
+TAR00981,731,Hybrid,Scotland,AB
+TAR00982,999,Petrol,West Midlands,B
+TAR00983,734,Petrol,Yorkshire and the Humber,S
+TAR00984,624,Petrol,East Midlands,DE
+TAR00985,667,Petrol,Northern Ireland,BT
+TAR00986,610,Petrol,London,W
+TAR00987,772,Hybrid,Yorkshire and the Humber,BD
+TAR00988,798,Petrol,North West,L
+TAR00989,945,Petrol,North West,BL
+TAR00990,870,Electric,East of England,IP
+TAR00991,961,Petrol,Wales,CF
+TAR00992,822,Petrol,West Midlands,B
+TAR00993,657,Electric,London,SE
+TAR00994,725,Petrol,South East,RG
+TAR00995,685,Diesel,North West,PR
+TAR00996,772,Electric,West Midlands,ST
+TAR00997,898,Electric,West Midlands,WV
+TAR00998,672,Diesel,South East,BN
+TAR00999,832,Petrol,North East,NE
+TAR01000,596,Petrol,North West,WA
+TAR01001,719,Petrol,North West,PR
+TAR01002,776,Petrol,East Midlands,LE
+TAR01003,662,Petrol,North West,PR
+TAR01004,725,Petrol,Scotland,DD
+TAR01005,893,Petrol,Northern Ireland,BT
+TAR01006,922,Hybrid,London,E
+TAR01007,849,Electric,South East,RG
+TAR01008,746,Petrol,South East,GU
+TAR01009,906,Petrol,Scotland,DD
+TAR01010,863,Petrol,North West,WA
+TAR01011,794,Petrol,South West,EX
+TAR01012,811,Hybrid,London,SE
+TAR01013,881,Electric,London,SW
+TAR01014,775,Diesel,East of England,CO
+TAR01015,880,Diesel,West Midlands,B
+TAR01016,769,Petrol,East of England,IP
+TAR01017,852,Diesel,London,SW
+TAR01018,842,Petrol,East of England,CO
+TAR01019,955,Hybrid,Yorkshire and the Humber,LS
+TAR01020,859,Diesel,Northern Ireland,BT
+TAR01021,811,Hybrid,Northern Ireland,BT
+TAR01022,616,Diesel,East of England,CO
+TAR01023,660,Petrol,South East,RG
+TAR01024,757,Petrol,North East,NE
+TAR01025,642,Petrol,London,SW
+TAR01026,842,Electric,South West,BS
+TAR01027,798,Petrol,Yorkshire and the Humber,HU
+TAR01028,692,Hybrid,West Midlands,CV
+TAR01029,820,Petrol,Yorkshire and the Humber,BD
+TAR01030,878,Electric,East Midlands,NG
+TAR01031,695,Electric,London,SW
+TAR01032,837,Hybrid,London,W
+TAR01033,725,Petrol,East of England,CB
+TAR01034,742,Hybrid,East Midlands,LE
+TAR01035,774,Petrol,South West,BA
+TAR01036,974,Diesel,Yorkshire and the Humber,S
+TAR01037,809,Electric,Yorkshire and the Humber,HU
+TAR01038,757,Diesel,East Midlands,LE
+TAR01039,824,Electric,London,SE
+TAR01040,738,Petrol,London,N
+TAR01041,857,Hybrid,East of England,CB
+TAR01042,826,Petrol,East of England,CB
+TAR01043,665,Diesel,East Midlands,DE
+TAR01044,889,Hybrid,Yorkshire and the Humber,HU
+TAR01045,733,Hybrid,South East,BN
+TAR01046,666,Petrol,Scotland,AB
+TAR01047,785,Electric,North East,NE
+TAR01048,732,Hybrid,North East,SR
+TAR01049,710,Electric,South East,RG
+TAR01050,778,Diesel,Wales,LL
+TAR01051,889,Diesel,Yorkshire and the Humber,LS
+TAR01052,580,Petrol,South East,RG
+TAR01053,777,Diesel,North West,M
+TAR01054,677,Diesel,Wales,LL
+TAR01055,838,Petrol,Wales,CF
+TAR01056,633,Petrol,East of England,CB
+TAR01057,754,Diesel,North East,SR
+TAR01058,866,Petrol,South East,BN
+TAR01059,765,Petrol,South East,ME
+TAR01060,899,Petrol,Scotland,DD
+TAR01061,948,Hybrid,South East,ME
+TAR01062,905,Hybrid,South East,ME
+TAR01063,564,Petrol,South West,PL
+TAR01064,694,Hybrid,London,W
+TAR01065,848,Diesel,South East,BN
+TAR01066,929,Electric,North East,NE
+TAR01067,857,Diesel,Scotland,EH
+TAR01068,732,Petrol,South West,PL
+TAR01069,863,Electric,East Midlands,LE
+TAR01070,814,Hybrid,East of England,IP
+TAR01071,804,Petrol,East of England,NR
+TAR01072,803,Petrol,Scotland,AB
+TAR01073,808,Petrol,South East,BN
+TAR01074,797,Hybrid,East of England,NR
+TAR01075,761,Diesel,South West,BS
+TAR01076,803,Diesel,North West,M
+TAR01077,621,Hybrid,East of England,CO
+TAR01078,751,Hybrid,West Midlands,B
+TAR01079,771,Hybrid,South East,BN
+TAR01080,811,Petrol,South East,RG
+TAR01081,727,Petrol,North West,BL
+TAR01082,655,Diesel,East of England,CO
+TAR01083,816,Electric,East of England,CO
+TAR01084,915,Electric,Northern Ireland,BT
+TAR01085,839,Petrol,South East,BN
+TAR01086,717,Petrol,Northern Ireland,BT
+TAR01087,789,Petrol,South East,BN
+TAR01088,795,Petrol,East of England,NR
+TAR01089,833,Petrol,North East,NE
+TAR01090,911,Hybrid,South West,BS
+TAR01091,790,Petrol,London,E
+TAR01092,804,Diesel,Scotland,AB
+TAR01093,675,Diesel,South East,OX
+TAR01094,837,Electric,South West,PL
+TAR01095,802,Petrol,South East,RG
+TAR01096,728,Electric,North West,PR
+TAR01097,698,Petrol,East Midlands,DE
+TAR01098,999,Electric,East of England,CB
+TAR01099,745,Electric,North West,WA
+TAR01100,696,Diesel,South East,BN
+TAR01101,684,Diesel,North East,NE
+TAR01102,728,Diesel,West Midlands,CV
+TAR01103,876,Hybrid,East of England,CO
+TAR01104,763,Electric,East of England,NR
+TAR01105,577,Electric,East Midlands,LE
+TAR01106,887,Hybrid,Scotland,G
+TAR01107,628,Petrol,West Midlands,WV
+TAR01108,637,Diesel,Wales,LL
+TAR01109,856,Diesel,West Midlands,WV
+TAR01110,847,Electric,East Midlands,LE
+TAR01111,559,Petrol,Scotland,EH
+TAR01112,847,Petrol,East Midlands,NG
+TAR01113,714,Petrol,North West,M
+TAR01114,979,Hybrid,North West,M
+TAR01115,741,Diesel,South East,OX
+TAR01116,831,Diesel,East of England,NR
+TAR01117,723,Petrol,East of England,CO
+TAR01118,774,Petrol,Wales,CF
+TAR01119,674,Electric,London,N
+TAR01120,718,Hybrid,East of England,CO
+TAR01121,742,Hybrid,South East,ME
+TAR01122,805,Diesel,East of England,CB
+TAR01123,947,Electric,East of England,CO
+TAR01124,819,Diesel,South West,EX
+TAR01125,746,Hybrid,North West,BL
+TAR01126,673,Hybrid,Wales,LL
+TAR01127,801,Electric,London,N
+TAR01128,661,Hybrid,South East,ME
+TAR01129,807,Petrol,South East,RG
+TAR01130,731,Electric,East of England,NR
+TAR01131,700,Diesel,South West,BA
+TAR01132,652,Petrol,East Midlands,NG
+TAR01133,907,Diesel,London,E
+TAR01134,894,Hybrid,Yorkshire and the Humber,LS
+TAR01135,897,Diesel,Wales,CF
+TAR01136,671,Petrol,Yorkshire and the Humber,HU
+TAR01137,749,Hybrid,East Midlands,NG
+TAR01138,921,Hybrid,East Midlands,DE
+TAR01139,753,Petrol,South East,BN
+TAR01140,815,Hybrid,Wales,SA
+TAR01141,727,Hybrid,South East,OX
+TAR01142,773,Petrol,South East,RG
+TAR01143,794,Petrol,North West,BL
+TAR01144,745,Petrol,South East,BN
+TAR01145,690,Hybrid,South East,BN
+TAR01146,868,Electric,West Midlands,CV
+TAR01147,821,Electric,Wales,CF
+TAR01148,796,Petrol,Scotland,DD
+TAR01149,657,Hybrid,North West,L
+TAR01150,906,Petrol,East Midlands,DE
+TAR01151,741,Petrol,South East,GU
+TAR01152,906,Petrol,London,E
+TAR01153,789,Petrol,South East,OX
+TAR01154,858,Diesel,London,E
+TAR01155,889,Petrol,London,W
+TAR01156,695,Petrol,South East,GU
+TAR01157,762,Petrol,Scotland,EH
+TAR01158,841,Hybrid,West Midlands,B
+TAR01159,833,Petrol,East Midlands,DE
+TAR01160,729,Electric,Yorkshire and the Humber,S
+TAR01161,833,Petrol,South West,PL
+TAR01162,807,Diesel,Scotland,G
+TAR01163,701,Hybrid,West Midlands,WV
+TAR01164,613,Petrol,South West,EX
+TAR01165,893,Electric,South West,BA
+TAR01166,890,Hybrid,Scotland,AB
+TAR01167,735,Diesel,North West,WA
+TAR01168,820,Diesel,London,W
+TAR01169,728,Petrol,Wales,SA
+TAR01170,747,Petrol,South East,GU
+TAR01171,729,Petrol,North West,L
+TAR01172,833,Electric,Scotland,G
+TAR01173,731,Petrol,South West,BA
+TAR01174,800,Diesel,South East,BN
+TAR01175,692,Hybrid,Scotland,DD
+TAR01176,722,Hybrid,Yorkshire and the Humber,S
+TAR01177,947,Petrol,South West,EX
+TAR01178,755,Diesel,Scotland,EH
+TAR01179,814,Electric,East of England,IP
+TAR01180,745,Diesel,West Midlands,B
+TAR01181,781,Petrol,South East,BN
+TAR01182,850,Petrol,Scotland,G
+TAR01183,701,Petrol,East Midlands,DE
+TAR01184,635,Diesel,South West,BA
+TAR01185,893,Hybrid,North West,L
+TAR01186,710,Petrol,London,E
+TAR01187,779,Petrol,London,SE
+TAR01188,810,Diesel,Yorkshire and the Humber,S
+TAR01189,858,Electric,East of England,CO
+TAR01190,845,Petrol,London,SE
+TAR01191,885,Petrol,Wales,CF
+TAR01192,851,Hybrid,London,SE
+TAR01193,812,Diesel,South East,OX
+TAR01194,690,Diesel,South East,RG
+TAR01195,620,Hybrid,Yorkshire and the Humber,HU
+TAR01196,649,Hybrid,West Midlands,ST
+TAR01197,671,Electric,Yorkshire and the Humber,S
+TAR01198,944,Hybrid,South West,BA
+TAR01199,822,Electric,London,SE
+TAR01200,726,Diesel,East Midlands,NG
+TAR01201,785,Petrol,North West,M
+TAR01202,803,Petrol,North West,PR
+TAR01203,701,Electric,Scotland,EH
+TAR01204,684,Diesel,North West,BL
+TAR01205,890,Petrol,North West,PR
+TAR01206,745,Hybrid,East of England,CO
+TAR01207,854,Petrol,South West,EX
+TAR01208,692,Petrol,North West,WA
+TAR01209,800,Petrol,South East,GU
+TAR01210,667,Petrol,North West,PR
+TAR01211,689,Diesel,North West,L
+TAR01212,742,Hybrid,West Midlands,B
+TAR01213,772,Petrol,West Midlands,B
+TAR01214,735,Electric,South West,EX
+TAR01215,714,Electric,North West,BL
+TAR01216,862,Diesel,South West,BS
+TAR01217,823,Petrol,London,SW
+TAR01218,712,Diesel,East of England,NR
+TAR01219,797,Hybrid,West Midlands,CV
+TAR01220,746,Electric,West Midlands,B
+TAR01221,894,Petrol,Wales,SA
+TAR01222,846,Petrol,North East,DH
+TAR01223,667,Petrol,South East,GU
+TAR01224,831,Petrol,South East,ME
+TAR01225,914,Petrol,East of England,CO
+TAR01226,853,Petrol,East Midlands,NG
+TAR01227,797,Diesel,North West,PR
+TAR01228,694,Petrol,East of England,CO
+TAR01229,858,Diesel,London,SE
+TAR01230,870,Electric,North West,BL
+TAR01231,759,Petrol,North West,BL
+TAR01232,775,Petrol,East of England,CB
+TAR01233,772,Electric,West Midlands,B
+TAR01234,704,Diesel,North West,L
+TAR01235,689,Hybrid,North West,WA
+TAR01236,736,Hybrid,East of England,IP
+TAR01237,734,Electric,West Midlands,WV
+TAR01238,797,Hybrid,Yorkshire and the Humber,S
+TAR01239,872,Diesel,Yorkshire and the Humber,BD
+TAR01240,748,Petrol,Yorkshire and the Humber,S
+TAR01241,791,Electric,South West,BS
+TAR01242,786,Diesel,South East,BN
+TAR01243,752,Petrol,South West,BS
+TAR01244,750,Petrol,East Midlands,NG
+TAR01245,778,Electric,North West,M
+TAR01246,652,Petrol,South East,BN
+TAR01247,947,Diesel,West Midlands,ST
+TAR01248,966,Electric,South West,BS
+TAR01249,825,Petrol,East of England,CO
+TAR01250,862,Diesel,East of England,NR
+TAR01251,691,Hybrid,West Midlands,CV
+TAR01252,771,Petrol,Scotland,EH
+TAR01253,786,Electric,Wales,LL
+TAR01254,797,Electric,South East,GU
+TAR01255,768,Diesel,South East,BN
+TAR01256,892,Petrol,East of England,NR
+TAR01257,572,Hybrid,South West,EX
+TAR01258,791,Petrol,London,N
+TAR01259,930,Electric,Wales,CF
+TAR01260,869,Diesel,Scotland,EH
+TAR01261,890,Diesel,London,W
+TAR01262,767,Petrol,East of England,CO
+TAR01263,933,Petrol,Scotland,EH
+TAR01264,853,Hybrid,South West,BS
+TAR01265,747,Hybrid,South East,OX
+TAR01266,914,Electric,London,N
+TAR01267,925,Petrol,North West,L
+TAR01268,741,Diesel,Scotland,DD
+TAR01269,795,Electric,Scotland,DD
+TAR01270,827,Diesel,South East,GU
+TAR01271,838,Hybrid,South East,GU
+TAR01272,739,Electric,South East,BN
+TAR01273,914,Electric,London,W
+TAR01274,782,Hybrid,London,W
+TAR01275,555,Petrol,West Midlands,CV
+TAR01276,821,Petrol,West Midlands,WV
+TAR01277,778,Electric,London,N
+TAR01278,829,Diesel,Scotland,G
+TAR01279,823,Hybrid,North West,PR
+TAR01280,724,Hybrid,Wales,LL
+TAR01281,693,Petrol,Wales,CF
+TAR01282,812,Diesel,Yorkshire and the Humber,LS
+TAR01283,821,Hybrid,London,W
+TAR01284,721,Hybrid,West Midlands,B
+TAR01285,836,Petrol,South East,OX
+TAR01286,892,Petrol,Scotland,G
+TAR01287,574,Petrol,Wales,LL
+TAR01288,813,Petrol,North West,BL
+TAR01289,730,Petrol,South East,OX
+TAR01290,871,Petrol,Wales,SA
+TAR01291,900,Petrol,Scotland,G
+TAR01292,868,Hybrid,London,SW
+TAR01293,779,Petrol,East Midlands,LE
+TAR01294,649,Diesel,East of England,CB
+TAR01295,934,Electric,North West,L
+TAR01296,767,Hybrid,East of England,CB
+TAR01297,795,Hybrid,North West,BL
+TAR01298,716,Hybrid,South East,OX
+TAR01299,808,Petrol,Yorkshire and the Humber,BD
+TAR01300,695,Diesel,Yorkshire and the Humber,HU
+TAR01301,651,Electric,South East,ME
+TAR01302,915,Diesel,South East,OX
+TAR01303,728,Petrol,London,W
+TAR01304,880,Hybrid,Wales,SA
+TAR01305,833,Diesel,South East,ME
+TAR01306,670,Electric,East Midlands,DE
+TAR01307,635,Diesel,South East,BN
+TAR01308,761,Petrol,Yorkshire and the Humber,LS
+TAR01309,772,Hybrid,South East,RG
+TAR01310,578,Diesel,London,SE
+TAR01311,819,Petrol,London,N
+TAR01312,647,Electric,Scotland,EH
+TAR01313,719,Electric,London,E
+TAR01314,769,Hybrid,East of England,CO
+TAR01315,678,Diesel,East of England,IP
+TAR01316,912,Petrol,West Midlands,B
+TAR01317,735,Petrol,South West,PL
+TAR01318,808,Petrol,Yorkshire and the Humber,S
+TAR01319,839,Diesel,North West,BL
+TAR01320,706,Diesel,London,E
+TAR01321,983,Petrol,West Midlands,CV
+TAR01322,834,Hybrid,Wales,SA
+TAR01323,928,Electric,London,W
+TAR01324,720,Hybrid,London,SE
+TAR01325,834,Diesel,Wales,SA
+TAR01326,806,Petrol,North West,M
+TAR01327,698,Hybrid,East of England,CO
+TAR01328,648,Petrol,North West,WA
+TAR01329,793,Hybrid,Yorkshire and the Humber,HU
+TAR01330,830,Petrol,Scotland,G
+TAR01331,811,Diesel,Wales,LL
+TAR01332,845,Diesel,East of England,CB
+TAR01333,776,Petrol,South East,ME
+TAR01334,770,Petrol,Scotland,EH
+TAR01335,745,Hybrid,South West,PL
+TAR01336,861,Hybrid,East Midlands,DE
+TAR01337,805,Petrol,Scotland,EH
+TAR01338,735,Petrol,Scotland,DD
+TAR01339,756,Petrol,North West,BL
+TAR01340,885,Electric,North West,PR
+TAR01341,773,Electric,West Midlands,ST
+TAR01342,895,Hybrid,South West,BA
+TAR01343,767,Electric,South West,PL
+TAR01344,660,Petrol,Scotland,AB
+TAR01345,954,Hybrid,South East,ME
+TAR01346,724,Petrol,West Midlands,B
+TAR01347,909,Petrol,West Midlands,B
+TAR01348,807,Hybrid,East of England,IP
+TAR01349,752,Petrol,North West,L
+TAR01350,707,Electric,Yorkshire and the Humber,LS
+TAR01351,707,Petrol,North East,SR
+TAR01352,792,Hybrid,South West,BA
+TAR01353,796,Petrol,East of England,CO
+TAR01354,757,Hybrid,Scotland,G
+TAR01355,836,Diesel,West Midlands,WV
+TAR01356,852,Diesel,South East,OX
+TAR01357,617,Diesel,Northern Ireland,BT
+TAR01358,701,Petrol,South West,BS
+TAR01359,691,Petrol,London,E
+TAR01360,662,Diesel,South East,GU
+TAR01361,811,Petrol,East of England,CB
+TAR01362,916,Petrol,Wales,LL
+TAR01363,800,Petrol,London,E
+TAR01364,836,Petrol,North West,L
+TAR01365,702,Petrol,Scotland,G
+TAR01366,664,Petrol,North East,NE
+TAR01367,758,Petrol,South East,GU
+TAR01368,739,Hybrid,East of England,NR
+TAR01369,785,Petrol,West Midlands,WV
+TAR01370,786,Petrol,South East,OX
+TAR01371,756,Hybrid,London,W
+TAR01372,961,Petrol,East of England,NR
+TAR01373,780,Hybrid,East of England,CO
+TAR01374,743,Diesel,North West,M
+TAR01375,679,Petrol,Wales,LL
+TAR01376,634,Diesel,South East,BN
+TAR01377,573,Petrol,South West,BS
+TAR01378,706,Petrol,Yorkshire and the Humber,S
+TAR01379,820,Diesel,East Midlands,LE
+TAR01380,999,Petrol,West Midlands,ST
+TAR01381,798,Diesel,North West,PR
+TAR01382,894,Petrol,London,E
+TAR01383,881,Petrol,South East,BN
+TAR01384,781,Diesel,South East,BN
+TAR01385,850,Petrol,Scotland,AB
+TAR01386,926,Diesel,Scotland,DD
+TAR01387,683,Petrol,South West,EX
+TAR01388,675,Hybrid,East of England,IP
+TAR01389,906,Hybrid,South East,ME
+TAR01390,942,Diesel,Yorkshire and the Humber,LS
+TAR01391,746,Petrol,London,SE
+TAR01392,747,Petrol,West Midlands,WV
+TAR01393,762,Petrol,South East,GU
+TAR01394,835,Hybrid,South East,OX
+TAR01395,814,Petrol,London,SW
+TAR01396,741,Hybrid,Scotland,AB
+TAR01397,662,Electric,London,N
+TAR01398,626,Petrol,East of England,CB
+TAR01399,798,Hybrid,Yorkshire and the Humber,S
+TAR01400,783,Petrol,West Midlands,WV
+TAR01401,606,Electric,South West,BS
+TAR01402,905,Electric,Wales,CF
+TAR01403,637,Petrol,North West,WA
+TAR01404,894,Diesel,London,E
+TAR01405,830,Hybrid,East of England,IP
+TAR01406,838,Electric,North West,L
+TAR01407,822,Hybrid,London,N
+TAR01408,702,Electric,London,N
+TAR01409,934,Petrol,Wales,LL
+TAR01410,748,Electric,East of England,NR
+TAR01411,695,Petrol,Northern Ireland,BT
+TAR01412,747,Petrol,Scotland,AB
+TAR01413,829,Electric,Scotland,DD
+TAR01414,725,Hybrid,Yorkshire and the Humber,LS
+TAR01415,651,Hybrid,East Midlands,LE
+TAR01416,872,Petrol,Scotland,AB
+TAR01417,714,Electric,East Midlands,LE
+TAR01418,931,Electric,Wales,CF
+TAR01419,660,Petrol,Yorkshire and the Humber,HU
+TAR01420,803,Petrol,North West,PR
+TAR01421,767,Petrol,South East,OX
+TAR01422,841,Diesel,South West,PL
+TAR01423,807,Diesel,Wales,SA
+TAR01424,763,Petrol,South West,EX
+TAR01425,815,Petrol,South West,PL
+TAR01426,900,Hybrid,South West,BA
+TAR01427,728,Petrol,South East,BN
+TAR01428,706,Electric,North West,BL
+TAR01429,689,Hybrid,South East,ME
+TAR01430,793,Diesel,London,SW
+TAR01431,823,Petrol,Yorkshire and the Humber,LS
+TAR01432,773,Petrol,South West,BS
+TAR01433,903,Diesel,North East,NE
+TAR01434,501,Diesel,South East,GU
+TAR01435,839,Petrol,London,SE
+TAR01436,884,Petrol,East of England,NR
+TAR01437,755,Petrol,South East,BN
+TAR01438,831,Petrol,Yorkshire and the Humber,HU
+TAR01439,774,Petrol,East Midlands,LE
+TAR01440,958,Diesel,Yorkshire and the Humber,BD
+TAR01441,775,Diesel,South East,RG
+TAR01442,778,Electric,North West,WA
+TAR01443,717,Petrol,East of England,CB
+TAR01444,727,Petrol,Northern Ireland,BT
+TAR01445,768,Petrol,East Midlands,DE
+TAR01446,866,Petrol,East Midlands,DE
+TAR01447,893,Petrol,South East,ME
+TAR01448,863,Petrol,Scotland,G
+TAR01449,608,Hybrid,London,SW
+TAR01450,916,Petrol,London,N
+TAR01451,713,Hybrid,North West,M
+TAR01452,893,Petrol,South East,RG
+TAR01453,858,Petrol,South East,OX
+TAR01454,688,Petrol,North West,M
+TAR01455,715,Diesel,West Midlands,ST
+TAR01456,918,Electric,Wales,CF
+TAR01457,776,Hybrid,East of England,NR
+TAR01458,790,Hybrid,Yorkshire and the Humber,S
+TAR01459,709,Hybrid,Scotland,G
+TAR01460,778,Diesel,Scotland,G
+TAR01461,776,Diesel,South East,RG
+TAR01462,859,Electric,Wales,CF
+TAR01463,772,Electric,Wales,CF
+TAR01464,797,Hybrid,South East,ME
+TAR01465,777,Electric,South East,GU
+TAR01466,710,Electric,North West,L
+TAR01467,725,Hybrid,East Midlands,LE
+TAR01468,775,Diesel,West Midlands,ST
+TAR01469,819,Electric,West Midlands,B
+TAR01470,710,Petrol,North West,L
+TAR01471,653,Petrol,South East,OX
+TAR01472,644,Petrol,London,N
+TAR01473,653,Hybrid,West Midlands,WV
+TAR01474,808,Hybrid,West Midlands,CV
+TAR01475,692,Petrol,Scotland,G
+TAR01476,754,Petrol,West Midlands,WV
+TAR01477,772,Petrol,North West,M
+TAR01478,745,Diesel,London,N
+TAR01479,807,Petrol,Wales,CF
+TAR01480,986,Petrol,Scotland,G
+TAR01481,757,Hybrid,East Midlands,NG
+TAR01482,681,Electric,London,E
+TAR01483,775,Petrol,South East,ME
+TAR01484,917,Electric,South East,BN
+TAR01485,744,Hybrid,East of England,NR
+TAR01486,767,Petrol,Scotland,G
+TAR01487,999,Petrol,East of England,NR
+TAR01488,710,Petrol,South East,OX
+TAR01489,682,Diesel,North East,SR
+TAR01490,837,Electric,East Midlands,LE
+TAR01491,784,Hybrid,West Midlands,ST
+TAR01492,733,Electric,South East,ME
+TAR01493,848,Diesel,South East,GU
+TAR01494,948,Petrol,North West,WA
+TAR01495,829,Diesel,South West,BS
+TAR01496,670,Petrol,Northern Ireland,BT
+TAR01497,949,Diesel,East of England,IP
+TAR01498,871,Electric,Scotland,AB
+TAR01499,794,Diesel,London,E
+TAR01500,733,Petrol,London,N
+TAR01501,810,Petrol,Wales,SA
+TAR01502,869,Petrol,North West,L
+TAR01503,780,Hybrid,Yorkshire and the Humber,LS
+TAR01504,912,Petrol,East of England,CB
+TAR01505,735,Petrol,West Midlands,WV
+TAR01506,620,Petrol,London,SE
+TAR01507,837,Petrol,Wales,SA
+TAR01508,729,Petrol,East of England,CO
+TAR01509,764,Electric,East of England,NR
+TAR01510,687,Petrol,Scotland,G
+TAR01511,785,Electric,East Midlands,DE
+TAR01512,780,Hybrid,West Midlands,WV
+TAR01513,753,Petrol,London,SW
+TAR01514,718,Electric,South West,BA
+TAR01515,964,Petrol,South West,BS
+TAR01516,746,Hybrid,West Midlands,WV
+TAR01517,882,Diesel,North West,BL
+TAR01518,697,Petrol,Wales,LL
+TAR01519,724,Petrol,North West,BL
+TAR01520,795,Hybrid,North West,BL
+TAR01521,890,Electric,West Midlands,WV
+TAR01522,715,Hybrid,Yorkshire and the Humber,HU
+TAR01523,629,Electric,East Midlands,NG
+TAR01524,790,Electric,East of England,NR
+TAR01525,874,Petrol,South West,BS
+TAR01526,865,Petrol,South East,RG
+TAR01527,783,Electric,London,SW
+TAR01528,791,Petrol,North West,M
+TAR01529,837,Petrol,South West,BS
+TAR01530,834,Petrol,Wales,SA
+TAR01531,712,Diesel,North West,PR
+TAR01532,644,Petrol,South West,EX
+TAR01533,793,Electric,East of England,NR
+TAR01534,752,Electric,Yorkshire and the Humber,S
+TAR01535,723,Hybrid,London,SW
+TAR01536,833,Hybrid,West Midlands,CV
+TAR01537,826,Diesel,South East,BN
+TAR01538,707,Petrol,South East,OX
+TAR01539,796,Diesel,Wales,CF
+TAR01540,911,Petrol,East of England,IP
+TAR01541,768,Hybrid,London,N
+TAR01542,835,Electric,London,SE
+TAR01543,861,Hybrid,Yorkshire and the Humber,S
+TAR01544,766,Petrol,London,SW
+TAR01545,833,Petrol,South East,RG
+TAR01546,906,Petrol,London,N
+TAR01547,766,Diesel,London,E
+TAR01548,853,Electric,West Midlands,ST
+TAR01549,701,Hybrid,London,W
+TAR01550,790,Electric,East Midlands,DE
+TAR01551,729,Diesel,South East,ME
+TAR01552,933,Electric,North West,BL
+TAR01553,745,Diesel,South East,OX
+TAR01554,633,Petrol,North West,WA
+TAR01555,849,Petrol,West Midlands,WV
+TAR01556,839,Petrol,South West,EX
+TAR01557,839,Petrol,North West,PR
+TAR01558,865,Diesel,East Midlands,DE
+TAR01559,708,Diesel,North West,M
+TAR01560,719,Petrol,North West,WA
+TAR01561,704,Petrol,Yorkshire and the Humber,BD
+TAR01562,868,Petrol,South East,RG
+TAR01563,866,Diesel,South East,RG
+TAR01564,711,Diesel,Wales,CF
+TAR01565,809,Hybrid,Wales,LL
+TAR01566,980,Hybrid,East of England,NR
+TAR01567,780,Electric,London,SE
+TAR01568,887,Electric,North West,M
+TAR01569,537,Petrol,South West,BS
+TAR01570,824,Hybrid,Wales,LL
+TAR01571,905,Diesel,South East,GU
+TAR01572,749,Petrol,South East,OX
+TAR01573,738,Petrol,South East,RG
+TAR01574,806,Hybrid,South East,ME
+TAR01575,691,Petrol,East Midlands,LE
+TAR01576,870,Diesel,Wales,LL
+TAR01577,731,Petrol,South East,OX
+TAR01578,776,Electric,South East,RG
+TAR01579,755,Petrol,North East,DH
+TAR01580,999,Diesel,North East,NE
+TAR01581,767,Electric,London,SE
+TAR01582,760,Hybrid,West Midlands,CV
+TAR01583,741,Petrol,Wales,CF
+TAR01584,917,Petrol,South East,RG
+TAR01585,888,Petrol,London,SW
+TAR01586,867,Electric,Northern Ireland,BT
+TAR01587,840,Petrol,Northern Ireland,BT
+TAR01588,875,Diesel,Scotland,DD
+TAR01589,759,Diesel,London,SE
+TAR01590,694,Petrol,West Midlands,WV
+TAR01591,703,Electric,South East,ME
+TAR01592,886,Diesel,East of England,IP
+TAR01593,816,Petrol,North West,M
+TAR01594,850,Diesel,Yorkshire and the Humber,S
+TAR01595,764,Petrol,East of England,IP
+TAR01596,700,Diesel,London,N
+TAR01597,828,Electric,South West,EX
+TAR01598,811,Diesel,North West,WA
+TAR01599,878,Petrol,London,SW
+TAR01600,825,Petrol,East of England,CB
+TAR01601,938,Petrol,West Midlands,CV
+TAR01602,629,Petrol,South East,GU
+TAR01603,761,Diesel,Scotland,AB
+TAR01604,832,Diesel,South West,EX
+TAR01605,846,Hybrid,South East,ME
+TAR01606,765,Electric,North West,PR
+TAR01607,744,Petrol,North West,M
+TAR01608,805,Diesel,North East,NE
+TAR01609,826,Diesel,South East,OX
+TAR01610,731,Petrol,London,N
+TAR01611,747,Diesel,Yorkshire and the Humber,LS
+TAR01612,765,Petrol,Scotland,EH
+TAR01613,833,Petrol,North East,DH
+TAR01614,776,Petrol,Yorkshire and the Humber,S
+TAR01615,871,Hybrid,Wales,SA
+TAR01616,709,Diesel,West Midlands,B
+TAR01617,759,Electric,London,SW
+TAR01618,856,Diesel,South West,EX
+TAR01619,667,Electric,South East,BN
+TAR01620,638,Petrol,Yorkshire and the Humber,BD
+TAR01621,776,Petrol,London,SE
+TAR01622,683,Petrol,South East,GU
+TAR01623,772,Petrol,London,E
+TAR01624,785,Petrol,North East,NE
+TAR01625,878,Petrol,East Midlands,DE
+TAR01626,768,Diesel,London,SE
+TAR01627,823,Hybrid,South East,BN
+TAR01628,817,Diesel,South East,OX
+TAR01629,687,Petrol,West Midlands,WV
+TAR01630,757,Hybrid,South West,BA
+TAR01631,786,Electric,East of England,CB
+TAR01632,796,Electric,West Midlands,WV
+TAR01633,655,Petrol,West Midlands,B
+TAR01634,694,Diesel,South West,BS
+TAR01635,710,Electric,South West,PL
+TAR01636,690,Petrol,South East,OX
+TAR01637,726,Hybrid,North West,BL
+TAR01638,642,Diesel,Scotland,AB
+TAR01639,756,Diesel,Wales,CF
+TAR01640,791,Electric,South West,PL
+TAR01641,988,Petrol,North West,PR
+TAR01642,786,Diesel,Scotland,G
+TAR01643,756,Petrol,South West,BS
+TAR01644,676,Diesel,South West,BA
+TAR01645,789,Petrol,North West,M
+TAR01646,774,Diesel,East Midlands,DE
+TAR01647,727,Petrol,North West,PR
+TAR01648,607,Petrol,London,W
+TAR01649,655,Petrol,East of England,IP
+TAR01650,772,Diesel,London,N
+TAR01651,762,Electric,London,SW
+TAR01652,865,Diesel,West Midlands,B
+TAR01653,686,Petrol,South East,GU
+TAR01654,690,Petrol,South East,ME
+TAR01655,648,Petrol,Scotland,AB
+TAR01656,753,Petrol,North West,PR
+TAR01657,782,Diesel,East of England,NR
+TAR01658,863,Petrol,South East,OX
+TAR01659,876,Petrol,West Midlands,CV
+TAR01660,858,Petrol,Northern Ireland,BT
+TAR01661,751,Electric,North West,M
+TAR01662,789,Petrol,London,SE
+TAR01663,713,Petrol,South East,ME
+TAR01664,744,Hybrid,East of England,CB
+TAR01665,836,Petrol,South East,OX
+TAR01666,851,Diesel,Scotland,DD
+TAR01667,830,Diesel,South West,BA
+TAR01668,705,Diesel,South West,BS
+TAR01669,713,Hybrid,Northern Ireland,BT
+TAR01670,796,Petrol,South East,RG
+TAR01671,839,Petrol,Scotland,DD
+TAR01672,736,Petrol,West Midlands,B
+TAR01673,728,Diesel,Scotland,DD
+TAR01674,742,Petrol,North West,BL
+TAR01675,597,Electric,Wales,SA
+TAR01676,774,Hybrid,Scotland,EH
+TAR01677,778,Hybrid,West Midlands,WV
+TAR01678,844,Petrol,Wales,LL
+TAR01679,960,Petrol,London,N
+TAR01680,652,Hybrid,South East,RG
+TAR01681,723,Hybrid,South East,ME
+TAR01682,810,Hybrid,London,W
+TAR01683,769,Hybrid,Northern Ireland,BT
+TAR01684,928,Hybrid,East of England,NR
+TAR01685,764,Petrol,London,SW
+TAR01686,674,Petrol,West Midlands,B
+TAR01687,766,Diesel,London,W
+TAR01688,717,Petrol,Yorkshire and the Humber,S
+TAR01689,802,Petrol,East Midlands,LE
+TAR01690,743,Petrol,London,N
+TAR01691,749,Hybrid,London,N
+TAR01692,838,Hybrid,London,W
+TAR01693,810,Hybrid,Scotland,EH
+TAR01694,877,Hybrid,North West,M
+TAR01695,906,Petrol,North West,L
+TAR01696,692,Hybrid,North East,DH
+TAR01697,670,Hybrid,North East,DH
+TAR01698,845,Petrol,North West,M
+TAR01699,886,Petrol,South West,PL
+TAR01700,830,Petrol,East Midlands,NG
+TAR01701,898,Petrol,East Midlands,LE
+TAR01702,889,Petrol,South West,BS
+TAR01703,781,Petrol,Yorkshire and the Humber,LS
+TAR01704,830,Diesel,East Midlands,NG
+TAR01705,752,Electric,South West,BS
+TAR01706,728,Petrol,South East,ME
+TAR01707,754,Petrol,South East,RG
+TAR01708,854,Hybrid,North West,L
+TAR01709,684,Diesel,Wales,SA
+TAR01710,789,Petrol,North West,PR
+TAR01711,826,Petrol,West Midlands,CV
+TAR01712,767,Petrol,London,SE
+TAR01713,627,Petrol,South West,EX
+TAR01714,781,Diesel,North West,L
+TAR01715,878,Hybrid,Yorkshire and the Humber,HU
+TAR01716,810,Petrol,East of England,NR
+TAR01717,788,Petrol,Yorkshire and the Humber,HU
+TAR01718,953,Hybrid,Yorkshire and the Humber,LS
+TAR01719,661,Diesel,South East,BN
+TAR01720,816,Hybrid,North West,BL
+TAR01721,704,Diesel,South East,ME
+TAR01722,845,Petrol,North West,L
+TAR01723,863,Hybrid,North East,DH
+TAR01724,804,Diesel,South East,ME
+TAR01725,620,Hybrid,West Midlands,ST
+TAR01726,890,Petrol,South West,PL
+TAR01727,630,Electric,East Midlands,DE
+TAR01728,709,Petrol,North East,NE
+TAR01729,999,Petrol,North West,L
+TAR01730,797,Diesel,North East,NE
+TAR01731,749,Hybrid,London,SW
+TAR01732,571,Diesel,London,N
+TAR01733,690,Hybrid,Wales,SA
+TAR01734,698,Hybrid,South East,RG
+TAR01735,935,Petrol,Scotland,DD
+TAR01736,760,Petrol,North West,M
+TAR01737,736,Diesel,London,SW
+TAR01738,900,Petrol,East Midlands,LE
+TAR01739,656,Electric,Scotland,DD
+TAR01740,649,Diesel,North West,PR
+TAR01741,762,Hybrid,Yorkshire and the Humber,BD
+TAR01742,605,Petrol,South East,RG
+TAR01743,837,Hybrid,Scotland,G
+TAR01744,688,Petrol,Scotland,AB
+TAR01745,741,Petrol,East of England,IP
+TAR01746,999,Hybrid,East of England,NR
+TAR01747,729,Petrol,South East,GU
+TAR01748,679,Petrol,Scotland,AB
+TAR01749,813,Petrol,North West,BL
+TAR01750,828,Petrol,East of England,CO
+TAR01751,773,Petrol,East of England,IP
+TAR01752,665,Hybrid,London,W
+TAR01753,833,Petrol,East of England,IP
+TAR01754,965,Electric,South East,BN
+TAR01755,986,Hybrid,London,N
+TAR01756,979,Electric,South East,BN
+TAR01757,854,Petrol,Scotland,AB
+TAR01758,612,Hybrid,Wales,SA
+TAR01759,757,Electric,North East,NE
+TAR01760,907,Diesel,Scotland,AB
+TAR01761,770,Petrol,East of England,NR
+TAR01762,821,Diesel,East Midlands,LE
+TAR01763,890,Diesel,East of England,CB
+TAR01764,786,Petrol,North West,BL
+TAR01765,886,Diesel,East of England,CO
+TAR01766,652,Petrol,Northern Ireland,BT
+TAR01767,763,Hybrid,London,SW
+TAR01768,794,Electric,South East,GU
+TAR01769,598,Diesel,East of England,CB
+TAR01770,964,Petrol,London,E
+TAR01771,706,Petrol,North East,SR
+TAR01772,818,Hybrid,Scotland,EH
+TAR01773,821,Hybrid,South East,GU
+TAR01774,865,Petrol,London,E
+TAR01775,801,Hybrid,North West,PR
+TAR01776,760,Hybrid,West Midlands,CV
+TAR01777,854,Hybrid,Northern Ireland,BT
+TAR01778,929,Diesel,North West,WA
+TAR01779,774,Diesel,North East,DH
+TAR01780,841,Electric,South East,GU
+TAR01781,741,Petrol,East Midlands,LE
+TAR01782,845,Hybrid,East Midlands,DE
+TAR01783,758,Petrol,West Midlands,ST
+TAR01784,797,Hybrid,Northern Ireland,BT
+TAR01785,785,Hybrid,Scotland,AB
+TAR01786,671,Hybrid,South West,PL
+TAR01787,667,Petrol,West Midlands,CV
+TAR01788,662,Diesel,North West,M
+TAR01789,808,Diesel,North West,BL
+TAR01790,922,Diesel,North West,WA
+TAR01791,801,Electric,East of England,IP
+TAR01792,936,Hybrid,Scotland,AB
+TAR01793,760,Electric,South West,BS
+TAR01794,603,Petrol,West Midlands,WV
+TAR01795,731,Petrol,East of England,IP
+TAR01796,814,Diesel,South East,GU
+TAR01797,710,Diesel,Scotland,G
+TAR01798,622,Petrol,London,SE
+TAR01799,762,Petrol,London,SE
+TAR01800,786,Diesel,Yorkshire and the Humber,LS
+TAR01801,747,Petrol,South West,BA
+TAR01802,896,Hybrid,Yorkshire and the Humber,LS
+TAR01803,680,Diesel,London,W
+TAR01804,888,Hybrid,South West,PL
+TAR01805,717,Hybrid,East of England,CO
+TAR01806,773,Petrol,London,E
+TAR01807,820,Diesel,East of England,CB
+TAR01808,829,Petrol,Yorkshire and the Humber,S
+TAR01809,769,Hybrid,Wales,CF
+TAR01810,779,Petrol,South East,GU
+TAR01811,673,Petrol,East of England,NR
+TAR01812,648,Petrol,Wales,CF
+TAR01813,817,Petrol,West Midlands,WV
+TAR01814,860,Petrol,East Midlands,NG
+TAR01815,687,Diesel,West Midlands,ST
+TAR01816,867,Electric,Yorkshire and the Humber,BD
+TAR01817,763,Electric,East Midlands,DE
+TAR01818,682,Hybrid,Scotland,G
+TAR01819,835,Petrol,South East,RG
+TAR01820,717,Hybrid,North West,BL
+TAR01821,912,Electric,North East,DH
+TAR01822,849,Petrol,East Midlands,LE
+TAR01823,814,Petrol,Northern Ireland,BT
+TAR01824,647,Hybrid,North West,PR
+TAR01825,810,Petrol,South East,ME
+TAR01826,849,Petrol,South East,BN
+TAR01827,925,Electric,South East,BN
+TAR01828,824,Hybrid,North West,BL
+TAR01829,868,Hybrid,South West,BA
+TAR01830,751,Electric,North East,SR
+TAR01831,777,Hybrid,South East,OX
+TAR01832,976,Petrol,West Midlands,B
+TAR01833,760,Petrol,London,SW
+TAR01834,808,Electric,London,N
+TAR01835,670,Electric,London,W
+TAR01836,676,Diesel,Wales,CF
+TAR01837,846,Petrol,South East,ME
+TAR01838,760,Petrol,London,E
+TAR01839,689,Diesel,London,SE
+TAR01840,748,Diesel,South West,EX
+TAR01841,999,Diesel,South West,BA
+TAR01842,823,Diesel,Yorkshire and the Humber,BD
+TAR01843,848,Diesel,West Midlands,ST
+TAR01844,629,Petrol,East of England,IP
+TAR01845,725,Hybrid,London,SW
+TAR01846,848,Hybrid,South East,ME
+TAR01847,754,Petrol,South East,RG
+TAR01848,834,Petrol,South East,GU
+TAR01849,809,Petrol,Scotland,G
+TAR01850,651,Hybrid,Wales,CF
+TAR01851,673,Electric,East Midlands,NG
+TAR01852,982,Petrol,South East,BN
+TAR01853,783,Petrol,East Midlands,LE
+TAR01854,677,Diesel,North West,WA
+TAR01855,722,Electric,East Midlands,DE
+TAR01856,722,Diesel,North West,L
+TAR01857,866,Petrol,London,N
+TAR01858,891,Electric,North West,WA
+TAR01859,709,Hybrid,North West,PR
+TAR01860,795,Petrol,West Midlands,ST
+TAR01861,773,Hybrid,Scotland,DD
+TAR01862,855,Hybrid,North West,M
+TAR01863,594,Diesel,North West,M
+TAR01864,765,Electric,South West,BA
+TAR01865,778,Diesel,West Midlands,B
+TAR01866,827,Hybrid,North East,SR
+TAR01867,755,Diesel,North West,BL
+TAR01868,632,Hybrid,South East,ME
+TAR01869,812,Hybrid,West Midlands,ST
+TAR01870,771,Electric,Yorkshire and the Humber,HU
+TAR01871,834,Diesel,South West,BS
+TAR01872,808,Petrol,London,N
+TAR01873,758,Petrol,South West,EX
+TAR01874,809,Hybrid,Wales,SA
+TAR01875,976,Electric,Scotland,AB
+TAR01876,824,Electric,South East,BN
+TAR01877,755,Petrol,Yorkshire and the Humber,LS
+TAR01878,664,Petrol,London,N
+TAR01879,709,Petrol,West Midlands,ST
+TAR01880,839,Petrol,London,N
+TAR01881,851,Petrol,West Midlands,CV
+TAR01882,840,Diesel,West Midlands,B
+TAR01883,857,Petrol,Wales,LL
+TAR01884,796,Hybrid,West Midlands,WV
+TAR01885,826,Petrol,South West,PL
+TAR01886,807,Petrol,Scotland,EH
+TAR01887,706,Petrol,London,N
+TAR01888,712,Petrol,Yorkshire and the Humber,LS
+TAR01889,730,Electric,Yorkshire and the Humber,BD
+TAR01890,805,Electric,East Midlands,LE
+TAR01891,980,Diesel,East of England,CB
+TAR01892,700,Petrol,Wales,CF
+TAR01893,593,Diesel,North West,BL
+TAR01894,657,Electric,London,W
+TAR01895,846,Electric,East of England,CO
+TAR01896,727,Petrol,North West,M
+TAR01897,799,Hybrid,East of England,IP
+TAR01898,803,Hybrid,Scotland,AB
+TAR01899,809,Hybrid,Scotland,EH
+TAR01900,862,Diesel,East of England,NR
+TAR01901,836,Electric,East of England,CB
+TAR01902,882,Electric,London,W
+TAR01903,796,Petrol,West Midlands,CV
+TAR01904,985,Hybrid,Yorkshire and the Humber,BD
+TAR01905,818,Petrol,South East,ME
+TAR01906,880,Petrol,Scotland,EH
+TAR01907,822,Diesel,Wales,SA
+TAR01908,683,Petrol,East Midlands,NG
+TAR01909,999,Hybrid,Yorkshire and the Humber,BD
+TAR01910,782,Petrol,Wales,LL
+TAR01911,703,Petrol,North West,BL
+TAR01912,688,Petrol,East of England,CB
+TAR01913,837,Petrol,North West,WA
+TAR01914,665,Diesel,London,W
+TAR01915,739,Hybrid,South West,PL
+TAR01916,884,Petrol,South East,BN
+TAR01917,910,Petrol,East of England,IP
+TAR01918,831,Electric,North West,L
+TAR01919,746,Electric,Scotland,EH
+TAR01920,755,Hybrid,North West,WA
+TAR01921,774,Electric,London,N
+TAR01922,623,Hybrid,West Midlands,ST
+TAR01923,835,Petrol,North West,M
+TAR01924,802,Petrol,North East,DH
+TAR01925,760,Diesel,East Midlands,NG
+TAR01926,689,Hybrid,South East,OX
+TAR01927,827,Petrol,Scotland,G
+TAR01928,868,Petrol,Yorkshire and the Humber,S
+TAR01929,711,Electric,East of England,NR
+TAR01930,679,Diesel,London,SE
+TAR01931,745,Diesel,Scotland,G
+TAR01932,738,Petrol,West Midlands,ST
+TAR01933,930,Diesel,North West,WA
+TAR01934,824,Petrol,East of England,CO
+TAR01935,885,Petrol,East Midlands,NG
+TAR01936,952,Petrol,North West,PR
+TAR01937,683,Electric,North West,WA
+TAR01938,745,Electric,South West,BA
+TAR01939,715,Electric,Wales,SA
+TAR01940,847,Hybrid,Yorkshire and the Humber,HU
+TAR01941,800,Petrol,Northern Ireland,BT
+TAR01942,651,Petrol,East of England,CO
+TAR01943,746,Petrol,North East,SR
+TAR01944,640,Petrol,London,SW
+TAR01945,925,Diesel,East of England,IP
+TAR01946,743,Petrol,Scotland,AB
+TAR01947,934,Petrol,South East,RG
+TAR01948,808,Petrol,East of England,NR
+TAR01949,773,Petrol,North West,BL
+TAR01950,668,Diesel,East of England,NR
+TAR01951,794,Petrol,North West,BL
+TAR01952,841,Hybrid,South West,EX
+TAR01953,780,Diesel,Yorkshire and the Humber,HU
+TAR01954,835,Electric,Scotland,G
+TAR01955,660,Hybrid,Wales,CF
+TAR01956,723,Electric,North West,L
+TAR01957,848,Electric,South East,GU
+TAR01958,819,Diesel,South West,EX
+TAR01959,780,Petrol,East Midlands,DE
+TAR01960,865,Petrol,North West,L
+TAR01961,781,Petrol,East of England,CB
+TAR01962,776,Petrol,South East,BN
+TAR01963,686,Diesel,East of England,CO
+TAR01964,849,Petrol,North West,BL
+TAR01965,602,Diesel,South East,GU
+TAR01966,844,Petrol,Wales,LL
+TAR01967,675,Petrol,Scotland,G
+TAR01968,780,Diesel,London,SE
+TAR01969,744,Electric,West Midlands,WV
+TAR01970,866,Diesel,London,W
+TAR01971,743,Petrol,North West,M
+TAR01972,667,Petrol,Yorkshire and the Humber,BD
+TAR01973,761,Petrol,East of England,NR
+TAR01974,742,Petrol,London,W
+TAR01975,750,Petrol,East Midlands,NG
+TAR01976,644,Petrol,South West,BA
+TAR01977,744,Electric,South East,ME
+TAR01978,715,Electric,North West,WA
+TAR01979,791,Hybrid,London,N
+TAR01980,738,Petrol,Northern Ireland,BT
+TAR01981,809,Petrol,Yorkshire and the Humber,LS
+TAR01982,707,Hybrid,Yorkshire and the Humber,LS
+TAR01983,777,Petrol,London,SW
+TAR01984,982,Petrol,Yorkshire and the Humber,S
+TAR01985,814,Diesel,South West,EX
+TAR01986,840,Hybrid,West Midlands,CV
+TAR01987,818,Petrol,London,SW
+TAR01988,801,Diesel,South West,BS
+TAR01989,836,Hybrid,South East,BN
+TAR01990,743,Petrol,East of England,NR
+TAR01991,695,Petrol,Scotland,G
+TAR01992,729,Petrol,North West,BL
+TAR01993,847,Hybrid,Yorkshire and the Humber,LS
+TAR01994,820,Electric,West Midlands,WV
+TAR01995,886,Petrol,Yorkshire and the Humber,HU
+TAR01996,901,Petrol,Wales,CF
+TAR01997,771,Electric,Wales,LL
+TAR01998,584,Hybrid,East Midlands,LE
+TAR01999,798,Hybrid,London,SE
+TAR02000,910,Hybrid,North West,L
+TAR02001,796,Hybrid,London,SW
+TAR02002,842,Petrol,South East,OX
+TAR02003,626,Petrol,Wales,LL
+TAR02004,702,Petrol,Wales,CF
+TAR02005,788,Petrol,West Midlands,CV
+TAR02006,858,Diesel,Wales,LL
+TAR02007,701,Diesel,Northern Ireland,BT
+TAR02008,600,Petrol,Wales,LL
+TAR02009,703,Petrol,North West,BL
+TAR02010,702,Petrol,East Midlands,NG
+TAR02011,810,Electric,West Midlands,B
+TAR02012,788,Petrol,London,SE
+TAR02013,726,Hybrid,Wales,CF
+TAR02014,895,Petrol,South West,BA
+TAR02015,668,Diesel,South East,GU
+TAR02016,794,Electric,South East,ME
+TAR02017,978,Petrol,East of England,CB
+TAR02018,767,Electric,Scotland,AB
+TAR02019,790,Diesel,South East,RG
+TAR02020,813,Electric,West Midlands,B
+TAR02021,766,Hybrid,North West,L
+TAR02022,694,Diesel,Scotland,DD
+TAR02023,769,Electric,London,E
+TAR02024,849,Petrol,London,W
+TAR02025,771,Diesel,Scotland,EH
+TAR02026,899,Petrol,Scotland,G
+TAR02027,788,Diesel,Scotland,DD
+TAR02028,725,Petrol,North East,DH
+TAR02029,808,Hybrid,North West,WA
+TAR02030,993,Electric,West Midlands,CV
+TAR02031,694,Electric,East of England,IP
+TAR02032,718,Petrol,South West,BS
+TAR02033,804,Petrol,South East,GU
+TAR02034,999,Petrol,South East,GU
+TAR02035,754,Diesel,Yorkshire and the Humber,S
+TAR02036,674,Diesel,South East,BN
+TAR02037,817,Diesel,South West,PL
+TAR02038,787,Electric,North West,WA
+TAR02039,782,Electric,West Midlands,ST
+TAR02040,675,Electric,London,SW
+TAR02041,670,Hybrid,South East,GU
+TAR02042,816,Hybrid,Scotland,AB
+TAR02043,784,Petrol,South East,BN
+TAR02044,811,Hybrid,Yorkshire and the Humber,BD
+TAR02045,865,Electric,London,SE
+TAR02046,844,Petrol,Scotland,EH
+TAR02047,572,Petrol,London,SW
+TAR02048,817,Petrol,South West,BS
+TAR02049,652,Electric,London,W
+TAR02050,776,Electric,Scotland,G
+TAR02051,747,Diesel,North West,PR
+TAR02052,821,Petrol,East of England,CB
+TAR02053,857,Diesel,Scotland,G
+TAR02054,796,Petrol,Scotland,EH
+TAR02055,741,Petrol,East of England,NR
+TAR02056,892,Hybrid,West Midlands,WV
+TAR02057,820,Hybrid,South East,OX
+TAR02058,948,Electric,Northern Ireland,BT
+TAR02059,967,Petrol,Northern Ireland,BT
+TAR02060,886,Hybrid,Scotland,AB
+TAR02061,780,Petrol,North West,M
+TAR02062,857,Diesel,London,N
+TAR02063,961,Petrol,West Midlands,CV
+TAR02064,666,Electric,Wales,LL
+TAR02065,801,Petrol,London,N
+TAR02066,894,Petrol,North West,WA
+TAR02067,706,Electric,South East,BN
+TAR02068,649,Petrol,London,SW
+TAR02069,760,Petrol,West Midlands,WV
+TAR02070,870,Petrol,Yorkshire and the Humber,BD
+TAR02071,723,Petrol,Scotland,G
+TAR02072,733,Petrol,North West,M
+TAR02073,731,Petrol,North West,M
+TAR02074,734,Hybrid,West Midlands,WV
+TAR02075,790,Petrol,South East,ME
+TAR02076,838,Hybrid,North East,DH
+TAR02077,826,Electric,North West,L
+TAR02078,799,Petrol,London,N
+TAR02079,828,Electric,West Midlands,WV
+TAR02080,802,Petrol,South East,GU
+TAR02081,815,Petrol,Yorkshire and the Humber,BD
+TAR02082,804,Hybrid,London,SE
+TAR02083,706,Petrol,West Midlands,CV
+TAR02084,888,Electric,Northern Ireland,BT
+TAR02085,775,Hybrid,London,W
+TAR02086,689,Petrol,North East,SR
+TAR02087,834,Petrol,South East,BN
+TAR02088,728,Electric,Wales,SA
+TAR02089,768,Petrol,North East,NE
+TAR02090,807,Hybrid,South East,ME
+TAR02091,686,Petrol,London,N
+TAR02092,769,Electric,London,W
+TAR02093,781,Diesel,South West,EX
+TAR02094,852,Diesel,South East,BN
+TAR02095,771,Petrol,East of England,NR
+TAR02096,757,Petrol,South West,PL
+TAR02097,906,Diesel,North West,WA
+TAR02098,907,Petrol,London,SW
+TAR02099,787,Petrol,London,W
+TAR02100,928,Petrol,North West,WA
+TAR02101,795,Electric,West Midlands,B
+TAR02102,727,Petrol,Wales,LL
+TAR02103,791,Hybrid,Scotland,G
+TAR02104,737,Petrol,West Midlands,ST
+TAR02105,750,Diesel,East Midlands,NG
+TAR02106,599,Petrol,South East,RG
+TAR02107,811,Petrol,Wales,LL
+TAR02108,999,Electric,South East,OX
+TAR02109,801,Petrol,South West,BS
+TAR02110,733,Diesel,North East,DH
+TAR02111,731,Electric,Scotland,G
+TAR02112,852,Electric,London,SE
+TAR02113,677,Diesel,North West,PR
+TAR02114,776,Petrol,Scotland,AB
+TAR02115,886,Hybrid,London,SW
+TAR02116,930,Diesel,South East,ME
+TAR02117,719,Electric,London,N
+TAR02118,810,Petrol,Northern Ireland,BT
+TAR02119,866,Hybrid,London,N
+TAR02120,805,Petrol,London,E
+TAR02121,653,Hybrid,East of England,CB
+TAR02122,899,Petrol,London,N
+TAR02123,661,Diesel,East of England,CB
+TAR02124,600,Diesel,West Midlands,CV
+TAR02125,727,Hybrid,Wales,CF
+TAR02126,700,Electric,East of England,NR
+TAR02127,887,Electric,Wales,LL
+TAR02128,794,Hybrid,West Midlands,ST
+TAR02129,928,Petrol,Wales,LL
+TAR02130,750,Hybrid,East Midlands,DE
+TAR02131,785,Hybrid,South East,RG
+TAR02132,718,Petrol,London,SW
+TAR02133,748,Diesel,East of England,NR
+TAR02134,832,Petrol,West Midlands,CV
+TAR02135,902,Electric,North East,DH
+TAR02136,719,Petrol,South East,GU
+TAR02137,878,Electric,Wales,CF
+TAR02138,882,Petrol,South East,OX
+TAR02139,632,Hybrid,London,E
+TAR02140,625,Petrol,South East,ME
+TAR02141,799,Hybrid,East of England,NR
+TAR02142,778,Diesel,South West,EX
+TAR02143,719,Hybrid,East Midlands,NG
+TAR02144,942,Petrol,East Midlands,NG
+TAR02145,656,Hybrid,Scotland,G
+TAR02146,803,Hybrid,Yorkshire and the Humber,LS
+TAR02147,816,Hybrid,Scotland,EH
+TAR02148,966,Electric,Yorkshire and the Humber,BD
+TAR02149,611,Petrol,London,N
+TAR02150,806,Petrol,South East,RG
+TAR02151,723,Hybrid,South West,EX
+TAR02152,754,Diesel,South East,GU
+TAR02153,846,Petrol,North East,SR
+TAR02154,827,Hybrid,South East,RG
+TAR02155,711,Petrol,South East,OX
+TAR02156,703,Petrol,Yorkshire and the Humber,S
+TAR02157,775,Diesel,East Midlands,DE
+TAR02158,861,Electric,Yorkshire and the Humber,HU
+TAR02159,665,Electric,London,E
+TAR02160,754,Petrol,London,W
+TAR02161,722,Petrol,East of England,IP
+TAR02162,775,Diesel,South West,BS
+TAR02163,978,Diesel,South East,ME
+TAR02164,711,Electric,South East,ME
+TAR02165,687,Petrol,East of England,NR
+TAR02166,819,Diesel,East of England,CB
+TAR02167,749,Diesel,South East,BN
+TAR02168,699,Diesel,North West,BL
+TAR02169,729,Petrol,South East,GU
+TAR02170,793,Diesel,East of England,CB
+TAR02171,754,Diesel,North West,WA
+TAR02172,661,Petrol,London,SW
+TAR02173,806,Hybrid,Scotland,G
+TAR02174,797,Electric,North West,WA
+TAR02175,628,Petrol,West Midlands,WV
+TAR02176,818,Petrol,South East,OX
+TAR02177,871,Petrol,South East,ME
+TAR02178,851,Petrol,South West,BA
+TAR02179,779,Electric,London,SE
+TAR02180,687,Hybrid,South East,BN
+TAR02181,727,Electric,North West,M
+TAR02182,761,Diesel,London,SE
+TAR02183,742,Hybrid,South East,ME
+TAR02184,654,Hybrid,London,SE
+TAR02185,819,Petrol,South West,BS
+TAR02186,796,Electric,South West,PL
+TAR02187,872,Petrol,South West,PL
+TAR02188,727,Petrol,Wales,LL
+TAR02189,929,Electric,Wales,LL
+TAR02190,945,Petrol,South East,OX
+TAR02191,764,Diesel,South West,EX
+TAR02192,760,Diesel,West Midlands,WV
+TAR02193,752,Petrol,London,SW
+TAR02194,822,Petrol,Scotland,AB
+TAR02195,707,Petrol,North West,L
+TAR02196,710,Hybrid,West Midlands,CV
+TAR02197,710,Petrol,North East,NE
+TAR02198,729,Petrol,South West,EX
+TAR02199,815,Electric,Scotland,DD
+TAR02200,697,Petrol,North West,WA
+TAR02201,771,Diesel,East Midlands,NG
+TAR02202,587,Petrol,East Midlands,NG
+TAR02203,933,Diesel,Scotland,DD
+TAR02204,979,Electric,West Midlands,ST
+TAR02205,745,Petrol,South East,OX
+TAR02206,717,Hybrid,Wales,CF
+TAR02207,838,Petrol,East of England,CO
+TAR02208,879,Electric,Yorkshire and the Humber,HU
+TAR02209,785,Petrol,North East,SR
+TAR02210,791,Petrol,Yorkshire and the Humber,S
+TAR02211,753,Petrol,North West,L
+TAR02212,801,Diesel,North West,L
+TAR02213,714,Petrol,South East,BN
+TAR02214,904,Diesel,East of England,NR
+TAR02215,840,Hybrid,North East,SR
+TAR02216,753,Electric,Northern Ireland,BT
+TAR02217,757,Electric,London,E
+TAR02218,825,Diesel,Scotland,EH
+TAR02219,723,Petrol,Northern Ireland,BT
+TAR02220,713,Diesel,London,W
+TAR02221,780,Petrol,West Midlands,B
+TAR02222,617,Petrol,London,SE
+TAR02223,588,Petrol,North West,L
+TAR02224,655,Diesel,Yorkshire and the Humber,HU
+TAR02225,609,Diesel,Wales,CF
+TAR02226,712,Diesel,Yorkshire and the Humber,LS
+TAR02227,844,Diesel,South West,BA
+TAR02228,686,Petrol,Scotland,DD
+TAR02229,850,Hybrid,South East,ME
+TAR02230,895,Petrol,South East,OX
+TAR02231,837,Hybrid,South East,OX
+TAR02232,800,Hybrid,London,N
+TAR02233,966,Diesel,South West,EX
+TAR02234,682,Electric,West Midlands,B
+TAR02235,695,Hybrid,Wales,CF
+TAR02236,845,Petrol,East of England,NR
+TAR02237,936,Electric,Northern Ireland,BT
+TAR02238,888,Hybrid,South West,PL
+TAR02239,765,Diesel,Northern Ireland,BT
+TAR02240,831,Petrol,London,W
+TAR02241,699,Petrol,West Midlands,CV
+TAR02242,956,Petrol,West Midlands,WV
+TAR02243,816,Petrol,South East,ME
+TAR02244,891,Diesel,Yorkshire and the Humber,S
+TAR02245,737,Electric,South East,ME
+TAR02246,797,Petrol,South East,BN
+TAR02247,644,Petrol,South West,PL
+TAR02248,730,Petrol,South East,BN
+TAR02249,757,Petrol,Wales,CF
+TAR02250,808,Diesel,North West,BL
+TAR02251,746,Petrol,North East,SR
+TAR02252,831,Electric,Yorkshire and the Humber,HU
+TAR02253,853,Petrol,East Midlands,NG
+TAR02254,791,Electric,North East,NE
+TAR02255,743,Hybrid,South West,BA
+TAR02256,824,Petrol,London,N
+TAR02257,980,Diesel,East of England,CB
+TAR02258,701,Hybrid,East of England,IP
+TAR02259,678,Petrol,Wales,CF
+TAR02260,759,Petrol,South East,RG
+TAR02261,747,Diesel,West Midlands,B
+TAR02262,855,Hybrid,South West,BA
+TAR02263,690,Petrol,North West,M
+TAR02264,760,Petrol,North West,PR
+TAR02265,800,Hybrid,Northern Ireland,BT
+TAR02266,769,Petrol,Yorkshire and the Humber,LS
+TAR02267,791,Diesel,Yorkshire and the Humber,BD
+TAR02268,793,Petrol,South East,ME
+TAR02269,846,Hybrid,London,W
+TAR02270,791,Electric,South East,ME
+TAR02271,689,Petrol,Wales,CF
+TAR02272,957,Hybrid,North West,WA
+TAR02273,772,Electric,Yorkshire and the Humber,BD
+TAR02274,877,Diesel,North West,L
+TAR02275,867,Electric,Scotland,G
+TAR02276,893,Diesel,Wales,SA
+TAR02277,882,Electric,South West,PL
+TAR02278,850,Hybrid,Northern Ireland,BT
+TAR02279,908,Diesel,East of England,IP
+TAR02280,743,Diesel,Northern Ireland,BT
+TAR02281,749,Hybrid,South East,GU
+TAR02282,883,Petrol,East of England,CB
+TAR02283,735,Diesel,North East,NE
+TAR02284,812,Petrol,Yorkshire and the Humber,LS
+TAR02285,828,Hybrid,London,N
+TAR02286,831,Petrol,Scotland,EH
+TAR02287,765,Petrol,South West,BA
+TAR02288,670,Diesel,Yorkshire and the Humber,LS
+TAR02289,678,Electric,East Midlands,LE
+TAR02290,872,Petrol,South West,EX
+TAR02291,759,Petrol,Yorkshire and the Humber,LS
+TAR02292,797,Hybrid,West Midlands,CV
+TAR02293,708,Petrol,East Midlands,NG
+TAR02294,700,Electric,London,W
+TAR02295,744,Diesel,West Midlands,CV
+TAR02296,768,Petrol,London,N
+TAR02297,693,Petrol,South East,OX
+TAR02298,829,Electric,Northern Ireland,BT
+TAR02299,676,Diesel,West Midlands,WV
+TAR02300,777,Hybrid,North West,PR
+TAR02301,725,Electric,Wales,LL
+TAR02302,839,Petrol,London,E
+TAR02303,675,Electric,West Midlands,B
+TAR02304,770,Diesel,East of England,NR
+TAR02305,781,Petrol,North West,L
+TAR02306,732,Petrol,Yorkshire and the Humber,HU
+TAR02307,784,Petrol,North West,PR
+TAR02308,747,Hybrid,East Midlands,LE
+TAR02309,603,Petrol,Scotland,AB
+TAR02310,771,Hybrid,Northern Ireland,BT
+TAR02311,832,Petrol,East of England,CO
+TAR02312,861,Electric,East Midlands,NG
+TAR02313,676,Petrol,Yorkshire and the Humber,BD
+TAR02314,869,Hybrid,Wales,LL
+TAR02315,942,Petrol,West Midlands,ST
+TAR02316,823,Petrol,South East,GU
+TAR02317,855,Diesel,Scotland,DD
+TAR02318,717,Electric,North East,NE
+TAR02319,675,Petrol,South East,OX
+TAR02320,800,Electric,North West,BL
+TAR02321,724,Hybrid,West Midlands,B
+TAR02322,806,Diesel,Scotland,EH
+TAR02323,795,Petrol,South East,BN
+TAR02324,974,Petrol,East of England,IP
+TAR02325,820,Petrol,Yorkshire and the Humber,S
+TAR02326,897,Electric,Wales,SA
+TAR02327,806,Hybrid,Yorkshire and the Humber,S
+TAR02328,750,Petrol,Yorkshire and the Humber,BD
+TAR02329,859,Electric,West Midlands,WV
+TAR02330,778,Electric,North West,M
+TAR02331,892,Hybrid,West Midlands,WV
+TAR02332,800,Diesel,East of England,IP
+TAR02333,858,Diesel,Yorkshire and the Humber,LS
+TAR02334,648,Diesel,London,W
+TAR02335,701,Diesel,Wales,CF
+TAR02336,819,Hybrid,North West,L
+TAR02337,839,Electric,East of England,CO
+TAR02338,838,Electric,East of England,CO
+TAR02339,653,Petrol,North East,NE
+TAR02340,787,Petrol,West Midlands,WV
+TAR02341,723,Petrol,South West,EX
+TAR02342,879,Hybrid,Scotland,EH
+TAR02343,719,Petrol,Wales,SA
+TAR02344,876,Diesel,East of England,CB
+TAR02345,613,Petrol,Wales,SA
+TAR02346,840,Petrol,West Midlands,B
+TAR02347,860,Electric,West Midlands,WV
+TAR02348,793,Electric,South East,BN
+TAR02349,849,Petrol,West Midlands,WV
+TAR02350,637,Petrol,London,SE
+TAR02351,721,Diesel,South East,BN
+TAR02352,751,Petrol,West Midlands,CV
+TAR02353,783,Electric,Yorkshire and the Humber,LS
+TAR02354,922,Hybrid,Yorkshire and the Humber,S
+TAR02355,819,Petrol,Northern Ireland,BT
+TAR02356,872,Petrol,Wales,SA
+TAR02357,703,Hybrid,East of England,CO
+TAR02358,750,Diesel,North East,SR
+TAR02359,787,Electric,Wales,LL
+TAR02360,858,Petrol,East Midlands,NG
+TAR02361,803,Diesel,Wales,LL
+TAR02362,750,Petrol,South West,EX
+TAR02363,813,Hybrid,North West,BL
+TAR02364,886,Hybrid,Yorkshire and the Humber,BD
+TAR02365,659,Electric,London,W
+TAR02366,610,Petrol,South East,RG
+TAR02367,664,Diesel,South East,OX
+TAR02368,839,Electric,West Midlands,ST
+TAR02369,774,Electric,East of England,IP
+TAR02370,822,Petrol,Scotland,EH
+TAR02371,644,Petrol,London,SW
+TAR02372,864,Diesel,East Midlands,LE
+TAR02373,711,Petrol,South East,OX
+TAR02374,806,Petrol,South East,BN
+TAR02375,635,Hybrid,Yorkshire and the Humber,BD
+TAR02376,784,Petrol,East of England,IP
+TAR02377,854,Petrol,South West,EX
+TAR02378,741,Petrol,North West,M
+TAR02379,782,Petrol,East of England,NR
+TAR02380,597,Petrol,North West,L
+TAR02381,731,Petrol,North West,WA
+TAR02382,539,Petrol,East of England,IP
+TAR02383,846,Petrol,Yorkshire and the Humber,S
+TAR02384,702,Petrol,Yorkshire and the Humber,BD
+TAR02385,763,Electric,North West,PR
+TAR02386,831,Electric,North West,WA
+TAR02387,833,Hybrid,East Midlands,LE
+TAR02388,720,Electric,Scotland,EH
+TAR02389,763,Hybrid,West Midlands,WV
+TAR02390,809,Petrol,Northern Ireland,BT
+TAR02391,958,Petrol,Northern Ireland,BT
+TAR02392,867,Hybrid,South West,BS
+TAR02393,802,Electric,London,N
+TAR02394,771,Petrol,Northern Ireland,BT
+TAR02395,821,Petrol,West Midlands,B
+TAR02396,720,Petrol,Yorkshire and the Humber,LS
+TAR02397,834,Hybrid,West Midlands,B
+TAR02398,837,Diesel,South East,GU
+TAR02399,653,Diesel,Wales,CF
+TAR02400,603,Petrol,North West,BL
+TAR02401,800,Hybrid,London,SE
+TAR02402,916,Diesel,London,SW
+TAR02403,681,Petrol,North West,PR
+TAR02404,852,Hybrid,North East,DH
+TAR02405,718,Electric,London,E
+TAR02406,814,Electric,North West,L
+TAR02407,999,Diesel,Northern Ireland,BT
+TAR02408,594,Petrol,North West,BL
+TAR02409,657,Petrol,North East,NE
+TAR02410,698,Petrol,North West,WA
+TAR02411,794,Diesel,North West,WA
+TAR02412,710,Hybrid,London,E
+TAR02413,801,Diesel,East Midlands,DE
+TAR02414,719,Electric,London,SW
+TAR02415,847,Petrol,East of England,CB
+TAR02416,702,Electric,North East,DH
+TAR02417,800,Petrol,London,W
+TAR02418,853,Petrol,South West,PL
+TAR02419,842,Petrol,London,SE
+TAR02420,716,Petrol,West Midlands,WV
+TAR02421,726,Petrol,London,N
+TAR02422,792,Petrol,South West,EX
+TAR02423,808,Electric,South East,RG
+TAR02424,702,Petrol,Wales,CF
+TAR02425,767,Petrol,North West,PR
+TAR02426,857,Diesel,East of England,CB
+TAR02427,684,Hybrid,West Midlands,CV
+TAR02428,698,Hybrid,South West,EX
+TAR02429,764,Petrol,South East,ME
+TAR02430,836,Hybrid,South East,BN
+TAR02431,807,Petrol,Scotland,AB
+TAR02432,782,Diesel,South West,BA
+TAR02433,867,Hybrid,Yorkshire and the Humber,LS
+TAR02434,708,Petrol,Yorkshire and the Humber,LS
+TAR02435,930,Petrol,London,E
+TAR02436,999,Hybrid,Yorkshire and the Humber,S
+TAR02437,842,Petrol,North West,WA
+TAR02438,969,Hybrid,North West,PR
+TAR02439,655,Petrol,West Midlands,ST
+TAR02440,820,Petrol,Yorkshire and the Humber,S
+TAR02441,659,Diesel,West Midlands,ST
+TAR02442,800,Electric,South East,OX
+TAR02443,999,Hybrid,East of England,CB
+TAR02444,813,Diesel,Scotland,EH
+TAR02445,715,Petrol,East of England,NR
+TAR02446,644,Electric,North West,L
+TAR02447,698,Hybrid,West Midlands,WV
+TAR02448,700,Petrol,South East,GU
+TAR02449,780,Petrol,East of England,CO
+TAR02450,868,Hybrid,London,N
+TAR02451,585,Electric,Yorkshire and the Humber,S
+TAR02452,834,Electric,West Midlands,B
+TAR02453,526,Petrol,East Midlands,LE
+TAR02454,884,Hybrid,South West,EX
+TAR02455,833,Diesel,London,N
+TAR02456,826,Petrol,London,SE
+TAR02457,809,Hybrid,South West,EX
+TAR02458,745,Petrol,West Midlands,CV
+TAR02459,803,Diesel,London,N
+TAR02460,747,Petrol,North West,BL
+TAR02461,811,Electric,London,N
+TAR02462,879,Petrol,East of England,NR
+TAR02463,779,Petrol,London,SW
+TAR02464,872,Hybrid,South East,BN
+TAR02465,815,Electric,North West,WA
+TAR02466,731,Hybrid,London,SW
+TAR02467,700,Petrol,North West,M
+TAR02468,925,Petrol,South West,EX
+TAR02469,737,Petrol,Scotland,DD
+TAR02470,667,Diesel,Wales,SA
+TAR02471,634,Petrol,North West,L
+TAR02472,989,Diesel,North East,SR
+TAR02473,899,Hybrid,North West,L
+TAR02474,684,Diesel,South East,OX
+TAR02475,642,Diesel,Wales,SA
+TAR02476,918,Diesel,North East,SR
+TAR02477,939,Petrol,Wales,SA
+TAR02478,857,Petrol,South West,PL
+TAR02479,708,Hybrid,West Midlands,WV
+TAR02480,828,Petrol,South East,ME
+TAR02481,766,Hybrid,South East,RG
+TAR02482,878,Diesel,South West,BA
+TAR02483,902,Petrol,Yorkshire and the Humber,BD
+TAR02484,771,Petrol,South East,RG
+TAR02485,747,Diesel,Yorkshire and the Humber,S
+TAR02486,799,Petrol,Yorkshire and the Humber,S
+TAR02487,806,Hybrid,North West,WA
+TAR02488,664,Petrol,North West,WA
+TAR02489,794,Diesel,London,N
+TAR02490,834,Petrol,West Midlands,B
+TAR02491,750,Petrol,West Midlands,WV
+TAR02492,963,Petrol,South West,EX
+TAR02493,806,Petrol,West Midlands,B
+TAR02494,712,Hybrid,Yorkshire and the Humber,LS
+TAR02495,818,Hybrid,Wales,SA
+TAR02496,848,Petrol,Wales,CF
+TAR02497,738,Hybrid,London,N
+TAR02498,987,Petrol,Scotland,DD
+TAR02499,849,Diesel,Scotland,EH
+TAR02500,661,Petrol,South East,OX
+TAR02501,872,Petrol,South West,EX
+TAR02502,864,Petrol,East of England,IP
+TAR02503,789,Petrol,Wales,SA
+TAR02504,820,Hybrid,West Midlands,CV
+TAR02505,880,Petrol,South East,ME
+TAR02506,749,Hybrid,Scotland,AB
+TAR02507,999,Hybrid,Scotland,AB
+TAR02508,676,Petrol,North West,M
+TAR02509,733,Petrol,North East,SR
+TAR02510,838,Petrol,East Midlands,LE
+TAR02511,942,Petrol,East Midlands,DE
+TAR02512,637,Diesel,East of England,IP
+TAR02513,823,Electric,Yorkshire and the Humber,LS
+TAR02514,761,Diesel,Yorkshire and the Humber,HU
+TAR02515,662,Electric,Yorkshire and the Humber,BD
+TAR02516,655,Electric,London,E
+TAR02517,910,Petrol,Scotland,G
+TAR02518,815,Hybrid,South West,BA
+TAR02519,680,Hybrid,East of England,IP
+TAR02520,694,Petrol,London,N
+TAR02521,659,Electric,South West,BS
+TAR02522,810,Petrol,North West,M
+TAR02523,790,Hybrid,London,W
+TAR02524,681,Petrol,South East,GU
+TAR02525,819,Diesel,North West,L
+TAR02526,883,Hybrid,East of England,CO
+TAR02527,841,Petrol,West Midlands,CV
+TAR02528,872,Petrol,West Midlands,B
+TAR02529,855,Petrol,South West,BS
+TAR02530,692,Electric,London,N
+TAR02531,776,Petrol,Northern Ireland,BT
+TAR02532,693,Petrol,North West,M
+TAR02533,843,Electric,London,W
+TAR02534,743,Petrol,West Midlands,B
+TAR02535,692,Diesel,London,W
+TAR02536,874,Electric,East Midlands,DE
+TAR02537,725,Diesel,Scotland,G
+TAR02538,668,Diesel,South East,BN
+TAR02539,684,Petrol,Northern Ireland,BT
+TAR02540,546,Hybrid,East Midlands,LE
+TAR02541,848,Petrol,London,N
+TAR02542,858,Diesel,North West,BL
+TAR02543,822,Electric,London,SE
+TAR02544,743,Electric,East Midlands,LE
+TAR02545,724,Diesel,East Midlands,NG
+TAR02546,735,Petrol,Yorkshire and the Humber,S
+TAR02547,811,Petrol,Northern Ireland,BT
+TAR02548,605,Electric,London,SW
+TAR02549,654,Electric,East Midlands,LE
+TAR02550,785,Electric,London,N
+TAR02551,925,Diesel,North West,PR
+TAR02552,859,Petrol,East of England,IP
+TAR02553,783,Hybrid,South West,BA
+TAR02554,781,Petrol,West Midlands,ST
+TAR02555,653,Hybrid,London,N
+TAR02556,651,Petrol,Northern Ireland,BT
+TAR02557,714,Petrol,East of England,CB
+TAR02558,823,Petrol,North West,PR
+TAR02559,866,Petrol,London,N
+TAR02560,748,Electric,South East,GU
+TAR02561,883,Petrol,Scotland,AB
+TAR02562,981,Petrol,South West,PL
+TAR02563,769,Diesel,London,SE
+TAR02564,851,Petrol,Yorkshire and the Humber,BD
+TAR02565,860,Petrol,West Midlands,WV
+TAR02566,960,Hybrid,North West,PR
+TAR02567,757,Diesel,South West,BA
+TAR02568,891,Petrol,West Midlands,ST
+TAR02569,795,Petrol,East Midlands,NG
+TAR02570,827,Petrol,North West,L
+TAR02571,646,Diesel,East Midlands,NG
+TAR02572,702,Petrol,London,SW
+TAR02573,846,Electric,South East,OX
+TAR02574,753,Electric,South East,GU
+TAR02575,852,Petrol,Yorkshire and the Humber,LS
+TAR02576,661,Petrol,West Midlands,ST
+TAR02577,776,Diesel,South East,ME
+TAR02578,806,Hybrid,East of England,CO
+TAR02579,800,Petrol,Scotland,G
+TAR02580,745,Hybrid,South East,ME
+TAR02581,844,Petrol,North West,WA
+TAR02582,927,Petrol,Scotland,DD
+TAR02583,694,Petrol,Scotland,EH
+TAR02584,676,Petrol,South West,BS
+TAR02585,816,Petrol,North West,L
+TAR02586,745,Diesel,South West,EX
+TAR02587,683,Diesel,Northern Ireland,BT
+TAR02588,848,Hybrid,Wales,LL
+TAR02589,774,Petrol,North West,PR
+TAR02590,800,Diesel,North West,PR
+TAR02591,851,Petrol,West Midlands,CV
+TAR02592,950,Petrol,East Midlands,DE
+TAR02593,744,Electric,East of England,IP
+TAR02594,735,Petrol,South East,BN
+TAR02595,691,Diesel,North West,M
+TAR02596,709,Electric,South East,OX
+TAR02597,628,Petrol,London,SW
+TAR02598,751,Petrol,East of England,CO
+TAR02599,698,Diesel,London,SE
+TAR02600,857,Petrol,Wales,LL
+TAR02601,727,Diesel,East Midlands,NG
+TAR02602,746,Petrol,North East,DH
+TAR02603,790,Hybrid,South West,EX
+TAR02604,872,Petrol,London,W
+TAR02605,708,Petrol,South East,GU
+TAR02606,703,Diesel,Scotland,G
+TAR02607,840,Diesel,North East,DH
+TAR02608,715,Hybrid,London,E
+TAR02609,698,Electric,Yorkshire and the Humber,LS
+TAR02610,562,Petrol,Yorkshire and the Humber,BD
+TAR02611,623,Electric,South East,OX
+TAR02612,999,Petrol,Yorkshire and the Humber,HU
+TAR02613,793,Diesel,London,N
+TAR02614,578,Electric,North East,DH
+TAR02615,933,Petrol,South East,GU
+TAR02616,811,Petrol,Scotland,EH
+TAR02617,746,Petrol,South West,EX
+TAR02618,941,Petrol,London,E
+TAR02619,657,Electric,East of England,IP
+TAR02620,646,Electric,South East,RG
+TAR02621,841,Petrol,London,N
+TAR02622,804,Petrol,West Midlands,WV
+TAR02623,779,Petrol,Scotland,AB
+TAR02624,760,Petrol,South East,ME
+TAR02625,778,Electric,West Midlands,WV
+TAR02626,725,Petrol,Scotland,DD
+TAR02627,881,Electric,East of England,IP
+TAR02628,840,Electric,Wales,SA
+TAR02629,800,Diesel,North East,NE
+TAR02630,763,Diesel,Wales,CF
+TAR02631,688,Electric,Scotland,G
+TAR02632,718,Petrol,South East,ME
+TAR02633,791,Electric,East Midlands,NG
+TAR02634,710,Hybrid,East Midlands,DE
+TAR02635,788,Electric,South West,BA
+TAR02636,587,Diesel,South East,BN
+TAR02637,688,Petrol,Yorkshire and the Humber,HU
+TAR02638,722,Diesel,Yorkshire and the Humber,HU
+TAR02639,814,Petrol,East of England,CO
+TAR02640,820,Electric,South West,PL
+TAR02641,867,Petrol,Scotland,EH
+TAR02642,841,Petrol,East of England,NR
+TAR02643,747,Hybrid,Scotland,DD
+TAR02644,764,Petrol,London,SW
+TAR02645,769,Hybrid,North West,L
+TAR02646,788,Electric,London,SE
+TAR02647,843,Diesel,London,SE
+TAR02648,842,Diesel,Northern Ireland,BT
+TAR02649,801,Hybrid,Yorkshire and the Humber,HU
+TAR02650,831,Diesel,South East,OX
+TAR02651,789,Petrol,London,SW
+TAR02652,731,Electric,Scotland,AB
+TAR02653,699,Hybrid,West Midlands,ST
+TAR02654,914,Hybrid,West Midlands,CV
+TAR02655,694,Diesel,South East,RG
+TAR02656,772,Hybrid,Yorkshire and the Humber,BD
+TAR02657,791,Petrol,Yorkshire and the Humber,LS
+TAR02658,829,Petrol,North West,BL
+TAR02659,842,Petrol,North East,NE
+TAR02660,799,Petrol,East Midlands,NG
+TAR02661,628,Electric,South West,BS
+TAR02662,767,Petrol,London,SW
+TAR02663,698,Diesel,North West,BL
+TAR02664,794,Petrol,Yorkshire and the Humber,BD
+TAR02665,879,Petrol,Yorkshire and the Humber,BD
+TAR02666,617,Petrol,South East,GU
+TAR02667,800,Petrol,East of England,CO
+TAR02668,774,Hybrid,East of England,CO
+TAR02669,890,Electric,South West,BA
+TAR02670,779,Hybrid,East of England,NR
+TAR02671,821,Petrol,South East,GU
+TAR02672,987,Hybrid,East of England,CO
+TAR02673,752,Petrol,East Midlands,DE
+TAR02674,792,Diesel,East Midlands,NG
+TAR02675,860,Petrol,Wales,LL
+TAR02676,740,Electric,Wales,LL
+TAR02677,654,Diesel,London,W
+TAR02678,939,Diesel,North West,PR
+TAR02679,824,Petrol,Wales,LL
+TAR02680,773,Petrol,South West,BS
+TAR02681,903,Hybrid,South West,BA
+TAR02682,651,Petrol,Northern Ireland,BT
+TAR02683,943,Petrol,East of England,CO
+TAR02684,907,Petrol,Scotland,AB
+TAR02685,731,Petrol,East Midlands,NG
+TAR02686,778,Petrol,Yorkshire and the Humber,S
+TAR02687,643,Hybrid,Wales,CF
+TAR02688,872,Petrol,North West,BL
+TAR02689,671,Diesel,North West,M
+TAR02690,939,Petrol,North East,DH
+TAR02691,723,Petrol,North West,L
+TAR02692,832,Petrol,Scotland,G
+TAR02693,777,Electric,North West,PR
+TAR02694,755,Petrol,London,W
+TAR02695,558,Petrol,West Midlands,ST
+TAR02696,755,Petrol,London,N
+TAR02697,783,Petrol,London,SE
+TAR02698,850,Diesel,South East,GU
+TAR02699,749,Petrol,South East,ME
+TAR02700,775,Electric,North West,M
+TAR02701,756,Petrol,East Midlands,LE
+TAR02702,777,Petrol,Yorkshire and the Humber,LS
+TAR02703,840,Diesel,South West,BS
+TAR02704,765,Hybrid,Scotland,EH
+TAR02705,842,Petrol,South East,BN
+TAR02706,761,Petrol,East of England,CB
+TAR02707,741,Petrol,Yorkshire and the Humber,S
+TAR02708,919,Diesel,South East,GU
+TAR02709,950,Petrol,Yorkshire and the Humber,BD
+TAR02710,679,Hybrid,North East,DH
+TAR02711,784,Electric,South East,BN
+TAR02712,635,Electric,North West,M
+TAR02713,719,Electric,Wales,CF
+TAR02714,915,Electric,Scotland,DD
+TAR02715,671,Diesel,London,SE
+TAR02716,826,Petrol,East Midlands,NG
+TAR02717,679,Petrol,South West,PL
+TAR02718,717,Electric,South East,ME
+TAR02719,637,Petrol,East of England,IP
+TAR02720,798,Hybrid,North West,PR
+TAR02721,744,Petrol,Wales,SA
+TAR02722,703,Petrol,South East,RG
+TAR02723,706,Petrol,South East,BN
+TAR02724,920,Electric,London,E
+TAR02725,869,Petrol,Wales,CF
+TAR02726,883,Hybrid,South West,BA
+TAR02727,825,Electric,East Midlands,LE
+TAR02728,911,Petrol,London,SW
+TAR02729,890,Petrol,South West,PL
+TAR02730,755,Diesel,South East,ME
+TAR02731,713,Petrol,West Midlands,B
+TAR02732,999,Diesel,East of England,NR
+TAR02733,719,Petrol,Yorkshire and the Humber,LS
+TAR02734,570,Electric,West Midlands,CV
+TAR02735,926,Petrol,North West,BL
+TAR02736,727,Petrol,Wales,LL
+TAR02737,790,Electric,Scotland,AB
+TAR02738,816,Hybrid,South East,RG
+TAR02739,679,Diesel,North East,NE
+TAR02740,698,Hybrid,West Midlands,B
+TAR02741,875,Petrol,North West,M
+TAR02742,999,Electric,South East,ME
+TAR02743,767,Hybrid,North West,L
+TAR02744,640,Diesel,Scotland,DD
+TAR02745,912,Electric,East Midlands,DE
+TAR02746,843,Petrol,Yorkshire and the Humber,S
+TAR02747,856,Petrol,West Midlands,ST
+TAR02748,844,Hybrid,London,E
+TAR02749,820,Petrol,Scotland,AB
+TAR02750,796,Petrol,Northern Ireland,BT
+TAR02751,817,Diesel,Yorkshire and the Humber,S
+TAR02752,670,Hybrid,South West,BS
+TAR02753,864,Hybrid,North West,L
+TAR02754,795,Petrol,East Midlands,NG
+TAR02755,846,Petrol,South West,PL
+TAR02756,751,Petrol,South East,GU
+TAR02757,658,Hybrid,Scotland,AB
+TAR02758,654,Diesel,South East,RG
+TAR02759,759,Hybrid,South East,ME
+TAR02760,832,Petrol,London,N
+TAR02761,557,Hybrid,Wales,SA
+TAR02762,739,Petrol,South West,BS
+TAR02763,929,Diesel,East of England,CO
+TAR02764,817,Petrol,North West,L
+TAR02765,706,Electric,South West,BS
+TAR02766,625,Hybrid,Scotland,EH
+TAR02767,631,Hybrid,Yorkshire and the Humber,LS
+TAR02768,798,Petrol,South East,BN
+TAR02769,972,Diesel,East of England,CO
+TAR02770,764,Petrol,North East,DH
+TAR02771,910,Diesel,South East,BN
+TAR02772,977,Hybrid,London,SE
+TAR02773,655,Petrol,Scotland,EH
+TAR02774,764,Hybrid,South East,OX
+TAR02775,591,Petrol,Wales,SA
+TAR02776,943,Hybrid,Wales,CF
+TAR02777,822,Electric,East Midlands,NG
+TAR02778,873,Petrol,East of England,CO
+TAR02779,766,Petrol,South East,GU
+TAR02780,919,Petrol,South East,GU
+TAR02781,800,Electric,Yorkshire and the Humber,LS
+TAR02782,946,Electric,London,W
+TAR02783,917,Hybrid,South West,EX
+TAR02784,741,Electric,South East,GU
+TAR02785,908,Petrol,South West,EX
+TAR02786,715,Hybrid,East of England,CO
+TAR02787,828,Petrol,South West,EX
+TAR02788,643,Electric,North West,WA
+TAR02789,671,Diesel,Yorkshire and the Humber,BD
+TAR02790,737,Petrol,East Midlands,LE
+TAR02791,754,Diesel,East Midlands,LE
+TAR02792,732,Electric,South East,ME
+TAR02793,756,Petrol,South East,RG
+TAR02794,719,Petrol,North West,PR
+TAR02795,801,Petrol,East of England,NR
+TAR02796,634,Petrol,West Midlands,WV
+TAR02797,857,Petrol,East of England,NR
+TAR02798,830,Hybrid,London,SE
+TAR02799,955,Petrol,South East,BN
+TAR02800,803,Petrol,Scotland,EH
+TAR02801,744,Diesel,South East,BN
+TAR02802,704,Petrol,South East,ME
+TAR02803,772,Electric,South East,ME
+TAR02804,741,Hybrid,West Midlands,WV
+TAR02805,739,Petrol,Scotland,EH
+TAR02806,660,Diesel,London,N
+TAR02807,729,Hybrid,North West,BL
+TAR02808,831,Petrol,North West,WA
+TAR02809,879,Hybrid,East Midlands,DE
+TAR02810,774,Electric,East Midlands,LE
+TAR02811,733,Hybrid,London,W
+TAR02812,693,Hybrid,South East,ME
+TAR02813,686,Hybrid,London,N
+TAR02814,999,Diesel,South East,BN
+TAR02815,801,Hybrid,Yorkshire and the Humber,LS
+TAR02816,903,Diesel,South East,GU
+TAR02817,786,Hybrid,Scotland,DD
+TAR02818,822,Petrol,North West,WA
+TAR02819,875,Hybrid,Wales,SA
+TAR02820,748,Petrol,Scotland,AB
+TAR02821,752,Petrol,East of England,NR
+TAR02822,776,Petrol,South West,PL
+TAR02823,788,Hybrid,Yorkshire and the Humber,S
+TAR02824,893,Diesel,South West,BS
+TAR02825,517,Electric,South East,ME
+TAR02826,677,Diesel,Yorkshire and the Humber,S
+TAR02827,814,Hybrid,South East,GU
+TAR02828,850,Hybrid,Northern Ireland,BT
+TAR02829,795,Diesel,Northern Ireland,BT
+TAR02830,729,Petrol,Scotland,AB
+TAR02831,738,Petrol,London,N
+TAR02832,619,Petrol,London,W
+TAR02833,710,Diesel,Northern Ireland,BT
+TAR02834,778,Petrol,Scotland,DD
+TAR02835,783,Hybrid,London,SW
+TAR02836,696,Petrol,London,SE
+TAR02837,674,Petrol,East of England,NR
+TAR02838,771,Petrol,Yorkshire and the Humber,HU
+TAR02839,859,Hybrid,North West,L
+TAR02840,748,Hybrid,West Midlands,CV
+TAR02841,881,Petrol,East of England,IP
+TAR02842,777,Petrol,Yorkshire and the Humber,BD
+TAR02843,814,Petrol,South West,BA
+TAR02844,978,Petrol,South East,OX
+TAR02845,723,Petrol,North West,BL
+TAR02846,805,Hybrid,Scotland,EH
+TAR02847,795,Diesel,East of England,NR
+TAR02848,581,Petrol,South West,EX
+TAR02849,861,Hybrid,North West,M
+TAR02850,833,Petrol,South East,RG
+TAR02851,673,Diesel,London,W
+TAR02852,691,Diesel,London,SE
+TAR02853,908,Diesel,Scotland,AB
+TAR02854,875,Diesel,South East,ME
+TAR02855,745,Petrol,Yorkshire and the Humber,S
+TAR02856,896,Hybrid,Scotland,G
+TAR02857,706,Diesel,North East,DH
+TAR02858,808,Petrol,North East,NE
+TAR02859,781,Electric,London,SE
+TAR02860,814,Diesel,London,N
+TAR02861,782,Diesel,West Midlands,CV
+TAR02862,793,Electric,South West,BS
+TAR02863,686,Petrol,North West,M
+TAR02864,729,Hybrid,East Midlands,DE
+TAR02865,779,Petrol,South West,EX
+TAR02866,879,Petrol,South East,ME
+TAR02867,765,Diesel,South East,BN
+TAR02868,856,Petrol,Wales,CF
+TAR02869,823,Hybrid,London,N
+TAR02870,748,Diesel,West Midlands,CV
+TAR02871,844,Petrol,London,W
+TAR02872,896,Petrol,South East,ME
+TAR02873,694,Electric,South East,ME
+TAR02874,848,Diesel,London,E
+TAR02875,851,Diesel,London,N
+TAR02876,726,Petrol,Scotland,EH
+TAR02877,882,Electric,North East,SR
+TAR02878,839,Petrol,Scotland,DD
+TAR02879,951,Diesel,East of England,CB
+TAR02880,788,Diesel,South East,GU
+TAR02881,806,Petrol,London,SE
+TAR02882,851,Hybrid,East Midlands,LE
+TAR02883,779,Petrol,North West,PR
+TAR02884,900,Electric,South West,EX
+TAR02885,807,Petrol,South East,GU
+TAR02886,770,Hybrid,Scotland,EH
+TAR02887,806,Petrol,South West,BA
+TAR02888,751,Petrol,North West,M
+TAR02889,725,Petrol,South West,EX
+TAR02890,796,Petrol,North West,PR
+TAR02891,845,Hybrid,Scotland,DD
+TAR02892,714,Diesel,West Midlands,CV
+TAR02893,748,Electric,East of England,NR
+TAR02894,729,Petrol,South East,ME
+TAR02895,785,Petrol,London,N
+TAR02896,932,Petrol,East of England,CO
+TAR02897,898,Petrol,Scotland,AB
+TAR02898,841,Hybrid,East Midlands,LE
+TAR02899,877,Hybrid,Northern Ireland,BT
+TAR02900,844,Diesel,North West,PR
+TAR02901,854,Petrol,London,SW
+TAR02902,658,Hybrid,South East,RG
+TAR02903,678,Petrol,Scotland,EH
+TAR02904,656,Diesel,London,E
+TAR02905,707,Petrol,South East,RG
+TAR02906,761,Hybrid,Wales,SA
+TAR02907,748,Electric,North East,DH
+TAR02908,741,Petrol,East Midlands,LE
+TAR02909,820,Petrol,South East,RG
+TAR02910,742,Diesel,East of England,CB
+TAR02911,732,Hybrid,London,E
+TAR02912,651,Diesel,West Midlands,CV
+TAR02913,570,Diesel,East Midlands,LE
+TAR02914,676,Electric,South West,BA
+TAR02915,832,Petrol,South West,BA
+TAR02916,711,Hybrid,South East,BN
+TAR02917,845,Petrol,Scotland,AB
+TAR02918,732,Petrol,East Midlands,DE
+TAR02919,744,Electric,North West,M
+TAR02920,750,Diesel,East Midlands,LE
+TAR02921,966,Electric,North West,M
+TAR02922,801,Electric,London,SE
+TAR02923,661,Diesel,South West,PL
+TAR02924,803,Diesel,East Midlands,NG
+TAR02925,741,Petrol,Northern Ireland,BT
+TAR02926,823,Petrol,East of England,IP
+TAR02927,737,Electric,North West,L
+TAR02928,974,Petrol,South West,BS
+TAR02929,899,Petrol,North West,PR
+TAR02930,837,Electric,East of England,CO
+TAR02931,793,Hybrid,South West,BA
+TAR02932,839,Petrol,East of England,CB
+TAR02933,680,Diesel,Yorkshire and the Humber,LS
+TAR02934,858,Petrol,North West,M
+TAR02935,813,Hybrid,South East,GU
+TAR02936,681,Electric,South East,OX
+TAR02937,919,Diesel,Wales,SA
+TAR02938,801,Hybrid,London,N
+TAR02939,713,Hybrid,Scotland,DD
+TAR02940,885,Petrol,Scotland,DD
+TAR02941,772,Diesel,Wales,SA
+TAR02942,857,Petrol,West Midlands,ST
+TAR02943,699,Petrol,South West,PL
+TAR02944,733,Petrol,West Midlands,CV
+TAR02945,676,Diesel,East of England,CO
+TAR02946,657,Petrol,Northern Ireland,BT
+TAR02947,915,Petrol,Yorkshire and the Humber,HU
+TAR02948,813,Diesel,North West,PR
+TAR02949,855,Hybrid,North West,WA
+TAR02950,683,Hybrid,East of England,CO
+TAR02951,754,Hybrid,North West,WA
+TAR02952,762,Petrol,London,N
+TAR02953,914,Petrol,London,SW
+TAR02954,733,Diesel,East of England,CO
+TAR02955,695,Diesel,Wales,LL
+TAR02956,715,Petrol,South West,BA
+TAR02957,695,Petrol,Yorkshire and the Humber,HU
+TAR02958,869,Petrol,East of England,CB
+TAR02959,843,Petrol,Northern Ireland,BT
+TAR02960,749,Diesel,East Midlands,DE
+TAR02961,826,Hybrid,West Midlands,WV
+TAR02962,751,Petrol,North West,BL
+TAR02963,814,Petrol,Yorkshire and the Humber,HU
+TAR02964,889,Hybrid,South West,BS
+TAR02965,943,Diesel,South East,OX
+TAR02966,632,Petrol,Wales,CF
+TAR02967,741,Petrol,Northern Ireland,BT
+TAR02968,767,Petrol,South East,BN
+TAR02969,808,Hybrid,London,N
+TAR02970,592,Petrol,North West,M
+TAR02971,872,Petrol,Scotland,G
+TAR02972,743,Hybrid,South East,GU
+TAR02973,925,Diesel,South East,GU
+TAR02974,830,Electric,London,SE
+TAR02975,867,Hybrid,East Midlands,LE
+TAR02976,666,Diesel,West Midlands,B
+TAR02977,812,Diesel,South East,OX
+TAR02978,732,Petrol,South East,BN
+TAR02979,783,Diesel,East of England,CB
+TAR02980,770,Petrol,Scotland,EH
+TAR02981,764,Petrol,South East,RG
+TAR02982,793,Petrol,Wales,LL
+TAR02983,967,Hybrid,Yorkshire and the Humber,S
+TAR02984,713,Hybrid,West Midlands,WV
+TAR02985,723,Petrol,South East,GU
+TAR02986,877,Petrol,East Midlands,LE
+TAR02987,741,Petrol,South East,BN
+TAR02988,692,Petrol,South East,OX
+TAR02989,709,Petrol,Scotland,DD
+TAR02990,587,Diesel,East Midlands,NG
+TAR02991,707,Petrol,North West,BL
+TAR02992,685,Electric,North West,BL
+TAR02993,966,Diesel,North West,L
+TAR02994,893,Hybrid,North West,BL
+TAR02995,816,Electric,East of England,IP
+TAR02996,672,Petrol,Northern Ireland,BT
+TAR02997,934,Diesel,Northern Ireland,BT
+TAR02998,9999,Electric,East Midlands,LE
+TAR02999,761,Petrol,South West,EX
+TAR03000,636,Diesel,West Midlands,B
+TAR03001,819,Hybrid,East Midlands,LE
+TAR03002,849,Hybrid,East Midlands,DE
+TAR03003,736,Hybrid,East Midlands,DE
+TAR03004,766,Petrol,Northern Ireland,BT
+TAR03005,846,Diesel,South East,BN
+TAR03006,876,Diesel,Scotland,DD
+TAR03007,818,Petrol,Yorkshire and the Humber,LS
+TAR03008,808,Electric,South East,GU
+TAR03009,716,Diesel,East of England,CO
+TAR03010,708,Petrol,North West,M
+TAR03011,822,Hybrid,Yorkshire and the Humber,LS
+TAR03012,763,Petrol,North East,DH
+TAR03013,869,Hybrid,South East,RG
+TAR03014,747,Diesel,North West,BL
+TAR03015,686,Hybrid,South East,OX
+TAR03016,827,Electric,Scotland,EH
+TAR03017,765,Petrol,Scotland,EH
+TAR03018,813,Petrol,Scotland,G
+TAR03019,823,Hybrid,South East,OX
+TAR03020,701,Petrol,West Midlands,B
+TAR03021,900,Petrol,South East,OX
+TAR03022,789,Diesel,North West,BL
+TAR03023,723,Petrol,Scotland,AB
+TAR03024,737,Electric,East of England,CO
+TAR03025,868,Petrol,West Midlands,B
+TAR03026,724,Diesel,London,SE
+TAR03027,708,Petrol,Yorkshire and the Humber,LS
+TAR03028,750,Electric,London,SE
+TAR03029,710,Petrol,Yorkshire and the Humber,BD
+TAR03030,823,Petrol,Yorkshire and the Humber,S
+TAR03031,589,Petrol,Scotland,G
+TAR03032,785,Petrol,West Midlands,ST
+TAR03033,842,Petrol,Wales,LL
+TAR03034,737,Hybrid,Scotland,DD
+TAR03035,656,Electric,West Midlands,WV
+TAR03036,748,Diesel,East of England,CB
+TAR03037,903,Hybrid,Yorkshire and the Humber,LS
+TAR03038,680,Diesel,East of England,IP
+TAR03039,901,Petrol,East of England,CO
+TAR03040,727,Electric,London,W
+TAR03041,719,Hybrid,Scotland,DD
+TAR03042,776,Diesel,South East,BN
+TAR03043,841,Petrol,East of England,CB
+TAR03044,805,Petrol,West Midlands,CV
+TAR03045,668,Hybrid,Yorkshire and the Humber,LS
+TAR03046,651,Petrol,South East,GU
+TAR03047,683,Petrol,North East,DH
+TAR03048,808,Diesel,Yorkshire and the Humber,HU
+TAR03049,700,Electric,North West,BL
+TAR03050,747,Electric,East Midlands,LE
+TAR03051,684,Petrol,South East,BN
+TAR03052,799,Diesel,North West,M
+TAR03053,849,Petrol,East of England,CB
+TAR03054,774,Diesel,South East,BN
+TAR03055,858,Diesel,North West,PR
+TAR03056,809,Diesel,South West,EX
+TAR03057,839,Petrol,North West,WA
+TAR03058,741,Petrol,East Midlands,DE
+TAR03059,818,Petrol,West Midlands,ST
+TAR03060,786,Diesel,London,W
+TAR03061,940,Hybrid,South West,BS
+TAR03062,856,Petrol,Yorkshire and the Humber,HU
+TAR03063,837,Diesel,West Midlands,ST
+TAR03064,714,Diesel,Yorkshire and the Humber,LS
+TAR03065,692,Petrol,Wales,SA
+TAR03066,852,Diesel,Scotland,AB
+TAR03067,896,Petrol,North West,BL
+TAR03068,613,Diesel,London,SW
+TAR03069,862,Electric,West Midlands,ST
+TAR03070,755,Diesel,Scotland,DD
+TAR03071,863,Diesel,London,E
+TAR03072,866,Petrol,North West,WA
+TAR03073,809,Hybrid,Wales,LL
+TAR03074,749,Electric,Yorkshire and the Humber,BD
+TAR03075,731,Petrol,North West,PR
+TAR03076,671,Hybrid,Yorkshire and the Humber,S
+TAR03077,778,Petrol,North West,BL
+TAR03078,631,Petrol,West Midlands,ST
+TAR03079,732,Petrol,North West,WA
+TAR03080,648,Diesel,South East,GU
+TAR03081,640,Electric,North East,SR
+TAR03082,754,Diesel,North West,L
+TAR03083,999,Electric,South East,BN
+TAR03084,881,Electric,Yorkshire and the Humber,BD
+TAR03085,776,Hybrid,Scotland,DD
+TAR03086,745,Petrol,West Midlands,ST
+TAR03087,772,Diesel,South East,BN
+TAR03088,748,Diesel,South East,OX
+TAR03089,841,Petrol,North East,NE
+TAR03090,800,Diesel,North West,L
+TAR03091,782,Diesel,Wales,LL
+TAR03092,852,Petrol,West Midlands,ST
+TAR03093,906,Electric,Yorkshire and the Humber,BD
+TAR03094,729,Petrol,South East,RG
+TAR03095,651,Petrol,South West,BA
+TAR03096,748,Hybrid,South East,OX
+TAR03097,675,Petrol,South East,GU
+TAR03098,789,Petrol,North West,L
+TAR03099,740,Petrol,London,N
+TAR03100,935,Petrol,Scotland,G
+TAR03101,922,Petrol,Wales,SA
+TAR03102,631,Diesel,North West,M
+TAR03103,841,Petrol,East Midlands,DE
+TAR03104,807,Diesel,South East,ME
+TAR03105,742,Diesel,North West,WA
+TAR03106,758,Hybrid,East Midlands,NG
+TAR03107,794,Petrol,Scotland,AB
+TAR03108,688,Hybrid,North West,WA
+TAR03109,705,Electric,East Midlands,LE
+TAR03110,607,Hybrid,London,W
+TAR03111,736,Hybrid,South West,EX
+TAR03112,844,Petrol,Wales,SA
+TAR03113,883,Petrol,North West,M
+TAR03114,820,Petrol,East of England,CO
+TAR03115,999,Diesel,Wales,LL
+TAR03116,663,Petrol,East of England,IP
+TAR03117,845,Petrol,London,SE
+TAR03118,691,Diesel,East of England,CB
+TAR03119,638,Petrol,East of England,IP
+TAR03120,804,Diesel,Scotland,DD
+TAR03121,798,Diesel,Northern Ireland,BT
+TAR03122,763,Diesel,South East,RG
+TAR03123,661,Hybrid,East of England,CB
+TAR03124,858,Hybrid,North West,M
+TAR03125,822,Petrol,South West,BA
+TAR03126,874,Petrol,South East,OX
+TAR03127,864,Petrol,Wales,LL
+TAR03128,877,Diesel,East Midlands,DE
+TAR03129,765,Electric,London,E
+TAR03130,719,Diesel,South East,GU
+TAR03131,847,Hybrid,London,SW
+TAR03132,853,Petrol,West Midlands,CV
+TAR03133,838,Electric,South West,EX
+TAR03134,618,Petrol,Yorkshire and the Humber,BD
+TAR03135,619,Petrol,North West,L
+TAR03136,694,Petrol,Wales,SA
+TAR03137,776,Electric,London,SW
+TAR03138,693,Petrol,London,E
+TAR03139,744,Electric,West Midlands,B
+TAR03140,776,Petrol,London,SE
+TAR03141,666,Petrol,South West,EX
+TAR03142,816,Hybrid,Scotland,DD
+TAR03143,630,Diesel,Scotland,AB
+TAR03144,907,Diesel,Northern Ireland,BT
+TAR03145,926,Petrol,London,E
+TAR03146,659,Hybrid,Scotland,EH
+TAR03147,780,Petrol,Scotland,DD
+TAR03148,812,Petrol,Wales,SA
+TAR03149,902,Hybrid,London,W
+TAR03150,729,Petrol,East Midlands,LE
+TAR03151,865,Hybrid,North West,PR
+TAR03152,667,Petrol,Northern Ireland,BT
+TAR03153,637,Petrol,London,E
+TAR03154,749,Diesel,Wales,CF
+TAR03155,818,Diesel,Yorkshire and the Humber,S
+TAR03156,599,Petrol,West Midlands,ST
+TAR03157,686,Petrol,South West,PL
+TAR03158,741,Petrol,South West,EX
+TAR03159,799,Petrol,East of England,NR
+TAR03160,642,Petrol,Scotland,DD
+TAR03161,846,Electric,London,SW
+TAR03162,676,Petrol,East of England,IP
+TAR03163,912,Petrol,Scotland,DD
+TAR03164,675,Petrol,North West,BL
+TAR03165,789,Petrol,East of England,CB
+TAR03166,670,Diesel,Scotland,DD
+TAR03167,678,Petrol,East of England,CO
+TAR03168,920,Electric,Yorkshire and the Humber,BD
+TAR03169,696,Diesel,East of England,CO
+TAR03170,706,Petrol,East of England,CO
+TAR03171,840,Hybrid,East of England,NR
+TAR03172,846,Hybrid,West Midlands,B
+TAR03173,656,Petrol,North West,M
+TAR03174,835,Petrol,Wales,CF
+TAR03175,648,Diesel,South West,BS
+TAR03176,763,Electric,North West,BL
+TAR03177,862,Hybrid,Northern Ireland,BT
+TAR03178,683,Petrol,South West,BA
+TAR03179,765,Petrol,East of England,IP
+TAR03180,742,Hybrid,North West,M
+TAR03181,910,Petrol,West Midlands,WV
+TAR03182,802,Diesel,East of England,CO
+TAR03183,823,Hybrid,East of England,CO
+TAR03184,744,Electric,South East,ME
+TAR03185,661,Hybrid,North West,PR
+TAR03186,911,Hybrid,East of England,CB
+TAR03187,782,Hybrid,West Midlands,CV
+TAR03188,932,Petrol,Northern Ireland,BT
+TAR03189,914,Hybrid,Scotland,G
+TAR03190,766,Petrol,South East,ME
+TAR03191,805,Petrol,Scotland,G
+TAR03192,787,Electric,East of England,IP
+TAR03193,784,Electric,North East,DH
+TAR03194,777,Diesel,Scotland,AB
+TAR03195,839,Petrol,London,SE
+TAR03196,607,Electric,East Midlands,NG
+TAR03197,826,Petrol,North West,WA
+TAR03198,752,Diesel,South East,OX
+TAR03199,550,Diesel,Wales,LL
+TAR03200,861,Petrol,East Midlands,DE
+TAR03201,930,Hybrid,Wales,CF
+TAR03202,862,Hybrid,Yorkshire and the Humber,BD
+TAR03203,687,Diesel,London,SE
+TAR03204,763,Petrol,East Midlands,DE
+TAR03205,674,Petrol,North East,DH
+TAR03206,765,Electric,Scotland,AB
+TAR03207,809,Diesel,East of England,NR
+TAR03208,626,Hybrid,South East,OX
+TAR03209,948,Hybrid,South East,BN
+TAR03210,753,Electric,South East,ME
+TAR03211,835,Hybrid,London,SW
+TAR03212,731,Hybrid,West Midlands,CV
+TAR03213,922,Hybrid,London,W
+TAR03214,805,Diesel,West Midlands,WV
+TAR03215,693,Diesel,South East,ME
+TAR03216,732,Diesel,South East,GU
+TAR03217,830,Diesel,South East,OX
+TAR03218,786,Petrol,South East,ME
+TAR03219,717,Hybrid,North West,M
+TAR03220,829,Electric,South West,BS
+TAR03221,666,Hybrid,South East,GU
+TAR03222,895,Petrol,North West,WA
+TAR03223,705,Petrol,London,E
+TAR03224,824,Electric,South East,GU
+TAR03225,735,Diesel,West Midlands,WV
+TAR03226,789,Hybrid,North West,BL
+TAR03227,848,Petrol,South West,BS
+TAR03228,699,Diesel,London,W
+TAR03229,779,Hybrid,East of England,NR
+TAR03230,733,Electric,South East,RG
+TAR03231,714,Petrol,East of England,CB
+TAR03232,772,Petrol,South East,ME
+TAR03233,752,Hybrid,North East,NE
+TAR03234,755,Petrol,North West,BL
+TAR03235,784,Petrol,North West,PR
+TAR03236,677,Hybrid,East Midlands,DE
+TAR03237,671,Petrol,London,N
+TAR03238,709,Electric,East Midlands,DE
+TAR03239,773,Diesel,Scotland,AB
+TAR03240,913,Petrol,Wales,LL
+TAR03241,679,Diesel,East of England,IP
+TAR03242,676,Electric,North West,BL
+TAR03243,643,Petrol,South East,ME
+TAR03244,752,Petrol,South West,PL
+TAR03245,760,Petrol,Yorkshire and the Humber,HU
+TAR03246,723,Electric,Yorkshire and the Humber,S
+TAR03247,828,Diesel,East Midlands,DE
+TAR03248,688,Diesel,South West,PL
+TAR03249,891,Diesel,West Midlands,CV
+TAR03250,862,Diesel,West Midlands,WV
+TAR03251,583,Diesel,South East,BN
+TAR03252,824,Electric,South West,EX
+TAR03253,581,Petrol,South West,BA
+TAR03254,684,Petrol,East of England,NR
+TAR03255,839,Diesel,North West,PR
+TAR03256,673,Hybrid,North West,PR
+TAR03257,669,Petrol,West Midlands,WV
+TAR03258,823,Hybrid,North East,SR
+TAR03259,603,Electric,South East,GU
+TAR03260,671,Petrol,Wales,LL
+TAR03261,815,Petrol,South East,BN
+TAR03262,769,Petrol,Wales,LL
+TAR03263,836,Electric,Scotland,AB
+TAR03264,654,Electric,Northern Ireland,BT
+TAR03265,751,Diesel,West Midlands,CV
+TAR03266,839,Petrol,Yorkshire and the Humber,S
+TAR03267,678,Electric,West Midlands,WV
+TAR03268,495,Hybrid,East of England,NR
+TAR03269,796,Electric,North East,DH
+TAR03270,776,Hybrid,North West,L
+TAR03271,450,Electric,North West,BL
+TAR03272,730,Petrol,London,W
+TAR03273,722,Electric,North West,PR
+TAR03274,767,Electric,London,SE
+TAR03275,807,Diesel,East of England,NR
+TAR03276,871,Electric,East of England,IP
+TAR03277,844,Petrol,South East,GU
+TAR03278,999,Hybrid,West Midlands,B
+TAR03279,833,Electric,West Midlands,WV
+TAR03280,781,Diesel,South East,BN
+TAR03281,923,Petrol,East of England,IP
+TAR03282,679,Petrol,London,SW
+TAR03283,651,Electric,South West,BA
+TAR03284,843,Petrol,West Midlands,WV
+TAR03285,802,Hybrid,Wales,SA
+TAR03286,794,Petrol,North East,DH
+TAR03287,841,Hybrid,London,W
+TAR03288,629,Petrol,North West,BL
+TAR03289,658,Hybrid,North West,BL
+TAR03290,770,Petrol,Scotland,AB
+TAR03291,766,Petrol,West Midlands,B
+TAR03292,706,Petrol,North West,BL
+TAR03293,759,Hybrid,Wales,CF
+TAR03294,709,Petrol,North East,DH
+TAR03295,773,Hybrid,North West,L
+TAR03296,924,Hybrid,Wales,LL
+TAR03297,518,Petrol,South East,ME
+TAR03298,786,Hybrid,Wales,LL
+TAR03299,847,Electric,South East,GU
+TAR03300,791,Diesel,East of England,IP
+TAR03301,836,Electric,South West,BA
+TAR03302,782,Hybrid,West Midlands,ST
+TAR03303,817,Electric,London,SW
+TAR03304,824,Electric,London,E
+TAR03305,962,Hybrid,London,N
+TAR03306,767,Petrol,Scotland,AB
+TAR03307,727,Petrol,East of England,CB
+TAR03308,813,Petrol,North East,SR
+TAR03309,695,Hybrid,South East,OX
+TAR03310,717,Petrol,North West,PR
+TAR03311,743,Petrol,South East,ME
+TAR03312,754,Petrol,South East,GU
+TAR03313,892,Petrol,South West,BS
+TAR03314,730,Diesel,London,E
+TAR03315,814,Diesel,East Midlands,NG
+TAR03316,923,Diesel,North West,L
+TAR03317,761,Petrol,Wales,CF
+TAR03318,815,Petrol,East Midlands,LE
+TAR03319,649,Electric,Yorkshire and the Humber,LS
+TAR03320,822,Hybrid,South West,BA
+TAR03321,663,Electric,Yorkshire and the Humber,HU
+TAR03322,722,Petrol,Northern Ireland,BT
+TAR03323,871,Petrol,South East,BN
+TAR03324,801,Petrol,South West,BA
+TAR03325,775,Diesel,Yorkshire and the Humber,BD
+TAR03326,824,Electric,South East,RG
+TAR03327,832,Petrol,South East,OX
+TAR03328,677,Hybrid,North East,NE
+TAR03329,761,Petrol,Yorkshire and the Humber,HU
+TAR03330,779,Petrol,East Midlands,DE
+TAR03331,925,Diesel,Yorkshire and the Humber,S
+TAR03332,862,Hybrid,North East,DH
+TAR03333,693,Petrol,East of England,CB
+TAR03334,771,Petrol,East of England,NR
+TAR03335,741,Petrol,Yorkshire and the Humber,LS
+TAR03336,991,Petrol,Scotland,AB
+TAR03337,779,Petrol,North West,PR
+TAR03338,753,Petrol,Scotland,G
+TAR03339,774,Hybrid,South West,EX
+TAR03340,764,Diesel,Yorkshire and the Humber,LS
+TAR03341,868,Electric,South East,BN
+TAR03342,843,Petrol,East of England,CB
+TAR03343,840,Petrol,North West,L
+TAR03344,707,Petrol,Scotland,DD
+TAR03345,553,Diesel,South East,RG
+TAR03346,688,Hybrid,North West,PR
+TAR03347,777,Petrol,South East,ME
+TAR03348,615,Electric,London,SE
+TAR03349,794,Hybrid,East Midlands,DE
+TAR03350,863,Petrol,South East,OX
+TAR03351,723,Petrol,North West,L
+TAR03352,942,Petrol,West Midlands,WV
+TAR03353,506,Diesel,South West,BS
+TAR03354,862,Electric,North West,M
+TAR03355,643,Electric,Yorkshire and the Humber,S
+TAR03356,934,Electric,South East,OX
+TAR03357,999,Petrol,East Midlands,NG
+TAR03358,767,Diesel,North East,DH
+TAR03359,728,Diesel,South East,ME
+TAR03360,719,Petrol,Yorkshire and the Humber,S
+TAR03361,862,Petrol,London,E
+TAR03362,812,Hybrid,South East,ME
+TAR03363,771,Electric,North West,PR
+TAR03364,824,Diesel,South East,OX
+TAR03365,957,Petrol,North East,SR
+TAR03366,671,Hybrid,East of England,CB
+TAR03367,775,Petrol,North East,DH
+TAR03368,789,Diesel,London,SW
+TAR03369,834,Hybrid,London,E
+TAR03370,895,Diesel,West Midlands,ST
+TAR03371,719,Electric,London,SE
+TAR03372,844,Petrol,East Midlands,LE
+TAR03373,669,Electric,London,SW
+TAR03374,701,Petrol,East of England,IP
+TAR03375,548,Petrol,West Midlands,ST
+TAR03376,734,Petrol,London,N
+TAR03377,874,Petrol,South East,GU
+TAR03378,882,Electric,West Midlands,ST
+TAR03379,881,Electric,Northern Ireland,BT
+TAR03380,794,Diesel,South East,RG
+TAR03381,935,Electric,East of England,IP
+TAR03382,725,Petrol,London,N
+TAR03383,751,Petrol,Yorkshire and the Humber,HU
+TAR03384,826,Petrol,Yorkshire and the Humber,HU
+TAR03385,620,Petrol,South West,BA
+TAR03386,767,Diesel,South West,BS
+TAR03387,750,Petrol,East of England,IP
+TAR03388,977,Diesel,West Midlands,WV
+TAR03389,852,Electric,West Midlands,B
+TAR03390,769,Petrol,Scotland,DD
+TAR03391,625,Hybrid,London,W
+TAR03392,791,Electric,South East,OX
+TAR03393,843,Petrol,Scotland,G
+TAR03394,852,Electric,Wales,SA
+TAR03395,740,Hybrid,North West,BL
+TAR03396,821,Electric,Wales,CF
+TAR03397,835,Petrol,London,SE
+TAR03398,764,Petrol,East of England,IP
+TAR03399,821,Petrol,South East,BN
+TAR03400,820,Electric,South East,RG
+TAR03401,775,Petrol,North West,M
+TAR03402,681,Petrol,East of England,IP
+TAR03403,630,Petrol,East of England,IP
+TAR03404,851,Hybrid,North West,M
+TAR03405,837,Petrol,East of England,IP
+TAR03406,792,Petrol,London,N
+TAR03407,633,Petrol,North West,WA
+TAR03408,751,Diesel,Wales,CF
+TAR03409,796,Diesel,South East,OX
+TAR03410,714,Petrol,North West,L
+TAR03411,988,Petrol,North West,PR
+TAR03412,759,Electric,West Midlands,WV
+TAR03413,691,Petrol,South West,EX
+TAR03414,802,Petrol,Scotland,G
+TAR03415,812,Petrol,London,N
+TAR03416,892,Diesel,North West,WA
+TAR03417,843,Petrol,Scotland,AB
+TAR03418,884,Hybrid,North East,NE
+TAR03419,868,Petrol,West Midlands,ST
+TAR03420,876,Petrol,Wales,SA
+TAR03421,818,Petrol,South East,RG
+TAR03422,963,Hybrid,London,SE
+TAR03423,744,Hybrid,West Midlands,B
+TAR03424,820,Petrol,North West,L
+TAR03425,795,Hybrid,North West,PR
+TAR03426,680,Petrol,South East,ME
+TAR03427,788,Petrol,South East,ME
+TAR03428,773,Petrol,West Midlands,B
+TAR03429,840,Diesel,Northern Ireland,BT
+TAR03430,806,Petrol,East of England,NR
+TAR03431,819,Electric,West Midlands,WV
+TAR03432,707,Electric,London,E
+TAR03433,814,Petrol,North West,M
+TAR03434,877,Hybrid,South East,ME
+TAR03435,717,Petrol,Scotland,AB
+TAR03436,797,Petrol,South East,GU
+TAR03437,632,Petrol,West Midlands,B
+TAR03438,693,Petrol,West Midlands,CV
+TAR03439,726,Electric,South East,RG
+TAR03440,820,Petrol,London,N
+TAR03441,874,Diesel,South East,RG
+TAR03442,903,Electric,Northern Ireland,BT
+TAR03443,640,Electric,East of England,NR
+TAR03444,815,Diesel,North West,BL
+TAR03445,890,Petrol,Wales,LL
+TAR03446,726,Petrol,Yorkshire and the Humber,BD
+TAR03447,713,Hybrid,North West,WA
+TAR03448,689,Diesel,Yorkshire and the Humber,HU
+TAR03449,935,Diesel,West Midlands,WV
+TAR03450,788,Diesel,South East,ME
+TAR03451,953,Diesel,South East,GU
+TAR03452,690,Electric,Wales,SA
+TAR03453,800,Hybrid,East of England,CO
+TAR03454,684,Diesel,Scotland,EH
+TAR03455,719,Petrol,London,SW
+TAR03456,781,Petrol,East of England,IP
+TAR03457,835,Petrol,London,SE
+TAR03458,627,Diesel,South East,OX
+TAR03459,853,Electric,Yorkshire and the Humber,LS
+TAR03460,709,Electric,Yorkshire and the Humber,BD
+TAR03461,749,Electric,Scotland,G
+TAR03462,783,Hybrid,East of England,IP
+TAR03463,816,Petrol,East of England,IP
+TAR03464,653,Petrol,Yorkshire and the Humber,HU
+TAR03465,796,Petrol,London,E
+TAR03466,875,Diesel,Scotland,G
+TAR03467,752,Electric,West Midlands,ST
+TAR03468,825,Petrol,Scotland,G
+TAR03469,720,Hybrid,South East,ME
+TAR03470,742,Petrol,London,SW
+TAR03471,858,Petrol,North West,WA
+TAR03472,826,Hybrid,East of England,CB
+TAR03473,663,Diesel,Yorkshire and the Humber,LS
+TAR03474,742,Hybrid,East Midlands,NG
+TAR03475,999,Petrol,Yorkshire and the Humber,S
+TAR03476,704,Electric,London,E
+TAR03477,708,Diesel,South East,BN
+TAR03478,717,Hybrid,Scotland,AB
+TAR03479,970,Diesel,North West,PR
+TAR03480,892,Petrol,South East,OX
+TAR03481,768,Petrol,Scotland,DD
+TAR03482,808,Hybrid,South West,PL
+TAR03483,781,Petrol,East of England,CO
+TAR03484,733,Hybrid,Yorkshire and the Humber,S
+TAR03485,827,Diesel,North West,WA
+TAR03486,582,Hybrid,South East,BN
+TAR03487,812,Diesel,East of England,IP
+TAR03488,839,Electric,West Midlands,B
+TAR03489,861,Petrol,South East,BN
+TAR03490,889,Petrol,Wales,CF
+TAR03491,789,Electric,North West,PR
+TAR03492,889,Petrol,South East,RG
+TAR03493,783,Electric,East Midlands,LE
+TAR03494,781,Petrol,Yorkshire and the Humber,LS
+TAR03495,820,Petrol,South West,PL
+TAR03496,771,Electric,Yorkshire and the Humber,BD
+TAR03497,728,Petrol,Northern Ireland,BT
+TAR03498,913,Hybrid,South East,GU
+TAR03499,660,Diesel,North West,WA
+TAR03500,793,Electric,North West,BL
+TAR03501,709,Petrol,North West,WA
+TAR03502,760,Diesel,South East,RG
+TAR03503,592,Electric,Yorkshire and the Humber,BD
+TAR03504,866,Diesel,London,W
+TAR03505,755,Electric,Yorkshire and the Humber,BD
+TAR03506,691,Hybrid,North West,M
+TAR03507,866,Petrol,Yorkshire and the Humber,BD
+TAR03508,740,Diesel,East of England,CO
+TAR03509,810,Petrol,South East,BN
+TAR03510,648,Petrol,Scotland,EH
+TAR03511,900,Hybrid,Yorkshire and the Humber,BD
+TAR03512,723,Diesel,South West,BS
+TAR03513,925,Petrol,London,SW
+TAR03514,584,Electric,London,W
+TAR03515,726,Petrol,Scotland,DD
+TAR03516,674,Electric,East of England,NR
+TAR03517,786,Petrol,East Midlands,DE
+TAR03518,762,Petrol,East of England,NR
+TAR03519,717,Electric,London,SW
+TAR03520,812,Hybrid,North West,BL
+TAR03521,647,Hybrid,South East,GU
+TAR03522,702,Petrol,Wales,CF
+TAR03523,778,Diesel,West Midlands,CV
+TAR03524,652,Diesel,South East,OX
+TAR03525,609,Petrol,Northern Ireland,BT
+TAR03526,807,Hybrid,East Midlands,DE
+TAR03527,805,Petrol,Yorkshire and the Humber,LS
+TAR03528,730,Petrol,London,W
+TAR03529,726,Hybrid,East of England,IP
+TAR03530,811,Petrol,Northern Ireland,BT
+TAR03531,783,Petrol,South West,EX
+TAR03532,785,Electric,South West,EX
+TAR03533,796,Petrol,Scotland,EH
+TAR03534,799,Petrol,London,SW
+TAR03535,714,Diesel,London,E
+TAR03536,950,Petrol,South East,OX
+TAR03537,731,Electric,North West,WA
+TAR03538,926,Petrol,West Midlands,B
+TAR03539,645,Petrol,North East,DH
+TAR03540,925,Diesel,East of England,NR
+TAR03541,771,Petrol,West Midlands,CV
+TAR03542,760,Diesel,East Midlands,DE
+TAR03543,778,Petrol,Scotland,DD
+TAR03544,767,Electric,North West,BL
+TAR03545,792,Electric,South East,ME
+TAR03546,687,Petrol,North West,M
+TAR03547,901,Petrol,Yorkshire and the Humber,BD
+TAR03548,753,Petrol,East of England,CB
+TAR03549,749,Electric,South East,BN
+TAR03550,709,Hybrid,East of England,CB
+TAR03551,738,Petrol,North West,M
+TAR03552,684,Petrol,South East,RG
+TAR03553,844,Hybrid,South East,ME
+TAR03554,938,Diesel,London,SE
+TAR03555,827,Petrol,North West,BL
+TAR03556,773,Electric,East of England,CB
+TAR03557,823,Hybrid,South East,RG
+TAR03558,750,Diesel,North West,BL
+TAR03559,747,Petrol,Scotland,AB
+TAR03560,792,Petrol,North West,L
+TAR03561,884,Petrol,South West,PL
+TAR03562,666,Diesel,London,SW
+TAR03563,999,Diesel,Scotland,G
+TAR03564,842,Electric,North West,L
+TAR03565,646,Petrol,North West,PR
+TAR03566,810,Petrol,Scotland,DD
+TAR03567,682,Diesel,North West,PR
+TAR03568,765,Petrol,West Midlands,WV
+TAR03569,832,Petrol,Northern Ireland,BT
+TAR03570,939,Petrol,London,W
+TAR03571,771,Hybrid,London,SW
+TAR03572,777,Petrol,North East,NE
+TAR03573,711,Electric,West Midlands,B
+TAR03574,767,Petrol,South West,EX
+TAR03575,832,Electric,South East,BN
+TAR03576,880,Petrol,South West,BS
+TAR03577,915,Electric,West Midlands,CV
+TAR03578,833,Petrol,London,W
+TAR03579,760,Petrol,Scotland,AB
+TAR03580,748,Petrol,North West,M
+TAR03581,724,Petrol,Wales,LL
+TAR03582,812,Diesel,West Midlands,ST
+TAR03583,825,Petrol,Scotland,AB
+TAR03584,696,Petrol,North East,NE
+TAR03585,829,Petrol,East of England,CB
+TAR03586,733,Petrol,North West,M
+TAR03587,825,Petrol,South East,OX
+TAR03588,726,Petrol,London,SW
+TAR03589,828,Petrol,West Midlands,B
+TAR03590,733,Diesel,South East,BN
+TAR03591,755,Petrol,East of England,IP
+TAR03592,683,Hybrid,North West,WA
+TAR03593,801,Diesel,West Midlands,ST
+TAR03594,796,Electric,Scotland,EH
+TAR03595,618,Diesel,London,W
+TAR03596,912,Hybrid,South East,BN
+TAR03597,718,Electric,West Midlands,CV
+TAR03598,746,Petrol,North West,M
+TAR03599,742,Diesel,West Midlands,CV
+TAR03600,760,Electric,London,SW
+TAR03601,622,Hybrid,London,SE
+TAR03602,754,Petrol,Yorkshire and the Humber,LS
+TAR03603,777,Diesel,East Midlands,NG
+TAR03604,725,Electric,North East,DH
+TAR03605,741,Petrol,South East,ME
+TAR03606,808,Diesel,East of England,NR
+TAR03607,946,Electric,West Midlands,CV
+TAR03608,795,Diesel,North East,DH
+TAR03609,750,Petrol,London,SE
+TAR03610,887,Hybrid,South East,RG
+TAR03611,717,Petrol,Yorkshire and the Humber,S
+TAR03612,747,Petrol,South East,RG
+TAR03613,839,Petrol,West Midlands,ST
+TAR03614,749,Hybrid,East of England,CO
+TAR03615,895,Diesel,London,SW
+TAR03616,663,Hybrid,West Midlands,WV
+TAR03617,756,Petrol,East Midlands,LE
+TAR03618,999,Hybrid,West Midlands,B
+TAR03619,847,Diesel,South West,BS
+TAR03620,895,Petrol,Yorkshire and the Humber,HU
+TAR03621,857,Electric,West Midlands,B
+TAR03622,734,Diesel,West Midlands,WV
+TAR03623,800,Petrol,East Midlands,NG
+TAR03624,710,Diesel,South East,RG
+TAR03625,574,Petrol,East Midlands,DE
+TAR03626,893,Hybrid,South West,BS
+TAR03627,903,Petrol,East of England,CB
+TAR03628,821,Electric,North East,DH
+TAR03629,798,Petrol,South East,GU
+TAR03630,826,Petrol,East of England,IP
+TAR03631,746,Petrol,North East,DH
+TAR03632,899,Diesel,East Midlands,LE
+TAR03633,789,Diesel,North East,NE
+TAR03634,773,Diesel,West Midlands,B
+TAR03635,894,Petrol,London,N
+TAR03636,787,Petrol,North East,DH
+TAR03637,680,Electric,South West,EX
+TAR03638,753,Diesel,South East,ME
+TAR03639,871,Petrol,London,SW
+TAR03640,607,Petrol,South East,OX
+TAR03641,781,Diesel,London,W
+TAR03642,859,Electric,North West,BL
+TAR03643,960,Hybrid,Scotland,G
+TAR03644,740,Diesel,London,SE
+TAR03645,824,Diesel,London,SE
+TAR03646,999,Petrol,South West,PL
+TAR03647,878,Electric,London,SW
+TAR03648,817,Petrol,South East,ME
+TAR03649,889,Petrol,North East,DH
+TAR03650,682,Hybrid,South East,BN
+TAR03651,748,Petrol,South West,EX
+TAR03652,858,Diesel,South West,EX
+TAR03653,907,Electric,Wales,LL
+TAR03654,817,Hybrid,Northern Ireland,BT
+TAR03655,743,Hybrid,Northern Ireland,BT
+TAR03656,822,Petrol,Scotland,G
+TAR03657,828,Diesel,Scotland,G
+TAR03658,833,Petrol,London,SE
+TAR03659,793,Petrol,Scotland,EH
+TAR03660,866,Petrol,East of England,CB
+TAR03661,901,Hybrid,Yorkshire and the Humber,S
+TAR03662,764,Electric,London,E
+TAR03663,908,Hybrid,North West,L
+TAR03664,729,Electric,East of England,IP
+TAR03665,849,Hybrid,South East,OX
+TAR03666,870,Diesel,West Midlands,B
+TAR03667,817,Hybrid,North West,BL
+TAR03668,718,Petrol,Yorkshire and the Humber,S
+TAR03669,772,Diesel,Yorkshire and the Humber,S
+TAR03670,768,Electric,South East,GU
+TAR03671,770,Electric,Wales,CF
+TAR03672,702,Petrol,South East,BN
+TAR03673,600,Electric,London,N
+TAR03674,795,Petrol,Wales,LL
+TAR03675,838,Petrol,South West,PL
+TAR03676,716,Petrol,Scotland,AB
+TAR03677,708,Petrol,West Midlands,CV
+TAR03678,816,Diesel,North West,BL
+TAR03679,770,Diesel,North West,BL
+TAR03680,874,Hybrid,South West,PL
+TAR03681,855,Hybrid,London,W
+TAR03682,999,Hybrid,East Midlands,NG
+TAR03683,753,Petrol,South East,ME
+TAR03684,789,Diesel,Scotland,EH
+TAR03685,786,Diesel,South East,OX
+TAR03686,641,Petrol,West Midlands,WV
+TAR03687,903,Petrol,Yorkshire and the Humber,BD
+TAR03688,712,Petrol,East of England,IP
+TAR03689,852,Diesel,London,SW
+TAR03690,798,Diesel,East Midlands,LE
+TAR03691,714,Diesel,East Midlands,DE
+TAR03692,557,Petrol,South East,RG
+TAR03693,705,Diesel,Scotland,AB
+TAR03694,754,Petrol,London,E
+TAR03695,999,Petrol,East of England,IP
+TAR03696,955,Petrol,South East,OX
+TAR03697,757,Electric,London,SW
+TAR03698,756,Petrol,Scotland,DD
+TAR03699,765,Petrol,South West,BA
+TAR03700,946,Hybrid,North West,BL
+TAR03701,671,Diesel,North East,DH
+TAR03702,757,Petrol,Yorkshire and the Humber,HU
+TAR03703,731,Electric,North West,BL
+TAR03704,736,Petrol,South West,EX
+TAR03705,824,Petrol,London,SW
+TAR03706,920,Petrol,South East,RG
+TAR03707,819,Electric,South West,PL
+TAR03708,779,Petrol,London,SE
+TAR03709,699,Petrol,South West,BA
+TAR03710,707,Petrol,North West,BL
+TAR03711,848,Petrol,North East,DH
+TAR03712,800,Petrol,North West,L
+TAR03713,781,Petrol,North East,DH
+TAR03714,763,Electric,Scotland,DD
+TAR03715,738,Electric,Yorkshire and the Humber,LS
+TAR03716,795,Petrol,Scotland,DD
+TAR03717,770,Petrol,East Midlands,NG
+TAR03718,830,Electric,London,SE
+TAR03719,754,Diesel,West Midlands,B
+TAR03720,691,Electric,Yorkshire and the Humber,S
+TAR03721,779,Petrol,South East,BN
+TAR03722,708,Petrol,Yorkshire and the Humber,HU
+TAR03723,791,Petrol,West Midlands,CV
+TAR03724,719,Petrol,East Midlands,LE
+TAR03725,786,Diesel,East Midlands,LE
+TAR03726,811,Petrol,Scotland,DD
+TAR03727,767,Petrol,East Midlands,DE
+TAR03728,739,Petrol,Yorkshire and the Humber,S
+TAR03729,684,Petrol,East of England,NR
+TAR03730,642,Electric,West Midlands,ST
+TAR03731,797,Petrol,Wales,CF
+TAR03732,873,Electric,South West,PL
+TAR03733,803,Hybrid,Yorkshire and the Humber,BD
+TAR03734,774,Petrol,Yorkshire and the Humber,LS
+TAR03735,908,Hybrid,London,W
+TAR03736,691,Electric,South West,BA
+TAR03737,745,Petrol,East of England,CB
+TAR03738,888,Petrol,North East,SR
+TAR03739,799,Electric,West Midlands,ST
+TAR03740,826,Hybrid,North West,L
+TAR03741,610,Petrol,South West,BA
+TAR03742,747,Petrol,Wales,LL
+TAR03743,627,Petrol,East of England,NR
+TAR03744,785,Petrol,North West,BL
+TAR03745,674,Petrol,North West,WA
+TAR03746,836,Diesel,South West,BA
+TAR03747,824,Electric,North East,DH
+TAR03748,704,Diesel,London,E
+TAR03749,716,Petrol,Scotland,DD
+TAR03750,812,Petrol,North East,DH
+TAR03751,777,Petrol,Yorkshire and the Humber,LS
+TAR03752,727,Petrol,South East,ME
+TAR03753,794,Electric,Wales,SA
+TAR03754,653,Petrol,Yorkshire and the Humber,S
+TAR03755,755,Electric,London,SW
+TAR03756,835,Diesel,East Midlands,LE
+TAR03757,857,Electric,North West,M
+TAR03758,727,Hybrid,South West,EX
+TAR03759,864,Diesel,South East,BN
+TAR03760,882,Petrol,East Midlands,DE
+TAR03761,783,Hybrid,South East,OX
+TAR03762,843,Hybrid,North East,SR
+TAR03763,836,Petrol,West Midlands,ST
+TAR03764,679,Diesel,Wales,LL
+TAR03765,721,Diesel,London,W
+TAR03766,741,Diesel,London,N
+TAR03767,755,Hybrid,East of England,CB
+TAR03768,884,Petrol,South East,ME
+TAR03769,729,Petrol,South East,ME
+TAR03770,760,Diesel,South East,ME
+TAR03771,847,Electric,London,N
+TAR03772,749,Electric,North West,BL
+TAR03773,885,Electric,West Midlands,ST
+TAR03774,755,Electric,North West,WA
+TAR03775,829,Hybrid,London,N
+TAR03776,754,Hybrid,South East,OX
+TAR03777,787,Electric,North West,WA
+TAR03778,841,Hybrid,North West,PR
+TAR03779,711,Petrol,South East,BN
+TAR03780,807,Diesel,London,SE
+TAR03781,818,Petrol,London,SW
+TAR03782,941,Petrol,London,SW
+TAR03783,854,Petrol,East Midlands,NG
+TAR03784,776,Petrol,London,E
+TAR03785,810,Diesel,East Midlands,LE
+TAR03786,720,Petrol,East of England,CB
+TAR03787,746,Diesel,East of England,NR
+TAR03788,737,Hybrid,East of England,IP
+TAR03789,682,Diesel,Northern Ireland,BT
+TAR03790,764,Electric,London,E
+TAR03791,765,Diesel,North West,PR
+TAR03792,829,Petrol,London,E
+TAR03793,702,Petrol,North West,WA
+TAR03794,793,Petrol,Wales,LL
+TAR03795,801,Hybrid,North West,WA
+TAR03796,830,Hybrid,London,SE
+TAR03797,869,Petrol,London,W
+TAR03798,739,Electric,West Midlands,CV
+TAR03799,823,Petrol,South East,GU
+TAR03800,793,Diesel,Scotland,AB
+TAR03801,535,Electric,West Midlands,B
+TAR03802,784,Diesel,East of England,CO
+TAR03803,852,Diesel,Wales,LL
+TAR03804,572,Electric,West Midlands,B
+TAR03805,632,Petrol,East Midlands,NG
+TAR03806,849,Petrol,Scotland,AB
+TAR03807,615,Diesel,Wales,SA
+TAR03808,678,Diesel,North West,WA
+TAR03809,783,Hybrid,Wales,SA
+TAR03810,731,Petrol,North East,DH
+TAR03811,782,Hybrid,North West,BL
+TAR03812,789,Petrol,East of England,CB
+TAR03813,750,Electric,South East,OX
+TAR03814,862,Hybrid,East Midlands,DE
+TAR03815,880,Hybrid,North West,PR
+TAR03816,673,Electric,East of England,CO
+TAR03817,536,Petrol,London,SE
+TAR03818,722,Petrol,South East,GU
+TAR03819,804,Diesel,North West,WA
+TAR03820,894,Electric,East of England,CO
+TAR03821,713,Electric,East Midlands,LE
+TAR03822,856,Hybrid,North East,SR
+TAR03823,752,Hybrid,South East,GU
+TAR03824,780,Petrol,North West,M
+TAR03825,813,Petrol,East of England,CO
+TAR03826,861,Hybrid,West Midlands,CV
+TAR03827,900,Petrol,South East,RG
+TAR03828,796,Petrol,North West,M
+TAR03829,646,Petrol,East Midlands,DE
+TAR03830,790,Diesel,Wales,LL
+TAR03831,859,Petrol,Yorkshire and the Humber,BD
+TAR03832,779,Diesel,North West,BL
+TAR03833,821,Diesel,South West,BA
+TAR03834,754,Petrol,North West,M
+TAR03835,984,Petrol,London,SW
+TAR03836,794,Petrol,North West,M
+TAR03837,848,Petrol,West Midlands,B
+TAR03838,863,Electric,Wales,SA
+TAR03839,684,Hybrid,Wales,LL
+TAR03840,746,Diesel,North East,NE
+TAR03841,725,Petrol,West Midlands,WV
+TAR03842,911,Electric,Scotland,EH
+TAR03843,763,Diesel,North West,L
+TAR03844,834,Diesel,Scotland,AB
+TAR03845,849,Petrol,Yorkshire and the Humber,S
+TAR03846,793,Petrol,East of England,CO
+TAR03847,815,Diesel,London,E
+TAR03848,771,Diesel,North West,L
+TAR03849,716,Diesel,East of England,CB
+TAR03850,655,Hybrid,Northern Ireland,BT
+TAR03851,928,Petrol,East of England,CB
+TAR03852,753,Petrol,London,N
+TAR03853,720,Petrol,London,N
+TAR03854,700,Petrol,North West,BL
+TAR03855,877,Electric,South East,OX
+TAR03856,794,Diesel,South East,BN
+TAR03857,841,Petrol,North West,L
+TAR03858,818,Electric,South East,OX
+TAR03859,770,Electric,Wales,SA
+TAR03860,796,Hybrid,Scotland,AB
+TAR03861,638,Diesel,Wales,SA
+TAR03862,878,Hybrid,North West,BL
+TAR03863,671,Petrol,London,W
+TAR03864,706,Diesel,London,W
+TAR03865,662,Electric,East Midlands,LE
+TAR03866,755,Petrol,East of England,CB
+TAR03867,790,Hybrid,Scotland,EH
+TAR03868,781,Petrol,South East,BN
+TAR03869,671,Petrol,London,SW
+TAR03870,737,Petrol,London,W
+TAR03871,829,Diesel,Wales,LL
+TAR03872,788,Petrol,South East,ME
+TAR03873,748,Petrol,East Midlands,LE
+TAR03874,628,Petrol,East of England,CB
+TAR03875,704,Petrol,South East,OX
+TAR03876,766,Petrol,Wales,SA
+TAR03877,709,Petrol,South East,GU
+TAR03878,874,Petrol,Wales,LL
+TAR03879,742,Electric,Scotland,EH
+TAR03880,761,Petrol,West Midlands,B
+TAR03881,870,Diesel,Scotland,G
+TAR03882,813,Diesel,North East,SR
+TAR03883,819,Petrol,South East,BN
+TAR03884,817,Diesel,Yorkshire and the Humber,BD
+TAR03885,815,Petrol,North West,BL
+TAR03886,797,Diesel,London,SW
+TAR03887,838,Petrol,Yorkshire and the Humber,HU
+TAR03888,788,Hybrid,Scotland,DD
+TAR03889,653,Hybrid,East Midlands,DE
+TAR03890,771,Diesel,West Midlands,ST
+TAR03891,714,Petrol,Wales,LL
+TAR03892,719,Diesel,Scotland,EH
+TAR03893,926,Hybrid,Yorkshire and the Humber,LS
+TAR03894,767,Petrol,North West,L
+TAR03895,882,Petrol,South East,GU
+TAR03896,771,Hybrid,Scotland,AB
+TAR03897,703,Petrol,Wales,LL
+TAR03898,727,Hybrid,North East,NE
+TAR03899,889,Hybrid,East of England,CB
+TAR03900,823,Electric,East Midlands,LE
+TAR03901,860,Diesel,Scotland,AB
+TAR03902,906,Petrol,London,N
+TAR03903,878,Diesel,Scotland,EH
+TAR03904,693,Petrol,North West,L
+TAR03905,754,Diesel,South East,OX
+TAR03906,702,Petrol,East of England,NR
+TAR03907,770,Hybrid,London,SW
+TAR03908,696,Petrol,South West,BA
+TAR03909,776,Petrol,South West,BS
+TAR03910,787,Petrol,South East,ME
+TAR03911,916,Diesel,South East,GU
+TAR03912,779,Diesel,East of England,CO
+TAR03913,852,Petrol,East Midlands,LE
+TAR03914,855,Electric,South West,PL
+TAR03915,953,Petrol,West Midlands,CV
+TAR03916,767,Electric,South West,PL
+TAR03917,700,Hybrid,East of England,NR
+TAR03918,846,Petrol,Northern Ireland,BT
+TAR03919,716,Diesel,South East,ME
+TAR03920,641,Petrol,Scotland,DD
+TAR03921,814,Hybrid,West Midlands,CV
+TAR03922,673,Petrol,Scotland,G
+TAR03923,868,Electric,Yorkshire and the Humber,LS
+TAR03924,836,Hybrid,Yorkshire and the Humber,S
+TAR03925,806,Petrol,West Midlands,WV
+TAR03926,733,Hybrid,East of England,CO
+TAR03927,693,Diesel,Yorkshire and the Humber,S
+TAR03928,849,Petrol,Scotland,AB
+TAR03929,737,Petrol,South West,EX
+TAR03930,710,Diesel,South West,EX
+TAR03931,801,Hybrid,North West,PR
+TAR03932,883,Hybrid,London,E
+TAR03933,679,Petrol,Scotland,EH
+TAR03934,768,Electric,West Midlands,WV
+TAR03935,825,Diesel,East Midlands,DE
+TAR03936,853,Petrol,South West,BS
+TAR03937,830,Petrol,East of England,IP
+TAR03938,815,Petrol,West Midlands,CV
+TAR03939,575,Petrol,London,SE
+TAR03940,623,Hybrid,East of England,NR
+TAR03941,827,Petrol,South East,RG
+TAR03942,712,Petrol,South West,EX
+TAR03943,683,Diesel,East of England,CO
+TAR03944,887,Electric,West Midlands,B
+TAR03945,857,Diesel,Scotland,EH
+TAR03946,872,Hybrid,Wales,LL
+TAR03947,889,Hybrid,South West,BA
+TAR03948,817,Hybrid,London,W
+TAR03949,852,Petrol,South East,OX
+TAR03950,658,Diesel,London,E
+TAR03951,836,Petrol,South West,BA
+TAR03952,613,Petrol,East of England,CO
+TAR03953,772,Petrol,London,W
+TAR03954,751,Petrol,West Midlands,B
+TAR03955,648,Petrol,East Midlands,DE
+TAR03956,782,Electric,Wales,SA
+TAR03957,822,Petrol,Scotland,DD
+TAR03958,852,Petrol,North West,WA
+TAR03959,803,Petrol,London,N
+TAR03960,750,Diesel,South East,BN
+TAR03961,666,Petrol,West Midlands,CV
+TAR03962,863,Hybrid,North East,NE
+TAR03963,774,Petrol,West Midlands,CV
+TAR03964,806,Petrol,South West,BA
+TAR03965,769,Petrol,East of England,CO
+TAR03966,893,Petrol,East of England,CO
+TAR03967,824,Electric,Northern Ireland,BT
+TAR03968,701,Petrol,South West,BA
+TAR03969,800,Petrol,North West,WA
+TAR03970,812,Diesel,South East,RG
+TAR03971,676,Hybrid,London,N
+TAR03972,877,Diesel,London,SE
+TAR03973,868,Petrol,North West,PR
+TAR03974,703,Petrol,London,SE
+TAR03975,734,Petrol,Northern Ireland,BT
+TAR03976,986,Petrol,North West,PR
+TAR03977,750,Petrol,South East,RG
+TAR03978,794,Diesel,Yorkshire and the Humber,HU
+TAR03979,924,Petrol,Scotland,G
+TAR03980,713,Petrol,North West,L
+TAR03981,930,Petrol,East Midlands,DE
+TAR03982,670,Petrol,East Midlands,NG
+TAR03983,851,Diesel,East of England,CB
+TAR03984,935,Diesel,South East,GU
+TAR03985,876,Petrol,Wales,CF
+TAR03986,887,Hybrid,South East,GU
+TAR03987,807,Diesel,West Midlands,WV
+TAR03988,559,Hybrid,London,E
+TAR03989,850,Petrol,Wales,CF
+TAR03990,731,Hybrid,South East,GU
+TAR03991,934,Electric,Northern Ireland,BT
+TAR03992,749,Electric,South East,OX
+TAR03993,790,Petrol,North West,WA
+TAR03994,648,Hybrid,Yorkshire and the Humber,HU
+TAR03995,721,Petrol,North West,WA
+TAR03996,707,Petrol,Wales,CF
+TAR03997,685,Petrol,South West,EX
+TAR03998,783,Petrol,Scotland,G
+TAR03999,812,Hybrid,East of England,CB
+TAR04000,789,Petrol,North East,NE
+TAR04001,710,Hybrid,Scotland,AB
+TAR04002,939,Petrol,East of England,CB
+TAR04003,913,Petrol,East of England,CB
+TAR04004,483,Hybrid,Northern Ireland,BT
+TAR04005,825,Petrol,North West,L
+TAR04006,772,Hybrid,London,E
+TAR04007,789,Hybrid,Scotland,AB
+TAR04008,788,Hybrid,West Midlands,ST
+TAR04009,892,Petrol,London,W
+TAR04010,815,Petrol,London,SW
+TAR04011,649,Diesel,East Midlands,DE
+TAR04012,692,Electric,London,E
+TAR04013,807,Diesel,East of England,CO
+TAR04014,718,Petrol,East of England,NR
+TAR04015,885,Petrol,London,SW
+TAR04016,802,Diesel,London,W
+TAR04017,728,Diesel,South East,OX
+TAR04018,650,Electric,North East,NE
+TAR04019,639,Petrol,Scotland,DD
+TAR04020,664,Petrol,Scotland,G
+TAR04021,718,Petrol,South East,ME
+TAR04022,775,Electric,London,W
+TAR04023,787,Petrol,West Midlands,ST
+TAR04024,938,Electric,North West,L
+TAR04025,848,Electric,West Midlands,ST
+TAR04026,834,Petrol,Wales,LL
+TAR04027,786,Petrol,East Midlands,NG
+TAR04028,716,Diesel,Scotland,G
+TAR04029,848,Diesel,South East,RG
+TAR04030,717,Petrol,West Midlands,WV
+TAR04031,805,Petrol,South East,ME
+TAR04032,663,Electric,Wales,SA
+TAR04033,667,Petrol,South East,RG
+TAR04034,809,Diesel,Northern Ireland,BT
+TAR04035,737,Electric,South West,PL
+TAR04036,737,Hybrid,East of England,NR
+TAR04037,859,Petrol,Wales,CF
+TAR04038,764,Petrol,South East,OX
+TAR04039,915,Diesel,East Midlands,LE
+TAR04040,789,Petrol,London,W
+TAR04041,677,Diesel,London,E
+TAR04042,696,Diesel,Yorkshire and the Humber,LS
+TAR04043,873,Petrol,Wales,SA
+TAR04044,752,Diesel,Wales,CF
+TAR04045,989,Hybrid,South West,BA
+TAR04046,795,Electric,North East,SR
+TAR04047,999,Petrol,London,W
+TAR04048,893,Petrol,Scotland,DD
+TAR04049,730,Diesel,South West,EX
+TAR04050,844,Petrol,Scotland,G
+TAR04051,824,Petrol,South East,GU
+TAR04052,851,Hybrid,London,SE
+TAR04053,792,Petrol,East of England,CO
+TAR04054,823,Petrol,South East,BN
+TAR04055,768,Hybrid,South East,GU
+TAR04056,751,Diesel,East of England,CO
+TAR04057,771,Electric,Northern Ireland,BT
+TAR04058,734,Electric,West Midlands,WV
+TAR04059,816,Electric,North West,PR
+TAR04060,697,Hybrid,East of England,CO
+TAR04061,812,Petrol,West Midlands,ST
+TAR04062,875,Diesel,Wales,SA
+TAR04063,840,Diesel,South East,BN
+TAR04064,747,Petrol,East of England,CB
+TAR04065,724,Diesel,North East,NE
+TAR04066,705,Hybrid,East Midlands,LE
+TAR04067,708,Diesel,South East,
+TAR04068,864,Petrol,Wales,CF
+TAR04069,853,Petrol,South West,BS
+TAR04070,881,Petrol,South East,OX
+TAR04071,711,Petrol,North West,L
+TAR04072,707,Petrol,Wales,SA
+TAR04073,735,Petrol,West Midlands,ST
+TAR04074,945,Diesel,Yorkshire and the Humber,BD
+TAR04075,815,Hybrid,London,N
+TAR04076,877,Hybrid,West Midlands,WV
+TAR04077,851,Petrol,Yorkshire and the Humber,LS
+TAR04078,759,Petrol,South East,GU
+TAR04079,731,Petrol,Wales,CF
+TAR04080,626,Hybrid,South West,BS
+TAR04081,762,Petrol,Yorkshire and the Humber,S
+TAR04082,862,Petrol,London,E
+TAR04083,793,Electric,South East,ME
+TAR04084,807,Diesel,Northern Ireland,BT
+TAR04085,876,Electric,South West,EX
+TAR04086,669,Hybrid,North West,L
+TAR04087,833,Diesel,West Midlands,ST
+TAR04088,825,Hybrid,Yorkshire and the Humber,BD
+TAR04089,755,Electric,Scotland,G
+TAR04090,858,Hybrid,West Midlands,ST
+TAR04091,935,Petrol,North East,SR
+TAR04092,730,Petrol,North West,WA
+TAR04093,831,Hybrid,East of England,NR
+TAR04094,880,Petrol,South West,BS
+TAR04095,552,Hybrid,West Midlands,ST
+TAR04096,856,Petrol,East of England,CB
+TAR04097,928,Diesel,South East,BN
+TAR04098,726,Hybrid,North West,BL
+TAR04099,787,Hybrid,South East,RG
+TAR04100,648,Petrol,Scotland,G
+TAR04101,802,Petrol,North West,M
+TAR04102,951,Hybrid,East of England,CB
+TAR04103,864,Petrol,South East,BN
+TAR04104,910,Diesel,East Midlands,NG
+TAR04105,952,Petrol,East of England,NR
+TAR04106,781,Diesel,South East,OX
+TAR04107,817,Electric,Yorkshire and the Humber,HU
+TAR04108,762,Hybrid,West Midlands,B
+TAR04109,847,Diesel,South East,BN
+TAR04110,744,Petrol,South West,BA
+TAR04111,773,Petrol,East Midlands,LE
+TAR04112,718,Petrol,South East,GU
+TAR04113,795,Diesel,South West,EX
+TAR04114,750,Diesel,Yorkshire and the Humber,LS
+TAR04115,862,Petrol,Scotland,DD
+TAR04116,801,Petrol,South East,GU
+TAR04117,848,Electric,East Midlands,DE
+TAR04118,845,Petrol,North West,PR
+TAR04119,836,Petrol,North East,NE
+TAR04120,707,Petrol,South West,PL
+TAR04121,645,Diesel,East Midlands,DE
+TAR04122,735,Petrol,Yorkshire and the Humber,BD
+TAR04123,741,Electric,South East,GU
+TAR04124,695,Diesel,South East,GU
+TAR04125,721,Petrol,London,E
+TAR04126,804,Petrol,Scotland,AB
+TAR04127,933,Hybrid,South West,EX
+TAR04128,854,Diesel,West Midlands,WV
+TAR04129,805,Petrol,London,N
+TAR04130,757,Petrol,South West,BA
+TAR04131,806,Diesel,East of England,CB
+TAR04132,683,Petrol,Northern Ireland,BT
+TAR04133,620,Hybrid,South East,OX
+TAR04134,757,Petrol,Wales,LL
+TAR04135,814,Petrol,East Midlands,LE
+TAR04136,754,Hybrid,West Midlands,CV
+TAR04137,629,Petrol,North West,BL
+TAR04138,883,Petrol,Northern Ireland,BT
+TAR04139,861,Petrol,East Midlands,DE
+TAR04140,573,Diesel,Northern Ireland,BT
+TAR04141,792,Electric,North West,WA
+TAR04142,790,Hybrid,London,E
+TAR04143,899,Diesel,North West,PR
+TAR04144,772,Petrol,Northern Ireland,BT
+TAR04145,702,Diesel,East Midlands,LE
+TAR04146,991,Petrol,South East,RG
+TAR04147,922,Petrol,London,SE
+TAR04148,851,Diesel,East of England,CB
+TAR04149,797,Petrol,Northern Ireland,BT
+TAR04150,795,Diesel,London,SW
+TAR04151,666,Hybrid,Northern Ireland,BT
+TAR04152,732,Petrol,South East,ME
+TAR04153,647,Petrol,Scotland,EH
+TAR04154,774,Electric,South East,BN
+TAR04155,806,Petrol,Scotland,AB
+TAR04156,683,Petrol,Wales,CF
+TAR04157,781,Petrol,East of England,IP
+TAR04158,707,Petrol,Scotland,DD
+TAR04159,968,Petrol,South East,ME
+TAR04160,670,Electric,South West,BS
+TAR04161,731,Petrol,North West,PR
+TAR04162,585,Hybrid,South East,RG
+TAR04163,801,Hybrid,West Midlands,B
+TAR04164,832,Petrol,East of England,IP
+TAR04165,778,Petrol,East of England,CB
+TAR04166,749,Electric,East Midlands,DE
+TAR04167,727,Petrol,East Midlands,DE
+TAR04168,853,Hybrid,South West,BA
+TAR04169,674,Hybrid,South West,BS
+TAR04170,834,Petrol,South East,ME
+TAR04171,872,Petrol,South West,BS
+TAR04172,756,Hybrid,South West,BA
+TAR04173,920,Hybrid,London,E
+TAR04174,710,Diesel,Scotland,EH
+TAR04175,825,Petrol,East of England,CB
+TAR04176,666,Hybrid,Northern Ireland,BT
+TAR04177,792,Petrol,Scotland,G
+TAR04178,682,Petrol,Scotland,EH
+TAR04179,801,Diesel,North West,L
+TAR04180,921,Hybrid,South East,ME
+TAR04181,620,Electric,Northern Ireland,BT
+TAR04182,862,Petrol,South East,GU
+TAR04183,848,Petrol,London,SE
+TAR04184,884,Electric,Yorkshire and the Humber,S
+TAR04185,806,Electric,East of England,NR
+TAR04186,876,Electric,Yorkshire and the Humber,BD
+TAR04187,610,Hybrid,Northern Ireland,BT
+TAR04188,834,Petrol,London,SW
+TAR04189,844,Hybrid,Northern Ireland,BT
+TAR04190,822,Hybrid,Wales,SA
+TAR04191,881,Diesel,East of England,CB
+TAR04192,718,Petrol,South West,BA
+TAR04193,890,Diesel,North West,M
+TAR04194,548,Petrol,North East,NE
+TAR04195,860,Petrol,Northern Ireland,BT
+TAR04196,901,Petrol,Wales,SA
+TAR04197,842,Hybrid,South East,OX
+TAR04198,801,Electric,North East,DH
+TAR04199,658,Diesel,South East,OX
+TAR04200,820,Diesel,London,SE
+TAR04201,797,Diesel,North East,SR
+TAR04202,798,Hybrid,Yorkshire and the Humber,BD
+TAR04203,895,Petrol,East Midlands,DE
+TAR04204,763,Hybrid,South East,GU
+TAR04205,779,Hybrid,East Midlands,LE
+TAR04206,810,Petrol,South East,RG
+TAR04207,785,Petrol,Scotland,AB
+TAR04208,708,Hybrid,South East,RG
+TAR04209,816,Diesel,South East,ME
+TAR04210,801,Petrol,South East,OX
+TAR04211,908,Petrol,South West,BA
+TAR04212,709,Petrol,West Midlands,CV
+TAR04213,878,Petrol,West Midlands,B
+TAR04214,762,Petrol,Northern Ireland,BT
+TAR04215,594,Diesel,Scotland,G
+TAR04216,950,Petrol,South West,EX
+TAR04217,862,Hybrid,South East,OX
+TAR04218,812,Petrol,London,SE
+TAR04219,920,Diesel,Yorkshire and the Humber,LS
+TAR04220,690,Hybrid,West Midlands,B
+TAR04221,837,Hybrid,East of England,NR
+TAR04222,809,Electric,North West,BL
+TAR04223,718,Hybrid,North West,M
+TAR04224,674,Petrol,Yorkshire and the Humber,S
+TAR04225,803,Petrol,East of England,CO
+TAR04226,731,Hybrid,Scotland,AB
+TAR04227,717,Diesel,South West,EX
+TAR04228,793,Petrol,London,N
+TAR04229,769,Diesel,North East,NE
+TAR04230,875,Petrol,Wales,CF
+TAR04231,810,Diesel,Yorkshire and the Humber,S
+TAR04232,681,Petrol,North West,WA
+TAR04233,623,Electric,Wales,SA
+TAR04234,787,Diesel,London,SW
+TAR04235,773,Hybrid,West Midlands,CV
+TAR04236,617,Electric,South East,GU
+TAR04237,776,Petrol,London,SE
+TAR04238,768,Hybrid,South East,ME
+TAR04239,820,Petrol,Wales,CF
+TAR04240,887,Petrol,West Midlands,WV
+TAR04241,816,Hybrid,Scotland,EH
+TAR04242,942,Petrol,Wales,LL
+TAR04243,761,Diesel,Scotland,AB
+TAR04244,797,Electric,North West,WA
+TAR04245,755,Electric,South West,EX
+TAR04246,835,Petrol,Scotland,DD
+TAR04247,871,Petrol,South East,ME
+TAR04248,764,Petrol,South East,ME
+TAR04249,817,Hybrid,Yorkshire and the Humber,S
+TAR04250,717,Diesel,London,N
+TAR04251,637,Electric,East Midlands,NG
+TAR04252,855,Electric,Wales,SA
+TAR04253,724,Diesel,North West,BL
+TAR04254,751,Petrol,West Midlands,CV
+TAR04255,973,Diesel,London,W
+TAR04256,655,Electric,East Midlands,LE
+TAR04257,686,Petrol,North West,L
+TAR04258,801,Diesel,South East,RG
+TAR04259,832,Electric,Yorkshire and the Humber,S
+TAR04260,706,Petrol,South East,GU
+TAR04261,836,Electric,South East,OX
+TAR04262,807,Petrol,East of England,IP
+TAR04263,575,Petrol,South East,BN
+TAR04264,935,Petrol,South East,OX
+TAR04265,850,Petrol,East Midlands,DE
+TAR04266,679,Petrol,North West,BL
+TAR04267,746,Petrol,South East,OX
+TAR04268,858,Petrol,North West,M
+TAR04269,643,Hybrid,East Midlands,NG
+TAR04270,750,Diesel,London,N
+TAR04271,953,Hybrid,Northern Ireland,BT
+TAR04272,738,Electric,East Midlands,LE
+TAR04273,770,Diesel,London,SE
+TAR04274,834,Diesel,South East,OX
+TAR04275,778,Petrol,East Midlands,LE
+TAR04276,770,Electric,East of England,CO
+TAR04277,980,Petrol,South East,OX
+TAR04278,839,Petrol,Yorkshire and the Humber,S
+TAR04279,787,Petrol,Northern Ireland,BT
+TAR04280,629,Petrol,West Midlands,B
+TAR04281,838,Hybrid,North West,BL
+TAR04282,771,Electric,East of England,NR
+TAR04283,792,Hybrid,South East,RG
+TAR04284,842,Electric,North West,WA
+TAR04285,709,Hybrid,South East,ME
+TAR04286,695,Diesel,London,N
+TAR04287,756,Petrol,North West,M
+TAR04288,711,Electric,East Midlands,NG
+TAR04289,778,Petrol,North West,L
+TAR04290,709,Petrol,South East,GU
+TAR04291,896,Petrol,East of England,CB
+TAR04292,786,Petrol,South East,BN
+TAR04293,720,Petrol,Scotland,AB
+TAR04294,791,Petrol,South East,OX
+TAR04295,690,Electric,South West,BS
+TAR04296,750,Petrol,East Midlands,LE
+TAR04297,766,Hybrid,North West,BL
+TAR04298,780,Petrol,London,SE
+TAR04299,799,Electric,London,SW
+TAR04300,638,Diesel,South East,BN
+TAR04301,755,Hybrid,East Midlands,NG
+TAR04302,816,Hybrid,East Midlands,LE
+TAR04303,833,Hybrid,East of England,CO
+TAR04304,779,Petrol,South West,EX
+TAR04305,854,Petrol,South West,BA
+TAR04306,982,Petrol,South East,RG
+TAR04307,708,Petrol,West Midlands,CV
+TAR04308,798,Petrol,South West,PL
+TAR04309,868,Petrol,South West,EX
+TAR04310,809,Petrol,North West,WA
+TAR04311,773,Petrol,South East,OX
+TAR04312,780,Electric,Yorkshire and the Humber,S
+TAR04313,660,Petrol,East of England,CO
+TAR04314,846,Hybrid,Scotland,EH
+TAR04315,778,Petrol,Wales,CF
+TAR04316,882,Electric,London,W
+TAR04317,715,Hybrid,East of England,NR
+TAR04318,724,Petrol,Yorkshire and the Humber,BD
+TAR04319,869,Electric,East of England,IP
+TAR04320,528,Hybrid,South East,RG
+TAR04321,798,Petrol,South West,PL
+TAR04322,779,Electric,Scotland,EH
+TAR04323,711,Hybrid,London,SW
+TAR04324,736,Petrol,London,SW
+TAR04325,689,Diesel,Northern Ireland,BT
+TAR04326,615,Diesel,West Midlands,CV
+TAR04327,845,Petrol,West Midlands,WV
+TAR04328,828,Petrol,Northern Ireland,BT
+TAR04329,733,Petrol,North West,WA
+TAR04330,845,Diesel,North West,BL
+TAR04331,736,Hybrid,Yorkshire and the Humber,S
+TAR04332,598,Hybrid,South West,BS
+TAR04333,806,Electric,North West,M
+TAR04334,899,Petrol,North West,BL
+TAR04335,708,Petrol,East of England,CB
+TAR04336,791,Diesel,South East,GU
+TAR04337,783,Diesel,Scotland,EH
+TAR04338,797,Petrol,South West,EX
+TAR04339,855,Electric,South East,GU
+TAR04340,683,Diesel,Wales,LL
+TAR04341,913,Electric,North West,PR
+TAR04342,641,Petrol,North West,L
+TAR04343,699,Electric,East of England,IP
+TAR04344,629,Diesel,Northern Ireland,BT
+TAR04345,687,Petrol,South West,PL
+TAR04346,879,Petrol,North West,L
+TAR04347,609,Diesel,Wales,LL
+TAR04348,798,Diesel,South East,BN
+TAR04349,766,Electric,West Midlands,B
+TAR04350,975,Petrol,Northern Ireland,BT
+TAR04351,832,Diesel,West Midlands,CV
+TAR04352,979,Electric,Yorkshire and the Humber,LS
+TAR04353,868,Hybrid,West Midlands,WV
+TAR04354,839,Electric,North East,NE
+TAR04355,827,Petrol,South East,GU
+TAR04356,804,Petrol,Wales,LL
+TAR04357,805,Hybrid,South East,OX
+TAR04358,781,Hybrid,South West,EX
+TAR04359,772,Petrol,West Midlands,WV
+TAR04360,794,Petrol,East of England,IP
+TAR04361,762,Hybrid,South West,EX
+TAR04362,735,Petrol,Scotland,AB
+TAR04363,766,Petrol,London,SW
+TAR04364,809,Hybrid,East Midlands,LE
+TAR04365,777,Electric,Wales,LL
+TAR04366,814,Electric,South East,OX
+TAR04367,794,Hybrid,South East,BN
+TAR04368,775,Diesel,South East,RG
+TAR04369,739,Hybrid,East of England,CO
+TAR04370,695,Hybrid,Wales,CF
+TAR04371,794,Diesel,Wales,CF
+TAR04372,794,Hybrid,London,N
+TAR04373,761,Diesel,East Midlands,NG
+TAR04374,600,Diesel,Yorkshire and the Humber,LS
+TAR04375,637,Petrol,South East,OX
+TAR04376,784,Diesel,South East,BN
+TAR04377,949,Diesel,South East,ME
+TAR04378,541,Electric,South East,ME
+TAR04379,800,Hybrid,South West,BA
+TAR04380,794,Electric,West Midlands,ST
+TAR04381,781,Diesel,North West,BL
+TAR04382,726,Petrol,North East,DH
+TAR04383,773,Petrol,London,N
+TAR04384,738,Petrol,South East,BN
+TAR04385,926,Diesel,East of England,CB
+TAR04386,772,Electric,South East,ME
+TAR04387,628,Hybrid,North West,M
+TAR04388,614,Petrol,London,E
+TAR04389,804,Hybrid,Wales,LL
+TAR04390,779,Diesel,South East,OX
+TAR04391,756,Diesel,West Midlands,CV
+TAR04392,943,Hybrid,Yorkshire and the Humber,LS
+TAR04393,639,Electric,South East,RG
+TAR04394,842,Electric,East of England,NR
+TAR04395,817,Petrol,East of England,CO
+TAR04396,683,Petrol,London,SE
+TAR04397,707,Diesel,Northern Ireland,BT
+TAR04398,826,Petrol,North East,NE
+TAR04399,843,Diesel,East Midlands,DE
+TAR04400,627,Petrol,London,SW
+TAR04401,917,Diesel,East of England,IP
+TAR04402,828,Hybrid,London,W
+TAR04403,774,Electric,Yorkshire and the Humber,HU
+TAR04404,879,Hybrid,Yorkshire and the Humber,HU
+TAR04405,777,Diesel,Wales,CF
+TAR04406,786,Diesel,South East,BN
+TAR04407,902,Electric,West Midlands,B
+TAR04408,745,Hybrid,North West,L
+TAR04409,823,Petrol,East Midlands,DE
+TAR04410,927,Petrol,Scotland,EH
+TAR04411,710,Diesel,London,SW
+TAR04412,805,Diesel,South East,ME
+TAR04413,933,Petrol,London,SE
+TAR04414,855,Diesel,Yorkshire and the Humber,LS
+TAR04415,812,Diesel,London,N
+TAR04416,728,Hybrid,South East,RG
+TAR04417,956,Electric,North West,L
+TAR04418,829,Hybrid,London,W
+TAR04419,636,Petrol,North West,BL
+TAR04420,893,Diesel,North West,L
+TAR04421,702,Diesel,Wales,LL
+TAR04422,911,Diesel,South East,OX
+TAR04423,738,Electric,North East,DH
+TAR04424,710,Electric,Scotland,EH
+TAR04425,650,Hybrid,South West,BS
+TAR04426,680,Petrol,London,W
+TAR04427,697,Petrol,Yorkshire and the Humber,BD
+TAR04428,877,Petrol,North West,PR
+TAR04429,890,Electric,Scotland,AB
+TAR04430,838,Diesel,South East,BN
+TAR04431,745,Petrol,South East,ME
+TAR04432,999,Electric,North East,SR
+TAR04433,839,Petrol,Scotland,DD
+TAR04434,769,Hybrid,West Midlands,WV
+TAR04435,881,Diesel,South West,PL
+TAR04436,938,Electric,West Midlands,ST
+TAR04437,779,Diesel,Wales,SA
+TAR04438,782,Hybrid,Yorkshire and the Humber,S
+TAR04439,711,Hybrid,South West,EX
+TAR04440,830,Hybrid,South East,OX
+TAR04441,861,Electric,North West,PR
+TAR04442,741,Petrol,South East,ME
+TAR04443,807,Electric,East of England,NR
+TAR04444,671,Diesel,London,W
+TAR04445,706,Electric,Yorkshire and the Humber,HU
+TAR04446,768,Petrol,South West,BS
+TAR04447,847,Petrol,Wales,LL
+TAR04448,811,Electric,South East,BN
+TAR04449,721,Hybrid,Scotland,AB
+TAR04450,824,Hybrid,London,N
+TAR04451,753,Diesel,Scotland,DD
+TAR04452,930,Diesel,South West,BS
+TAR04453,756,Petrol,North West,M
+TAR04454,833,Petrol,Scotland,DD
+TAR04455,805,Petrol,North West,L
+TAR04456,880,Petrol,West Midlands,ST
+TAR04457,755,Diesel,East Midlands,NG
+TAR04458,926,Diesel,London,W
+TAR04459,716,Petrol,South East,GU
+TAR04460,684,Electric,South West,BS
+TAR04461,859,Petrol,Scotland,G
+TAR04462,720,Hybrid,East Midlands,NG
+TAR04463,705,Petrol,Northern Ireland,BT
+TAR04464,774,Petrol,South West,BA
+TAR04465,914,Diesel,North West,L
+TAR04466,844,Hybrid,North West,BL
+TAR04467,928,Electric,Yorkshire and the Humber,S
+TAR04468,718,Diesel,South East,BN
+TAR04469,837,Electric,South East,RG
+TAR04470,620,Hybrid,North West,PR
+TAR04471,723,Diesel,London,SW
+TAR04472,750,Petrol,South East,GU
+TAR04473,708,Petrol,East of England,IP
+TAR04474,619,Petrol,North West,M
+TAR04475,889,Hybrid,South West,BS
+TAR04476,676,Petrol,West Midlands,B
+TAR04477,886,Hybrid,North East,DH
+TAR04478,795,Petrol,East Midlands,LE
+TAR04479,611,Petrol,South East,BN
+TAR04480,888,Electric,South East,GU
+TAR04481,635,Diesel,South East,OX
+TAR04482,785,Petrol,Scotland,DD
+TAR04483,662,Hybrid,Scotland,AB
+TAR04484,734,Hybrid,Wales,SA
+TAR04485,749,Diesel,Yorkshire and the Humber,HU
+TAR04486,928,Electric,North West,L
+TAR04487,884,Electric,Scotland,EH
+TAR04488,949,Petrol,South West,EX
+TAR04489,811,Petrol,South East,ME
+TAR04490,683,Diesel,East of England,IP
+TAR04491,767,Petrol,London,N
+TAR04492,819,Hybrid,East Midlands,DE
+TAR04493,763,Hybrid,Scotland,AB
+TAR04494,796,Electric,London,SE
+TAR04495,810,Petrol,West Midlands,B
+TAR04496,690,Petrol,South East,GU
+TAR04497,742,Diesel,South East,RG
+TAR04498,800,Petrol,Wales,CF
+TAR04499,708,Hybrid,East Midlands,LE
+TAR04500,823,Petrol,Wales,LL
+TAR04501,761,Hybrid,South East,ME
+TAR04502,809,Diesel,London,W
+TAR04503,775,Diesel,East Midlands,LE
+TAR04504,911,Hybrid,South West,PL
+TAR04505,683,Electric,South East,RG
+TAR04506,553,Diesel,North West,M
+TAR04507,689,Petrol,South West,BS
+TAR04508,863,Petrol,Yorkshire and the Humber,HU
+TAR04509,733,Petrol,Wales,SA
+TAR04510,639,Petrol,West Midlands,ST
+TAR04511,798,Hybrid,London,W
+TAR04512,720,Hybrid,West Midlands,WV
+TAR04513,761,Diesel,South East,GU
+TAR04514,948,Electric,West Midlands,B
+TAR04515,848,Hybrid,East of England,IP
+TAR04516,737,Petrol,North West,L
+TAR04517,743,Hybrid,South East,BN
+TAR04518,810,Hybrid,South West,EX
+TAR04519,818,Hybrid,South West,BS
+TAR04520,757,Electric,Scotland,EH
+TAR04521,704,Petrol,West Midlands,CV
+TAR04522,764,Electric,East of England,CO
+TAR04523,788,Hybrid,East of England,CO
+TAR04524,972,Diesel,East Midlands,LE
+TAR04525,801,Diesel,South East,BN
+TAR04526,802,Petrol,East of England,NR
+TAR04527,816,Electric,London,SE
+TAR04528,655,Petrol,South East,GU
+TAR04529,789,Petrol,South West,PL
+TAR04530,853,Hybrid,West Midlands,ST
+TAR04531,881,Diesel,South West,EX
+TAR04532,888,Petrol,South East,GU
+TAR04533,836,Hybrid,East Midlands,DE
+TAR04534,734,Petrol,London,SW
+TAR04535,909,Hybrid,London,N
+TAR04536,869,Petrol,South East,GU
+TAR04537,795,Diesel,Scotland,AB
+TAR04538,849,Petrol,South West,BA
+TAR04539,788,Hybrid,South East,ME
+TAR04540,853,Hybrid,Wales,CF
+TAR04541,825,Hybrid,London,SW
+TAR04542,697,Petrol,South West,EX
+TAR04543,858,Petrol,Scotland,AB
+TAR04544,759,Diesel,Northern Ireland,BT
+TAR04545,682,Petrol,London,W
+TAR04546,707,Diesel,Northern Ireland,BT
+TAR04547,763,Diesel,North East,NE
+TAR04548,736,Petrol,Northern Ireland,BT
+TAR04549,757,Diesel,London,N
+TAR04550,748,Diesel,Scotland,AB
+TAR04551,803,Petrol,East of England,CB
+TAR04552,923,Petrol,South West,BA
+TAR04553,874,Petrol,London,SW
+TAR04554,704,Hybrid,South West,BS
+TAR04555,754,Diesel,South East,ME
+TAR04556,766,Petrol,South East,OX
+TAR04557,873,Hybrid,South East,RG
+TAR04558,611,Hybrid,East Midlands,NG
+TAR04559,780,Diesel,South East,OX
+TAR04560,857,Petrol,North West,BL
+TAR04561,788,Diesel,Wales,LL
+TAR04562,667,Petrol,South East,GU
+TAR04563,682,Petrol,East Midlands,DE
+TAR04564,849,Hybrid,North West,PR
+TAR04565,768,Petrol,London,E
+TAR04566,674,Petrol,South East,RG
+TAR04567,848,Petrol,South West,BS
+TAR04568,854,Petrol,East of England,IP
+TAR04569,884,Diesel,Wales,LL
+TAR04570,839,Petrol,Scotland,EH
+TAR04571,859,Petrol,North East,SR
+TAR04572,727,Petrol,South East,OX
+TAR04573,670,Petrol,Wales,LL
+TAR04574,719,Diesel,North West,L
+TAR04575,733,Petrol,Scotland,G
+TAR04576,753,Petrol,Yorkshire and the Humber,S
+TAR04577,721,Electric,South East,GU
+TAR04578,835,Electric,South West,PL
+TAR04579,926,Petrol,Northern Ireland,BT
+TAR04580,821,Diesel,South East,OX
+TAR04581,808,Petrol,Scotland,AB
+TAR04582,928,Petrol,Wales,LL
+TAR04583,726,Hybrid,South East,ME
+TAR04584,999,Petrol,North West,PR
+TAR04585,883,Petrol,North West,BL
+TAR04586,854,Petrol,South East,OX
+TAR04587,645,Hybrid,North West,PR
+TAR04588,836,Diesel,North West,PR
+TAR04589,817,Diesel,London,E
+TAR04590,780,Electric,West Midlands,ST
+TAR04591,890,Diesel,North East,DH
+TAR04592,866,Petrol,Scotland,AB
+TAR04593,733,Electric,London,N
+TAR04594,901,Petrol,South East,OX
+TAR04595,817,Diesel,Yorkshire and the Humber,LS
+TAR04596,936,Diesel,West Midlands,B
+TAR04597,947,Petrol,South East,GU
+TAR04598,804,Hybrid,South West,BS
+TAR04599,703,Diesel,East Midlands,LE
+TAR04600,843,Petrol,London,W
+TAR04601,765,Diesel,East of England,NR
+TAR04602,739,Petrol,East of England,IP
+TAR04603,841,Petrol,London,E
+TAR04604,702,Petrol,London,W
+TAR04605,745,Petrol,South West,EX
+TAR04606,866,Electric,West Midlands,CV
+TAR04607,863,Hybrid,East of England,CO
+TAR04608,800,Petrol,East of England,CB
+TAR04609,642,Hybrid,Yorkshire and the Humber,S
+TAR04610,696,Petrol,Wales,CF
+TAR04611,672,Petrol,London,E
+TAR04612,796,Diesel,North West,L
+TAR04613,771,Petrol,Yorkshire and the Humber,S
+TAR04614,879,Petrol,South East,GU
+TAR04615,778,Petrol,Scotland,AB
+TAR04616,830,Petrol,South West,BA
+TAR04617,792,Petrol,Yorkshire and the Humber,S
+TAR04618,864,Petrol,West Midlands,CV
+TAR04619,784,Petrol,Scotland,EH
+TAR04620,643,Electric,London,SW
+TAR04621,706,Petrol,Scotland,DD
+TAR04622,762,Diesel,South West,EX
+TAR04623,999,Diesel,North West,PR
+TAR04624,626,Hybrid,Yorkshire and the Humber,BD
+TAR04625,620,Hybrid,Scotland,DD
+TAR04626,730,Petrol,East of England,CB
+TAR04627,741,Diesel,London,W
+TAR04628,711,Hybrid,North West,M
+TAR04629,804,Electric,Yorkshire and the Humber,BD
+TAR04630,825,Petrol,South East,RG
+TAR04631,822,Petrol,East Midlands,LE
+TAR04632,903,Petrol,Scotland,AB
+TAR04633,840,Petrol,South East,OX
+TAR04634,732,Petrol,East Midlands,LE
+TAR04635,927,Petrol,North East,DH
+TAR04636,704,Diesel,Scotland,G
+TAR04637,700,Diesel,London,SW
+TAR04638,760,Diesel,North West,BL
+TAR04639,818,Hybrid,North West,BL
+TAR04640,822,Diesel,East of England,CO
+TAR04641,792,Petrol,Yorkshire and the Humber,LS
+TAR04642,647,Petrol,South West,EX
+TAR04643,873,Petrol,Yorkshire and the Humber,LS
+TAR04644,938,Petrol,South East,RG
+TAR04645,673,Petrol,London,W
+TAR04646,736,Electric,South East,ME
+TAR04647,832,Diesel,North West,L
+TAR04648,705,Hybrid,South West,BA
+TAR04649,842,Hybrid,East Midlands,LE
+TAR04650,653,Hybrid,West Midlands,B
+TAR04651,928,Petrol,Scotland,EH
+TAR04652,684,Diesel,Wales,CF
+TAR04653,666,Electric,Wales,CF
+TAR04654,851,Petrol,South West,EX
+TAR04655,823,Hybrid,Wales,LL
+TAR04656,663,Petrol,Yorkshire and the Humber,HU
+TAR04657,654,Petrol,West Midlands,CV
+TAR04658,693,Electric,South East,RG
+TAR04659,805,Hybrid,London,W
+TAR04660,802,Electric,London,N
+TAR04661,615,Petrol,London,N
+TAR04662,963,Diesel,South East,ME
+TAR04663,763,Electric,Northern Ireland,BT
+TAR04664,882,Electric,Wales,LL
+TAR04665,826,Petrol,Northern Ireland,BT
+TAR04666,624,Petrol,East of England,IP
+TAR04667,769,Petrol,North East,SR
+TAR04668,831,Petrol,Scotland,EH
+TAR04669,826,Electric,South East,BN
+TAR04670,819,Diesel,East Midlands,NG
+TAR04671,838,Petrol,East of England,NR
+TAR04672,847,Petrol,Yorkshire and the Humber,S
+TAR04673,724,Diesel,Scotland,DD
+TAR04674,730,Petrol,East of England,CB
+TAR04675,896,Petrol,East of England,IP
+TAR04676,839,Hybrid,East Midlands,NG
+TAR04677,852,Diesel,Wales,CF
+TAR04678,658,Petrol,South West,BA
+TAR04679,902,Petrol,West Midlands,WV
+TAR04680,816,Petrol,North West,BL
+TAR04681,686,Hybrid,South East,RG
+TAR04682,999,Diesel,South East,RG
+TAR04683,763,Diesel,North East,SR
+TAR04684,793,Diesel,Scotland,AB
+TAR04685,721,Electric,South East,ME
+TAR04686,915,Hybrid,North West,PR
+TAR04687,864,Petrol,South West,PL
+TAR04688,818,Petrol,Scotland,DD
+TAR04689,788,Petrol,East of England,CO
+TAR04690,731,Hybrid,East of England,NR
+TAR04691,629,Petrol,South East,BN
+TAR04692,770,Diesel,West Midlands,WV
+TAR04693,787,Petrol,North West,M
+TAR04694,747,Diesel,West Midlands,ST
+TAR04695,852,Petrol,West Midlands,CV
+TAR04696,631,Petrol,East of England,CB
+TAR04697,819,Diesel,Yorkshire and the Humber,BD
+TAR04698,988,Petrol,West Midlands,B
+TAR04699,922,Hybrid,London,E
+TAR04700,814,Petrol,East of England,CB
+TAR04701,800,Electric,South East,RG
+TAR04702,856,Petrol,East of England,CB
+TAR04703,760,Electric,East of England,IP
+TAR04704,900,Petrol,South East,OX
+TAR04705,814,Electric,Yorkshire and the Humber,S
+TAR04706,698,Electric,East Midlands,DE
+TAR04707,653,Electric,West Midlands,CV
+TAR04708,786,Diesel,London,E
+TAR04709,776,Hybrid,Wales,LL
+TAR04710,843,Petrol,North West,PR
+TAR04711,686,Petrol,West Midlands,B
+TAR04712,757,Petrol,Yorkshire and the Humber,BD
+TAR04713,773,Petrol,East of England,IP
+TAR04714,577,Hybrid,Scotland,AB
+TAR04715,772,Diesel,South West,BA
+TAR04716,792,Petrol,Northern Ireland,BT
+TAR04717,744,Electric,South West,BA
+TAR04718,779,Petrol,Yorkshire and the Humber,S
+TAR04719,693,Hybrid,Wales,CF
+TAR04720,664,Petrol,Scotland,G
+TAR04721,829,Petrol,Wales,LL
+TAR04722,806,Hybrid,West Midlands,ST
+TAR04723,807,Diesel,East Midlands,LE
+TAR04724,863,Diesel,London,E
+TAR04725,805,Electric,North West,BL
+TAR04726,862,Electric,London,SW
+TAR04727,786,Petrol,East of England,NR
+TAR04728,712,Petrol,South West,BS
+TAR04729,965,Petrol,London,N
+TAR04730,768,Petrol,Scotland,DD
+TAR04731,738,Hybrid,London,E
+TAR04732,758,Petrol,West Midlands,WV
+TAR04733,763,Diesel,London,SE
+TAR04734,900,Petrol,South East,RG
+TAR04735,831,Diesel,Yorkshire and the Humber,S
+TAR04736,683,Petrol,East Midlands,LE
+TAR04737,776,Petrol,London,E
+TAR04738,855,Petrol,Northern Ireland,BT
+TAR04739,836,Electric,West Midlands,CV
+TAR04740,736,Diesel,South East,BN
+TAR04741,683,Diesel,East of England,CO
+TAR04742,824,Petrol,Yorkshire and the Humber,LS
+TAR04743,906,Hybrid,South West,BS
+TAR04744,928,Petrol,North West,BL
+TAR04745,873,Petrol,London,N
+TAR04746,685,Hybrid,West Midlands,CV
+TAR04747,834,Diesel,East Midlands,NG
+TAR04748,775,Petrol,West Midlands,B
+TAR04749,898,Petrol,Northern Ireland,BT
+TAR04750,999,Diesel,London,SE
+TAR04751,676,Diesel,East of England,NR
+TAR04752,748,Diesel,East of England,CB
+TAR04753,782,Diesel,East of England,NR
+TAR04754,749,Hybrid,North West,M
+TAR04755,650,Petrol,South East,ME
+TAR04756,776,Hybrid,Northern Ireland,BT
+TAR04757,876,Petrol,Wales,CF
+TAR04758,591,Hybrid,South East,OX
+TAR04759,785,Petrol,East of England,IP
+TAR04760,918,Hybrid,South West,BS
+TAR04761,871,Electric,East of England,CB
+TAR04762,813,Hybrid,North West,L
+TAR04763,820,Petrol,West Midlands,ST
+TAR04764,798,Diesel,West Midlands,WV
+TAR04765,807,Petrol,Yorkshire and the Humber,LS
+TAR04766,834,Hybrid,East Midlands,NG
+TAR04767,880,Electric,East Midlands,LE
+TAR04768,747,Petrol,North West,M
+TAR04769,883,Electric,South East,BN
+TAR04770,776,Petrol,Scotland,G
+TAR04771,962,Petrol,West Midlands,CV
+TAR04772,795,Hybrid,Wales,CF
+TAR04773,617,Petrol,Northern Ireland,BT
+TAR04774,966,Diesel,East of England,CB
+TAR04775,839,Petrol,East Midlands,NG
+TAR04776,755,Petrol,South East,ME
+TAR04777,720,Hybrid,London,SW
+TAR04778,653,Petrol,Yorkshire and the Humber,LS
+TAR04779,847,Hybrid,East of England,NR
+TAR04780,816,Petrol,Scotland,G
+TAR04781,806,Hybrid,London,SE
+TAR04782,777,Hybrid,South West,PL
+TAR04783,892,Petrol,Scotland,G
+TAR04784,876,Hybrid,South East,ME
+TAR04785,911,Hybrid,Northern Ireland,BT
+TAR04786,763,Petrol,North West,M
+TAR04787,784,Petrol,London,SW
+TAR04788,811,Hybrid,Scotland,EH
+TAR04789,730,Petrol,North West,PR
+TAR04790,645,Electric,East Midlands,NG
+TAR04791,882,Petrol,North West,M
+TAR04792,733,Petrol,South East,RG
+TAR04793,837,Hybrid,South East,GU
+TAR04794,860,Diesel,South West,EX
+TAR04795,906,Diesel,South West,BA
+TAR04796,888,Petrol,North West,L
+TAR04797,616,Petrol,East of England,IP
+TAR04798,677,Diesel,West Midlands,CV
+TAR04799,656,Hybrid,South West,BS
+TAR04800,852,Diesel,North East,NE
+TAR04801,729,Petrol,Yorkshire and the Humber,LS
+TAR04802,738,Hybrid,Wales,CF
+TAR04803,654,Petrol,Northern Ireland,BT
+TAR04804,933,Diesel,West Midlands,B
+TAR04805,798,Diesel,Northern Ireland,BT
+TAR04806,812,Electric,South West,BS
+TAR04807,843,Diesel,Yorkshire and the Humber,S
+TAR04808,743,Petrol,South East,BN
+TAR04809,833,Petrol,Scotland,DD
+TAR04810,936,Hybrid,East Midlands,NG
+TAR04811,711,Petrol,West Midlands,B
+TAR04812,699,Petrol,Yorkshire and the Humber,BD
+TAR04813,587,Petrol,North West,L
+TAR04814,701,Petrol,East Midlands,LE
+TAR04815,686,Petrol,Scotland,DD
+TAR04816,828,Hybrid,South West,BA
+TAR04817,903,Petrol,East of England,CB
+TAR04818,712,Petrol,South East,BN
+TAR04819,808,Diesel,London,W
+TAR04820,656,Electric,East Midlands,NG
+TAR04821,867,Diesel,East Midlands,LE
+TAR04822,823,Petrol,South East,BN
+TAR04823,696,Diesel,North West,L
+TAR04824,872,Petrol,Wales,CF
+TAR04825,748,Hybrid,North East,NE
+TAR04826,733,Petrol,London,N
+TAR04827,606,Diesel,South West,EX
+TAR04828,811,Petrol,South East,BN
+TAR04829,870,Hybrid,Yorkshire and the Humber,BD
+TAR04830,836,Diesel,South East,BN
+TAR04831,739,Diesel,South East,RG
+TAR04832,722,Petrol,Wales,CF
+TAR04833,887,Petrol,North West,M
+TAR04834,835,Electric,South East,GU
+TAR04835,783,Hybrid,South East,BN
+TAR04836,657,Diesel,Yorkshire and the Humber,HU
+TAR04837,634,Hybrid,South West,EX
+TAR04838,999,Electric,South West,PL
+TAR04839,693,Diesel,South East,OX
+TAR04840,760,Petrol,South East,OX
+TAR04841,843,Hybrid,South East,RG
+TAR04842,784,Petrol,Northern Ireland,BT
+TAR04843,707,Hybrid,West Midlands,B
+TAR04844,930,Petrol,Scotland,EH
+TAR04845,688,Petrol,North West,M
+TAR04846,787,Petrol,Wales,LL
+TAR04847,825,Diesel,Northern Ireland,BT
+TAR04848,893,Petrol,London,SE
+TAR04849,595,Petrol,Wales,LL
+TAR04850,772,Hybrid,Scotland,DD
+TAR04851,798,Hybrid,Scotland,EH
+TAR04852,719,Petrol,East of England,NR
+TAR04853,590,Diesel,North West,BL
+TAR04854,745,Hybrid,East of England,IP
+TAR04855,786,Electric,Yorkshire and the Humber,LS
+TAR04856,797,Petrol,South East,RG
+TAR04857,785,Petrol,West Midlands,B
+TAR04858,775,Petrol,North West,M
+TAR04859,585,Diesel,North West,L
+TAR04860,812,Hybrid,North West,L
+TAR04861,857,Electric,North East,SR
+TAR04862,706,Petrol,South West,BA
+TAR04863,780,Petrol,London,SW
+TAR04864,623,Diesel,London,N
+TAR04865,868,Petrol,South East,BN
+TAR04866,778,Petrol,Yorkshire and the Humber,S
+TAR04867,795,Petrol,London,E
+TAR04868,730,Petrol,South West,BA
+TAR04869,776,Hybrid,South East,ME
+TAR04870,915,Petrol,Northern Ireland,BT
+TAR04871,900,Electric,London,N
+TAR04872,781,Petrol,South West,BA
+TAR04873,717,Diesel,Yorkshire and the Humber,LS
+TAR04874,785,Diesel,South East,BN
+TAR04875,773,Electric,Wales,LL
+TAR04876,823,Diesel,South West,EX
+TAR04877,750,Petrol,West Midlands,WV
+TAR04878,576,Petrol,Northern Ireland,BT
+TAR04879,859,Petrol,Wales,LL
+TAR04880,786,Diesel,West Midlands,B
+TAR04881,758,Hybrid,East Midlands,LE
+TAR04882,775,Petrol,South East,OX
+TAR04883,730,Petrol,West Midlands,B
+TAR04884,865,Petrol,London,W
+TAR04885,754,Petrol,East Midlands,NG
+TAR04886,641,Petrol,London,W
+TAR04887,692,Petrol,East of England,CO
+TAR04888,797,Petrol,South East,ME
+TAR04889,737,Petrol,Yorkshire and the Humber,LS
+TAR04890,858,Electric,London,SE
+TAR04891,999,Petrol,West Midlands,WV
+TAR04892,618,Diesel,South West,EX
+TAR04893,648,Diesel,London,SW
+TAR04894,791,Petrol,South East,OX
+TAR04895,809,Hybrid,West Midlands,B
+TAR04896,666,Diesel,East of England,IP
+TAR04897,798,Petrol,London,W
+TAR04898,781,Petrol,South East,GU
+TAR04899,943,Electric,South East,BN
+TAR04900,936,Petrol,Scotland,G
+TAR04901,752,Hybrid,South West,BS
+TAR04902,816,Petrol,London,SW
+TAR04903,920,Petrol,Yorkshire and the Humber,BD
+TAR04904,790,Petrol,Wales,CF
+TAR04905,843,Electric,Scotland,G
+TAR04906,700,Hybrid,East of England,IP
+TAR04907,758,Petrol,London,N
+TAR04908,900,Electric,North West,L
+TAR04909,771,Diesel,Northern Ireland,BT
+TAR04910,808,Petrol,Yorkshire and the Humber,BD
+TAR04911,694,Petrol,East Midlands,NG
+TAR04912,630,Petrol,East of England,CO
+TAR04913,793,Petrol,East of England,CB
+TAR04914,763,Diesel,East of England,CO
+TAR04915,755,Diesel,West Midlands,B
+TAR04916,922,Diesel,South East,GU
+TAR04917,887,Diesel,South East,RG
+TAR04918,721,Electric,South East,GU
+TAR04919,611,Petrol,South East,BN
+TAR04920,971,Diesel,West Midlands,B
+TAR04921,621,Petrol,East Midlands,DE
+TAR04922,837,Petrol,South West,BS
+TAR04923,868,Diesel,North West,M
+TAR04924,912,Petrol,Wales,CF
+TAR04925,764,Petrol,East of England,CB
+TAR04926,861,Diesel,West Midlands,CV
+TAR04927,782,Diesel,Yorkshire and the Humber,BD
+TAR04928,815,Petrol,Scotland,DD
+TAR04929,750,Diesel,Scotland,G
+TAR04930,705,Hybrid,East of England,CB
+TAR04931,778,Diesel,London,SE
+TAR04932,773,Electric,South East,BN
+TAR04933,835,Diesel,South West,EX
+TAR04934,796,Hybrid,North West,BL
+TAR04935,948,Diesel,London,SW
+TAR04936,911,Petrol,North West,M
+TAR04937,849,Electric,London,W
+TAR04938,787,Electric,Yorkshire and the Humber,HU
+TAR04939,866,Petrol,North West,WA
+TAR04940,859,Petrol,North West,WA
+TAR04941,801,Petrol,South West,BA
+TAR04942,822,Electric,North East,NE
+TAR04943,755,Electric,South East,ME
+TAR04944,739,Electric,North East,SR
+TAR04945,811,Electric,East of England,NR
+TAR04946,662,Petrol,South East,BN
+TAR04947,907,Electric,London,E
+TAR04948,712,Electric,Scotland,DD
+TAR04949,767,Hybrid,London,N
+TAR04950,950,Hybrid,South East,ME
+TAR04951,699,Petrol,South East,BN
+TAR04952,716,Petrol,London,SW
+TAR04953,615,Petrol,Scotland,G
+TAR04954,746,Petrol,Scotland,AB
+TAR04955,912,Diesel,East Midlands,NG
+TAR04956,634,Electric,London,E
+TAR04957,864,Petrol,South East,RG
+TAR04958,871,Petrol,West Midlands,ST
+TAR04959,787,Petrol,North West,BL
+TAR04960,792,Diesel,South East,BN
+TAR04961,575,Electric,East Midlands,DE
+TAR04962,864,Hybrid,East of England,CO
+TAR04963,704,Petrol,London,SE
+TAR04964,785,Petrol,East of England,NR
+TAR04965,834,Petrol,South East,GU
+TAR04966,933,Petrol,Yorkshire and the Humber,LS
+TAR04967,725,Petrol,South East,GU
+TAR04968,970,Hybrid,East Midlands,NG
+TAR04969,855,Hybrid,Yorkshire and the Humber,BD
+TAR04970,650,Diesel,Wales,LL
+TAR04971,767,Diesel,London,N
+TAR04972,805,Hybrid,London,E
+TAR04973,793,Petrol,Yorkshire and the Humber,HU
+TAR04974,842,Hybrid,Wales,CF
+TAR04975,766,Petrol,South East,RG
+TAR04976,796,Electric,Yorkshire and the Humber,HU
+TAR04977,789,Diesel,East of England,IP
+TAR04978,973,Petrol,Yorkshire and the Humber,BD
+TAR04979,807,Diesel,London,E
+TAR04980,725,Diesel,East of England,NR
+TAR04981,801,Petrol,South East,ME
+TAR04982,794,Electric,London,E
+TAR04983,717,Petrol,South East,ME
+TAR04984,768,Petrol,West Midlands,ST
+TAR04985,779,Petrol,Yorkshire and the Humber,S
+TAR04986,639,Petrol,London,N
+TAR04987,812,Petrol,East of England,CO
+TAR04988,757,Petrol,London,W
+TAR04989,734,Petrol,South East,ME
+TAR04990,925,Hybrid,North West,L
+TAR04991,672,Petrol,East of England,NR
+TAR04992,747,Petrol,London,SE
+TAR04993,797,Petrol,North West,WA
+TAR04994,873,Diesel,South East,BN
+TAR04995,859,Petrol,South East,ME
+TAR04996,689,Petrol,South West,BS
+TAR04997,726,Hybrid,Yorkshire and the Humber,HU
+TAR04998,865,Petrol,Wales,CF
+TAR04999,657,Electric,London,W
+TAR05000,796,Hybrid,London,E

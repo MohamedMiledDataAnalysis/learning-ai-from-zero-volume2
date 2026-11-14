@@ -101,7 +101,11 @@ choose_tool <- function(question) {
   q <- tolower(question)
   period <- find_period(question)
   or0 <- if (is.null(period)) 0 else period
-  if (grepl("prospectus", q, fixed = TRUE)) return(list(name = "search_prospectus", arguments = list(query = question)))
+  # Search for the subject of the question, not for the word "prospectus": in a 136-page prospectus that word is
+  # on many pages and would pull them up.
+  if (grepl("prospectus", q, fixed = TRUE))
+    return(list(name = "search_prospectus",
+                arguments = list(query = sub("^according to the prospectus,?\\s*", "", question, ignore.case = TRUE))))
   if (grepl("loan tape", q, fixed = TRUE)) return(list(name = "validate_loan_tape", arguments = named_list()))
   # Order matters: the stratification words are checked before "pool balance".
   if (has_any(q, c("region", "fuel", "pcp", "product", "how many loans"))) {

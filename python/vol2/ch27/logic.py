@@ -11,6 +11,7 @@ import getpass
 import io
 import json
 import os
+import re
 import sys
 import tempfile
 import time
@@ -29,7 +30,9 @@ from tar_agent.tools.analyse import analyse_deal_terms  # noqa: E402
 from tar_agent.tools.document import page_texts, search_document  # noqa: E402
 from tar_agent.tools.extract import all_fields, extract_deal_terms, score_against_key  # noqa: E402
 from tar_agent.tools.extract_sim import simulated_model_brain  # noqa: E402
-from tar_agent.tools.loan_tape import validate_loan_tape  # noqa: E402
+from tar_agent.data import STANDARD_REGIONS, investor_report, investor_report_path  # noqa: E402
+from tar_agent.tools.investor_report import read_investor_report  # noqa: E402
+from tar_agent.tools.loan_tape import POOL_CUT, SUPPLEMENTARY, load_clean_tape, validate_loan_tape  # noqa: E402
 
 MAX_BYTES = 50 * 1024 * 1024                     # the upload limit: 50 MB
 PENDING = "[Recording pending: run python record_all.py with Ollama installed, then rebuild]"
@@ -60,7 +63,8 @@ def size_text(n):
 def decode_upload(contents, filename, kind="pdf"):
     """Turn what dcc.Upload sends ("data:<type>;base64,<data>") into a temporary file. Returns its path.
 
-    kind "pdf" accepts a PDF only; kind "csv" a loan tape; kind "json" an investor report.
+    kind "pdf" accepts a PDF only (a prospectus); kind "csv" a loan tape file (the FCA template file or its
+    supplementary file); kind "report" an investor report as a PDF or an Excel workbook (the first bytes tell which).
     """
     if not contents or "," not in contents:
         raise ValueError("nothing was uploaded")
@@ -73,8 +77,15 @@ def decode_upload(contents, filename, kind="pdf"):
     raw = base64.b64decode(data)
     if kind == "pdf" and not raw.startswith(b"%PDF"):
         raise ValueError(f"{filename} is not a PDF (a PDF file starts with %PDF)")
-    if kind == "json":
-        json.loads(raw.decode("utf-8"))           # raises if the report is not valid JSON
+    if kind == "csv" and (raw.startswith(b"PK") or raw.startswith(b"%PDF")):
+        raise ValueError(f"{filename} is not a CSV file")
+    if kind == "report":
+        if raw.startswith(b"%PDF"):
+            kind = "pdf"
+        elif raw.startswith(b"PK"):
+            kind = "xlsx"
+        else:
+            raise ValueError(f"{filename} is neither a PDF nor an Excel workbook")
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
     for stale in UPLOAD_DIR.iterdir():             # the folder must not grow without limit
         try:
@@ -334,39 +345,147 @@ def surveillance_rows(terms, reports):
 
 
 def thames_reports():
-    folder = ROOT / "data" / "investor_reports"
-    return [json.loads(p.read_text(encoding="utf-8")) for p in sorted(folder.glob("investor_report_*.json"))]
+    """The twelve Thames investor reports, read from Larkmead Bank's PDFs."""
+    return [investor_report(period) for period in range(1, 13)]
 
 
-def surveillance(terms, use_thames_data=False, report_path=None, tape_path=None):
+def surveillance(terms, use_thames_data=False, report_path=None, tape_path=None, supplementary_path=None):
     """The surveillance panel: trigger tests with the extracted limits, plus a tape check if a tape is given."""
     out = {"rows": [], "tape": None, "message": ""}
-    if report_path:
-        reports = [json.loads(Path(report_path).read_text(encoding="utf-8"))]
-    elif use_thames_data:
-        reports = thames_reports()
-    else:
-        reports = []
-        out["message"] = ("No investor report: upload one (JSON, in the book's format) or tick "
-                          "'Use the Thames sample data'.")
+    reports = []
     try:
-        out["rows"] = surveillance_rows(terms, reports)
-    except KeyError as e:
-        out["message"] = f"The investor report is not in the book's format (missing {e})."
-    except TypeError:
-        out["message"] = "The investor report is not in the book's format (expected one JSON object for one period)."
-    if tape_path:
+        if report_path:
+            reports = [read_investor_report(str(report_path))]
+        elif use_thames_data:
+            reports = thames_reports()
+        else:
+            out["message"] = ("No investor report: upload one (the cash manager's PDF) or tick "
+                              "'Use the Thames sample data'.")
+    except (ValueError, StopIteration, OSError) as e:
+        out["message"] = f"The investor report could not be read: {e}"
+    out["rows"] = surveillance_rows(terms, reports)
+    if tape_path or supplementary_path:
+        if not tape_path:
+            out["tape"] = {"error": "no file starts with the field AUTL1 of the FCA template"}
+            return out
         try:
-            v = validate_loan_tape(tape_path)
-        except (KeyError, AttributeError, ValueError, pd.errors.ParserError) as e:   # UnicodeDecodeError is a ValueError
-            out["tape"] = {"error": f"the CSV is not a loan tape in the book's format ({type(e).__name__})"}
+            v = validate_loan_tape(tape_path, supplementary_path)
+        except (KeyError, AttributeError, ValueError, OSError) as e:
+            out["tape"] = {"error": f"the file is not a loan tape that matches the data dictionary ({e})"}
             return out
         out["tape"] = {"rows received": v["rows_received"], "loans after cleaning": v["loans_after_cleaning"],
                        "issues found": v["issues_found"], "issues by rule": v["issues_by_rule"]}
     return out
 
 
-# ---------------------------------------------------------------- 6. Export
+# ---------------------------------------------------------------- 6. The deal check: the three files together
+
+# Eligibility criteria the check can test on the tape: a pattern in the criterion's text, and the test.
+ELIGIBILITY_TESTS = [
+    (r"resident in the United Kingdom", lambda t, n: t.region.isin(STANDARD_REGIONS)),
+    (r"hire purchase or personal contract purchase", lambda t, n: t["product"].isin(["HP", "PCP"])),
+    (r"days past due equal to 0", lambda t, n: t.days_past_due == 0),
+    (r"At least (\d+) instalments had been paid",
+     lambda t, n: t.original_term_months - t.remaining_term_months >= n),
+    (r"At least (\d+) instalments remained", lambda t, n: t.remaining_term_months >= n),
+    (r"loan-to-value was (\d+)% or less", lambda t, n: t.ltv_original_pct <= n),
+]
+
+
+def _row(check, files, page, expected, found, ok):
+    return {"check": check, "files": files, "prospectus page": "" if page is None else page,
+            "expected": expected, "found": found, "result": "pass" if ok else "FAIL"}
+
+
+def _missing(check, files):
+    return {"check": check, "files": files, "prospectus page": "", "expected": "", "found": "",
+            "result": "file not loaded"}
+
+
+def tape_files(paths):
+    """Sort uploaded tape files: the FCA template file starts with the field AUTL1, the supplementary file with
+    AUTL2. Returns (template, supplementary); either can be None."""
+    template = supplementary = None
+    for p in paths:
+        with open(p, encoding="utf-8", errors="replace") as f:
+            first = f.readline()
+        if first.startswith("AUTL1,"):
+            template = p
+        elif first.startswith("AUTL2,"):
+            supplementary = p
+    return template, supplementary
+
+
+def deal_check(terms, tape_path=None, report_path=None, supplementary_path=None):
+    """Check the prospectus, the loan tape and one investor report against each other, as on a new deal."""
+    rows = []
+    tape = load_clean_tape(tape_path, supplementary_path) if tape_path else None
+    report = read_investor_report(str(report_path)) if report_path else None
+    pool = terms["pool_balance"]
+
+    # 1. The tape against the prospectus.
+    if tape is None:
+        rows.append(_missing("Pool balance at the cut-off date", "tape + prospectus"))
+        rows.append(_missing("Eligibility criteria", "tape + prospectus"))
+    else:
+        total = round(float(tape.current_balance.sum()), 2)
+        rows.append(_row("Pool balance at the cut-off date", "tape + prospectus", pool["page"],
+                         f"£{pool['value']:,.2f}", f"£{total:,.2f} ({len(tape):,} loans)",
+                         pool["value"] is not None and abs(total - pool["value"]) < 0.01))
+        for c in terms["eligibility_criteria"]:
+            for pattern, test in ELIGIBILITY_TESTS:
+                m = re.search(pattern, c["value"] or "")
+                if m:
+                    n = int(m.group(1)) if m.groups() else None
+                    fails = int((~test(tape, n)).sum())
+                    rows.append(_row("Eligibility: " + c["value"], "tape + prospectus", c["page"], "every loan",
+                                     f"{fails} loan(s) fail", fails == 0))
+                    break
+            else:
+                rows.append({**_row("Eligibility: " + (c["value"] or ""), "tape + prospectus", c["page"], "", "", True),
+                             "result": "not tested automatically"})
+
+    # 2. The investor report against the prospectus.
+    if report is None:
+        for name in ("Notes: balance, margin and rating", "Reserve fund required amount", "Trigger tests"):
+            rows.append(_missing(name, "report + prospectus"))
+    else:
+        reported = {n["class"]: n for n in report["notes"]}
+        for c in terms["classes"]:
+            name = c["name"]["value"]
+            n = reported.get(name)
+            found = "not in the report" if n is None else \
+                f"£{n['initial_balance']:,.2f}, {n['margin']:.2%}, {n['rating']}"
+            ok = n is not None and abs(n["initial_balance"] - c["balance"]["value"]) < 0.01 and \
+                abs(n["margin"] - c["margin"]["value"]) < 1e-9 and n["rating"] == c["rating"]["value"]
+            rows.append(_row(f"Class {name}: balance, margin and rating", "report + prospectus", c["balance"]["page"],
+                             f"£{c['balance']['value']:,.2f}, {c['margin']['value']:.2%}, {c['rating']['value']}",
+                             found, ok))
+        if terms["reserve_funds"]:
+            rf = terms["reserve_funds"][0]["amount"]
+            rows.append(_row("Reserve fund required amount", "report + prospectus", rf["page"],
+                             f"£{rf['value']:,.2f}", f"£{report['reserve_fund']['required']:,.2f}",
+                             abs(report["reserve_fund"]["required"] - rf["value"]) < 0.01))
+        for r in surveillance_rows(terms, [report]):
+            row = _row(f"Trigger tests, period {r['period']}", "report + prospectus",
+                       terms["triggers"][0]["limit"]["page"] if terms["triggers"] else None,
+                       f"limits {r['default limit']} and {r['arrears limit']}",
+                       f"{r['cumulative default ratio']} and {r['90+ arrears ratio']}", True)
+            row["result"] = "pass" if r["result"] == "pass" else "BREACHED"   # a breach is news, not a data error
+            rows.append(row)
+
+    # 3. The investor report against the tape: the pool factor is the closing balance over the cut-off balance.
+    if tape is None or report is None:
+        rows.append(_missing("Pool factor: report closing balance / tape balance", "report + tape"))
+    else:
+        factor = round(report["pool"]["closing_balance"] / float(tape.current_balance.sum()), 6)
+        rows.append(_row("Pool factor: report closing balance / tape balance", "report + tape", None,
+                         f"{report['pool']['pool_factor']:.6f} (in the report)", f"{factor:.6f}",
+                         abs(factor - report["pool"]["pool_factor"]) < 1e-6))
+    return rows
+
+
+# ---------------------------------------------------------------- 7. Export
 
 def export_json(terms, result):
     return json.dumps({"terms": terms, "analysis": result}, indent=2, ensure_ascii=False, default=str)

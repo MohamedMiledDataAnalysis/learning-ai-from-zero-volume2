@@ -107,10 +107,10 @@ def build_questions():
         page_of(f"must not exceed {lim90}"))
     fee = terms["fees"]["servicer_fee_rate"] * 100
     add("According to the prospectus, what is the servicer fee?", number(fee, 0), ["search_prospectus"],
-        page_of(f"servicer fee of {fee:.2f}%"))
+        page_of(f"servicer fee is {fee:.2f}%"))        # section 13, Servicing
     b = next(c for c in terms["classes"] if c["name"] == "B")
     add("According to the prospectus, what is the margin on the Class B notes?", number(b["margin"] * 100, 0),
-        ["search_prospectus"], page_of(f"SONIA + {b['margin'] * 100:.2f}%"))
+        ["search_prospectus"], page_of(f"SONIA + {b['margin'] * 100:.2f}% {b['rating']}"))   # the row of section 4
     rf = terms["reserve_fund_required_amount"]
     add("According to the prospectus, how much is the reserve fund on the closing date?", number(rf, 0.01),
         ["search_prospectus"], page_of(f"£{rf:,.2f}"))
@@ -126,7 +126,7 @@ def build_questions():
         number(round(wa, 2), PCT_TOL), ["search_prospectus"], page_of(f"Weighted average interest rate {wa:.2f}%"))
     a = next(c for c in terms["classes"] if c["name"] == "A")
     add("According to the prospectus, what is the rating of the Class A notes at closing?", text(a["rating"]),
-        ["search_prospectus"], page_of(f"{a['rating']}"))
+        ["search_prospectus"], page_of(f"SONIA + {a['margin'] * 100:.2f}% {a['rating']}"))
     add("According to the prospectus, when is a loan defaulted?", text("4 instalments in arrears"),
         ["search_prospectus"], page_of("4 instalments in arrears"))
 

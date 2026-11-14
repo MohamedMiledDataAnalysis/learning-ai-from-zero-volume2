@@ -16,9 +16,9 @@ print(f"{q['id']}: {q['question']}")
 print(f"Expected: {json.dumps(q['expected'])}")
 print()
 for answer in [
-    "The prospectus sets the limit at 1.25% (page 9).",
+    "The prospectus sets the limit at 1.25% (page 109).",
     "The limit for the 90+ day arrears ratio is 1.25%.",
-    "The limit is 1.50% (page 9).",
+    "The limit is 1.50% (page 109).",
 ]:
     ok, reason = score_answer(answer, q["expected"])
     print(f"{'CORRECT' if ok else 'WRONG  '}  {answer}")

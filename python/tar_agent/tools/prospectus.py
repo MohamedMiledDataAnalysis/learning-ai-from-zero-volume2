@@ -44,9 +44,12 @@ def chunks():
         lines = [ln.strip() for ln in text.splitlines()
                  if ln.strip() and not ln.startswith("Thames Auto Receivables 2026-1 plc Prospectus")
                  and not re.fullmatch(r"Page \d+", ln.strip())]
-        # A heading is "N. Title" with no full stop or colon (list items such as "2. Class A interest." end with one).
-        headings = {i: ln for i, ln in enumerate(lines)
-                    if re.fullmatch(r"\d\. [A-Z][^.:]*", ln) or ln == "Important notice"}
+        # Every section starts on a new page, so a heading is the first line of a page, written "N. Title" with no
+        # full stop or colon. Numbered lines elsewhere (the contents, list items) are not headings.
+        first = lines[0] if lines else ""
+        is_heading = (re.fullmatch(r"\d{1,2}\. [A-Z][^.:]*", first)
+                      or first in ("Important notices", "Index of defined terms"))
+        headings = {0: first} if is_heading else {}
         for start in window_starts(len(lines)):
             for i in range(start + 1):
                 section = headings.get(i, section)

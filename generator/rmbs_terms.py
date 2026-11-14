@@ -152,3 +152,27 @@ STRATS = {
     "Repayment type": [("Capital and interest", 0.914, 0.931), ("Interest-only", 0.032, 0.021),
                        ("Part and part", 0.054, 0.048)],
 }
+
+# Further stratifications of the full-length offering circular (Section 13): (label, share of balance, share of loans).
+STRATS_EXTRA = {
+    "Seasoning": [("Up to 12 months", 0.312, 0.290), ("12 to 24 months", 0.298, 0.300), ("24 to 36 months", 0.214, 0.220),
+                  ("36 to 60 months", 0.121, 0.130), ("Over 60 months", 0.055, 0.060)],
+    "Original loan-to-value": [("0% to 50%", 0.142, 0.210), ("50% to 60%", 0.118, 0.120), ("60% to 75%", 0.257, 0.240),
+                               ("75% to 85%", 0.236, 0.220), ("85% to 90%", 0.161, 0.140), ("90% to 95%", 0.086, 0.070)],
+    "Current balance": [("Up to £100,000", 0.071, 0.210), ("£100,000 to £150,000", 0.142, 0.220),
+                        ("£150,000 to £250,000", 0.318, 0.310), ("£250,000 to £400,000", 0.262, 0.170),
+                        ("£400,000 to £750,000", 0.168, 0.080), ("Over £750,000", 0.039, 0.010)],
+    "Current interest rate": [("Below 3.00%", 0.094, 0.100), ("3.00% to 3.99%", 0.157, 0.160),
+                              ("4.00% to 4.99%", 0.412, 0.400), ("5.00% to 5.99%", 0.268, 0.260),
+                              ("6.00% and above", 0.069, 0.080)],
+    "Remaining term": [("Up to 15 years", 0.087, 0.110), ("15 to 20 years", 0.141, 0.150), ("20 to 25 years", 0.248, 0.240),
+                       ("25 to 30 years", 0.319, 0.300), ("30 to 35 years", 0.205, 0.200)],
+    "Year of origination": [("2019", 0.031, 0.040), ("2020", 0.049, 0.050), ("2021", 0.088, 0.090), ("2022", 0.134, 0.130),
+                            ("2023", 0.172, 0.170), ("2024", 0.241, 0.240), ("2025", 0.285, 0.280)],
+    "Property type": [("Detached house", 0.312, 0.260), ("Semi-detached house", 0.298, 0.310),
+                      ("Terraced house", 0.236, 0.270), ("Flat or maisonette", 0.154, 0.160)],
+    "Employment status": [("Employed", 0.812, 0.830), ("Self-employed", 0.163, 0.140), ("Retired", 0.025, 0.030)],
+    "Payment method": [("Direct debit", 0.991, 0.992), ("Other", 0.009, 0.008)],
+}
+for _name, _rows in STRATS_EXTRA.items():
+    assert abs(sum(r[1] for r in _rows) - 1) < 1e-9 and abs(sum(r[2] for r in _rows) - 1) < 1e-9, _name

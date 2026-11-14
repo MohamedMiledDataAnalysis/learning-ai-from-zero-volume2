@@ -113,8 +113,13 @@ test_that("surveillance with the extracted limits agrees with the agent in all 1
   expect_equal(nrow(s), 12)
   expect_true(all(s$`Agent agrees` == "yes"))
   expect_equal(which(s$Result == "BREACHED")[1], 10)
-  r <- report_against_limits(file.path(root, "data", "investor_reports", "investor_report_2026_10.json"), terms)
-  expect_equal(r$Result, c("pass", "BREACHED"))
+  for (ext in c(".pdf", ".xlsx")) {                       # the cash manager's PDF and its Excel copy
+    r <- report_against_limits(sub("\\.pdf$", ext, investor_report_path(10)), terms)
+    expect_equal(r$Result, c("pass", "BREACHED"))
+  }
+  d <- deal_check(terms, POOL_CUT, investor_report_path(10), SUPPLEMENTARY)
+  expect_equal(d$Result[d$Check == "Trigger tests, period 10"], "BREACHED")
+  expect_equal(sum(d$Result == "pass"), nrow(d) - 1)
 })
 
 test_that("an upload that is not a PDF is refused", {
@@ -152,7 +157,7 @@ test_that("the reference answer to the practical task gets full marks, and the s
   out <- system2("Rscript", c("r/vol2/ch26/check_ch26.R", "--solution"), stdout = TRUE)
   expect_equal(tail(out, 1), "6 of 6 checks passed: full mark.")
   s4 <- system2("Rscript", "r/vol2/ch26/solutions/ex_26_4_servicer_rule.R", stdout = TRUE)
-  expect_equal(s4[1], "Rule found: Marlowe Building Society on page 2 ")
+  expect_equal(s4[1], "Rule found: Marlowe Building Society on page 6 ")
   expect_equal(s4[3], "Fields found: 6 of 16 (was 5)")
   s5 <- system2("Rscript", "r/vol2/ch26/solutions/ex_26_5_wrong_pool.R", stdout = TRUE)
   expect_equal(s5[3], "Paths that failed: pool_balance ")
@@ -166,8 +171,8 @@ test_that("bad uploads give a plain sentence, never R's error", {
   testServer(server, {
     session$setInputs(sample_thames = 1, layer = "rules", mode = "simulated", extract = 1)
     session$setInputs(tape = list(datapath = tape, name = "other.csv"))
-    expect_error(output$tape_check, "The loan tape \\(CSV in the book's format\\) could not be read")
+    expect_error(output$tape_check, "The loan tape \\(FCA template and supplementary file\\) could not be read")
     session$setInputs(report = list(datapath = report, name = "report.json"))
-    expect_error(output$report_check, "The investor report \\(JSON in the book's format\\) could not be read")
+    expect_error(output$report_check, "The investor report \\(PDF or Excel\\) could not be read")
   })
 })

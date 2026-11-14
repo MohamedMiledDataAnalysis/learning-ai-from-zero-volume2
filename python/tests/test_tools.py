@@ -109,12 +109,12 @@ def test_first_breach_is_the_arrears_test_in_october():
 
 # ---------------------------------------------------------------- Tool 4
 @pytest.mark.parametrize("query, page, must_contain", [
-    ("What is the limit for the 90+ day arrears ratio?", 9, "1.25%"),
-    ("servicer fee", 8, "1.00%"),
-    ("margin on Class B notes", 3, "1.30%"),
-    ("weighted average interest rate of the pool", 4, "9.31%"),
-    ("How much is the reserve fund at closing?", 9, "£1,111,137.93"),
-    ("definition of a defaulted loan", 7, "4 instalments in arrears"),
+    ("What is the limit for the 90+ day arrears ratio?", 109, "1.25%"),     # section 16
+    ("servicer fee", 97, "1.00%"),                                          # section 13
+    ("margin on Class B notes", 46, "1.30%"),                               # section 4
+    ("weighted average interest rate of the pool", 86, "9.31%"),            # section 10
+    ("How much is the reserve fund at closing?", 109, "£1,111,137.93"),     # section 16
+    ("definition of a defaulted loan", 91, "4 instalments in arrears"),     # section 11
 ])
 def test_search_finds_the_right_page(query, page, must_contain):
     results = search_prospectus(query)["results"]
@@ -122,10 +122,10 @@ def test_search_finds_the_right_page(query, page, must_contain):
 
 
 def test_known_limitation_of_keyword_search():
-    # BM25 matches exact words: "eligible" does not match "eligibility" on page 7.
+    # BM25 matches exact words: "eligible" does not match "eligibility" in section 11 (page 91).
     # Volume 1, chapter 27 fixes this with stemming and pretrained embeddings. Keep this test so the book's example stays true.
     results = search_prospectus("Which loans were eligible?")["results"]
-    assert results[0]["page"] == 2                       # the transaction overview wins on the word "loans"
+    assert results[0]["page"] == 76                      # Kestrel's dealer network wins on the word "eligible"
     assert not any("Each loan met the following criteria" in r["text"] for r in results)
 
 

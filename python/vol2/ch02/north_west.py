@@ -6,15 +6,15 @@ and the North West's share of all 90+ arrears.
 Run from the repository root:
     python python/vol2/ch02/north_west.py
 """
+import sys
 from pathlib import Path
 
-import pandas as pd
-
-DATA = Path(__file__).resolve().parents[3] / "data" / "servicer_reports"
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from tar_agent.data import servicer_report  # noqa: E402   the Regional sheet of Kestrel's servicer report
 
 print(f"{'Period':>6}{'NW 90+ ratio':>14}{'Rest 90+ ratio':>16}{'NW share of 90+':>17}{'NW share of pool':>18}")
 for period in range(1, 13):
-    s = pd.read_csv(DATA / f"servicer_report_2026_{period:02d}.csv")
+    s = servicer_report(period)
     nw = s[s.region == "North West"].iloc[0]
     rest = s[s.region != "North West"]
     total_90 = s.balance_3_in_arrears.sum()

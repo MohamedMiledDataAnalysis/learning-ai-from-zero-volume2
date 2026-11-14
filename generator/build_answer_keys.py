@@ -55,9 +55,9 @@ def locate(value, pdf, key="", hint=None, anchor=None):
     at the first line that contains it, so Class Z's 3.00% is quoted from the Class Z row, not the Class C row.
     """
     texts, pages = page_texts(pdf), read_pages(pdf)
-    order = range(len(texts))
-    if hint:
-        order = [hint - 1] + [i for i in order if i != hint - 1]
+    order = list(range(len(texts)))
+    if hint:                       # the section's first page, then the pages after it, then the earlier pages
+        order = order[hint - 1:] + order[:hint - 1]
     for i in order:
         if value is not None and _value_on_page(value, texts[i], key):
             lines = pages[i]
@@ -85,6 +85,15 @@ def cover_keyed(value, name, pdf):
     return f
 
 
+def section_page(pdf, heading):
+    """The page on which a section starts: the first page with a line that is exactly the heading (the contents
+    page writes the heading followed by dots and a page number, so it never matches)."""
+    for i, lines in enumerate(read_pages(pdf)):
+        if heading in lines:
+            return i + 1
+    raise SystemExit(f"{pdf.name}: no page starts the section {heading!r}")
+
+
 def row(name, balance):
     """The anchor of a class row: its name followed by its balance, as the notes table writes it."""
     return f"{name} {balance:,.2f}" if balance != int(balance) else f"{name} {balance:,.0f}"
@@ -94,82 +103,84 @@ def thames_key():
     t = json.loads((ROOT / "data" / "deal_terms.json").read_text(encoding="utf-8"))
     md = (ROOT / "data" / "prospectus" / "prospectus.md").read_text(encoding="utf-8")
     pdf, d = THAMES_PDF, t["deal"]
+    S = lambda heading: section_page(pdf, heading)  # noqa: E731
     k = empty_terms()
     k["deal_name"] = keyed(d["issuer"], pdf, hint=1)
-    k["currency"] = keyed(d["currency"], pdf, "currency", hint=2)
-    k["pool_balance"] = keyed(t["initial_pool_balance"], pdf, hint=2)
-    k["parties"] = {"issuer": keyed(d["issuer"], pdf, hint=2), "originator": keyed(d["originator"], pdf, hint=2),
-                    "servicer": keyed(d["servicer"], pdf, hint=2), "trustee": keyed(d["trustee"], pdf, hint=2)}
-    k["dates"] = {"cut_off": keyed(d["cut_off_date"], pdf, hint=2), "closing": keyed(d["closing_date"], pdf, hint=2),
-                  "first_payment": keyed(d["first_payment_date"], pdf, hint=2)}
+    k["currency"] = keyed(d["currency"], pdf, "currency", hint=S("1. Transaction overview"))
+    k["pool_balance"] = keyed(t["initial_pool_balance"], pdf, hint=S("1. Transaction overview"))
+    k["parties"] = {"issuer": keyed(d["issuer"], pdf, hint=S("1. Transaction overview")), "originator": keyed(d["originator"], pdf, hint=S("1. Transaction overview")),
+                    "servicer": keyed(d["servicer"], pdf, hint=S("1. Transaction overview")), "trustee": keyed(d["trustee"], pdf, hint=S("1. Transaction overview"))}
+    k["dates"] = {"cut_off": keyed(d["cut_off_date"], pdf, hint=S("1. Transaction overview")), "closing": keyed(d["closing_date"], pdf, hint=S("1. Transaction overview")),
+                  "first_payment": keyed(d["first_payment_date"], pdf, hint=S("1. Transaction overview"))}
     total = sum(t["initial_note_balances"].values())
     anchors = {c["name"]: row(c["name"], t["initial_note_balances"][c["name"]]) for c in t["classes"]}
-    k["classes"] = [{"name": keyed(c["name"], pdf, hint=3, anchor=anchors[c["name"]]),
-                     "balance": keyed(t["initial_note_balances"][c["name"]], pdf, hint=3, anchor=anchors[c["name"]]),
-                     "share": keyed(c["share"], pdf, hint=3, anchor=anchors[c["name"]]),
-                     "margin": keyed(c["margin"], pdf, hint=3, anchor=anchors[c["name"]]),
-                     "rating": keyed(c["rating"], pdf, hint=3, anchor=anchors[c["name"]])} for c in t["classes"]]
+    k["classes"] = [{"name": keyed(c["name"], pdf, hint=S("4. The notes"), anchor=anchors[c["name"]]),
+                     "balance": keyed(t["initial_note_balances"][c["name"]], pdf, hint=S("4. The notes"), anchor=anchors[c["name"]]),
+                     "share": keyed(c["share"], pdf, hint=S("4. The notes"), anchor=anchors[c["name"]]),
+                     "margin": keyed(c["margin"], pdf, hint=S("4. The notes"), anchor=anchors[c["name"]]),
+                     "rating": keyed(c["rating"], pdf, hint=S("4. The notes"), anchor=anchors[c["name"]])} for c in t["classes"]]
     pct = t["reserve_fund"]["required_pct_of_initial_notes"]
-    k["reserve_funds"] = [{"name": keyed("Reserve fund", pdf, hint=9),
-                           "amount": keyed(t["reserve_fund_required_amount"], pdf, hint=9, anchor="Reserve fund."),
-                           "percent": keyed(pct, pdf, hint=9, anchor="Reserve fund."),
-                           "basis": keyed(["A", "B", "C", "D"], pdf, hint=3),
+    k["reserve_funds"] = [{"name": keyed("Reserve fund", pdf, hint=S("16. Reserve fund and trigger events")),
+                           "amount": keyed(t["reserve_fund_required_amount"], pdf, hint=S("16. Reserve fund and trigger events"), anchor="Reserve fund."),
+                           "percent": keyed(pct, pdf, hint=S("16. Reserve fund and trigger events"), anchor="Reserve fund."),
+                           "basis": keyed(["A", "B", "C", "D"], pdf, hint=S("4. The notes")),
                            "can_cover_losses": cover_keyed(t["reserve_fund"]["can_cover_losses"], "Reserve fund", pdf)}]
-    section5 = md.split("# 5. Priority of payments")[1].split("\n# ")[0]
+    section5 = re.split(r"# \d+\. Priority of payments", md)[1].split("\n# ")[0]
     labels = [re.sub(r"\.$", "", m) for m in re.findall(r"^\d+\. \*\*(.+?)\*\*", section5, flags=re.M)]
-    k["priority_of_payments"]["combined"] = [keyed(x, pdf, hint=8) for x in labels]
+    k["priority_of_payments"]["combined"] = [keyed(x, pdf, hint=S("15. Priority of payments")) for x in labels]
     sched = [{"periods": f"{a} to {b}", "limit": lim} for a, b, lim in t["triggers"]["cum_default_schedule"]]
     k["triggers"] = [
-        {"name": keyed("Cumulative default ratio", pdf, hint=9), "measure": keyed("cumulative default ratio", pdf, hint=9),
-         "limit": keyed(sched, pdf, hint=9, anchor="Cumulative default ratio"),
-         "consequence": keyed("sequentially", pdf, hint=9)},
-        {"name": keyed("90+ day arrears ratio", pdf, hint=9), "measure": keyed("90+ day arrears ratio", pdf, hint=9),
-         "limit": keyed(t["triggers"]["arrears_90_limit"], pdf, hint=9, anchor="90+ day arrears ratio"),
-         "consequence": keyed("sequentially", pdf, hint=9)},
-        {"name": keyed("Reserve fund", pdf, hint=9), "measure": keyed("reserve fund", pdf, hint=9),
-         "limit": keyed("required amount", pdf, hint=9), "consequence": keyed("sequentially", pdf, hint=9)},
+        {"name": keyed("Cumulative default ratio", pdf, hint=S("16. Reserve fund and trigger events")), "measure": keyed("cumulative default ratio", pdf, hint=S("16. Reserve fund and trigger events")),
+         "limit": keyed(sched, pdf, hint=S("16. Reserve fund and trigger events"), anchor="Cumulative default ratio"),
+         "consequence": keyed("sequentially", pdf, hint=S("16. Reserve fund and trigger events"))},
+        {"name": keyed("90+ day arrears ratio", pdf, hint=S("16. Reserve fund and trigger events")), "measure": keyed("90+ day arrears ratio", pdf, hint=S("16. Reserve fund and trigger events")),
+         "limit": keyed(t["triggers"]["arrears_90_limit"], pdf, hint=S("16. Reserve fund and trigger events"), anchor="90+ day arrears ratio"),
+         "consequence": keyed("sequentially", pdf, hint=S("16. Reserve fund and trigger events"))},
+        {"name": keyed("Reserve fund", pdf, hint=S("16. Reserve fund and trigger events")), "measure": keyed("reserve fund", pdf, hint=S("16. Reserve fund and trigger events")),
+         "limit": keyed("required amount", pdf, hint=S("16. Reserve fund and trigger events")), "consequence": keyed("sequentially", pdf, hint=S("16. Reserve fund and trigger events"))},
     ]
     criteria = md.split("met the following criteria at the cut-off date:")[1].split("\n\n")[1]
-    k["eligibility_criteria"] = [keyed(re.sub(r"^\d+\. ", "", ln), pdf, hint=7) for ln in criteria.splitlines()]
+    k["eligibility_criteria"] = [keyed(re.sub(r"^\d+\. ", "", ln), pdf, hint=S("11. Eligibility criteria and definitions")) for ln in criteria.splitlines()]
     method = re.search(r"holds it as a \*(.+?)\*", md).group(1)
-    k["risk_retention"] = keyed(method, pdf, hint=2)
+    k["risk_retention"] = keyed(method, pdf, hint=S("1. Transaction overview"))
     return k
 
 
 def rmbs_key():
     pdf, d = RMBS_PDF, R.DEAL
+    S = lambda heading: section_page(pdf, heading)  # noqa: E731
     k = empty_terms()
     k["deal_name"] = keyed(d["issuer"], pdf, hint=1)
-    k["currency"] = keyed(d["currency"], pdf, "currency", hint=2)
-    k["pool_balance"] = keyed(d["pool_balance"], pdf, hint=2)
-    k["parties"] = {"issuer": keyed(d["issuer"], pdf, hint=2), "originator": keyed(d["seller"], pdf, hint=2),
-                    "servicer": keyed(d["mortgage_administrator"], pdf, hint=2), "trustee": keyed(d["trustee"], pdf, hint=2)}
-    k["dates"] = {"cut_off": keyed(d["portfolio_reference_date"], pdf, hint=2),
-                  "closing": keyed(d["issue_date"], pdf, hint=2),
-                  "first_payment": keyed(d["first_interest_payment_date"], pdf, hint=2)}
+    k["currency"] = keyed(d["currency"], pdf, "currency", hint=S("Key Terms"))
+    k["pool_balance"] = keyed(d["pool_balance"], pdf, hint=S("Key Terms"))
+    k["parties"] = {"issuer": keyed(d["issuer"], pdf, hint=S("Key Terms")), "originator": keyed(d["seller"], pdf, hint=S("Key Terms")),
+                    "servicer": keyed(d["mortgage_administrator"], pdf, hint=S("Key Terms")), "trustee": keyed(d["trustee"], pdf, hint=S("Key Terms"))}
+    k["dates"] = {"cut_off": keyed(d["portfolio_reference_date"], pdf, hint=S("Key Terms")),
+                  "closing": keyed(d["issue_date"], pdf, hint=S("Key Terms")),
+                  "first_payment": keyed(d["first_interest_payment_date"], pdf, hint=S("Key Terms"))}
     total = sum(c["balance"] for c in R.CLASSES)
-    k["classes"] = [{"name": keyed(c["name"], pdf, hint=3, anchor=row(c["name"], c["balance"])),
-                     "balance": keyed(c["balance"], pdf, hint=3, anchor=row(c["name"], c["balance"])),
-                     "share": keyed(round(c["balance"] / total, 6), pdf, hint=3, anchor=row(c["name"], c["balance"])),
-                     "margin": keyed(c["margin"], pdf, hint=3, anchor=row(c["name"], c["balance"]))
+    k["classes"] = [{"name": keyed(c["name"], pdf, hint=S("Section 3 — The Notes"), anchor=row(c["name"], c["balance"])),
+                     "balance": keyed(c["balance"], pdf, hint=S("Section 3 — The Notes"), anchor=row(c["name"], c["balance"])),
+                     "share": keyed(round(c["balance"] / total, 6), pdf, hint=S("Section 3 — The Notes"), anchor=row(c["name"], c["balance"])),
+                     "margin": keyed(c["margin"], pdf, hint=S("Section 3 — The Notes"), anchor=row(c["name"], c["balance"]))
                      if c["margin"] is not None else field(None),
-                     "rating": keyed(c["rating"], pdf, hint=3, anchor=row(c["name"], c["balance"]))} for c in R.CLASSES]
+                     "rating": keyed(c["rating"], pdf, hint=S("Section 3 — The Notes"), anchor=row(c["name"], c["balance"]))} for c in R.CLASSES]
     k["reserve_funds"] = []
     for r in R.RESERVES:
         amount = round(r["percent"] * sum(c["balance"] for c in R.CLASSES if c["name"] in r["basis"]), 2)
-        k["reserve_funds"].append({"name": keyed(r["name"], pdf, hint=4),
-                                   "amount": keyed(amount, pdf, hint=4, anchor=r["name"]),
-                                   "percent": keyed(r["percent"], pdf, hint=4, anchor=r["name"]),
-                                   "basis": keyed(r["basis"], pdf, hint=4),
+        k["reserve_funds"].append({"name": keyed(r["name"], pdf, hint=S("Section 5 — Credit Structure")),
+                                   "amount": keyed(amount, pdf, hint=S("Section 5 — Credit Structure"), anchor=r["name"]),
+                                   "percent": keyed(r["percent"], pdf, hint=S("Section 5 — Credit Structure"), anchor=r["name"]),
+                                   "basis": keyed(r["basis"], pdf, hint=S("Section 5 — Credit Structure")),
                                    "can_cover_losses": cover_keyed(r["can_cover_losses"], r["name"], pdf)})
-    k["priority_of_payments"]["revenue"] = [keyed(x, pdf, hint=5) for x in R.REVENUE_PRIORITY]
-    k["priority_of_payments"]["principal"] = [keyed(x, pdf, hint=6) for x in R.PRINCIPAL_PRIORITY]
-    k["triggers"] = [{"name": keyed(t["name"], pdf, hint=7), "measure": keyed(t["measure"], pdf, hint=7),
-                      "limit": keyed(t["limit"], pdf, hint=7, anchor=t["name"]), "consequence": keyed("Sequential Payment Trigger", pdf, hint=7)}
+    k["priority_of_payments"]["revenue"] = [keyed(x, pdf, hint=S("Section 6 — Revenue Priority of Payments")) for x in R.REVENUE_PRIORITY]
+    k["priority_of_payments"]["principal"] = [keyed(x, pdf, hint=S("Section 7 — Principal Priority of Payments")) for x in R.PRINCIPAL_PRIORITY]
+    k["triggers"] = [{"name": keyed(t["name"], pdf, hint=S("Section 8 — Trigger Events")), "measure": keyed(t["measure"], pdf, hint=S("Section 8 — Trigger Events")),
+                      "limit": keyed(t["limit"], pdf, hint=S("Section 8 — Trigger Events"), anchor=t["name"]), "consequence": keyed("Sequential Payment Trigger", pdf, hint=S("Section 8 — Trigger Events"))}
                      for t in R.TRIGGERS]
-    k["eligibility_criteria"] = [keyed(w.rstrip("."), pdf, hint=10) for w in R.LOAN_WARRANTIES]
-    k["risk_retention"] = keyed(R.RISK_RETENTION_METHOD, pdf, hint=12)
-    k["definitions"] = {term: keyed(text, pdf, hint=13) for term, text in R.DEFINITIONS.items()}
+    k["eligibility_criteria"] = [keyed(w.rstrip("."), pdf, hint=S("Section 12 — Lending Criteria and Loan Warranties")) for w in R.LOAN_WARRANTIES]
+    k["risk_retention"] = keyed(R.RISK_RETENTION_METHOD, pdf, hint=S("Section 17 — Risk Retention and Regulatory Disclosures"))
+    k["definitions"] = {term: keyed(text, pdf, hint=S("Glossary of Defined Terms")) for term, text in R.DEFINITIONS.items()}
     return k
 
 

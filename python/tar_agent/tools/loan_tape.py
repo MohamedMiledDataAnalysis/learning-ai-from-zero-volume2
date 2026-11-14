@@ -1,8 +1,11 @@
 """Tool 1 — load and validate the loan tape.
 
-The originator sends a loan tape: one row per loan. Before using it, an analyst
-checks it. This tool runs the same checks, lists every problem it finds, and
-can return a cleaned copy with the safe fixes applied.
+The originator sends a loan tape: one row per loan. Before closing, Kestrel makes it
+available in the FCA template for car loans (fields AUTL1 to AUTL84), with a
+supplementary file for the fields the template does not have, and a data dictionary.
+Before using the tape, an analyst checks it. This tool reads the tape through the
+dictionary, runs the checks, lists every problem it finds, and can return a cleaned
+copy with the safe fixes applied.
 
 Each check is a small rule. A rule never guesses: when the correct value cannot
 be known (an impossible credit score), the value is set to missing and flagged.
@@ -10,6 +13,7 @@ be known (an impossible credit score), the value is set to missing and flagged.
 
 import difflib
 from functools import lru_cache
+from pathlib import Path
 
 import pandas as pd
 
@@ -19,10 +23,63 @@ REQUIRED = ["loan_id", "origination_date", "maturity_date", "original_balance", 
             "interest_rate_pct", "credit_score", "region", "postcode_area"]
 
 
-def read_tape(path=None):
-    """Read the cut-off loan tape exactly as received (empty cells stay empty strings)."""
-    path = path or DATA_DIR / "loan_tape_cutoff.csv"
-    return pd.read_csv(path, keep_default_na=False, na_values=[])
+POOL_CUT = DATA_DIR / "originator" / "THAMES_2026-1_AUTL_Pool_Cut_2025-12-31.csv"
+SUPPLEMENTARY = DATA_DIR / "originator" / "Kestrel_Thames_2026-1_Supplementary_Data_2025-12-31.csv"
+DICTIONARY = DATA_DIR / "originator" / "Kestrel_Thames_2026-1_Data_Dictionary.xlsx"
+
+# The working name of each column, and where it comes from: a field of the FCA template, or a field of the
+# supplementary file. Columns marked "code" hold a list code that the dictionary's "List Codes" sheet decodes.
+TAPE_SOURCES = [
+    ("loan_id", "AUTL2", "text"), ("origination_date", "AUTL24", "text"), ("maturity_date", "AUTL25", "text"),
+    ("original_term_months", "AUTL26", "integer"), ("remaining_term_months", None, "integer"),
+    ("product", "AUTL23", "code"), ("vehicle_type", "AUTL56", "code"), ("fuel_type", "Fuel Type", "text"),
+    ("vehicle_value", "AUTL60", "number"), ("original_balance", "AUTL29", "number"),
+    ("current_balance", "AUTL30", "number"), ("balloon_amount", "AUTL38", "number"),
+    ("ltv_original_pct", "AUTL59", "number"), ("interest_rate_pct", "AUTL40", "number"),
+    ("monthly_instalment", "AUTL37", "number"), ("credit_score", "Bureau Score at Origination", "integer"),
+    ("employment_status", "AUTL12", "code"), ("annual_income", "AUTL16", "number"), ("region", "Region", "text"),
+    ("postcode_area", "Postcode Area", "text"), ("days_past_due", "AUTL69", "integer"),
+]
+
+
+def read_dictionary(sheet, path=None):
+    """One sheet of the originator's data dictionary."""
+    return pd.read_excel(path or DICTIONARY, sheet_name=sheet, dtype=str, keep_default_na=False)
+
+
+def read_tape(path=None, supplementary=None):
+    """Read the cut-off loan tape exactly as received, with working column names.
+
+    The tape is the FCA template file (fields AUTL1 to AUTL84). Its columns must be the dictionary's field codes,
+    in order. The fields the template does not have come from the supplementary file, joined on AUTL2. List codes
+    (HIRP, NEWX, EMUK, ...) become the originator's own values through the dictionary. Empty cells stay empty
+    strings, so a missing value is visible. A CSV file already in working names is read as it is.
+    """
+    path = Path(path) if path else POOL_CUT
+    tape = pd.read_csv(path, dtype=str, keep_default_na=False, na_values=[])
+    if "loan_id" in tape.columns:                                 # already in working names
+        return pd.read_csv(path, keep_default_na=False, na_values=[])
+    codes = list(read_dictionary("FCA Template AUTL")["Field Code"])
+    if list(tape.columns) != codes:
+        raise ValueError(f"{path.name} does not follow the FCA template: expected the fields AUTL1 to AUTL84 in "
+                         f"order, found {list(tape.columns)[:3]}...")
+    extra = pd.read_csv(supplementary or SUPPLEMENTARY, dtype=str, keep_default_na=False, na_values=[])
+    tape = tape.merge(extra, on="AUTL2", how="left").fillna("")      # duplicated rows stay duplicated
+    lists = read_dictionary("List Codes")
+    decode = {(f, c): v for f, c, v in zip(lists["Field Code"], lists["Code"], lists["Kestrel Value"])}
+    out = pd.DataFrame()
+    for name, source, kind in TAPE_SOURCES:
+        if name == "remaining_term_months":                          # term less the instalments already paid
+            out[name] = tape.AUTL26.astype(int) - tape.AUTL47.astype(int)
+        elif kind == "code":
+            out[name] = [decode.get((source, c), c) for c in tape[source]]
+        elif kind == "number":
+            out[name] = tape[source].astype(float)
+        elif kind == "integer":
+            out[name] = tape[source].astype(int)
+        else:
+            out[name] = tape[source]
+    return out
 
 
 def find_issues(tape):
@@ -97,9 +154,9 @@ def clean_tape(tape, issues):
     return out
 
 
-def validate_loan_tape(path=None):
+def validate_loan_tape(path=None, supplementary=None):
     """Tool entry point. Returns a summary the model can read, without the 5,000 rows."""
-    tape = read_tape(path)
+    tape = read_tape(path, supplementary)
     issues = find_issues(tape)
     cleaned = clean_tape(tape, issues)
     expected = deal_terms()["initial_pool_balance"]
@@ -119,12 +176,12 @@ def validate_loan_tape(path=None):
     }
 
 
-def load_clean_tape(path=None):
+def load_clean_tape(path=None, supplementary=None):
     """The cleaned cut-off tape, for the other tools (a fresh copy each time)."""
-    return _clean_tape_cached(str(path) if path else None).copy()
+    return _clean_tape_cached(str(path) if path else None, str(supplementary) if supplementary else None).copy()
 
 
 @lru_cache(maxsize=4)
-def _clean_tape_cached(path):
-    tape = read_tape(path)
+def _clean_tape_cached(path, supplementary=None):
+    tape = read_tape(path, supplementary)
     return clean_tape(tape, find_issues(tape))

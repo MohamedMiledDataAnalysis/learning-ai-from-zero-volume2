@@ -8,14 +8,14 @@
   },
   "currency": {
     "value": "GBP",
-    "page": 2,
+    "page": 6,
     "quote": null,
     "source": "answer key",
     "grounded": true
   },
   "pool_balance": {
     "value": 400000000.0,
-    "page": 2,
+    "page": 6,
     "quote": "400,000,000",
     "source": "answer key",
     "grounded": true
@@ -23,28 +23,28 @@
   "parties": {
     "issuer": {
       "value": "Severn Residential Mortgages 2026-1 plc",
-      "page": 2,
+      "page": 6,
       "quote": "Issuer Severn Residential Mortgages 2026-1 plc",
       "source": "answer key",
       "grounded": true
     },
     "originator": {
       "value": "Marlowe Building Society",
-      "page": 2,
+      "page": 6,
       "quote": "Seller Marlowe Building Society",
       "source": "answer key",
       "grounded": true
     },
     "servicer": {
       "value": "Marlowe Building Society",
-      "page": 2,
+      "page": 6,
       "quote": "Seller Marlowe Building Society",
       "source": "answer key",
       "grounded": true
     },
     "trustee": {
       "value": "Kingsgate Trustees Limited",
-      "page": 2,
+      "page": 6,
       "quote": "Note Trustee and Security Trustee Kingsgate Trustees Limited",
       "source": "answer key",
       "grounded": true
@@ -53,21 +53,21 @@
   "dates": {
     "cut_off": {
       "value": "2026-03-31",
-      "page": 2,
+      "page": 6,
       "quote": "Portfolio Reference Date 31 March 2026",
       "source": "answer key",
       "grounded": true
     },
     "closing": {
       "value": "2026-05-14",
-      "page": 2,
+      "page": 6,
       "quote": "Issue Date 14 May 2026",
       "source": "answer key",
       "grounded": true
     },
     "first_payment": {
       "value": "2026-07-20",
-      "page": 2,
+      "page": 6,
       "quote": "First Interest Payment Date 20 July 2026",
       "source": "answer key",
       "grounded": true
@@ -77,35 +77,35 @@
     {
       "name": {
         "value": "A",
-        "page": 3,
+        "page": 41,
         "quote": "A 350,000,000 87.50 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "balance": {
         "value": 350000000.0,
-        "page": 3,
+        "page": 41,
         "quote": "A 350,000,000 87.50 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "share": {
         "value": 0.875,
-        "page": 3,
+        "page": 41,
         "quote": "A 350,000,000 87.50 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "margin": {
         "value": 0.0058,
-        "page": 3,
+        "page": 41,
         "quote": "0.58% 1.16% AAAsf",
         "source": "answer key",
         "grounded": true
       },
       "rating": {
         "value": "AAAsf",
-        "page": 3,
+        "page": 41,
         "quote": "0.58% 1.16% AAAsf",
         "source": "answer key",
         "grounded": true
@@ -114,35 +114,35 @@
     {
       "name": {
         "value": "B",
-        "page": 3,
+        "page": 41,
         "quote": "B 16,000,000 4.00 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "balance": {
         "value": 16000000.0,
-        "page": 3,
+        "page": 41,
         "quote": "B 16,000,000 4.00 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "share": {
         "value": 0.04,
-        "page": 3,
+        "page": 41,
         "quote": "B 16,000,000 4.00 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "margin": {
         "value": 0.0095,
-        "page": 3,
+        "page": 41,
         "quote": "0.95% 1.425% AAsf",
         "source": "answer key",
         "grounded": true
       },
       "rating": {
         "value": "AAsf",
-        "page": 3,
+        "page": 41,
         "quote": "0.95% 1.425% AAsf",
         "source": "answer key",
         "grounded": true
@@ -151,35 +151,35 @@
     {
       "name": {
         "value": "C",
-        "page": 3,
+        "page": 41,
         "quote": "C 12,000,000 3.00 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "balance": {
         "value": 12000000.0,
-        "page": 3,
+        "page": 41,
         "quote": "C 12,000,000 3.00 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "share": {
         "value": 0.03,
-        "page": 3,
+        "page": 41,
         "quote": "C 12,000,000 3.00 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "margin": {
         "value": 0.0135,
-        "page": 3,
+        "page": 41,
         "quote": "1.35% 2.025% Asf",
         "source": "answer key",
         "grounded": true
       },
       "rating": {
         "value": "Asf",
-        "page": 3,
+        "page": 41,
         "quote": "1.35% 2.025% Asf",
         "source": "answer key",
         "grounded": true
@@ -188,35 +188,35 @@
     {
       "name": {
         "value": "D",
-        "page": 3,
+        "page": 41,
         "quote": "D 10,000,000 2.50 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "balance": {
         "value": 10000000.0,
-        "page": 3,
+        "page": 41,
         "quote": "D 10,000,000 2.50 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "share": {
         "value": 0.025,
-        "page": 3,
+        "page": 41,
         "quote": "D 10,000,000 2.50 Compounded",
         "source": "answer key",
         "grounded": true
       },
       "margin": {
         "value": 0.021,
-        "page": 3,
+        "page": 41,
         "quote": "2.10% 3.15% BBBsf",
         "source": "answer key",
         "grounded": true
       },
       "rating": {
         "value": "BBBsf",
-        "page": 3,
+        "page": 41,
         "quote": "2.10% 3.15% BBBsf",
         "source": "answer key",
         "grounded": true
@@ -225,21 +225,21 @@
     {
       "name": {
         "value": "Z",
-        "page": 3,
+        "page": 41,
         "quote": "Z 12,000,000 3.00 None n/a n/a Unrated",
         "source": "answer key",
         "grounded": true
       },
       "balance": {
         "value": 12000000.0,
-        "page": 3,
+        "page": 41,
         "quote": "Z 12,000,000 3.00 None n/a n/a Unrated",
         "source": "answer key",
         "grounded": true
       },
       "share": {
         "value": 0.03,
-        "page": 3,
+        "page": 41,
         "quote": "Z 12,000,000 3.00 None n/a n/a Unrated",
         "source": "answer key",
         "grounded": true
@@ -253,7 +253,7 @@
       },
       "rating": {
         "value": "Unrated",
-        "page": 3,
+        "page": 41,
         "quote": "Z 12,000,000 3.00 None n/a n/a Unrated",
         "source": "answer key",
         "grounded": true
@@ -264,21 +264,21 @@
     {
       "name": {
         "value": "General Reserve Fund",
-        "page": 4,
+        "page": 61,
         "quote": "General Reserve Fund 1.50 per cent of the Class A,",
         "source": "answer key",
         "grounded": true
       },
       "amount": {
         "value": 5820000.0,
-        "page": 4,
+        "page": 61,
         "quote": "5,820,000",
         "source": "answer key",
         "grounded": true
       },
       "percent": {
         "value": 0.015,
-        "page": 4,
+        "page": 61,
         "quote": "General Reserve Fund 1.50 per cent of the Class A,",
         "source": "answer key",
         "grounded": true
@@ -290,15 +290,15 @@
           "C",
           "D"
         ],
-        "page": 4,
+        "page": 61,
         "quote": "Subordination. Payments on the Notes are made in order of seniority: the Class A Notes rank",
         "source": "answer key",
         "grounded": true
       },
       "can_cover_losses": {
         "value": true,
-        "page": 4,
-        "quote": "The General Reserve Fund covers shortfalls of senior expenses and interest on the Class A to D Notes, and debit balances on the Class A to D Principal Deficiency Ledgers;",
+        "page": 13,
+        "quote": "the General Reserve Fund to make good the corresponding debit balances on the Principal Deficiency Ledger.",
         "source": "answer key",
         "grounded": true
       }
@@ -306,21 +306,21 @@
     {
       "name": {
         "value": "Liquidity Reserve Fund",
-        "page": 4,
+        "page": 61,
         "quote": "Liquidity Reserve Fund 1.00 per cent of the Class A",
         "source": "answer key",
         "grounded": true
       },
       "amount": {
         "value": 3660000.0,
-        "page": 4,
+        "page": 61,
         "quote": "3,660,000",
         "source": "answer key",
         "grounded": true
       },
       "percent": {
         "value": 0.01,
-        "page": 4,
+        "page": 61,
         "quote": "Liquidity Reserve Fund 1.00 per cent of the Class A",
         "source": "answer key",
         "grounded": true
@@ -330,15 +330,15 @@
           "A",
           "B"
         ],
-        "page": 4,
+        "page": 61,
         "quote": "Subordination. Payments on the Notes are made in order of seniority: the Class A Notes rank",
         "source": "answer key",
         "grounded": true
       },
       "can_cover_losses": {
         "value": false,
-        "page": 4,
-        "quote": "The Liquidity Reserve Fund covers shortfalls of senior expenses and interest on the Class A and B Notes only.",
+        "page": 15,
+        "quote": "the Liquidity Reserve Fund, also funded on the Issue Date from the proceeds of the Subordinated Loan, is available to meet shortfalls of senior expenses and interest on the Class A Notes and the Class B Notes only.",
         "source": "answer key",
         "grounded": true
       }
@@ -349,119 +349,119 @@
     "revenue": [
       {
         "value": "Note Trustee and Security Trustee fees and expenses",
-        "page": 5,
+        "page": 62,
         "quote": "(a) Note Trustee and Security Trustee fees and expenses;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Mortgage Administrator, Cash Manager and Issuer Account Bank fees",
-        "page": 5,
+        "page": 62,
         "quote": "(b) Mortgage Administrator, Cash Manager and Issuer Account Bank fees;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Net amounts due to the Swap Provider",
-        "page": 5,
+        "page": 62,
         "quote": "(c) Net amounts due to the Swap Provider;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Interest on the Class A Notes",
-        "page": 5,
+        "page": 62,
         "quote": "(d) Interest on the Class A Notes;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Liquidity Reserve Fund top-up",
-        "page": 5,
+        "page": 62,
         "quote": "(e) Liquidity Reserve Fund top-up;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Class A Principal Deficiency Ledger",
-        "page": 5,
+        "page": 62,
         "quote": "(f) Class A Principal Deficiency Ledger;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Interest on the Class B Notes",
-        "page": 5,
+        "page": 62,
         "quote": "(g) Interest on the Class B Notes;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Class B Principal Deficiency Ledger",
-        "page": 5,
+        "page": 62,
         "quote": "(h) Class B Principal Deficiency Ledger;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Interest on the Class C Notes",
-        "page": 5,
+        "page": 62,
         "quote": "(i) Interest on the Class C Notes;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Class C Principal Deficiency Ledger",
-        "page": 5,
+        "page": 62,
         "quote": "(j) Class C Principal Deficiency Ledger;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Interest on the Class D Notes",
-        "page": 5,
+        "page": 62,
         "quote": "(k) Interest on the Class D Notes;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Class D Principal Deficiency Ledger",
-        "page": 5,
+        "page": 62,
         "quote": "(l) Class D Principal Deficiency Ledger;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "General Reserve Fund top-up",
-        "page": 5,
+        "page": 62,
         "quote": "(m) General Reserve Fund top-up;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Class Z Principal Deficiency Ledger",
-        "page": 5,
+        "page": 62,
         "quote": "(n) Class Z Principal Deficiency Ledger;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Subordinated swap termination payments",
-        "page": 5,
+        "page": 62,
         "quote": "(o) Subordinated swap termination payments;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Interest and principal on the Subordinated Loan",
-        "page": 5,
+        "page": 62,
         "quote": "(p) Interest and principal on the Subordinated Loan;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Deferred consideration to the Seller",
-        "page": 5,
+        "page": 62,
         "quote": "(q) Deferred consideration to the Seller.",
         "source": "answer key",
         "grounded": true
@@ -470,49 +470,49 @@
     "principal": [
       {
         "value": "Revenue shortfall",
-        "page": 6,
+        "page": 63,
         "quote": "(a) Revenue shortfall;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Principal on the Class A Notes",
-        "page": 6,
+        "page": 63,
         "quote": "(b) Principal on the Class A Notes;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Principal on the Class B Notes",
-        "page": 6,
+        "page": 63,
         "quote": "(c) Principal on the Class B Notes;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Principal on the Class C Notes",
-        "page": 6,
+        "page": 63,
         "quote": "(d) Principal on the Class C Notes;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Principal on the Class D Notes",
-        "page": 6,
+        "page": 63,
         "quote": "(e) Principal on the Class D Notes;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Principal on the Class Z Notes",
-        "page": 6,
+        "page": 63,
         "quote": "(f) Principal on the Class Z Notes;",
         "source": "answer key",
         "grounded": true
       },
       {
         "value": "Excess to Available Revenue Receipts",
-        "page": 6,
+        "page": 63,
         "quote": "(g) Excess to Available Revenue Receipts.",
         "source": "answer key",
         "grounded": true
@@ -523,28 +523,28 @@
     {
       "name": {
         "value": "Arrears Trigger",
-        "page": 7,
+        "page": 64,
         "quote": "• Arrears Trigger: on any Calculation Date, the current balance of loans 3 or more months in",
         "source": "answer key",
         "grounded": true
       },
       "measure": {
         "value": "current balance of loans 3 or more months in arrears divided by the current balance of the portfolio",
-        "page": 7,
+        "page": 64,
         "quote": null,
         "source": "answer key",
         "grounded": true
       },
       "limit": {
         "value": 0.025,
-        "page": 7,
+        "page": 64,
         "quote": "arrears divided by the current balance of the portfolio exceeds 2.50 per cent.",
         "source": "answer key",
         "grounded": true
       },
       "consequence": {
         "value": "Sequential Payment Trigger",
-        "page": 7,
+        "page": 64,
         "quote": "A Sequential Payment Trigger occurs if any of the following events happens:",
         "source": "answer key",
         "grounded": true
@@ -553,28 +553,28 @@
     {
       "name": {
         "value": "Cumulative Loss Trigger",
-        "page": 7,
+        "page": 64,
         "quote": "• Cumulative Loss Trigger: on any Calculation Date, the cumulative realised losses divided by",
         "source": "answer key",
         "grounded": true
       },
       "measure": {
         "value": "cumulative realised losses divided by the portfolio balance at the Issue Date",
-        "page": 7,
+        "page": 64,
         "quote": null,
         "source": "answer key",
         "grounded": true
       },
       "limit": {
         "value": 0.004,
-        "page": 7,
+        "page": 64,
         "quote": "the portfolio balance at the Issue Date exceeds 0.40 per cent.",
         "source": "answer key",
         "grounded": true
       },
       "consequence": {
         "value": "Sequential Payment Trigger",
-        "page": 7,
+        "page": 64,
         "quote": "A Sequential Payment Trigger occurs if any of the following events happens:",
         "source": "answer key",
         "grounded": true
@@ -583,28 +583,28 @@
     {
       "name": {
         "value": "Reserve Trigger",
-        "page": 7,
+        "page": 64,
         "quote": "• Reserve Trigger: on any Interest Payment Date, the General Reserve Fund balance divided",
         "source": "answer key",
         "grounded": true
       },
       "measure": {
         "value": "General Reserve Fund balance divided by the General Reserve Fund Required Amount",
-        "page": 7,
+        "page": 64,
         "quote": null,
         "source": "answer key",
         "grounded": true
       },
       "limit": {
         "value": 0.85,
-        "page": 7,
+        "page": 64,
         "quote": "by the General Reserve Fund Required Amount is less than 85 per cent.",
         "source": "answer key",
         "grounded": true
       },
       "consequence": {
         "value": "Sequential Payment Trigger",
-        "page": 7,
+        "page": 64,
         "quote": "A Sequential Payment Trigger occurs if any of the following events happens:",
         "source": "answer key",
         "grounded": true
@@ -614,70 +614,70 @@
   "eligibility_criteria": [
     {
       "value": "Each loan is secured by a first-ranking legal mortgage over a residential property in England or Wales, or by a first-ranking standard security over a residential property in Scotland",
-      "page": 10,
+      "page": 84,
       "quote": null,
       "source": "answer key",
       "grounded": true
     },
     {
       "value": "Each borrower is an individual who occupies the property as his or her main residence",
-      "page": 10,
+      "page": 84,
       "quote": "(b) Each borrower is an individual who occupies the property as his or her main residence;",
       "source": "answer key",
       "grounded": true
     },
     {
       "value": "No loan was more than 30 days in arrears on the Portfolio Reference Date",
-      "page": 10,
+      "page": 84,
       "quote": "(c) No loan was more than 30 days in arrears on the Portfolio Reference Date;",
       "source": "answer key",
       "grounded": true
     },
     {
       "value": "Each loan had made at least 3 monthly payments by the Portfolio Reference Date",
-      "page": 10,
+      "page": 84,
       "quote": "(d) Each loan had made at least 3 monthly payments by the Portfolio Reference Date;",
       "source": "answer key",
       "grounded": true
     },
     {
       "value": "The current loan-to-value ratio of each loan does not exceed 95 per cent",
-      "page": 10,
+      "page": 84,
       "quote": "(e) The current loan-to-value ratio of each loan does not exceed 95 per cent;",
       "source": "answer key",
       "grounded": true
     },
     {
       "value": "No loan is a buy-to-let, shared-ownership, right-to-buy or equity-release loan",
-      "page": 10,
+      "page": 84,
       "quote": "(f) No loan is a buy-to-let, shared-ownership, right-to-buy or equity-release loan;",
       "source": "answer key",
       "grounded": true
     },
     {
       "value": "Each loan was originated by the Seller between 2019 and 2025 under its lending criteria",
-      "page": 10,
+      "page": 84,
       "quote": "(g) Each loan was originated by the Seller between 2019 and 2025 under its lending criteria;",
       "source": "answer key",
       "grounded": true
     },
     {
       "value": "The final maturity date of each loan falls no later than July 2061",
-      "page": 10,
+      "page": 84,
       "quote": "(h) The final maturity date of each loan falls no later than July 2061;",
       "source": "answer key",
       "grounded": true
     },
     {
       "value": "Each loan is denominated in sterling and repayable in monthly instalments",
-      "page": 10,
+      "page": 84,
       "quote": "(i) Each loan is denominated in sterling and repayable in monthly instalments;",
       "source": "answer key",
       "grounded": true
     },
     {
       "value": "No borrower is subject to a bankruptcy order or an individual voluntary arrangement",
-      "page": 10,
+      "page": 84,
       "quote": "(j) No borrower is subject to a bankruptcy order or an individual voluntary arrangement.",
       "source": "answer key",
       "grounded": true
@@ -685,7 +685,7 @@
   ],
   "risk_retention": {
     "value": "randomly selected exposures",
-    "page": 12,
+    "page": 101,
     "quote": "of the securitised exposures by holding randomly selected exposures, which would otherwise have",
     "source": "answer key",
     "grounded": true
@@ -693,35 +693,35 @@
   "definitions": {
     "Arrears Ratio": {
       "value": "the aggregate current balance of the loans that are 3 or more months in arrears divided by the aggregate current balance of the portfolio, on the last day of a collection period",
-      "page": 13,
+      "page": 119,
       "quote": null,
       "source": "answer key",
       "grounded": true
     },
     "Cumulative Loss Ratio": {
       "value": "the aggregate of all realised losses since the Issue Date divided by the current balance of the portfolio on the Issue Date",
-      "page": 13,
+      "page": 119,
       "quote": null,
       "source": "answer key",
       "grounded": true
     },
     "Realised Loss": {
       "value": "the amount by which the balance of a loan exceeds the proceeds of enforcement after the property has been sold",
-      "page": 13,
+      "page": 119,
       "quote": null,
       "source": "answer key",
       "grounded": true
     },
     "Principal Deficiency Ledger": {
       "value": "a ledger, one sub-ledger per class, recording realised losses and principal used to pay revenue items, cleared from Available Revenue Receipts",
-      "page": 13,
+      "page": 119,
       "quote": null,
       "source": "answer key",
       "grounded": true
     },
     "Step-Up Date": {
       "value": "the Interest Payment Date in July 2031, after which the margins step up and the Issuer may redeem all the Notes",
-      "page": 13,
+      "page": 119,
       "quote": null,
       "source": "answer key",
       "grounded": true

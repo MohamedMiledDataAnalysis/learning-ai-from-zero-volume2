@@ -6,10 +6,61 @@
 REQUIRED <- c("loan_id", "origination_date", "maturity_date", "original_balance", "current_balance",
               "interest_rate_pct", "credit_score", "region", "postcode_area")
 
-# Read the cut-off tape exactly as received: an empty cell stays an empty string "".
-read_tape <- function(path = NULL) {
-  if (is.null(path)) path <- file.path(DATA_DIR, "loan_tape_cutoff.csv")
-  read.csv(path, stringsAsFactors = FALSE, na.strings = character(0))
+POOL_CUT <- file.path(DATA_DIR, "originator", "THAMES_2026-1_AUTL_Pool_Cut_2025-12-31.csv")
+SUPPLEMENTARY <- file.path(DATA_DIR, "originator", "Kestrel_Thames_2026-1_Supplementary_Data_2025-12-31.csv")
+DICTIONARY <- file.path(DATA_DIR, "originator", "Kestrel_Thames_2026-1_Data_Dictionary.xlsx")
+
+# The working name of each column, and where it comes from: a field of the FCA template, or a field of the
+# supplementary file. Columns marked "code" hold a list code that the dictionary's "List Codes" sheet decodes.
+TAPE_SOURCES <- list(
+  c("loan_id", "AUTL2", "text"), c("origination_date", "AUTL24", "text"), c("maturity_date", "AUTL25", "text"),
+  c("original_term_months", "AUTL26", "integer"), c("remaining_term_months", NA, "integer"),
+  c("product", "AUTL23", "code"), c("vehicle_type", "AUTL56", "code"), c("fuel_type", "Fuel Type", "text"),
+  c("vehicle_value", "AUTL60", "number"), c("original_balance", "AUTL29", "number"),
+  c("current_balance", "AUTL30", "number"), c("balloon_amount", "AUTL38", "number"),
+  c("ltv_original_pct", "AUTL59", "number"), c("interest_rate_pct", "AUTL40", "number"),
+  c("monthly_instalment", "AUTL37", "number"), c("credit_score", "Bureau Score at Origination", "integer"),
+  c("employment_status", "AUTL12", "code"), c("annual_income", "AUTL16", "number"), c("region", "Region", "text"),
+  c("postcode_area", "Postcode Area", "text"), c("days_past_due", "AUTL69", "integer"))
+
+# One sheet of the originator's data dictionary.
+read_dictionary <- function(sheet, path = DICTIONARY) {
+  as.data.frame(readxl::read_excel(path, sheet = sheet, col_types = "text"))
+}
+
+read_text_csv <- function(path) {
+  read.csv(path, colClasses = "character", na.strings = character(0), check.names = FALSE)
+}
+
+# Read the cut-off tape exactly as received, with working column names. The tape is the FCA template file
+# (fields AUTL1 to AUTL84), with the supplementary file joined on AUTL2; list codes become the originator's
+# own values through the dictionary. An empty cell stays "". A CSV in working names is read as it is.
+read_tape <- function(path = NULL, supplementary = NULL) {
+  if (is.null(path)) path <- POOL_CUT
+  tape <- read_text_csv(path)
+  if ("loan_id" %in% names(tape)) return(read.csv(path, stringsAsFactors = FALSE, na.strings = character(0)))
+  codes <- read_dictionary("FCA Template AUTL")$`Field Code`
+  if (!identical(names(tape), codes))
+    stop(sprintf("%s does not follow the FCA template: expected the fields AUTL1 to AUTL84 in order",
+                 basename(path)), call. = FALSE)
+  extra <- read_text_csv(if (is.null(supplementary)) SUPPLEMENTARY else supplementary)
+  i <- match(tape$AUTL2, extra$AUTL2)                        # duplicated rows stay duplicated
+  for (f in setdiff(names(extra), "AUTL2")) tape[[f]] <- ifelse(is.na(i), "", extra[[f]][i])
+  lists <- read_dictionary("List Codes")
+  decode <- setNames(lists$`Kestrel Value`, paste(lists$`Field Code`, lists$Code))
+  out <- data.frame(row.names = seq_len(nrow(tape)))
+  for (s in TAPE_SOURCES) {
+    name <- s[1]; source <- s[2]; kind <- s[3]
+    out[[name]] <- if (name == "remaining_term_months") as.integer(tape$AUTL26) - as.integer(tape$AUTL47) else
+      switch(kind,
+             code = unname(ifelse(is.na(decode[paste(source, tape[[source]])]), tape[[source]],
+                                  decode[paste(source, tape[[source]])])),
+             number = as.numeric(tape[[source]]),
+             integer = as.integer(tape[[source]]),
+             text = tape[[source]])
+  }
+  rownames(out) <- NULL
+  out
 }
 
 # Python's str.title(): every word starts with a capital, the rest is lower case.
@@ -133,8 +184,8 @@ clean_tape <- function(tape, issues) {
 }
 
 # Tool entry point. Returns a summary the model can read, without the 5,000 rows.
-validate_loan_tape <- function(path = NULL) {
-  tape <- read_tape(path)
+validate_loan_tape <- function(path = NULL, supplementary = NULL) {
+  tape <- read_tape(path, supplementary)
   issues <- find_issues(tape)
   cleaned <- clean_tape(tape, issues)
   expected <- deal_terms()$initial_pool_balance
@@ -156,10 +207,10 @@ validate_loan_tape <- function(path = NULL) {
 }
 
 # The cleaned cut-off tape, for the other tools (computed once per session).
-load_clean_tape <- function(path = NULL) {
-  key <- paste0("clean_tape:", if (is.null(path)) "default" else path)
+load_clean_tape <- function(path = NULL, supplementary = NULL) {
+  key <- paste0("clean_tape:", if (is.null(path)) "default" else path, ":", if (is.null(supplementary)) "" else supplementary)
   cached(key, function() {
-    tape <- read_tape(path)
+    tape <- read_tape(path, supplementary)
     clean_tape(tape, find_issues(tape))
   })
 }

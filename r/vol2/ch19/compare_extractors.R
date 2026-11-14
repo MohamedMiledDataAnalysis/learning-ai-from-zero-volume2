@@ -14,8 +14,17 @@ for (p in seq_along(r_pages)) {
   if (length(a) == length(b)) same_count <- same_count + 1
 }
 cat(sprintf("Pages with the same number of lines: %d of %d\n\n", same_count, length(r_pages)))
-cat("Lines where the words differ (R first, then Python):\n")
-for (p in c(4, 9)) {
+cat("The first lines where the words differ, on pages with the same lines (R first, then Python):\n")
+shown <- 0
+for (p in seq_along(r_pages)) {
   a <- clean_lines(r_pages[p]); b <- clean_lines(py_pages[p])
-  for (k in which(a != b)[1:2]) cat(sprintf("  page %d  R : %s\n          Py: %s\n", p, substr(a[k], 1, 60), substr(b[k], 1, 60)))
+  if (length(a) != length(b)) next
+  for (k in which(a != b)) {
+    if (shown == 4) break
+    x <- strsplit(a[k], "")[[1]]; y <- strsplit(b[k], "")[[1]]
+    first <- which(x[seq_len(min(length(x), length(y)))] != y[seq_len(min(length(x), length(y)))])[1]
+    from <- max(1, (if (is.na(first)) min(length(x), length(y)) else first) - 25)   # 25 letters before the change
+    cat(sprintf("  page %d  R : ...%s\n          Py: ...%s\n", p, substr(a[k], from, from + 50), substr(b[k], from, from + 50)))
+    shown <- shown + 1
+  }
 }
