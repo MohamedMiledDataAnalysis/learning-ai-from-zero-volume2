@@ -14,6 +14,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
+failed = []                                     # a failed command does not stop the others
 for manifest in sorted((REPO / "python" / "recordings").glob("manifest-*.txt")) + \
         sorted((REPO / "r" / "recordings").glob("manifest-*.txt")):
     for line in manifest.read_text().splitlines():
@@ -22,5 +23,9 @@ for manifest in sorted((REPO / "python" / "recordings").glob("manifest-*.txt")) 
             if cmd[0] == "python":
                 cmd[0] = sys.executable
             print("Recording:", line)
-            subprocess.run(cmd, cwd=REPO, check=True)
+            if subprocess.run(cmd, cwd=REPO).returncode != 0:
+                failed.append(line)
+if failed:
+    print("Failed:", *failed, sep="\n  ")
+    sys.exit(1)
 print("Done. Rebuild the book to print the recorded replies.")

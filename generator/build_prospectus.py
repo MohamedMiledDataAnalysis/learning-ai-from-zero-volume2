@@ -1,4 +1,3 @@
-import calendar
 """Build the Thames prospectus (PDF) from the deal terms and the clean cut-off tape.
 
 The key sections below are the ones the agent reads; prospectus_long.py places them, renumbered, among
@@ -11,6 +10,7 @@ Run from the repository root after generate_deal_pack.py:
 Needs pandoc and XeLaTeX.
 """
 
+import calendar
 import json
 import os
 import re

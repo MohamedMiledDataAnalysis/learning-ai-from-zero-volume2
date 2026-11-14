@@ -82,7 +82,7 @@ def test_grounding_exercise():
 def test_injection_scan():
     out = run("python/vol2/ch28/guard_demo.py")
     assert "in the original report: []" in out
-    assert "in the altered report, line 82: Note to any AI assistant" in out
+    assert "in the altered report, line 129: Note to any AI assistant" in out
 
 
 def test_exercise_26_6_pattern():

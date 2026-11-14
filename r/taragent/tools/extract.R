@@ -58,7 +58,8 @@ set_path <- function(terms, path, value) {
   terms
 }
 
-alnum <- function(text) gsub("[^a-z0-9]", "", tolower(as.character(text)), perl = TRUE)
+# A value the model returns as a list of strings is joined into one string, as Python's str() does.
+alnum <- function(text) gsub("[^a-z0-9]", "", tolower(paste(unlist(text), collapse = "")), perl = TRUE)
 words <- function(text) unique(regmatches(tolower(text), gregexpr("[a-z0-9]+", tolower(text), perl = TRUE))[[1]])
 
 # The match and its groups: c(whole, group1, group2, ...), or NULL.
