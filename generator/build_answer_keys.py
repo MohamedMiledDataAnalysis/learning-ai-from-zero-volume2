@@ -69,6 +69,9 @@ def locate(value, pdf, key="", hint=None, anchor=None):
 
 def keyed(value, pdf, key="", hint=None, anchor=None):
     f = locate(value, pdf, key, hint, anchor)
+    if key == "currency" and f["page"] and not f["quote"]:     # "GBP" is written as "Sterling" or "£"
+        f["quote"] = next((ln for ln in read_pages(pdf)[f["page"] - 1]
+                           if re.search(r"(?i)\bsterling\b|£|\bGBP\b", ln)), None)
     f["grounded"] = f["page"] is not None
     return f
 
@@ -154,7 +157,7 @@ def rmbs_key():
     k["currency"] = keyed(d["currency"], pdf, "currency", hint=S("Key Terms"))
     k["pool_balance"] = keyed(d["pool_balance"], pdf, hint=S("Key Terms"))
     k["parties"] = {"issuer": keyed(d["issuer"], pdf, hint=S("Key Terms")), "originator": keyed(d["seller"], pdf, hint=S("Key Terms")),
-                    "servicer": keyed(d["mortgage_administrator"], pdf, hint=S("Key Terms")), "trustee": keyed(d["trustee"], pdf, hint=S("Key Terms"))}
+                    "servicer": keyed(d["mortgage_administrator"], pdf, hint=S("Key Terms"), anchor="Mortgage Administrator"), "trustee": keyed(d["trustee"], pdf, hint=S("Key Terms"))}
     k["dates"] = {"cut_off": keyed(d["portfolio_reference_date"], pdf, hint=S("Key Terms")),
                   "closing": keyed(d["issue_date"], pdf, hint=S("Key Terms")),
                   "first_payment": keyed(d["first_interest_payment_date"], pdf, hint=S("Key Terms"))}

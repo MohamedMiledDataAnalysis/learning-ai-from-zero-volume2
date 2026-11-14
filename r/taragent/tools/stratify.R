@@ -3,7 +3,7 @@
 # Splits the pool into groups (region, product, credit score band...) at the cut-off
 # date or at the end of any period, and totals a measure in each group.
 
-# Bands match the tables in section 3 of the prospectus: (column, edges, labels).
+# Bands match the tables in section 10 of the prospectus: (column, edges, labels).
 BANDS <- list(
   credit_score_band = list("credit_score", c(-1, 649, 699, 749, 799, 849, 999),   # -1: a score of 0 is valid
                            c("Below 650", "650-699", "700-749", "750-799", "800-849", "850 and above")),

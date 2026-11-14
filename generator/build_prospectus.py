@@ -138,8 +138,8 @@ The table shows the margin of each class of notes over SONIA and its rating at c
 {notes_rows}
 
 **Interest.** Each class pays interest monthly at SONIA plus its margin. For each period, interest equals the
-class balance at the start of the period multiplied by one-twelfth of the annual rate. The SONIA rate for each
-period is stated in the investor report.
+class balance at the start of the period multiplied by one-twelfth of the annual rate. The rate for each
+period is Compounded Daily SONIA for that period, and is stated in the investor report.
 
 **Principal.** On each payment date the issuer pays principal so that the total balance of the notes falls to
 the pool balance at the end of the period, provided enough funds are available (section 5, item 7).
@@ -266,7 +266,7 @@ the end of each period and are reported in each investor report.
 **Consequence.** From the payment date that follows the period in which a trigger event occurs, principal is
 paid sequentially (section 2). The switch is permanent, even if the test is passed again in a later period.
 
-**Reporting.** Within 15 days after each payment date, the servicer publishes an investor report showing the
+**Reporting.** Within 15 days after each payment date, the cash manager publishes an investor report showing the
 pool performance, the arrears, the application of funds, the note balances, the reserve fund and the result
 of each test in this section.
 """

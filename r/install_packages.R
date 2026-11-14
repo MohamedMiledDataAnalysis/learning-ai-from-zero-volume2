@@ -14,6 +14,7 @@
 # | ggplot2    | 3.4.4          | Charts (Vol. 1 Part II, Vol. 2 ch. 26)                           |
 # | rpart      | 4.1.23         | Decision trees (Vol. 1 ch. 10)                                   |
 # | openxlsx   | 4.2.5.2        | Excel export (Vol. 2 ch. 23, 26)                                  |
+# | readxl     | 1.4.3          | Reading the deal pack's Excel files (Vol. 2 ch. 16 onwards)      |
 # | shiny      | 1.8.0          | The two Shiny apps (Vol. 2 ch. 25, 26)                           |
 # | bslib      | 0.6.1          | Layout of the Shiny apps                                         |
 # | DT         | 0.31           | Tables in the Shiny apps                                         |
@@ -25,7 +26,7 @@
 # Some R tests and scripts compare R with Python, so they also need Python and the packages in
 # requirements.txt (pip install -r requirements.txt).
 
-packages <- c("jsonlite", "httr2", "pdftools", "ggplot2", "rpart", "openxlsx",
+packages <- c("jsonlite", "httr2", "pdftools", "ggplot2", "rpart", "openxlsx", "readxl",
               "shiny", "bslib", "DT", "commonmark", "testthat", "withr")
 missing <- packages[!vapply(packages, requireNamespace, logical(1), quietly = TRUE)]
 if (length(missing) > 0) {

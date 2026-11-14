@@ -14,7 +14,7 @@ import pandas as pd
 from ..data import check_period, loan_performance
 from .loan_tape import load_clean_tape
 
-# Bands match the tables in section 3 of the prospectus.
+# Bands match the tables in section 10 of the prospectus.
 BANDS = {
     "credit_score_band": ("credit_score", [-1, 649, 699, 749, 799, 849, 999],   # -1: a score of 0 is valid
                           ["Below 650", "650-699", "700-749", "750-799", "800-849", "850 and above"]),

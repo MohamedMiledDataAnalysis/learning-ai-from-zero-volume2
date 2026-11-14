@@ -14,10 +14,10 @@ DATA = ROOT / "data"
 
 
 def show(name, what):
-    print(f"{name:<52}{what:>36}")
+    print(f"{name}{what:>{88 - len(name)}}")   # each line is 88 characters wide
 
 
-print(f"{'File (folder/name)':<52}{'What it holds':>36}")
+show("File (folder/name)", "What it holds")
 tape = pd.read_csv(DATA / "originator" / "THAMES_2026-1_AUTL_Pool_Cut_2025-12-31.csv", dtype=str)
 show("originator/THAMES_2026-1_AUTL_Pool_Cut_2025-12-31.csv", f"{len(tape):,} rows x {tape.shape[1]} fields")
 extra = pd.read_csv(DATA / "originator" / "Kestrel_Thames_2026-1_Supplementary_Data_2025-12-31.csv")
@@ -31,8 +31,8 @@ level = sorted((DATA / "servicer_reports").glob("*_Loan_Level_Data_*.csv"))
 rows = sum(len(pd.read_csv(f)) for f in level)
 show("servicer_reports/..._Loan_Level_Data_2026-MM.csv", f"{len(level)} files, {rows:,} rows")
 reports = sorted((DATA / "investor_reports").glob("*.pdf"))
-show("investor_reports/..._Investor_Report_YYYY-MM-DD.pdf",
-     f"{len(reports)} reports x {len(PdfReader(reports[0]).pages)} pages")
+pages = sorted({len(PdfReader(f).pages) for f in reports})   # a report has 6 or 7 pages
+show("investor_reports/..._Investor_Report_YYYY-MM-DD.pdf", f"{len(reports)} reports x {pages[0]}-{pages[-1]} pages")
 excel = sorted((DATA / "investor_reports").glob("*.xlsx"))
 show("investor_reports/..._Investor_Report_YYYY-MM-DD.xlsx",
      f"{len(excel)} reports x {len(pd.read_excel(excel[0], sheet_name=None))} sheets")
@@ -40,7 +40,8 @@ fca = sorted((DATA / "loan_level").glob("*_AUTL_*.csv"))
 fields = pd.read_csv(fca[0], nrows=1).shape[1]
 show("loan_level/THAMES_2026-1_AUTL_2026-MM-DD.csv", f"{len(fca)} files x {fields} fields")
 ivs = sorted((DATA / "loan_level").glob("*_IVS_*.xlsx"))
-show("loan_level/THAMES_2026-1_IVS_2026-MM-DD.xlsx", f"{len(ivs)} files x 3 sheets (IVSS, IVSR, IVSF)")
+ivs_sheets = pd.ExcelFile(ivs[0]).sheet_names
+show("loan_level/THAMES_2026-1_IVS_2026-MM-DD.xlsx", f"{len(ivs)} files x {len(ivs_sheets)} sheets ({', '.join(ivs_sheets)})")
 pages = len(PdfReader(DATA / "prospectus" / "prospectus.pdf").pages)
 show("prospectus/prospectus.pdf", f"{pages} pages")
 terms = json.loads((DATA / "deal_terms.json").read_text())

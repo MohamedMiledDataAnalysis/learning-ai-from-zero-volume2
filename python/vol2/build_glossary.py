@@ -45,8 +45,12 @@ def to_markdown(entries, volume):
     title = "Volume 1" if volume == "vol1" else "Volume 2"
     appendix = "Appendix A — Glossary" if volume == "vol1" else "Appendix B — Glossary"
     lines = [f"# {appendix} {{.unnumbered}}", "",
-             f"Every term defined in a Word box in {title}, in alphabetical order. The numbers in brackets are "
-             "the chapters where the term is defined or explained; the first one is where it first appears.", ""]
+             (f"Every term defined in a Word box in {title}, in alphabetical order. The numbers in brackets are "
+              "the chapters where the term is defined or explained; the first one is where it first appears."
+              if volume == "vol1" else
+              "Every term defined in a Word box in Volume 2, and a few terms explained in the text, in alphabetical "
+              "order. The numbers in brackets are the chapters where the term is defined or explained; the first one "
+              "is where it first appears."), ""]
     letter = None
     for e in entries:
         first = e["term"][0].upper()

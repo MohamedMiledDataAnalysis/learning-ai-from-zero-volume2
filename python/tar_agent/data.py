@@ -5,10 +5,10 @@ Set the environment variable TAR_DATA_DIR to use another copy of the data.
 
 The deal pack holds the files the parties really send:
 
-    originator/        Kestrel's pool-cut loan tape (Excel) and its data dictionary (Excel)
+    originator/        Kestrel's pool-cut tape (FCA template, CSV), supplementary file (CSV), data dictionary (Excel)
     servicer_reports/  Kestrel's monthly servicer report (Excel) and loan-level data file (CSV)
-    investor_reports/  Larkmead Bank's monthly investor report (PDF), one per payment date
-    loan_level/        the monthly FCA loan-level file (template SECN 12 Annex 5, fields AUTL1 to AUTL84)
+    investor_reports/  Larkmead Bank's monthly investor report (PDF, with an Excel copy), one per payment date
+    loan_level/        the monthly FCA files: loan level (SECN 12 Annex 5, AUTL1-AUTL84) and investor report (Annex 12)
 
 The functions below turn each file into a table with short working names (loan_id,
 current_balance, ...), so the tools never depend on how one party labels its columns.

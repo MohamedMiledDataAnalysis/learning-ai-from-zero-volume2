@@ -1840,8 +1840,8 @@ The table shows the margin of each class of notes over SONIA and its rating at c
 | Class D | £2,963,034.49 | 4% | SONIA + 3.50% | BBB |
 
 **Interest.** Each class pays interest monthly at SONIA plus its margin. For each period, interest equals the
-class balance at the start of the period multiplied by one-twelfth of the annual rate. The SONIA rate for each
-period is stated in the investor report.
+class balance at the start of the period multiplied by one-twelfth of the annual rate. The rate for each
+period is Compounded Daily SONIA for that period, and is stated in the investor report.
 
 **Principal.** On each payment date the issuer pays principal so that the total balance of the notes falls to
 the pool balance at the end of the period, provided enough funds are available (section 15, item 7).
@@ -4626,7 +4626,7 @@ the end of each period and are reported in each investor report.
 **Consequence.** From the payment date that follows the period in which a trigger event occurs, principal is
 paid sequentially (section 4). The switch is permanent, even if the test is passed again in a later period.
 
-**Reporting.** Within 15 days after each payment date, the servicer publishes an investor report showing the
+**Reporting.** Within 15 days after each payment date, the cash manager publishes an investor report showing the
 pool performance, the arrears, the application of funds, the note balances, the reserve fund and the result
 of each test in this section.
 
@@ -4806,7 +4806,7 @@ Transaction, which the Originator will continue to make available to investors o
 potential investors on request;
 
 (c) loan-level information on the Loans in the portfolio at the cut-off date, in the form of the underlying
-exposures template for automobile loans and leases set out in SECN 11; and
+exposures template for automobile loans and leases set out in SECN 12 Annex 5; and
 
 (d) a draft of this Prospectus and the drafts of the principal Transaction Documents, including the
 agreement under which the Seller sells the Loans to the Issuer, the Servicing Agreement, the Cash Management
@@ -4821,7 +4821,7 @@ On each payment date, the Cash Manager will prepare, on behalf of the Reporting 
 provided by the Servicer, a report on the Transaction for the preceding monthly period (each, an "Investor
 Report"). Each Investor Report will be made available within 15 days after the payment date to which it
 relates, as stated in section 16, and will contain the information required by SECN 6, in the form of the
-investor report template for non-asset-backed commercial paper securitisations in SECN 11, together with:
+investor report template for non-asset-backed commercial paper securitisations in SECN 12 Annex 12, together with:
 
 (a) the collections, the available funds and their application in the priority of payments in section 15;
 
@@ -4839,7 +4839,7 @@ vehicle recoveries and losses;
 
 At the same time, the Cash Manager will make available on behalf of the Reporting Entity the loan-level
 information on the Loans as at the end of the relevant monthly period, in the form of the underlying exposures
-template for automobile loans and leases in SECN 11. SECN 6 requires this information and the investor report
+template for automobile loans and leases in SECN 12 Annex 5. SECN 6 requires this information and the investor report
 to be made available at least quarterly; in respect of the Transaction both will be made available monthly.
 Each data submission will use the same reporting date as the Investor Report to which it relates, and will
 identify the Loans by a unique identifier that does not allow a borrower to be identified directly.

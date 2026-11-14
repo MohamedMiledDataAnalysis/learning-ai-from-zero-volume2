@@ -1,6 +1,6 @@
 """Tool 3 — trigger tests.
 
-The prospectus (section 6) sets limits on the cumulative default ratio and the
+The prospectus (section 16) sets limits on the cumulative default ratio and the
 90+ day arrears ratio. When a limit is exceeded, principal switches from pro
 rata to sequential payment, permanently.
 

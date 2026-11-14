@@ -27,7 +27,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y r-base-core r-cran-jsonlite r-cran-httr2 r-cran-dplyr r-cran-readr \
             r-cran-pdftools r-cran-testthat r-cran-shiny r-cran-bslib r-cran-dt r-cran-openxlsx \
-            r-cran-ggplot2 r-cran-rpart r-cran-commonmark r-cran-withr
+            r-cran-ggplot2 r-cran-rpart r-cran-commonmark r-cran-withr r-cran-readxl
 
       - name: Cache the model
         uses: actions/cache@v4

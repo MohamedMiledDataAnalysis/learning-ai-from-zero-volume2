@@ -136,10 +136,10 @@ the requirements of SECN 6:
 (a) before pricing, and in final form no later than 15 days after the Issue Date, the Transaction Documents and
 this Offering Circular;
 
-(b) quarterly, loan-level information on the Mortgage Loans, in the form required by SECN 6, published at the same
+(b) quarterly, loan-level information on the Mortgage Loans, in the template of SECN 12 Annex 2, published at the same
 time as the Investor Report;
 
-(c) quarterly, an investor report in the form required by SECN 6, including the confirmation by the Society of its
+(c) quarterly, an investor report in the template of SECN 12 Annex 12, including the confirmation by the Society of its
 continued retention of the randomly selected exposures described in Section 17; and
 
 (d) without delay, any significant event, including a material breach of the Transaction Documents, a change in

@@ -4,9 +4,9 @@
 # chunks of 5 lines every 3 lines, score each chunk with BM25, return the best chunks.
 #
 # One difference with Python: pdftools (R) and pypdf (Python) extract the text with
-# different libraries. pdftools keeps words whole where pypdf splits a few of them at the
-# letter spacing ("Total" versus "T otal"). Lines, pages and chunks are the same; a few
-# words differ, so a few BM25 scores differ in the last decimals (chapter 19).
+# different libraries, which break a few pages into lines differently. On the 136-page
+# Thames prospectus the lines match on 127 pages, R makes 1,803 chunks and Python 1,826,
+# so the scores differ by up to 2% and the best pages are the same (chapter 19).
 
 suppressPackageStartupMessages(library(pdftools))
 

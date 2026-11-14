@@ -143,7 +143,7 @@ capital_structure_plot <- function(analysis) {
                   ce = vapply(ce, function(r) r$credit_enhancement, 0))
   d$label <- sprintf("Class %s: %.2f%% of notes, CE %.2f%%", d$class, d$share * 100, d$ce * 100)
   d$label <- factor(d$label, levels = d$label)           # legend in seniority order, Class A first
-  d$class <- factor(d$class, levels = rev(d$class))      # first class (A) drawn on top of the bar
+  d$class <- factor(d$class, levels = d$class)           # first level (A) is stacked on top of the bar
   ggplot2::ggplot(d, ggplot2::aes(x = "Notes", y = share, fill = label, group = class)) +
     ggplot2::geom_col(width = 0.5, colour = "white") +
     ggplot2::scale_fill_manual(values = grDevices::colorRampPalette(c("#1F2F54", "#B8892B"))(nrow(d)), name = NULL) +

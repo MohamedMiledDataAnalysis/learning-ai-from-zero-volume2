@@ -9,7 +9,7 @@
   "currency": {
     "value": "GBP",
     "page": 6,
-    "quote": null,
+    "quote": "Denomination Sterling",
     "source": "answer key",
     "grounded": true
   },
@@ -38,7 +38,7 @@
     "servicer": {
       "value": "Marlowe Building Society",
       "page": 6,
-      "quote": "Seller Marlowe Building Society",
+      "quote": "Mortgage Administrator Marlowe Building Society",
       "source": "answer key",
       "grounded": true
     },
