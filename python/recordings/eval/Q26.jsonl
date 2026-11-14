@@ -2,5 +2,5 @@
 {"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"by": "count", "measure": "count", "period": 12}}]}
 {"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"by": "count", "measure": "count", "period": 12}}]}
 {"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"by": "count", "measure": "count", "period": 12}}]}
-{"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"period": 12, "by": "count", "measure": "count"}}]}
-{"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"period": 12, "by": "count", "measure": "count"}}]}
+{"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"by": "count", "measure": "count", "period": 12}}]}
+{"content": "", "tool_calls": [{"name": "stratify_pool", "arguments": {"by": "count", "measure": "count", "period": 12}}]}

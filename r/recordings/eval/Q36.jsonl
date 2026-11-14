@@ -1,2 +1,2 @@
-{"content": "", "tool_calls": [{"name":"search_prospectus","arguments":{"top_k":1,"query":"default"}}]}
-{"content": "According to the prospectus (page 9), a loan is defaulted when it contributes to the cumulative default ratio exceeding the limit specified for each period, as reported in the investor report.", "tool_calls": []}
+{"content": "", "tool_calls": [{"name":"search_prospectus","arguments":{"query":"default","top_k":1}}]}
+{"content": "According to the prospectus, a loan is considered defaulted after it meets the criteria defined in section 11, and the balance at the date of default is recorded in the Servicer Report. A defaulted loan remains in default even if the arrears are later cleared. Page 99 of the prospectus provides this information.", "tool_calls": []}
