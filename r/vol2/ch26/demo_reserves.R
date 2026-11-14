@@ -9,7 +9,7 @@ for (deal in c("thames", "severn")) {
     f <- terms$reserve_funds[[i]]$can_cover_losses
     r <- a$reserves[[i]]
     cat(sprintf("%s: %s\n", r$name, r$reason))
-    cat(strwrap(sprintf("page %s: \"%s\"", f$page, f$quote), 96, indent = 2, exdent = 2), sep = "\n")
+    cat(strwrap(sprintf("page %s: \"%s\"", f$page, f$quote), 84, indent = 2, exdent = 2), sep = "\n")
   }
   cat(sprintf("Class A credit enhancement: %.3f%%\n\n", 100 * a$credit_enhancement[[1]]$credit_enhancement))
 }

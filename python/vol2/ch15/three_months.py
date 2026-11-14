@@ -5,7 +5,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))   # lets Python find tar_agent and agent_core
 
 import tempfile
-from pathlib import Path
 
 from tar_agent.agentic import run_surveillance
 
