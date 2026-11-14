@@ -46,9 +46,18 @@ Reply with ONLY a JSON list of steps for period {period}, each step like
 # 1-2. Plan, and check the plan
 # --------------------------------------------------------------------------
 
+def with_period(step, period):
+    """The step's arguments, with the goal's period added when the tool has a period argument
+    (validate_loan_tape and search_prospectus have none, and would refuse one)."""
+    args = dict(step.get("arguments", {}))
+    if "period" in TOOLS[step["tool"]]["parameters"]["properties"]:
+        args["period"] = period
+    return args
+
+
 def rule_plan(period):
     """The plan written by rules: the checklist itself, for this period."""
-    return [{"tool": s["tool"], "arguments": {**s.get("arguments", {}), "period": period}, "why": s["why"]}
+    return [{"tool": s["tool"], "arguments": with_period(s, period), "why": s["why"]}
             for s in CHECKLIST]
 
 
@@ -68,8 +77,8 @@ def model_plan(brain, period, feedback=None):
 
 
 def matches(step, item, period):
-    if step.get("tool") != item["tool"] or step.get("arguments", {}).get("period") != period:
-        return False
+    if step.get("tool") != item["tool"] or with_period(step, period) != step.get("arguments", {}):
+        return False                          # another tool, or a step for another period
     return all(step.get("arguments", {}).get(k) == v for k, v in item.get("arguments", {}).items())
 
 
@@ -87,7 +96,7 @@ def check_plan(plan, period):
         else:
             kept.append(s)
     missing = [item for item in CHECKLIST if not any(matches(s, item, period) for s in kept)]
-    completed = kept + [{"tool": m["tool"], "arguments": {**m.get("arguments", {}), "period": period},
+    completed = kept + [{"tool": m["tool"], "arguments": with_period(m, period),
                          "why": m["why"] + " (added: missing from the plan)"} for m in missing]
     return completed, missing, rejected
 

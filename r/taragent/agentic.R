@@ -31,12 +31,17 @@ PLAN_PROMPT <- paste(
 # 1-2. Plan, and check the plan
 # --------------------------------------------------------------------------
 
+# The step's arguments, with the goal's period added when the tool has a period argument
+# (validate_loan_tape and search_prospectus have none, and would refuse one).
+with_period <- function(step, period) {
+  args <- if (is.null(step$arguments)) list() else step$arguments
+  if ("period" %in% names(TOOLS[[step$tool]]$parameters$properties)) args$period <- period
+  args
+}
+
 # The plan written by rules: the checklist itself, for this period.
 rule_plan <- function(period) {
-  lapply(CHECKLIST, function(s) {
-    args <- if (is.null(s$arguments)) list() else s$arguments
-    list(tool = s$tool, arguments = c(args, list(period = period)), why = s$why)
-  })
+  lapply(CHECKLIST, function(s) list(tool = s$tool, arguments = with_period(s, period), why = s$why))
 }
 
 # Ask a model for the plan. Returns a list of steps, or an empty list if the reply is not a JSON list.
@@ -61,7 +66,8 @@ same_period <- function(step, period) {
 
 # Does a plan step do what a checklist item asks, for the goal's period?
 matches <- function(step, item, period) {
-  if (!identical(step$tool, item$tool) || !same_period(step, period)) return(FALSE)
+  if (!identical(step$tool, item$tool)) return(FALSE)
+  if ("period" %in% names(TOOLS[[item$tool]]$parameters$properties) && !same_period(step, period)) return(FALSE)
   for (k in names(item$arguments)) if (!identical(step$arguments[[k]], item$arguments[[k]])) return(FALSE)
   TRUE
 }
@@ -84,8 +90,7 @@ check_plan <- function(plan, period) {
   }
   missing <- Filter(function(item) !any(vapply(kept, matches, logical(1), item = item, period = period)), CHECKLIST)
   added <- lapply(missing, function(m) {
-    args <- if (is.null(m$arguments)) list() else m$arguments
-    list(tool = m$tool, arguments = c(args, list(period = period)), why = paste(m$why, "(added: missing from the plan)"))
+    list(tool = m$tool, arguments = with_period(m, period), why = paste(m$why, "(added: missing from the plan)"))
   })
   list(plan = c(kept, added), missing = missing, rejected = rejected)
 }

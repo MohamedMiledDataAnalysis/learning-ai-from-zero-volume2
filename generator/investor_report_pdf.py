@@ -81,6 +81,40 @@ def _page(canvas, doc, rep):
     canvas.restoreState()
 
 
+# ---- Sections 6 and 7, shared with the Excel copy (investor_report_xlsx.py): the same tables and definitions.
+
+def pool_tables(t, perf, loans):
+    """Section 6: the live loans at the end of period t by product, fuel type and region.
+    Returns {title: [(group, loans, balance, share), ..., ("Total", loans, balance, 1.0)]}."""
+    live = perf[(perf.period == t) & perf.status.isin(["Current", "Arrears"])].merge(
+        loans[["loan_id", "product", "region", "fuel_type"]], on="loan_id")
+    total = live.closing_balance.sum()
+    out = {}
+    for col, title in (("product", "Product"), ("fuel_type", "Fuel type"), ("region", "Region")):
+        g = live.groupby(col).agg(n=("loan_id", "size"), bal=("closing_balance", "sum"))
+        rows = [(k, int(g.loc[k, "n"]), float(g.loc[k, "bal"]), float(g.loc[k, "bal"] / total))
+                for k in sorted(g.index)]
+        out[title] = rows + [("Total", len(live), float(total), 1.0)]
+    return out
+
+
+DEFINITIONS = [
+    ("Collection Period", "Each calendar month. The first Collection Period is January 2026."),
+    ("CPR", "Conditional prepayment rate: the annualised rate of prepayment in the Collection Period, "
+            "1 - (1 - SMM)^12, where SMM is prepayments divided by the Opening Pool Balance less scheduled "
+            "principal."),
+    ("Cumulative Default Ratio", "Cumulative Defaults divided by the Pool Balance at the Cut-off Date."),
+    ("90+ Day Arrears Ratio", "Balance of the Loans with 3 instalments in arrears divided by the Closing Pool "
+                              "Balance."),
+    ("Defaulted Loan", "A Loan with 4 or more instalments in arrears, or written off by the Servicer."),
+    ("Note Factor", "Closing Balance of a Class divided by its Initial Balance."),
+    ("Pool Factor", "Closing Pool Balance divided by the Pool Balance at the Cut-off Date."),
+    ("Principal Deficiency", "The amount by which the Notes exceed the Closing Pool Balance after the Payment "
+                             "Date."),
+    ("Reserve Fund Required Amount", "The amount set out in section 16 of the Prospectus."),
+]
+
+
 def write_investor_report_pdf(rep, reports, perf, loans, path):
     t = rep["period"]
     end = date.fromisoformat(rep["collection_period_end"])
@@ -199,43 +233,21 @@ def write_investor_report_pdf(rep, reports, perf, loans, path):
     story += [table(hist, [16, 26, 38, 24, 20, 38, 34, 38], align_right_from=1), Spacer(1, 4 * mm)]
 
     # ---- pool tables at the end of the period
-    live = perf[(perf.period == t) & perf.status.isin(["Current", "Arrears"])].merge(
-        loans[["loan_id", "product", "region", "fuel_type"]], on="loan_id")
-    total = live.closing_balance.sum()
+    tables = pool_tables(t, perf, loans)
 
-    def strat(col, title, order=None):
-        g = live.groupby(col).agg(n=("loan_id", "size"), bal=("closing_balance", "sum"))
-        keys = order or sorted(g.index)
+    def strat(title):
         rows = [[title, "Loans", "Balance (GBP)", "% of Balance"]]
-        for k in keys:
-            if k in g.index:
-                rows.append([k, f"{int(g.loc[k, 'n']):,}", m(g.loc[k, "bal"]), f"{g.loc[k, 'bal'] / total:.2%}"])
-        rows.append(["Total", f"{len(live):,}", m(total), "100.00%"])
+        rows += [[k, f"{n:,}", m(bal), f"{share:.2%}"] for k, n, bal, share in tables[title]]
         return table(rows, [44, 18, 32, 22])
 
     story.append(KeepTogether([Paragraph("6. Pool Stratification at the End of the Collection Period", H2),
-                               Table([[strat("product", "Product"), strat("fuel_type", "Fuel type")]],
+                               Table([[strat("Product"), strat("Fuel type")]],
                                      colWidths=[130 * mm, 130 * mm], style=[("VALIGN", (0, 0), (-1, -1), "TOP")])]))
-    story += [Spacer(1, 3 * mm), strat("region", "Region"), PageBreak()]
+    story += [Spacer(1, 3 * mm), strat("Region"), PageBreak()]
 
     # ---- definitions
     story.append(Paragraph("7. Definitions", H2))
-    defs = [
-        ("Collection Period", "Each calendar month. The first Collection Period is January 2026."),
-        ("CPR", "Conditional prepayment rate: the annualised rate of prepayment in the Collection Period, "
-                "1 - (1 - SMM)^12, where SMM is prepayments divided by the Opening Pool Balance less scheduled "
-                "principal."),
-        ("Cumulative Default Ratio", "Cumulative Defaults divided by the Pool Balance at the Cut-off Date."),
-        ("90+ Day Arrears Ratio", "Balance of the Loans with 3 instalments in arrears divided by the Closing Pool "
-                                  "Balance."),
-        ("Defaulted Loan", "A Loan with 4 or more instalments in arrears, or written off by the Servicer."),
-        ("Note Factor", "Closing Balance of a Class divided by its Initial Balance."),
-        ("Pool Factor", "Closing Pool Balance divided by the Pool Balance at the Cut-off Date."),
-        ("Principal Deficiency", "The amount by which the Notes exceed the Closing Pool Balance after the Payment "
-                                 "Date."),
-        ("Reserve Fund Required Amount", "The amount set out in section 16 of the Prospectus."),
-    ]
-    story.append(table([["Term", "Definition"]] + [[k, Paragraph(v, SMALL)] for k, v in defs], [55, 200],
+    story.append(table([["Term", "Definition"]] + [[k, Paragraph(v, SMALL)] for k, v in DEFINITIONS], [55, 200],
                        align_right_from=9))
     story += [Spacer(1, 5 * mm), Paragraph(
         "Disclaimer. This report is provided for information only. It is not an offer to sell or a solicitation of "

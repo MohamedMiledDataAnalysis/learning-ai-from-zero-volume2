@@ -408,7 +408,8 @@ def write_data_dictionary(path, cut_off):
               "Number of monthly instalments", "AUTL29": "Amount financed", "AUTL30": "Outstanding capital "
               "balance, including any final payment", "AUTL37": "Monthly instalment", "AUTL38": "Optional final "
               "payment (PCP); 0 for HP", "AUTL40": "Customer rate, per cent", "AUTL47": "Instalments paid before "
-              "the cut-off date", "AUTL53": "ND2: held in the dealer system, not in the reporting system",
+              "the cut-off date", "AUTL53": "ND2: recorded on the application form but never loaded into the "
+              "reporting system",
               "AUTL56": "New -> NEWX, Used -> USED", "AUTL59": "Amount financed / cash price, per cent", "AUTL60":
               "Cash price of the vehicle", "AUTL69": "30 days per unpaid instalment", "AUTL70": "PERF, ARRE, "
               "DFLT or RDMD"}
@@ -747,4 +748,4 @@ def write_all(data, loans, perf, recoveries, reports, dirty, regional_by_period,
         write_ivs(rep, data / "loan_level" / f"THAMES_2026-1_IVS_{rep['collection_period_end']}.xlsx")
         stem_ir = data / "investor_reports" / f"Thames_2026-1_Investor_Report_{rep['payment_date']}"
         write_pdf(rep, reports, perf, loans, stem_ir.with_suffix(".pdf"))
-        write_xlsx(rep, reports, stem_ir.with_suffix(".xlsx"))
+        write_xlsx(rep, reports, perf, loans, stem_ir.with_suffix(".xlsx"))

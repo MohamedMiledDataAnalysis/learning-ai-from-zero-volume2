@@ -2,7 +2,7 @@
 
 Cash managers publish the investor report as a PDF for reading and as an Excel workbook
 for analysts who load the figures into their own models. The workbook holds the same
-figures as the PDF, one sheet per section. Amounts are numbers, ratios are fractions shown
+figures as the PDF, one sheet per section, sections 1 to 7. Amounts are numbers, ratios are fractions shown
 with a percentage format, as in any Excel file: the cell holds 0.138497, the screen shows
 13.8497%.
 """
@@ -15,6 +15,7 @@ from openpyxl.styles import Font
 from real_files import (CASH_MANAGER, ISINS, ISSUER, ISSUER_LEI, ORIGINATOR, ORIGINATOR_LEI, TRUSTEE, _header,
                         _save)
 from deal_terms import DEAL
+from investor_report_pdf import DEFINITIONS, pool_tables
 
 MONEY, PCT4, PCT2, FACTOR = "#,##0.00", "0.0000%", "0.00%", "0.000000"
 
@@ -33,7 +34,7 @@ def _pairs(ws, start_row, rows, formats=None):
     ws.column_dimensions["B"].width = 22
 
 
-def write_investor_report_xlsx(rep, reports, path):
+def write_investor_report_xlsx(rep, reports, perf, loans, path):
     t = rep["period"]
     end = date.fromisoformat(rep["collection_period_end"])
     prev = date.fromisoformat(reports[t - 2]["payment_date"]) if t > 1 else date.fromisoformat(DEAL["closing_date"])
@@ -133,4 +134,26 @@ def write_investor_report_xlsx(rep, reports, path):
             cell = ws.cell(row=i, column=j, value=v)
             if f:
                 cell.number_format = f
+
+    ws = wb.create_sheet("Pool Stratification")           # section 6: one table under the other
+    row = 1
+    for title, rows in pool_tables(t, perf, loans).items():
+        _header(ws, row, [title, "Loans", "Balance (GBP)", "% of Balance"])
+        for i, values in enumerate(rows, start=row + 1):
+            for j, (v, f) in enumerate(zip(values, [None, "#,##0", MONEY, PCT2]), start=1):
+                cell = ws.cell(row=i, column=j, value=v)
+                if f:
+                    cell.number_format = f
+        row += len(rows) + 2
+    ws.column_dimensions["A"].width = 30
+    for col in "BCD":
+        ws.column_dimensions[col].width = 16
+
+    ws = wb.create_sheet("Definitions")                   # section 7
+    _header(ws, 1, ["Term", "Definition"])
+    for i, (term, text) in enumerate(DEFINITIONS, start=2):
+        ws.cell(row=i, column=1, value=term).font = Font(name="Arial", size=9)
+        ws.cell(row=i, column=2, value=text).font = Font(name="Arial", size=9)
+    ws.column_dimensions["A"].width = 30
+    ws.column_dimensions["B"].width = 110
     _save(wb, path)
